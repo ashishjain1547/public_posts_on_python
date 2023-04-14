@@ -1,0 +1,52 @@
+(base) C:\Users\Ashish Jain\OneDrive\Desktop>python s1.py
+**********************************************************************
+File "s1.py", line 11, in __main__.factorial
+Failed example:
+    factorial(0)
+Exception raised:
+    Traceback (most recent call last):
+      File "E:\programfiles\Anaconda3\lib\doctest.py", line 1329, in __run
+        compileflags, 1), test.globs)
+      File "<doctest __main__.factorial[1]>", line 1, in <module>
+        factorial(0)
+      File "s1.py", line 14, in factorial
+        return np.arange(1, n+1).cumprod()[-1]
+    IndexError: index -1 is out of bounds for axis 0 with size 0
+**********************************************************************
+1 items had failures:
+   1 of   2 in __main__.factorial
+***Test Failed*** 1 failures.
+
+(base) C:\Users\Ashish Jain\OneDrive\Desktop>
+(base) C:\Users\Ashish Jain\OneDrive\Desktop>
+(base) C:\Users\Ashish Jain\OneDrive\Desktop>python s1.py -v
+Trying:
+    factorial(3)
+Expecting:
+    6
+ok
+Trying:
+    factorial(0)
+Expecting:
+    1
+**********************************************************************
+File "s1.py", line 11, in __main__.factorial
+Failed example:
+    factorial(0)
+Exception raised:
+    Traceback (most recent call last):
+      File "E:\programfiles\Anaconda3\lib\doctest.py", line 1329, in __run
+        compileflags, 1), test.globs)
+      File "<doctest __main__.factorial[1]>", line 1, in <module>
+        factorial(0)
+      File "s1.py", line 14, in factorial
+        return np.arange(1, n+1).cumprod()[-1]
+    IndexError: index -1 is out of bounds for axis 0 with size 0
+1 items had no tests:
+    __main__
+**********************************************************************
+1 items had failures:
+   1 of   2 in __main__.factorial
+2 tests in 2 items.
+1 passed and 1 failed.
+***Test Failed*** 1 failures.

@@ -1,0 +1,61 @@
+<head>
+    <script crossorigin="anonymous" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <!-- Google AdSense Using Machine Learning Code -->
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-3071098372371409",
+            enable_page_level_ads: true
+        });
+    </script>
+    <style>
+        pre {
+            overflow-x: auto;
+            white-space: pre-wrap;
+            white-space: -moz-pre-wrap;
+            white-space: -pre-wrap;
+            white-space: -o-pre-wrap;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<br />
+<!-- End of 'Personal Posts Menu Template For Copy-Paste'. It started from the top of the page from <HEAD> tag. -->
+
+<pre>
+<i>
+def compare_dict(x, y):
+    shared_items = {k: x[k] for k in x if k in y and x[k] == y[k]}
+    differing_values = {k: x[k] for k in x if k in y and x[k] != y[k]}
+    differing_keys = [k for k in x if k not in y]
+
+    return {
+        "shared_items_in_x": shared_items,
+        "differing_values_in_x": differing_values,
+        "differing_keys_in_x": differing_keys
+    }
+
+def is_dict_in_list(d, l):
+    rtn = False
+    for k in l:
+        cd = compare_dict(d, k)
+        if(len(cd['differing_values_in_x']) == 0 and len(cd['differing_keys_in_x']) == 0):
+            rtn = True
+            break
+    return rtn
+
+def purify_list_of_dicts(inlist):
+    nlist = [i for j in inlist for i in j]
+   
+    olist = []
+
+    for i in range(0, len(nlist)):
+        if is_dict_in_list(nlist[i], olist) == False:
+            olist.append(nlist[i])
+
+    return olist
+</i>
+</pre>
+<span style="display: none">Tags: Python,</span>

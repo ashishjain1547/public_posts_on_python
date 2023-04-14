@@ -1,0 +1,609 @@
+<head>
+  <script crossorigin="anonymous" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  
+  <!-- Google AdSense Using Machine Learning Code -->
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-3071098372371409",
+          enable_page_level_ads: true
+      });
+  </script>
+
+  <style>
+      .customTempCodeHolderForSocialMedia {
+          display: none;
+      }
+
+      pre {
+          white-space: pre-wrap;
+          white-space: -moz-pre-wrap;
+          white-space: -pre-wrap;
+          white-space: -o-pre-wrap;
+          word-wrap: break-word;
+      }
+
+      .customOl {
+          font-size: 15px;
+      }
+
+      .customPre {
+          white-space: pre-wrap; 
+      }
+
+      .customLink {
+          background-color: #4CAF50;
+          border: none;
+          color: white !important;
+          padding: 8px 13px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 14px;
+          margin: 4px 2px;
+          cursor: pointer;
+      }
+
+      .customLink:hover {
+          text-decoration: none;
+      }
+
+      .custom_5px_0px_padding_noMargin {
+          padding: 5px 0px;
+          margin: 0px;
+      }
+  
+      td {
+       padding: 0 3px;
+      }
+  </style>
+</head>
+<!-- End of 'Personal Posts Menu Template For Copy-Paste'. It started from the top of the page from <HEAD> tag. -->
+
+<pre>We would begin with a line about Python String from the book "Pg 191, Learning Python (O'Reilly, 5e)":
+  
+<i class="">Strictly speaking, Python strings are categorized as immutable sequences, meaning that the characters they contain have a left-to-right positional order and that they cannot be changed in place. In fact, strings are the first representative of the larger class of objects called sequences that we will study here. Pay special attention to the sequence operations introduced in this post, because they will work the same on other sequence types we’ll explore later, such as lists and tuples.</i>
+  
+Table 7-1. Common string literals and operations
+
+<table>
+  <tr> <td><b class="">Operation</b></td> <td><b>Interpretation</b></td></tr>
+  <tr> <td>S = ''</td> <td>Empty string</td> </tr>
+  <tr> <td>S = "spam's"</td> <td>Double quotes, same as single</td> </tr>
+  <tr> <td>S = 's\np\ta\x00m' </td> <td>Escape sequences</td> </tr>
+  <tr> <td>S = """...multiline..."""</td> <td>Triple-quoted block strings</td> </tr> 
+  <tr> <td>S = r'\temp\spam' </td> <td>Raw strings (no escapes)<br>print(S) # \temp\spam</td> </tr>
+  <tr> <td>B = b'sp\xc4m' </td> <td>Byte strings in 2.6, 2.7, and 3.X<br>print(B) # b'sp\xc4m'</td> </tr>
+  <tr> <td>U = u'sp\u00c4m' </td> <td>Unicode strings in 2.X and 3.3+<br>print(U) # spÄm</td></tr>
+  <tr> <td>S1 + S2</td> <td>Concatenate</td></tr>
+  <tr> <td>S * 3</td> <td>repeat</td> </tr>
+  <tr> <td>S[i]</td> <td>Index</td> </tr>
+  <tr> <td>S[i:j]</td> <td>slice</td> </tr>
+  <tr> <td>len(S)</td> <td>length</td> </tr>
+  <tr> <td>"a %s parrot" % 'kind' </td> <td>String formatting expression<br>print("a %s parrot" % 'kind') # a kind parrot</td></tr>
+  <tr> <td>"a {0} parrot".format('kind')</td> <td>String formatting method in 2.6, 2.7, and 3.X</td>  </tr>
+  <tr> <td>S.find('pa')</td> <td>String methods (see ahead for all 43): search<br>print('a parrot'.find('pa')) # 2</td>  </tr>
+  <tr> <td>S.rstrip()</td> <td>remove whitespace from end<br>print("!" + "   okay   ".rstrip() + "!") # !   okay!</td></tr>
+  <tr> <td>S.strip()</td> <td>remove whitespace from beginning and end<br/>print("!" + "   okay   ".strip() + "!") # !okay!</td></tr>
+  <tr> <td>S.replace('pa', 'xx')</td> <td>replacement<br/><i style="color: blue;">print("parrot".replace('pa', 'xx')) # xxrrot</i></td> </tr>
+  <tr> <td>S.split(',')</td> <td>split on delimiter</td></tr>
+  <tr> <td>S.isdigit()</td> <td>content test</td></tr>
+  <tr> <td>S.lower()<br>S.upper()</td> <td>case conversion<br>print("Parrot".lower()) # parrot<br>print("parrot".upper()) # PARROT</td></tr>
+  <tr> <td>S.endswith('spam')</td> <td>end test<br><i style="color: blue;">print("is this yours".endswith("yours")) # True<br>print("my parrot".startswith("my")) # True</i></td></tr>
+  <tr> <td>'spam'.join(strlist)</td> <td>delimiter join</td></tr>
+  <tr> <td>S.encode('latin-1')</td> <td>Unicode encoding</td></tr>
+  <tr> <td>B.decode('utf8')</td> <td>Unicode decoding, etc.</td></tr>
+  <tr> <td>for x in S: print(x)</td> <td>Iteration</td></tr>
+  <tr> <td>'spam' in S</td> <td>membership</td></tr>
+  <tr> <td>[c * 2 for c in S]</td> <td>list comprehension to create a new list</td></tr>
+  <tr> <td>map(ord, S)</td> <td><i style="color: blue;">map(ord, "hello") # [104, 101, 108, 108, 111]<br>map(lambda x: 10*x, [1,2,3,4]) # [10, 20, 30, 40]</i> </td></tr>
+  <tr> <td>re.match('sp(.*)am', line)</td> <td>Pattern matching: library module</td></tr>
+</table>
+
+<b class="">To begin our work, we would first create a Conda environment for this using a YAML file as shown below:</b>
+
+Filename: string_env.yml
+
+Note: "name: string_env" This line is where we are suggesting the name for our new environment below.
+
+<i class="" style="color: blue;">name: string_env
+channels:
+- conda-forge
+dependencies:
+- python=3.9
+- pip
+- nltk
+- spacy
+- scikit-learn
+- pandas
+- ipykernel
+- jupyter
+- jupyterlab</i>
+
+#-#-#-#-#-#-#-#-#-#
+
+<i class="" style="color: blue;">(base) CMD>conda env create -f string_env.yml</i>
+
+<i class="" style="color: green;">Collecting package metadata (repodata.json): done
+Solving environment: /
+Warning: 2 possible package resolutions (only showing differing packages):
+  - conda-forge/noarch::typer-0.3.1-py_0, conda-forge/win-64::click-8.0.0-py39hcbf5309_0
+  - conda-forge/noarch::click-7.1.2-pyh9f0ad1d_0, conda-forge/noarch::typer-0.3.2-pyhd8ed1abdone
+
+Downloading and Extracting Packages
+chardet-4.0.0        | 218 KB    | # | 100%
+pyqtchart-5.12       | 207 KB    | # | 100%
+parso-0.8.2          | 68 KB     | # | 100%
+vc-14.2              | 13 KB     | # | 100%
+jinja2-3.0.0         | 98 KB     | # | 100%
+markupsafe-2.0.0     | 25 KB     | # | 100%
+jupyter_server-1.7.0 | 441 KB    | # | 100%
+threadpoolctl-2.1.0  | 15 KB     | # | 100%
+pywinpty-1.1.0       | 179 KB    | # | 100%
+urllib3-1.26.4       | 99 KB     | # | 100%
+pywin32-300          | 6.9 MB    | # | 100%
+zipp-3.4.1           | 11 KB     | # | 100%
+pandas-1.2.4         | 10.2 MB   | # | 100%
+attrs-21.2.0         | 44 KB     | # | 100%
+tzdata-2021a         | 121 KB    | # | 100%
+grpcio-1.37.1        | 2.0 MB    | # | 100%
+pygments-2.9.0       | 754 KB    | # | 100%
+six-1.16.0           | 14 KB     | # | 100%
+dataclasses-0.8      | 7 KB      | # | 100%
+mkl-2021.2.0         | 183.8 MB  | # | 100%
+googleapis-common-pr | 128 KB    | # | 100%
+rsa-4.7.2            | 28 KB     | # | 100%
+google-cloud-storage | 71 KB     | # | 100%
+mistune-0.8.4        | 54 KB     | # | 100%
+cryptography-3.4.7   | 706 KB    | # | 100%
+typing-extensions-3. | 8 KB      | # | 100%
+qtconsole-5.1.0      | 89 KB     | # | 100%
+pyqt-5.12.3          | 22 KB     | # | 100%
+boto3-1.17.74        | 70 KB     | # | 100%
+libclang-11.1.0      | 20.8 MB   | # | 100%
+qt-5.12.9            | 106.1 MB  | # | 100%
+google-crc32c-1.1.2  | 26 KB     | # | 100%
+cymem-2.0.5          | 40 KB     | # | 100%
+aiohttp-3.7.4        | 600 KB    | # | 100%
+preshed-3.0.5        | 96 KB     | # | 100%
+wasabi-0.8.2         | 23 KB     | # | 100%
+pyqtwebengine-5.12.1 | 143 KB    | # | 100%
+pyzmq-22.0.3         | 703 KB    | # | 100%
+pickleshare-0.7.5    | 9 KB      | # | 100%
+pandoc-2.13          | 16.3 MB   | # | 100%
+typing_extensions-3. | 25 KB     | # | 100%
+spacy-3.0.6          | 9.1 MB    | # | 100%
+spacy-legacy-3.0.5   | 14 KB     | # | 100%
+terminado-0.9.4      | 26 KB     | # | 100%
+protobuf-3.17.0      | 262 KB    | # | 100%
+backports.functools_ | 9 KB      | # | 100%
+google-auth-1.30.0   | 77 KB     | # | 100%
+liblapack-3.9.0      | 4.0 MB    | # | 100%
+zlib-1.2.11          | 126 KB    | # | 100%
+joblib-1.0.1         | 206 KB    | # | 100%
+decorator-5.0.9      | 11 KB     | # | 100%
+zeromq-4.3.4         | 9.0 MB    | # | 100%
+pysocks-1.7.1        | 28 KB     | # | 100%
+ipywidgets-7.6.3     | 101 KB    | # | 100%
+prompt-toolkit-3.0.1 | 244 KB    | # | 100%
+cachetools-4.2.2     | 12 KB     | # | 100%
+jupyterlab_widgets-1 | 130 KB    | # | 100%
+pip-21.1.1           | 1.1 MB    | # | 100%
+scikit-learn-0.24.2  | 6.6 MB    | # | 100%
+defusedxml-0.7.1     | 23 KB     | # | 100%
+sqlite-3.35.5        | 1.2 MB    | # | 100%
+numpy-1.20.2         | 5.3 MB    | # | 100%
+testpath-0.5.0       | 86 KB     | # | 100%
+win_inet_pton-1.1.0  | 8 KB      | # | 100%
+m2w64-gcc-libs-5.3.0 | 520 KB    | # | 100%
+click-8.0.0          | 146 KB    | # | 100%
+jsonschema-3.2.0     | 45 KB     | # | 100%
+libprotobuf-3.17.0   | 2.3 MB    | # | 100%
+vs2015_runtime-14.28 | 2.3 MB    | # | 100%
+jpeg-9d              | 366 KB    | # | 100%
+babel-2.9.1          | 6.2 MB    | # | 100%
+ipython-7.23.1       | 1.1 MB    | # | 100%
+wcwidth-0.2.5        | 33 KB     | # | 100%
+tornado-6.1          | 654 KB    | # | 100%
+prompt_toolkit-3.0.1 | 4 KB      | # | 100%
+pydantic-1.7.3       | 164 KB    | # | 100%
+brotlipy-0.7.0       | 369 KB    | # | 100%
+bz2file-0.98         | 9 KB      | # | 100%
+jupyter-1.0.0        | 6 KB      | # | 100%
+importlib-metadata-4 | 30 KB     | # | 100%
+widgetsnbextension-3 | 1.8 MB    | # | 100%
+argon2-cffi-20.1.0   | 51 KB     | # | 100%
+bleach-3.3.0         | 111 KB    | # | 100%
+jupyter_console-6.4. | 22 KB     | # | 100%
+nbclient-0.5.3       | 67 KB     | # | 100%
+srsly-2.4.1          | 501 KB    | # | 100%
+async-timeout-3.0.1  | 11 KB     | # | 100%
+pyopenssl-20.0.1     | 48 KB     | # | 100%
+json5-0.9.5          | 20 KB     | # | 100%
+google-resumable-med | 40 KB     | # | 100%
+nbconvert-6.0.7      | 563 KB    | # | 100%
+jupyter_client-6.1.1 | 79 KB     | # | 100%
+matplotlib-inline-0. | 11 KB     | # | 100%
+backports-1.0        | 4 KB      | # | 100%
+pyqt5-sip-4.19.18    | 298 KB    | # | 100%
+pathy-0.5.2          | 37 KB     | # | 100%
+wheel-0.36.2         | 31 KB     | # | 100%
+tbb-2021.2.0         | 138 KB    | # | 100%
+m2w64-libwinpthread- | 31 KB     | # | 100%
+qtpy-1.9.0           | 34 KB     | # | 100%
+entrypoints-0.3      | 8 KB      | # | 100%
+nbformat-5.1.3       | 47 KB     | # | 100%
+boto-2.49.0          | 838 KB    | # | 100%
+jupyter_core-4.7.1   | 96 KB     | # | 100%
+pyqt-impl-5.12.3     | 4.3 MB    | # | 100%
+nltk-3.6.2           | 1.1 MB    | # | 100%
+libblas-3.9.0        | 4.0 MB    | # | 100%
+anyio-3.0.1          | 133 KB    | # | 100%
+cffi-1.14.5          | 228 KB    | # | 100%
+typer-0.3.1          | 22 KB     | # | 100%
+botocore-1.20.74     | 4.6 MB    | # | 100%
+icu-68.1             | 16.3 MB   | # | 100%
+regex-2021.4.4       | 334 KB    | # | 100%
+python-3.9.4         | 19.9 MB   | # | 100%
+libpng-1.6.37        | 724 KB    | # | 100%
+websocket-client-0.5 | 62 KB     | # | 100%
+yarl-1.5.1           | 136 KB    | # | 100%
+requests-2.25.1      | 51 KB     | # | 100%
+msys2-conda-epoch-20 | 3 KB      | # | 100%
+colorama-0.4.4       | 18 KB     | # | 100%
+jedi-0.18.0          | 931 KB    | # | 100%
+setuptools-49.6.0    | 954 KB    | # | 100%
+jupyterlab_server-2. | 40 KB     | # | 100%
+libcblas-3.9.0       | 4.0 MB    | # | 100%
+wincertstore-0.2     | 15 KB     | # | 100%
+smart_open-2.2.1     | 78 KB     | # | 100%
+python-dateutil-2.8. | 220 KB    | # | 100%
+google-api-core-1.26 | 59 KB     | # | 100%
+tqdm-4.60.0          | 79 KB     | # | 100%
+nest-asyncio-1.5.1   | 9 KB      | # | 100%
+thinc-8.0.3          | 926 KB    | # | 100%
+prometheus_client-0. | 46 KB     | # | 100%
+notebook-6.4.0       | 6.1 MB    | # | 100%
+murmurhash-1.0.5     | 26 KB     | # | 100%
+nbclassic-0.2.8      | 17 KB     | # | 100%
+pyrsistent-0.17.3    | 92 KB     | # | 100%
+libsodium-1.0.18     | 697 KB    | # | 100%
+scipy-1.6.3          | 23.3 MB   | # | 100%
+m2w64-gcc-libgfortra | 342 KB    | # | 100%
+catalogue-2.0.4      | 31 KB     | # | 100%
+sniffio-1.2.0        | 16 KB     | # | 100%
+shellingham-1.4.0    | 11 KB     | # | 100%
+cython-blis-0.7.4    | 5.6 MB    | # | 100%
+s3transfer-0.4.2     | 55 KB     | # | 100%
+certifi-2020.12.5    | 144 KB    | # | 100%
+python_abi-3.9       | 4 KB      | # | 100%
+m2w64-gcc-libs-core- | 214 KB    | # | 100%
+ipykernel-5.5.5      | 168 KB    | # | 100%
+traitlets-5.0.5      | 81 KB     | # | 100%
+libcrc32c-1.1.1      | 25 KB     | # | 100%
+packaging-20.9       | 35 KB     | # | 100%
+multidict-5.1.0      | 63 KB     | # | 100%
+jupyterlab-3.0.15    | 5.5 MB    | # | 100%
+m2w64-gmp-6.1.0      | 726 KB    | # | 100%
+google-cloud-core-1. | 26 KB     | # | 100%
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: / Enabling notebook extension jupyter-js-widgets/extension...
+      - Validating: ok
+
+done
+#
+# To activate this environment, use
+#     $ conda activate string_env
+# To deactivate an active environment, use
+#     $ conda deactivate</i>
+
+#-#-#-#-#-#-#-#-#-#
+
+<b class="">Suppose we are coming back after a week to work and we need to work in an environment again. What do we do now if don't remember the name?</b>
+
+<i class="" style="color: blue;">(base) CMD>conda env list</i>
+
+<i class="" style="color: green;"># conda environments:
+#
+base                  *  E:\programfiles\Anaconda3
+pegasus                  E:\programfiles\Anaconda3\envs\pegasus
+py39                     E:\programfiles\Anaconda3\envs\py39
+selenium                 E:\programfiles\Anaconda3\envs\selenium
+<b class="">string_env               E:\programfiles\Anaconda3\envs\string_env</b>
+tf                       E:\programfiles\Anaconda3\envs\tf</i>
+
+#-#-#-#-#-#-#-#-#-#
+
+<i class="" style="color: blue;">(base) ~\Desktop\ws>conda activate string_env
+<b class="">(string_env)</b> ~\Desktop\ws>jupyter lab</i>
+
+<i class="" style="color: green;">[I 2021-05-19 02:43:28.973 ServerApp] jupyterlab | extension was successfully linked.
+[I 2021-05-19 02:43:29.051 ServerApp] Writing notebook server cookie secret to C:\Users\Ashish Jain\AppData\Roaming\jupyter\runtime\jupyter_cookie_secret
+[W 2021-05-19 02:43:29.145 ServerApp] The 'min_open_files_limit' trait of a ServerApp instance expected an int, not the NoneType None.
+[I 2021-05-19 02:43:29.191 LabApp] JupyterLab extension loaded from E:\programfiles\Anaconda3\envs\string_env\lib\site-packages\jupyterlab
+[I 2021-05-19 02:43:29.191 LabApp] JupyterLab application directory is E:\programfiles\Anaconda3\envs\string_env\share\jupyter\lab
+[I 2021-05-19 02:43:29.207 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2021-05-19 02:43:29.801 ServerApp] nbclassic | extension was successfully loaded.
+[I 2021-05-19 02:43:30.176 ServerApp] Serving notebooks from local directory: ~\Desktop\ws
+[I 2021-05-19 02:43:30.176 ServerApp] Jupyter Server 1.7.0 is running at:
+[I 2021-05-19 02:43:30.176 ServerApp] http://localhost:8888/lab?token=57b5a01c1c12a9acab6499a55cbfcb61de9ab5e1598db126
+[I 2021-05-19 02:43:30.176 ServerApp]     http://127.0.0.1:8888/lab?token=57b5a01c1c12a9acab6499a55cbfcb61de9ab5e1598db126
+[I 2021-05-19 02:43:30.176 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 2021-05-19 02:43:30.332 ServerApp]
+
+    To access the server, open this file in a browser:
+        file:///C:/Users/Ashish%20Jain/AppData/Roaming/jupyter/runtime/jpserver-1812-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:8888/lab?token=57b5a01c1c12a9acab6499a55cbfcb61de9ab5e1598db126
+        http://127.0.0.1:8888/lab?token=57b5a01c1c12a9acab6499a55cbfcb61de9ab5e1598db126</i>
+
+#-#-#-#-#-#-#-#-#-#
+
+<b class="">Ques: What is the difference between "Jupyter Notebook" and "Jupyter Lab"?</b>
+
+Ans:
+Jupyter Notebook is a web-based interactive computational environment for creating Jupyter notebook documents. It supports several languages like Python (IPython), Julia, R etc. and is largely used for data analysis, data visualization and further interactive, exploratory computing.
+
+JupyterLab is the next-generation user interface including notebooks. It has a modular structure, where you can open several notebooks or files (e.g. HTML, Text, Markdowns etc) as tabs in the same window. It offers more of an IDE-like experience.
+
+For a beginner I would suggest starting with Jupyter Notebook as it just consists of a filebrowser and an (notebook) editor view. It might be easier to use. If you want more features, switch to JupyterLab. JupyterLab offers much more features and an enhanced interface, which can be extended through extensions: 
+<a href="https://github.com/search?q=topic%3Ajupyterlab-extension&type=Repositories" target="_blank" class="">JupyterLab Extensions (GitHub)</a>
+
+#-#-#-#-#-#-#-#-#-#
+
+<h3 class="">Now Some Hands-On</h3>
+
+<b># Picking the fifth character from a string</b>
+<i style="color: blue;">str_1 = "Hi, I am Ashish!"
+str_1[4]</i>
+
+<i style="color: green;">'I'</i>
+
+<b># Picking characters from fifth to tenth</b>
+<i style="color: blue;">str_1[4:10]</i>
+<i style="color: green;">'I am A'</i>
+
+<b># Print the length of the string</b>
+<i style="color: blue;">print(len(str_1))
+print(len(str_1[4:10]))</i>
+
+<i style="color: green;">16
+6</i>
+
+<b># Print every second character in the string</b>
+<i style="color: blue;">str_1[0::2]</i>
+
+<i style="color: green;">'H,Ia sih'</i>
+
+<b class=""># When you give negative number for indexing, it starts traversing the string from the right:</b>
+<i style="color: blue;">print(str_1[-1])
+print(str_1[-2])
+print(str_1[-5 : -1])
+print(str_1[-5 :])</i>
+
+<i style="color: green;">!
+h
+hish
+hish!</i>
+
+<b>When you are giving a range for indexing to a string, the first number should be smaller than the second, or nothing comes out:</b>
+<i style="color: blue;">print("str_1[-1 : -5]: ", str_1[-1 : -5], "&lt;-")</i>
+
+<i class="" style="color: green;">str_1[-1 : -5]:   &lt;-</i>
+
+<b class=""># Reverse a string</b>
+<i class="" style="color: blue;" >print("-->", str_1[len(str_1) : 0])
+print("-->", str_1[6 : 0])
+print()
+"""Here it skips the first character because that's how indexing works. It excludes the last indexing number specified."""
+print("-->", str_1[len(str_1) : 0 : -1]) 
+print("-->", str_1[len(str_1) : 0 : -1])
+print()
+print("-->", str_1[len(str_1) : : -1])
+print("-->", str_1[ : : -1])
+print()
+print("-->", str_1[len(str_1)+1 : : -1])
+print("-->", str_1[0 : len(str_1)+1])</i>
+
+<i style="color: green;">--> 
+--> 
+
+--> !hsihsA ma I ,i
+--> !hsihsA ma I ,i
+
+--> !hsihsA ma I ,iH
+--> !hsihsA ma I ,iH
+
+--> !hsihsA ma I ,iH
+--> Hi, I am Ashish!</i>
+
+<b>When you are specifying number for an indexing range, the number can go beyond the actual string length but not when you are picking only a character:</b>
+<i style="color: blue;">print("-->", str_1[len(str_1)+1])</i>
+
+<i style="color: red;">IndexError   Traceback (most recent call last)
+&lt;ipython-input-32-ae4c8bcbdc17> in &lt;module>
+---> print("-->", str_1[len(str_1)+1])
+
+IndexError: string index out of range</i>
+
+<b># Check if a string is a palindrome</b>
+<i style="color: blue;">str_2 = "mom"
+print(str_2 == str_2[::-1])
+print(str_1 == str_1[::-1])</i>
+
+<i style="color: green;">True
+False</i>
+
+<b class=""># Check if two string variables are actually same.
+Important Note: What we are going to see in this piece of code does not hold true for lists.</b>
+
+<i style="color: blue;">v1 = str_2
+v2 = str_2
+v3 = 'mom'
+
+print("v1 == v2:", v1 == v2)
+print("v1 == v3:", v1 == v3)
+print("v1 is v2:", v1 is v2)
+print("v1 is v3:", v1 is v3)
+print("id(v1)", id(v1))
+print("id(v3)", id(v3))</i>
+
+<i style="color: green;">v1 == v2: True
+v1 == v3: True
+v1 is v2: True
+v1 is v3: True
+id(v1) 2053130113968
+id(v3) 2053130113968</i>
+
+<b># Now trying the same thing with lists:</b>
+
+<i style="color: blue;">animals           = ['python','gopher']
+more_animals      = animals
+print("animals == more_animals:", animals == more_animals) #=> True
+print("animals is more_animals:", animals is more_animals) #=> True
+even_more_animals = ['python','gopher']
+print("animals == even_more_animals:", animals == even_more_animals) #=> True
+print("animals is even_more_animals:", animals is even_more_animals) #=> False
+
+print("\nMemory addresses:")
+print("id(animals)", id(animals))
+print("id(more_animals)", id(more_animals))
+print("id(even_more_animals)", id(even_more_animals))</i>
+
+<i style="color: green;">animals == more_animals: True
+animals is more_animals: True
+animals == even_more_animals: True
+animals is even_more_animals: False
+
+Memory addresses:
+id(animals) 2053130940992
+id(more_animals) 2053130940992
+id(even_more_animals) 2053130060928</i>
+
+<b class="">Checking what happens to a string when replace a character in a string and to a list when we replace an element in it:</b>
+
+<i style="color: blue;">owner = 'Ashish'
+pets = ['python', 'gopher']
+
+print("owner:", owner)
+print("id(owner): ", id(owner))
+print("id(pets): ", id(pets))
+
+owner = owner.replace('A', 'X')
+
+<b># Note: we don't have a "replace()" method for Python lists.</b>
+pets[0] = 'cat'
+
+print("owner:", owner)
+print("id(owner): ", id(owner))
+print("id(pets): ", id(pets))
+
+owner = owner.replace('X', 'A')
+pets[0] = 'python'
+
+print("owner:", owner)
+print("id(owner): ", id(owner))
+print("id(pets): ", id(pets))
+
+print("Trivial replacement:")
+owner = owner.replace('A', 'A')
+print("owner:", owner)
+print("id(owner): ", id(owner))</i>
+
+<i style="color: green;">owner: Ashish
+id(owner):  2287299151536
+id(pets):  2287299204096
+owner: Xshish
+id(owner):  2287299080624
+id(pets):  2287299204096
+owner: Ashish
+id(owner):  2287298874672
+id(pets):  2287299204096
+Trivial replacement:
+owner: Ashish
+id(owner):  2287298874672</i>
+
+<b class="">Now the question is: did it actually perform the trivial replace operation in this case or not?</b>
+
+<h3>Creating Replace For List</h3>
+
+<b># a loop to do the replacement in-place</b>
+<i style="color: blue;">words = ['I', 'like', 'chicken']
+for i, word in enumerate(words):
+    if word == 'chicken':
+        words[i] = 'broccoli'
+print(words)</i>
+
+<i style="color: green;">['I', 'like', 'broccoli']</i>
+
+<b># a shorter option if there’s always exactly one instance:</b>
+<i style="color: blue;">words = ['I', 'like', 'chicken']
+words[words.index('chicken')] = 'broccoli'
+print(words)</i>
+
+<i style="color: green;">['I', 'like', 'broccoli']</i>
+
+<b># a list comprehension to create a new list:</b>
+<i style="color: blue;">words = ['I', 'like', 'chicken']
+new_words = ['broccoli' if word == 'chicken' else word for word in words]
+print(new_words)</i>
+
+<i style="color: green;">['I', 'like', 'broccoli']</i>
+
+<b># any of which can be wrapped up in a function:</b>
+<i style="color: blue;">words = ['I', 'like', 'chicken']
+def replaced(sequence, old, new):
+    return (new if x == old else x for x in sequence)
+
+new_words = list(replaced(words, 'chicken', 'broccoli'))
+print(new_words)</i>
+
+<i style="color: green;">['I', 'like', 'broccoli']</i>
+
+#-#-#-#-#-#-#-#-#-#
+
+<h3 class="">Python's in-built support for String and List</h3>
+
+<b>1. reversed()</b>
+
+>>> s1 = "Hi, I am Ashish!"
+>>> ''.join(reversed(s1))
+'!hsihsA ma I ,iH'
+>>> reversed(s1)
+&lt;reversed object at 0x000001D587048518>
+>>> list(reversed(s1))
+['!', 'h', 's', 'i', 'h', 's', 'A', ' ', 'm', 'a', ' ', 'I', ' ', ',', 'i', 'H']
+>>> str(reversed(s1))
+'&lt;reversed object at 0x000001D587048B70>'
+>>>
+>>> l1 = ['Ashish', 'Rashmi', 'Smita']
+>>> reversed(l1)
+&lt;list_reverseiterator object at 0x000001D5870702B0>
+>>> list(reversed(l1))
+['Smita', 'Rashmi', 'Ashish']
+>>>
+
+<b>2. sorted()</b>
+
+>>> sorted(s1)
+[' ', ' ', ' ', '!', ',', 'A', 'H', 'I', 'a', 'h', 'h', 'i', 'i', 'm', 's', 's']
+>>>
+>>> sorted(l1)
+['Ashish', 'Rashmi', 'Smita']
+>>>
+>>> l2 = ['Rashmi', 'Ashish', 'Smita']
+>>> sorted(l2)
+['Ashish', 'Rashmi', 'Smita']
+>>>
+
+<b>3. len()</b>
+
+>>> len(s1)
+16
+>>> len(l1)
+3
+>>>
+
+<span class="" style="display: none;">Tags: Technology,Python,Anaconda,Natural Language Processing,</span></pre>

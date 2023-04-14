@@ -1,0 +1,103 @@
+(base) C:\Users\Ashish Jain\OneDrive\Desktop>python script.py
+**********************************************************************
+File "script.py", line 11, in __main__.factorial
+Failed example:
+    factorial(0)
+Exception raised:
+    Traceback (most recent call last):
+      File "E:\programfiles\Anaconda3\lib\doctest.py", line 1329, in __run
+        compileflags, 1), test.globs)
+      File "<doctest __main__.factorial[1]>", line 1, in <module>
+        factorial(0)
+      File "script.py", line 14, in factorial
+        return np.arange(1, n+1).cumprod()[-1]
+    IndexError: index -1 is out of bounds for axis 0 with size 0
+**********************************************************************
+File "script.py", line 24, in __main__.isEven
+Failed example:
+    isEven(9)
+Expected:
+    True
+Got:
+    False
+**********************************************************************
+2 items had failures:
+   1 of   2 in __main__.factorial
+   1 of   3 in __main__.isEven
+***Test Failed*** 2 failures.
+
+(base) C:\Users\Ashish Jain\OneDrive\Desktop>
+(base) C:\Users\Ashish Jain\OneDrive\Desktop>
+(base) C:\Users\Ashish Jain\OneDrive\Desktop>
+(base) C:\Users\Ashish Jain\OneDrive\Desktop>
+(base) C:\Users\Ashish Jain\OneDrive\Desktop>python script.py -v
+Trying:
+    factorial(3)
+Expecting:
+    6
+ok
+Trying:
+    factorial(0)
+Expecting:
+    1
+**********************************************************************
+File "script.py", line 11, in __main__.factorial
+Failed example:
+    factorial(0)
+Exception raised:
+    Traceback (most recent call last):
+      File "E:\programfiles\Anaconda3\lib\doctest.py", line 1329, in __run
+        compileflags, 1), test.globs)
+      File "<doctest __main__.factorial[1]>", line 1, in <module>
+        factorial(0)
+      File "script.py", line 14, in factorial
+        return np.arange(1, n+1).cumprod()[-1]
+    IndexError: index -1 is out of bounds for axis 0 with size 0
+Trying:
+    isEven(10)
+Expecting:
+    True
+ok
+Trying:
+    isEven(9)
+Expecting:
+    True
+**********************************************************************
+File "script.py", line 24, in __main__.isEven
+Failed example:
+    isEven(9)
+Expected:
+    True
+Got:
+    False
+Trying:
+    isEven(9)
+Expecting:
+    False
+ok
+1 items had no tests:
+    __main__
+**********************************************************************
+2 items had failures:
+   1 of   2 in __main__.factorial
+   1 of   3 in __main__.isEven
+5 tests in 3 items.
+3 passed and 2 failed.
+***Test Failed*** 2 failures.
+
+(base) C:\Users\Ashish Jain\OneDrive\Desktop>
+(base) C:\Users\Ashish Jain\OneDrive\Desktop>
+(base) C:\Users\Ashish Jain\OneDrive\Desktop>
+(base) C:\Users\Ashish Jain\OneDrive\Desktop>
+(base) C:\Users\Ashish Jain\OneDrive\Desktop>python
+Python 3.7.1 (default, Dec 10 2018, 22:54:23) [MSC v.1915 64 bit (AMD64)] :: Anaconda, Inc. on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>>
+>>>
+>>> assert(1 == 1)
+>>> assert(1 == 2)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AssertionError
+>>>
+>>>

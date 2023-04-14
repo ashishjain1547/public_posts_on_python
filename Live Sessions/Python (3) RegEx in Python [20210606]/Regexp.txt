@@ -1,0 +1,277 @@
+
+FINDING THE CLOSING PARENTHESIS (OR ELSE OR TRY KEYWORD) FOLLOWED BY SPACES, LINE BREAKS AND THEN AN OPENING CURLY BRACKET:
+
+FW: (\)|else|try)[^0-9a-zA-Z\|&$\(\)]+?{
+RW: $1{
+
+Note: In RW pattern, we cannot use "$1 {" as now after replacement, the replacement string and FW still have a match. By using "RW: $1{", it is easy to figure out if we are left zero string instances matching the FW pattern.
+.................................
+
+FINDING LESS-THAN, GREATER-THAN IN THE FTL IF-TAG:
+
+(Add checks for arithematic operators)
+FW:
+<#[^<>]+?(>|<)[a-z0-9A-Z="'$_\.'?& \|,!\{\}\(\)\[\]+\-\*\\]+?>
+--------------------------------------------------------------------------------
+	NOTE: Wrong, angular brackets of HTML are considered as part of the RegExp.
+	<#[^<>]+?(>|<)[a-z0-9A-Z="'$_\.'?& \|,!<>\{\}\(\)\[\]+\-\*\\]+?>
+
+	MATCH FOUND__ <#if routedetails.fwd_rut_type?? && routedetails.fwd_rut_type == '2' > <u>
+--------------------------------------------------------------------------------
+.................................
+
+
+FINDING THE OPENING FTL TAGS:
+FW: <#[^<>]*?>
+
+FINDING THE CLOSING FTL TAGS:
+FW: </#([^>]+?)>
+RW: [/#$1]
+
+
+FINDING THE OPENING AND CLOSING FTL TAGS: 
+
+FW: <(#--.*?--)> (FOR REPLACING ANGULAR BRACKET COMMENTS TO SQUARE BRACKETS)
+RW: [$1]
+
+FW: <(#|/#)([^>]*?)> (MISSES THE CLOSING FTL COMMENT TAG WHEN SYMBOL ">" IS FOUND IN THE FTL COMMENT SO CHECK FOR FTL COMMENTS FIRST)
+Option: "." matches new line.
+RW: [$1$2]
+
+[* - Greedy; *? - Lazy with optional (lazy) quantifier]
+[Notepad++ Options: 'regular expression', '. matches newline']
+--------------------------------------------
+	Wrong pattern: 
+	<(#|/#)([^<>]*?)>
+	This goes erroneous. This (<#if (i < 10)>) is detected as (<#if (i <)
+--------------------------------------------
+
+CONFIRMATION:
+If there are no greater than, less than symbol used in the IF-ELSE FTL tags, then this Regexp:
+<#[^<>]+?(>|<)?[a-z0-9A-Z="'$_\.'?& \|,!<>\{\}\(\)\[\]+\-\*\\]+?>
+and this Regexp should return equal number of hits.
+<#[^<>]*?>
+
+FINDING FTL COMMENTS:
+FW: <#--.*?>
+
+_____________________________________________________
+
+FIND WHAT:	Sat Nov 28|14:05:31.755
+REGEXP: 	[A-Z].+?\|[:.0-9]+?\|
+(Dot does not match line feed or tab character)
+
+Sat Nov 28|14:05:31.755|D|http-9999-1|Data loaded for [coslist] but not stored in runtime repository.|com.imas.app.generic.parser.DataLoader|execute|119
+Sat Nov 28|14:05:31.755|D|http-9999-1|Loaded [6] records for data loader [coslist]. Merging the elements of the last record into the input hash.|com.imas.app.generic.parser.DataLoader|execute|170
+____________________________________________________________________________________________
+
+REMOVING BLANK LINES:
+FW: ^[ \t]*\r?\n
+Option: "." matches new line.
+RW: NOTHING
+
+INTRODUCING LINE BREAK BEFORE JAVASCRIPT FUNCTION DEFINITION:
+FW:
+(^[ \t]*function)
+RW:
+\r\n$1
+____________________________________________________________________________________________
+
+FINDING/REPLACING TABLESPACE CLAUSE IN THE SQL SCRIPTS:
+--DO NOT MATCH CASE
+
+FIND WHAT: tablespace [_a-z]+\s?;
+Note: ". matches newline"
+RESULT:
+C:\oracle\tables\rqm_common_tables_62.sql (1 hit)
+	Line 22: tablespace rqm_indx_ts ;
+
+--***--
+
+Find What: tablespace [_a-zA-Z0-9]+\s*(;|\r?\n;|\r?\n[)])
+Replace With: $1
+
+PATTERNS TO MATCH:[[
+1. tablespace rqm_indx_ts ;
+2. tablespace rqm_indx_ts  ;
+3. tablespace R360_INDX_TS
+4. create table rqm_opcodes (
+	...
+	constraint pk_rqm_opcodes primary key (protocol,version,opcode) using index tablespace rqm_indx_ts
+) ;
+
+5. *** create table rqm_dashboardviews
+(
+   loggedinusername varchar2(256) not null,...
+   constraint rqm_dashboardviews_pk primary key (loggedinusername,d_name,v_name)  using index 
+)tablespace rqm_stats_ts 
+; ***
+]]
+
+--------------------------------------------------------------------------------------------------------------
+CHANGING TEMPLATES FROM FREEMARKER TO FREEMARKER2
+
+1:
+Pattern Instances: <fmlist>, </fmlist>, <fmif>, </fmif>, <fmelse>, </fmelse>
+Find What: (<|</)fm
+"." matches new line.
+Replace With: $1#
+Pattern Instances After Replacement: <#list>, </#list>, <#if>, </#if>, <#else>, </#else>
+
+2:
+PI: ${currentpage}, ${langlist.message}, ${maxmsgs2}
+FW: \$\{([a-z0-9._]*?)\}
+RW: ${$1!''}
+PIAR: ${currentpage!''}, ${langlist.message!''}, ${maxmsgs2!''}
+
+3:
+NOW FIRST CONVERT ANGLE BRACKET SYNTAX TO SQUARE BRACKET SYNTAX THEN DO THE FOLLOWING SWAPS.
+
+4:
+PI: "[#if imasappparameters.permission !=", "[#if rulebased ==", "[#if copyapps.appid !=", "[#if c1 !="
+FW: ([\[]#(if|elseif))\s([0-9a-z.]+)\s*(!=|==)
+RW: $1 $3?? && $3 $4
+PIAR: [#if imasappparameters.permission?? && imasappparameters.permission !=", "[#if rulebased?? && rulebased =="
+
+5:
+PI: "[#list apps", "[#list vone.data"
+FW: ([\[]#list)\s+([a-z.]+)
+RW: "$1 $2 ![] "
+Use replacement pattern without quotes.
+PIAR: "[#list apps ![] ", "[#list vone.data ![] "
+
+Search mode: Normal
+FW: [#if imasappparameters.permission?? && imasappparameters.permission != "view"]
+RW: [#if !(imasappparameters.permission??) || (imasappparameters.permission?? && imasappparameters.permission != "view")]
+----------------------------------------------------------------------------------------------------------
+
+Pattern Instances:
+	Line 275: 				document.getElementById("edit_gsmul_succratio_threshold").className= "red" ;
+	Line 282: 				document.getElementById("edit_gsmul_succratio_threshold").className= "red" ;
+	Line 291: 				document.getElementById("edit_gsmul_latency_threshold").className= "red" ;
+	Line 298: 				document.getElementById("edit_gsmul_latency_threshold").className= "red" ;
+	Line 306: 				document.getElementById("edit_lteul_succratio").className= "red" ;
+	
+FW: document.getElementById["a-zA-Z\(\)._]+?(= "red" ;)
+RW: NOTHING
+-----------------------------------------------------------------------------------------
+
+FOR FORMATTING JAVA CODE IN ECLIPSE:
+ Press "Ctrl + Shift + F"
+
+----------------------------------------------------------------------------------------- 
+
+Pattern Instances: "This  is", "okay,  right" (Note the two spaces used as separation)
+FW: ([a-z,.])  ([a-z])
+RW: $1 $2
+Note: In Notepad++, regex class [a-z] is also matching the capital letters as in pattern instances "I  must", "other  Sixth".
+Wrong regex: ([a-z,.])\s\s([a-z])
+Invalid patterns it matched with: "Hi
+World" (Note the separation of "Hi" and "World" by a line-feed.)
+----------------------------------------------------------------------------
+
+FOR FORMATTING SQL QUERIES IN THE IMAS CONFIG (XML) FILE:
+STEP 1:
+	FW: (<sql>.*?<!\[CDATA\[)(.*?)(\]\]>.*?</sql>)
+	PI: "<sql>
+			<![CDATA[
+				select kpi_id, kpi_name from ri_grq_kpi_service_mapping order by kpi_id
+			]]>
+		</sql>"
+	RW: $1\L$2$3
+	Note: "Regex to change sentence to lower case": Use "\L" to do that
+	
+STEP 2:
+	FW: \b((select )|(distinct )|(as )|(from )|(where )|(and )|(or )|(order )|(by )|(lower )|(union ))
+	RW: \U$1
+
+	A more inclusive FW pattern: \b((select )|(distinct )|(as )|(from )|(where )|(and )|(or )|(order )|(by )|(lower )|(union )|(update )|(\sset\s)|(merge )|(into )|(using )|(when )|(not )|(is )|(then )|(insert )|(values )|(matched ))
+	
+	Correction (1) in FW, avoiding "set" as it appears in iMAS tags, and "values", "not" and "is" as they appear in comments: \b((select )|(distinct )|(as )|(from )|(where )|(and )|(or )|(order )|(by )|(lower )|(union )|(update )|(merge )|(into )|(using )|(when )|(then )|(insert )|(matched ))
+	
+	Excluded ones: "timestamp, date" are data types, "to_char, to_date" are functions.
+	RW: same as above
+
+
+	Note-1: "." does not match new line.
+	Note-2: Select 'match case' option.
+	Note-3: Exception with match for "SET", we have iMAS tags like "snmp-set" and "set-field", to avoid these, we use pattern "\sset\s" to match the " set " appearing in an SQL query.
+	"Regex to change sentence to upper case": Use "\U" to do that
+	Anchor "\b" matches either the start or end of a word. This is important because without this "date" would also match with 'date' in labels like "changedate".
+	Note 4: Check why this pattern "\b(?![-])set(?![-])\b" matches "snmp-set" and "set-field".
+----------------------------------------------------------------------------
+
+WORD MEANINGS FILE FORMATTING:
+
+FW: (archaic|informal|rare|dated) (RUN THIS REPLACEMENT ONE BY ONE)
+RW: "$1: "
+
+PI: ") 	v" (Not in use anymore)
+FW: \)\s*\t+([a-z])
+RW: \) $1
+
+----------------------------------------------------------------------------
+ORACLE TO EDB:
+	1. Changing the way arrays are accessed via index:
+		PI: "in_countryid(i)", as in this string "lower(in_columnsarr(columnCount))"
+		FW: ([a-z]+?_[a-z]+?)\((.*?)\)
+		RW: $1[$2]
+		Note: "." does not match new line.
+		Do not do replace all. Beware of "array_length(in_l_tariffs_arr,1)", this should not be modified, this is a valid PostgreSQL code.
+		Modify this buggy pattern to adjust FW: (?!array_length|rray_length|ray_length|ray_length|ay_length|y_length|_length|length|ength|ngth|gth|th|h)([a-z]+?_[a-z]+?)\((.*?)\)
+		
+
+	2. From "FOR NETWORK IN 1..IN_NETWORKLIST.count" to "FOR NETWORK IN 1..array_length(IN_NETWORKLIST,1)"
+		PI: "in_l_tariffs_arr.count"
+		FW: ([a-z_]+?)\.count
+		RW: array_length($1,1)
+		Note: "." does not match new line.
+----------------------------------------------------------------------------
+
+PI: "26-Nov-17,933,All time,"
+	United States,26-Nov-17,933,All time,37.09,95.7129,
+	Brazil,26-Nov-17,200,All time,-23.53,-46.625,
+	Russia,26-Nov-17,76,All time,61.524,105.318,
+	Germany,26-Nov-17,56,All time,51.165,10.4515,
+	Ukraine,26-Nov-17,46,All time,48.379,31.1656,
+	Poland,26-Nov-17,27,All time,51.919,19.1451,
+	Canada,26-Nov-17,22,All time,56.13,106.346,
+	Singapore,26-Nov-17,16,All time,1.3521,103.819,
+	United Arab Emirates,26-Nov-17,15,All time,23.424,53.8478,
+	United Kingdom,26-Nov-17,5,Month,55.378,-3.436,
+	Indonesia,26-Nov-17,3,Month,?3.597031,98.678513,
+	Czechia,26-Nov-17,1,Week,50.511002,14.150558,
+	South Korea,26-Nov-17,1,Week,37.5326,127.024612,
+	Kazakhstan,26-Nov-17,1,Week,42.820923,71.492271,
+
+FW: [0-9]{2}-[a-zA-Z]{3}-[0-9]{2},[0-9]*?,[a-zA-Z ]*?,
+RW: ""
+Note: ". matches newline"
+
+PI: Comma at the end of a line
+FW: ,$
+RW: ""
+
+-----------------------------------------
+
+TO REMOVE LOGGING STATEMENTS FROM A JAVA FILE:
+PI: 'Logger.debug("Enter methodName");' 'Logger.debug("Exit methodName");'
+FW: Logger[.]debug\(["]Enter.*?;|Logger[.]debug\(["]Exit.*?;
+RW: ""
+
+-------------------------------------------------------------------------
+
+TO GET LIST OF CHANGED FILES FROM THE LIST PRODUCED BY CVS CHECK-IN PROCESS
+
+PI: "
+Checking in ui/templates/sc/scbillingreport/en/report_pf.html;
+/cvs/products/SC/7.0/java/ui/templates/sc/scbillingreport/en/report_pf.html,v  <--  report_pf.html
+new revision: 1.2; previous revision: 1.1
+done
+"
+FW: (,v.*)|(done.*)|(Checking.*)|(new.*)|(^[ \t]*\r?\n)
+RW: ""
+
+Note: ". does not match newline"
+
+FINAL RESULT: "/cvs/products/SC/7.0/java/ui/templates/sc/scbillingreport/en/report_pf.html"

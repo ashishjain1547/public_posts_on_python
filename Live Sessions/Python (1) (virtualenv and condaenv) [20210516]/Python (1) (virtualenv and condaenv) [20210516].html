@@ -1,0 +1,578 @@
+<head>
+  <script crossorigin="anonymous" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script>
+      $(document).ready(function () {
+          $.ajax({
+              url: window.location.protocol + "//" + window.location.hostname + "/p/personal-posts-menu.html",
+              success: function (result) {
+                  $("div.customTemporaryCodeHolder").html(result);
+                  $("nav.customDynamicNav").html(
+                      $("div.customTemporaryCodeHolder nav.customBitsWilpMenu").html()
+                  );
+              }
+          });
+
+          $.ajax({
+              url: window.location.protocol + "//" + window.location.hostname + "/p/follow-us-on-social-media.html",
+
+              success: function (result) {
+                  $("span.customTempCodeHolderForSocialMedia").html(result);
+                  $("div.customSocialMediaBtnsWrapper").html(
+                      $("span.customTempCodeHolderForSocialMedia div.customSocialMediaWrapper").html()
+                  );
+              }
+
+          });
+      }); 
+  </script>
+  <!-- Google AdSense Using Machine Learning Code -->
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-3071098372371409",
+          enable_page_level_ads: true
+      });
+  </script>
+
+  <style>
+      .customTempCodeHolderForSocialMedia {
+          display: none;
+      }
+
+      pre {
+          white-space: pre-wrap;
+          white-space: -moz-pre-wrap;
+          white-space: -pre-wrap;
+          white-space: -o-pre-wrap;
+          word-wrap: break-word;
+      }
+
+      .customOl {
+          font-size: 15px;
+      }
+
+      .customPre {
+          white-space: pre-wrap; 
+      }
+
+      .customLink {
+          background-color: #4CAF50;
+          border: none;
+          color: white !important;
+          padding: 8px 13px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 14px;
+          margin: 4px 2px;
+          cursor: pointer;
+      }
+
+      .customLink:hover {
+          text-decoration: none;
+      }
+
+      .custom_5px_0px_padding_noMargin {
+          padding: 5px 0px;
+          margin: 0px;
+      }
+  
+  </style>
+</head>
+<div class="customTemporaryCodeHolder"> </div>
+<span class="customTempCodeHolderForSocialMedia"> </span>
+
+<nav class="customDynamicNav"> </nav> <br />
+<div class="customSocialMediaBtnsWrapper"> </div> <br />
+<!-- End of 'Personal Posts Menu Template For Copy-Paste'. It started from the top of the page from <HEAD> tag. -->
+
+<pre class="">Hello friends, to begin with the first thing we have to do is installation:
+
+% You can download and install 'Python' from here: <a href="https://www.python.org/downloads/" target="_blank" class="">Python Downloads</a>
+% Or, you can download Anaconda from here: <a href="https://www.anaconda.com/products/individual" target="_blank" class="">Anaconda Downloads</a>
+
+<i class="">For those who do not know what Anaconda is, here is a one-liner: <b class="">It is your data science toolkit.</b> [As written on the Anaconda website]</i>
+
+You should note that knowledge of both Python and Anaconda is important as Anaconda makes things very simple and manageable, but some organization will not allow you to install 'Anaconda' and you would have to work with Python only.
+
+Today as this is the first session that I am taking, we would be discussing about installation of Python on Windows and Linux machines. That is because this is an especially important step as in future you would have to install and work with a lot of Python packages and at times there would conflicts as you would keep on increasing the number of package installations in your system.
+For example: if you do a “pip install tensorflow” on your system that will install the latest version of the TensorFlow and now if you try to install a package (let us say) Elephas that would lead to conflict in packages as the dependencies of Elephas require you to have an incredibly old version of TensorFlow.
+
+The dependencies of the Elephas as of 2020-July were:
+
+<i class="" style="color: green;">Flask==1.0.2
+hyperas==0.4
+pyspark==2.4.0
+six==1.11.0
+<b class="">tensorflow==1.15.2</b>
+pydl4j>=0.1.3
+keras==2.2.5</i>
+
+Now we check the current version of TensorFlow available:
+
+<i class="" style="color: blue;">CMD>pip install tensorflow==</i>
+
+<i class="" style="color: red;">ERROR: Could not find a version that satisfies the requirement tensorflow== (from versions: 1.13.0rc1, 1.13.0rc2, 1.13.1, 1.13.2, 1.14.0rc0, 1.14.0rc1, 1.14.0, 1.15.0rc0, 1.15.0rc1, 1.15.0rc2, 1.15.0rc3, 1.15.0, 1.15.2, 1.15.3, 1.15.4, 1.15.5, 2.0.0a0, 2.0.0b0, 2.0.0b1, 2.0.0rc0, 2.0.0rc1, 2.0.0rc2, 2.0.0, 2.0.1, 2.0.2, 2.0.3, 2.0.4, 2.1.0rc0, 2.1.0rc1, 2.1.0rc2, 2.1.0, 2.1.1, 2.1.2, 2.1.3, 2.2.0rc0, 2.2.0rc1, 2.2.0rc2, 2.2.0rc3, 2.2.0rc4, 2.2.0, 2.2.1, 2.2.2, 2.3.0rc0, 2.3.0rc1, 2.3.0rc2, 2.3.0, 2.3.1, 2.3.2, 2.4.0rc0, 2.4.0rc1, 2.4.0rc2, 2.4.0rc3, 2.4.0rc4, 2.4.0, 2.4.1, 2.5.0rc0, 2.5.0rc1, 2.5.0rc2, 2.5.0rc3, 2.5.0)
+ERROR: No matching distribution found for tensorflow==</i>
+
+Latest version of TensorFlow is 2.5.0.
+
+Ref: <a href="https://survival8.blogspot.com/2020/07/distributed-deep-learning-using-python.html" target="_blank" class="">Distributed Deep Learning Using Python Packages Elephas, Keras, Tensorflow and PySpark</a>
+
+This problem of dependencies is not only between packages but also between the version of Python you are using and a package such as Rasa.
+
+As of Rasa 2.6.x, you need a Python from one of the following versions only: 3.6, 3.7 or 3.8 
+[ Ref: 
+% <a href="https://rasa.com/docs/rasa/installation" target="_blank" class="">rasa/installation</a>  
+% <a href="https://rasa.com/docs/rasa/2.5.x/installation" target="_blank" class="">rasa/2.5.x/installation</a> ]
+
+Even though the current version of Python is: 3.9
+
+<b class="">What is the solution? </b>
+To deal with this we have a solution called:
+1. 'virtual environment' in Python
+2. 'conda environment' in Anaconda
+
+We have an older version of Python in my system:
+
+<i class="" style="color: white; display: block; background-color: black;">
+C:\Users\Ashish Jain>python
+Python 3.7.1 (default, Dec 10 2018, 22:54:23) [MSC v.1915 64 bit (AMD64)] :: Anaconda, Inc. on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>>
+>>> print("Hi")
+Hi
+>>>
+>>> exit()
+C:\Users\Ashish Jain></i>
+
+On a sidenote, if you want to see where your Python.exe is:
+1. On Ubuntu, use "which python"
+2. On Windows, use "where python"
+
+<i class="" style="color: white; display: block; background-color: black;">
+C:\Users\Ashish Jain>where python
+E:\programfiles\Anaconda3\python.exe
+C:\Users\Ashish Jain\AppData\Local\Microsoft\WindowsApps\python.exe </i>
+
+<h4 class="">Setting up "virtualenv"</h4>
+
+Step 1: Install "virtualenv"
+
+<i class="" style="color: white; display: block; background-color: black;">
+C:\Users\Ashish Jain>pip install virtualenv
+Collecting virtualenv
+  Downloading virtualenv-20.4.6-py2.py3-none-any.whl (7.2 MB)
+     |███| 7.2 MB 1.6 MB/s
+Collecting appdirs[2,>=1.4.3
+  Downloading appdirs-1.4.4-py2.py3-none-any.whl (9.6 kB)
+Requirement already satisfied: importlib-metadata>=0.12; python_version &lt; "3.8" in e:\programfiles\anaconda3\lib\site-packages (from virtualenv) (1.7.0)
+Requirement already satisfied: six[2,>=1.9.0 in e:\programfiles\anaconda3\lib\site-packages (from virtualenv) (1.15.0)
+Collecting distlib[1,>=0.3.1
+  Downloading distlib-0.3.1-py2.py3-none-any.whl (335 kB)
+     |███| 335 kB 3.2 MB/s
+Requirement already satisfied: filelock[4,>=3.0.0 in e:\programfiles\anaconda3\lib\site-packages (from virtualenv) (3.0.12)
+Requirement already satisfied: zipp>=0.5 in e:\programfiles\anaconda3\lib\site-packages (from importlib-metadata>=0.12; python_version &lt; "3.8"->virtualenv) (3.1.0)
+Installing collected packages: appdirs, distlib, virtualenv
+Successfully installed appdirs-1.4.4 distlib-0.3.1 virtualenv-20.4.6</i>
+
+Step 2: Check where it is installed.
+
+<i class="" style="color: white; display: block; background-color: black;">
+C:\Users\Ashish Jain>where virtualenv
+E:\programfiles\Anaconda3\Scripts\virtualenv.exe</i>
+
+Step 3: "virtualenv" creates a directory so you need to (additionally) set up a folder (like "my_workspace") where you would create virtual environments.
+
+Related projects, that build abstractions on top of virtualenv:
+
+% <b class="">virtualenvwrapper</b> - a useful set of scripts for creating and deleting virtual environments
+
+% <b class="">pew</b> - provides a set of commands to manage multiple virtual environments
+
+% <b class="">tox</b> - a generic virtualenv management and test automation command line tool, driven by a tox.ini configuration file
+
+% <b class="">nox</b> - a tool that automates testing in multiple Python environments, similar to tox, driven by a noxfile.py configuration file
+Ref: <a href="https://virtualenv.pypa.io/en/latest/" target="_blank" class="">virtualenv Documentation</a>
+
+<i class="" style="color: white; display: block; background-color: black;">
+C:\Users\Ashish Jain>cd OneDrive/Desktop/my_workspace</i>
+
+Important difference between "Conda environment" and "Virtualenv": With "virtualenv" you cannot install lower (or previous) versions of Python but a higher (or newer) version. While, this limitation is not there in "conda env".
+
+<i class="" style="color: red; display: block; background-color: black;">
+C:\Users\Ashish Jain\OneDrive\Desktop\my_workspace>virtualenv rasa_env --python=python3.8
+RuntimeError: failed to find interpreter for Builtin discover of python_spec='python3.8'
+
+C:\Users\Ashish Jain\OneDrive\Desktop\my_workspace>virtualenv rasa_env_2 --python=python3.8
+RuntimeError: failed to find interpreter for Builtin discover of python_spec='python3.8'</i>
+
+<i class="" style="color: green; display: block; background-color: black;">
+C:\Users\Ashish Jain\OneDrive\Desktop\my_workspace>virtualenv rasa_env_2 --python=python3.6
+created virtual environment CPython3.6.6.final.0-64 in 12325ms
+  creator CPython3Windows(dest=C:\Users\Ashish Jain\OneDrive\Desktop\my_workspace\rasa_env_2, clear=False, no_vcs_ignore=False, global=False)
+  seeder FromAppData(download=False, pip=bundle, setuptools=bundle, wheel=bundle, via=copy, app_data_dir=C:\Users\Ashish Jain\AppData\Local\pypa\virtualenv)
+    added seed packages: pip==21.1.1, setuptools==56.0.0, wheel==0.36.2
+  activators BashActivator,BatchActivator,FishActivator,PowerShellActivator,PythonActivator,XonshActivator</i>
+
+<i class="" style="color: red; display: block; background-color: black;">
+C:\Users\Ashish Jain\OneDrive\Desktop\my_workspace>virtualenv rasa_env_3 --python=python3.8
+RuntimeError: failed to find interpreter for Builtin discover of python_spec='python3.8'</i>
+
+Step 4: We locate our "activate" file if we are on Ubuntu and "activate.bat" file if we are on Windows.
+
+<i class="" style="color: white; display: block; background-color: black;">
+C:\Users\Ashish Jain\OneDrive\Desktop\my_workspace>dir /s "activate"
+ Volume in drive C is Windows
+ Volume Serial Number is 8139-90C0
+
+ Directory of C:\Users\Ashish Jain\OneDrive\Desktop\my_workspace\rasa_env\Scripts
+
+05/16/2021  12:54 AM             2,179 activate
+               1 File(s)          2,179 bytes
+
+     Total Files Listed:
+               1 File(s)          2,179 bytes
+               0 Dir(s)  62,928,424,960 bytes free</i>
+
+<b class="">View 1:</b>
+<i class="" style="color: white; display: block; background-color: black;">
+C:\Users\Ashish Jain\OneDrive\Desktop\my_workspace>dir /s "activate*"
+Volume in drive C is Windows
+Volume Serial Number is 8139-90C0
+
+Directory of C:\Users\Ashish Jain\OneDrive\Desktop\my_workspace\rasa_env\Scripts
+
+05/16/2021  12:54 AM             2,179 activate
+05/16/2021  12:54 AM             1,052 activate.bat
+05/16/2021  12:54 AM             3,102 activate.fish
+05/16/2021  12:55 AM             1,755 activate.ps1
+05/16/2021  12:55 AM             1,193 activate.xsh
+05/16/2021  12:55 AM             1,193 activate_this.py
+                6 File(s)         10,474 bytes
+
+    Total Files Listed:
+            12 File(s)         20,956 bytes
+                0 Dir(s)  62,889,410,560 bytes free </i>
+
+<b class="">View 2:</b>
+<i class="" style="color: white; display: block; background-color: black;">
+C:\Users\Ashish Jain\OneDrive\Desktop\my_workspace>dir /s /b "activate*"
+C:\Users\Ashish Jain\OneDrive\Desktop\my_workspace\rasa_env\Scripts\activate
+C:\Users\Ashish Jain\OneDrive\Desktop\my_workspace\rasa_env\Scripts\activate.bat
+C:\Users\Ashish Jain\OneDrive\Desktop\my_workspace\rasa_env\Scripts\activate.fish
+C:\Users\Ashish Jain\OneDrive\Desktop\my_workspace\rasa_env\Scripts\activate.ps1
+C:\Users\Ashish Jain\OneDrive\Desktop\my_workspace\rasa_env\Scripts\activate.xsh
+C:\Users\Ashish Jain\OneDrive\Desktop\my_workspace\rasa_env\Scripts\activate_this.py</i>
+
+<i class="" style="color: white; display: block; background-color: black;">
+C:\Users\Ashish Jain\OneDrive\Desktop\my_workspace\rasa_env\Scripts>activate.bat
+<b class="">(rasa_env)</b> C:\Users\Ashish Jain\OneDrive\Desktop\my_workspace\rasa_env\Scripts> </i>
+Do you see this "(rasa_env)"? This means you are in venv "rasa_env".
+
+<h4 class="">Activate 'Python CLI' (Command Line Interface). Python CLI is also known as Python shell.</h4>
+
+<b class="">And Try Some Commands...</b> 
+
+<i class="" style="color: white; display: block; background-color: black;">
+(rasa_env) C:\Users\Ashish Jain\OneDrive\Desktop\my_workspace>python
+Python 3.7.1 (default, Dec 10 2018, 22:54:23) [MSC v.1915 64 bit (AMD64)] :: Anaconda, Inc. on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>></i>
+
+<b class="">Dealing with numeric data</b>
+<b class="">Addition</b>
+>>>
+>>> 7 + 3
+10
+>>>
+
+<b class="">Division</b>
+>>> 7 / 3
+2.3333333333333335
+>>>
+
+>>> 7 // 3
+2
+>>>
+
+<b class="">Modulo (returns the remainder from division operation)</b>
+>>> 7 % 3
+1
+>>> 
+
+<b class="">Data Type: Strings</b>
+
+>>> username = "Ashish"
+
+>>> print(username)
+Ashish
+>>>
+
+<b class=""><i class="">Note: You can do indexing on a String.</i></b>
+>>> username[0]
+'A'
+>>>
+
+<b class=""><i class="">But a Python String is immutable like a 'Tuple'.</i></b>
+>>> username[0] = 'I'
+Traceback (most recent call last):
+  File "&lt;stdin>", line 1, in &lt;module>
+TypeError: 'str' object does not support item assignment
+>>>
+
+<b class="">Output Formatting in Four Ways:
+Output Formatting #1</b>
+
+>>> print(F"Logged in as: {username}")
+Logged in as: Ashish
+>>>
+
+<b class="">Output Formatting #2</b>
+
+>>> print("Logged in as: {}".format('Ashish'))
+Logged in as: Ashish
+>>>
+>>> print("Logged in as: {}".format(username))
+Logged in as: Ashish
+>>>
+
+<b class="">Output Formatting #3</b>
+
+>>> firstname = 'Ashish'
+>>> lastname = 'Jain'
+>>> print("Logged in as: %s %s" % (firstname, lastname))
+Logged in as: Ashish Jain
+>>>
+
+<b class="">Output Formatting #4</b>
+
+>>> print("Logged in as:", firstname, lastname)
+Logged in as: Ashish Jain
+>>>
+>>> print("Logged in as:", username)
+Logged in as: Ashish
+>>>
+
+<b class="">Data Type: List</b>
+List is a collection of elements (may not be of similar type as you would see in programming language C or C++).
+
+>>> l = ['a', 1]
+>>> l[0]
+'a'
+>>> l[1]
+1
+>>>
+
+<b class="">Data Type: Tuple</b>
+Tuple is like the List data type with one difference that it is immutable.
+
+>>> my_tuple = (1, 2, 3)
+>>> my_tuple[0]
+1
+>>> my_tuple[0:3]
+(1, 2, 3)
+>>>
+>>> my_tuple[0] = 4
+Traceback (most recent call last):
+  File "&lt;stdin>", line 1, in &lt;module>
+TypeError: 'tuple' object does not support item assignment
+>>>
+
+<b class="">Data Type: Dict (Dictionary)</b>
+
+<b class="">Important Note: What you are seeing as error for an attempt to concatenate two "dict" using "|" pipe character has been added as a feature in Python 3.9.0.</b>
+ 
+>>> {'a': 'b'} | {'c': 'd'}
+Traceback (most recent call last):
+  File "&lt;stdin>", line 1, in &lt;module>
+TypeError: unsupported operand type(s) for |: 'dict' and 'dict'
+>>>
+
+<b class="">Multi-line String and Printing it.</b>
+
+>>>
+>>> print("""Hi!
+... I am Ashish!
+... I love Python!""")
+Hi!
+I am Ashish!
+I love Python!
+>>>
+
+<b class="">Checking the type of a variable:</b>
+
+>>> type(username)
+&lt;class 'str'>
+>>>
+
+>>> isinstance(username, str)
+True
+>>>
+
+>>> isinstance(username, int)
+False
+>>> isinstance(5, int)
+True
+
+Sometimes, the error logs of Python are not very clear. For example, in the example below we entered second argument as ('str') that is a string, instead of the keyword (str), so Python returns an error log <i class="" style="color: red;">TypeError: isinstance() arg 2 must be a type or tuple of types</i>. Here by "type" it means "Data Type".
+
+>>> isinstance(username, 'str')
+Traceback (most recent call last):
+  File "&lt;stdin>", line 1, in &lt;module>
+TypeError: isinstance() arg 2 must be a type or tuple of types
+
+<b class="">Immutability of Strings and Tuples</b>
+
+<i class="" style="color: red;">% TypeError: 'tuple' object does not support item assignment
+
+% TypeError: 'str' object does not support item assignment</i>
+
+<h4 class="">Working with "conda" (with Anaconda)</h4>
+
+Launch 'Anaconda Prompt'.
+
+<i class="" style="color: white; display: block; background-color: black;">
+(base) C:\Users\Ashish Jain>conda create -n py39 python=3.9
+Collecting package metadata (repodata.json): done
+Solving environment: done
+==> WARNING: A newer version of conda exists. &lt;==
+  current version: 4.8.5
+  latest version: 4.10.1
+Please update conda by running
+    $ conda update -n base -c defaults conda
+## Package Plan ##
+  environment location: E:\programfiles\Anaconda3\envs\py39
+  added / updated specs:
+    - python=3.9
+The following packages will be downloaded:
+    package                    |            build
+    ---------------------------|-----------------
+    ca-certificates-2021.4.13  |       haa95532_1         150 KB
+    certifi-2020.12.5          |   py39haa95532_0         144 KB
+    openssl-1.1.1k             |       h2bbff1b_0         5.7 MB
+    pip-21.0.1                 |   py39haa95532_0         2.0 MB
+    python-3.9.4               |       h6244533_0        19.8 MB
+    setuptools-52.0.0          |   py39haa95532_0         930 KB
+    sqlite-3.35.4              |       h2bbff1b_0         1.2 MB
+    tzdata-2020f               |       h52ac0ba_0         123 KB
+    vc-14.2                    |       h21ff451_1           8 KB
+    vs2015_runtime-14.27.29016 |       h5e58377_2         2.2 MB
+    wheel-0.36.2               |     pyhd3eb1b0_0          31 KB
+    wincertstore-0.2           |   py39h2bbff1b_0          15 KB
+    ------------------------------------------------------------
+                                           Total:        32.3 MB
+The following NEW packages will be INSTALLED:
+  ca-certificates    pkgs/main/win-64::ca-certificates-2021.4.13-haa95532_1
+  ...
+  tzdata             pkgs/main/noarch::tzdata-2020f-h52ac0ba_0
+  ...
+  wheel              pkgs/main/noarch::wheel-0.36.2-pyhd3eb1b0_0
+  wincertstore       pkgs/main/win-64::wincertstore-0.2-py39h2bbff1b_0
+Proceed ([y]/n)? y
+Downloading and Extracting Packages...
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+#
+# To activate this environment, use
+#     $ conda activate py39
+# To deactivate an active environment, use
+#     $ conda deactivate</i>
+
+Note: conda create -n py39 -c conda-forge python=3.9
+
+(base) C:\Users\Ashish Jain>python
+Python 3.7.1 (default, Dec 10 2018, 22:54:23) [MSC v.1915 64 bit (AMD64)] :: Anaconda, Inc. on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> exit()
+
+<b class="">Note here: We were in "base" environment with Python 3.7.1 but we were still able to create an environment with higher version (Python 3.9.4).</b>
+
+(base) C:\Users\Ashish Jain>conda activate py39
+
+(py39) C:\Users\Ashish Jain>python
+Python 3.9.4 (default, Apr  9 2021, 11:43:21) [MSC v.1916 64 bit (AMD64)] :: Anaconda, Inc. on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> exit()
+
+(py39) C:\Users\Ashish Jain>
+
+<b class="">The concatenation of two "dict" using "pipe" (|) character:</b>
+
+(py39) C:\Users\Ashish Jain>python
+Python 3.9.4 (default, Apr  9 2021, 11:43:21) [MSC v.1916 64 bit (AMD64)] :: Anaconda, Inc. on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>>
+>>> {'a': 'b'} | {'c': 'd'}
+{'a': 'b', 'c': 'd'}
+>>>
+
+<h4 class="">Putting all of the above in a '.py file' or a 'Python script'.</h4>
+
+<i class="" style="color: blue;">print(7 + 3, end='\n\n')
+
+print(7 / 3, end='\n\n')
+
+print(7 // 3, end='\n\n')
+
+print(7 % 3, end='\n\n')
+
+username = "Ashish"
+
+print(username, end='\n\n')
+
+print(F"Logged in as: {username}")</i>
+
+Output:
+
+<i class="" style="color: white; display: block; background-color: black;">
+(base) C:\Users\Ashish Jain\OneDrive\Desktop>python script.py
+
+<i class="" style="color: green;">10
+
+2.3333333333333335
+
+2
+
+1
+
+Ashish
+
+Logged in as: Ashish</i>
+
+(base) C:\Users\Ashish Jain\OneDrive\Desktop></i>
+
+<h4 class="">Putting all of the above in a 'Jupyter Notebook'.</h4>
+
+The way to start Jupyter Notebook is through the command: "jupyter notebook"
+
+<i class="" style="color: white; display: block; background-color: black;">
+(base) C:\Users\Ashish Jain\OneDrive\Desktop><b class="">jupyter notebook</b> 
+[I 2021-05-16 17:00:42.136 LabApp] JupyterLab extension loaded from E:\programfiles\Anaconda3\lib\site-packages\jupyterlab
+[I 2021-05-16 17:00:42.136 LabApp] JupyterLab application directory is E:\programfiles\Anaconda3\share\jupyter\lab
+[I 17:00:42.172 NotebookApp] Serving notebooks from local directory: C:\Users\Ashish Jain\OneDrive\Desktop
+[I 17:00:42.172 NotebookApp] Jupyter Notebook 6.3.0 is running at:
+[I 17:00:42.173 NotebookApp] http://localhost:8888/?token=b9833146c3b56e7dc6632be0e513c541a436d84ff42b1511
+[I 17:00:42.173 NotebookApp]  or http://127.0.0.1:8888/?token=b9833146c3b56e7dc6632be0e513c541a436d84ff42b1511
+[I 17:00:42.174 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 17:00:42.370 NotebookApp]
+
+    To access the notebook, open this file in a browser:
+        file:///C:/Users/Ashish%20Jain/AppData/Roaming/jupyter/runtime/nbserver-764-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:8888/?token=b9833146c3b56e7dc6632be0e513c541a436d84ff42b1511
+     or http://127.0.0.1:8888/?token=b9833146c3b56e7dc6632be0e513c541a436d84ff42b1511</i>
+
+This opens up a window in your browser:
+
+<div class="separator" style="clear: both;"><a href="https://1.bp.blogspot.com/-mGHE3J-60ac/YKEE3IXkFSI/AAAAAAAAGqY/r--cndkz-_k-gFQ_8HX0zVvA5NwbRXb2QCLcBGAsYHQ/s847/Jupyter%2BNotebook%2BScreenshot.png" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" width="600" data-original-height="467" data-original-width="847" src="https://1.bp.blogspot.com/-mGHE3J-60ac/YKEE3IXkFSI/AAAAAAAAGqY/r--cndkz-_k-gFQ_8HX0zVvA5NwbRXb2QCLcBGAsYHQ/s600/Jupyter%2BNotebook%2BScreenshot.png"/></a></div>
+
+In the image above, you can see the dropdown named "New". Click on this dropdown and select something like "Python 3" (the option coming for me). The items in this dropdown are your kernels that is an advanced concept for this post.
+
+<div class="separator" style="clear: both;"><a href="https://1.bp.blogspot.com/-AU3kfjPaSrc/YKEGJcc_WOI/AAAAAAAAGqg/FsEW8-JejiouZl6RY4QdL1AMcE2MeEnfQCLcBGAsYHQ/s994/Jupyter%2BNotebook%2Bwith%2BCells.png" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" height="600" data-original-height="994" data-original-width="677" src="https://1.bp.blogspot.com/-AU3kfjPaSrc/YKEGJcc_WOI/AAAAAAAAGqg/FsEW8-JejiouZl6RY4QdL1AMcE2MeEnfQCLcBGAsYHQ/s600/Jupyter%2BNotebook%2Bwith%2BCells.png"/></a></div>
+
+<b class="">Link to the session recording: <a href="https://www.youtube.com/watch?v=NLgVI-ZYASc" class="" target="_blank">YouTube</a></b>
+
+<span class="" style="display: none;">Tags: Technology,Python,Anaconda,Windows CMD,</span></pre>

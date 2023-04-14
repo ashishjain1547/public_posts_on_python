@@ -1,0 +1,242 @@
+<head>
+    <script crossorigin="anonymous" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                url: window.location.protocol + "//" + window.location.hostname + "/p/personal-posts-menu.html",
+                success: function (result) {
+                    $("div.customTemporaryCodeHolder").html(result);
+                    $("nav.customDynamicNav").html(
+                        $("div.customTemporaryCodeHolder nav.customBitsWilpMenu").html()
+                    );
+                }
+            });
+
+            $.ajax({
+                url: window.location.protocol + "//" + window.location.hostname + "/p/follow-us-on-social-media.html",
+
+                success: function (result) {
+                    $("span.customTempCodeHolderForSocialMedia").html(result);
+                    $("div.customSocialMediaBtnsWrapper").html(
+                        $("span.customTempCodeHolderForSocialMedia div.customSocialMediaWrapper").html()
+                    );
+                }
+
+            });
+        });
+    </script>
+    <!-- Google AdSense Using Machine Learning Code -->
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-3071098372371409",
+            enable_page_level_ads: true
+        });
+    </script>
+
+    <style>
+        .customTempCodeHolderForSocialMedia {
+            display: none;
+        }
+
+        i.ib {
+            color: blue;
+        }
+
+        i.ibb {
+            display: block;
+            background-color: black;
+            color: white;
+        }
+
+        i.ibg {
+            display: block;
+            background-color: rgb(50, 50, 50);
+            color: white;
+        }
+
+        i.ibl {
+            display: block;
+            background-color: lawngreen;
+            color: black;
+        }
+
+        pre {
+            white-space: pre-wrap;
+            white-space: -moz-pre-wrap;
+            white-space: -pre-wrap;
+            white-space: -o-pre-wrap;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<div class="customTemporaryCodeHolder"> </div>
+<span class="customTempCodeHolderForSocialMedia"> </span>
+
+<nav class="customDynamicNav"> </nav> <br />
+<div class="customSocialMediaBtnsWrapper"> </div> <br />
+<!-- Header ends -->
+
+<pre><h4>OOP Concepts</h4>
+
+P: Polymorphism
+I: Inheritance
+E: Encapsulation
+
+A: Abstraction
+
+<b>Apple PIE</b>
+
+<h4>How and where OOP concepts are used?</h4>    
+
+Because using classes well requires some up-front planning, they tend to be of more interest to people who work in strategic mode (doing long-term product development) than to people who work in tactical mode (where time is in very short supply).
+
+<h4>The concept of “self”</h4>
+
+<i class="ib">class C2: pass # Make superclass objects
+class C3: pass
+
+class C1(C2, C3): # Make and link class C1
+    def setname(self, who): # Assign name: C1.setname
+        self.name = who # Self is either I1 or I2
+
+I1 = C1() # Make two instances
+I2 = C1()
+I1.setname('bob') # Sets I1.name to 'bob'
+I2.setname('sue') # Sets I2.name to 'sue’
+print(I1.name) # Prints 'bob'</i>
+
+There’s nothing syntactically unique about def in this context. Operationally, though, when a def appears inside a class like this, it is usually known as a method, and it automatically receives a special first argument—called self by convention—that provides a handle back to the instance to be processed. Any values you pass to the method yourself go to arguments after self (here, to who).
+
+If you’ve ever used C++ or Java, you’ll recognize that Python’s self is the same as the “this” pointer, but self is always explicit in both headers and bodies of Python methods to make attribute accesses more obvious: a name has fewer possible meanings.
+
+<h4>Concept of Inheritance of Variables and Methods</h4>
+<i class="ibb">class Employee: # General superclass
+    def __init__(self, who = "NA", sal = 0): # Set name when constructed
+        self.name = who
+        self.salary = sal
+
+    def getDetails(self):
+        rtn = (self.name, self.salary)
+        print("rtn: ", rtn)
+        return rtn
+
+class Engineer(Employee): # Specialized subclass
+   pass
+
+print("Defaults:")
+e = Engineer()
+e.getDetails()
+
+print()
+print("Custom:")
+e = Engineer(who = 'Ashish', sal = 100)
+e.getDetails() </i>
+
+<i class="ibg">$ python inheritance.py
+
+Defaults:
+rtn:  ('NA', 0)
+
+Custom:
+rtn:  ('Ashish', 100)</i>
+
+<h4>Error Alert</h4>
+
+<i class="ibl">class Employee: # General superclass
+    def __init__(self, who, sal): # Set name when constructed
+        self.name = who
+        self.salary = sal
+
+class Engineer(Employee): # Specialized subclass
+    pass
+ 
+e = Engineer()
+
+$ python inheritance.py
+<b>Traceback (most recent call last):
+File "inheritance.py", line 14, in &lt;module>
+    e = Engineer()
+TypeError: __init__() missing 2 required positional arguments: 'who' and 'sal' </b></i>
+
+<h4>Polymorphism</h4>
+
+<i class="ibb">class Employee:
+    def __init__(self, who = "NA", sal = 0): 
+        self.name = who
+        self.salary = sal
+
+    def getDetails(self):
+        rtn = (self.name, self.salary)
+        print("rtn: ", rtn)
+        return rtn
+
+class Engineer(Employee): 
+    def reviseSalary(self):
+        self.salary =+ 100
+
+    def reviseSalary(self, inc = 200):
+        self.salary =+ inc
+
+e = Engineer(who = 'Ashish', sal = 100)
+e.getDetails()
+e.reviseSalary()
+e.getDetails()
+e.reviseSalary(inc = 500)
+e.getDetails()</i>
+
+<i class="ibg">$ python polymorphism.py
+rtn:  ('Ashish', 100)
+rtn:  ('Ashish', 200)
+rtn:  ('Ashish', 500)</i>
+
+<h4>Abstraction</h4>
+
+When we call "print()" for an object it prints some object details like these:
+
+<b>&lt;__main__.Employee object at 0x000001F549F7A1D0></b>
+
+However, when we define the Python's in-built __str__() for an object, we are essentially telling what should happen when print() is called for the object and end-user would not have to know how to get user-friendly details of the object. This is abstraction (abstraction of print()'s output in __str__() redefining it).
+
+<i class="ibb">class Employee:
+    def __init__(self, who = "NA", sal = 0): 
+        self.name = who
+        self.salary = sal
+
+    def getDetails(self):
+        rtn = (self.name, self.salary)
+        print("rtn: ", rtn)
+        return rtn
+
+class Engineer(Employee): 
+    def reviseSalary(self):
+        self.salary =+ 100
+
+    def reviseSalary(self, inc = 200):
+        self.salary =+ inc
+
+    def __str__(self): # Higher priority than __repr__ when using with print()
+        return '[From __str__: %s, %s]' % (self.name, self.salary)
+
+    #def __repr__(self):
+    #    return '[From __repr__: %s, %s]' % (self.name, self.salary)
+
+e = Engineer(who = 'Ashish', sal = 100)
+e.getDetails()
+
+print("e:", e)
+print("e.__repr__():", e.__repr__())
+
+f = Employee()
+print("f = Employee():", f) </i>
+
+<i class="ibg">$ python abstraction.py
+rtn:  ('Ashish', 100)
+e: [From __str__: Ashish, 100]
+e.__repr__(): &lt;__main__.Engineer object at 0x000001F549C2F8D0>
+f = Employee(): &lt;__main__.Employee object at 0x000001F549F7A1D0></i>
+
+</pre>
+<span class="" style="display: none;">Tags: Python,Technology,
+Title: Python (5): OOP Concepts </span>

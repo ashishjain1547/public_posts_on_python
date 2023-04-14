@@ -1,0 +1,113 @@
+<head>
+    <script crossorigin="anonymous" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                url: window.location.protocol + "//" + window.location.hostname + "/p/personal-posts-menu.html",
+                success: function (result) {
+                    $("div.customTemporaryCodeHolder").html(result);
+                    $("nav.customDynamicNav").html(
+                        $("div.customTemporaryCodeHolder nav.customBitsWilpMenu").html()
+                    );
+                }
+            });
+
+            $.ajax({
+                url: window.location.protocol + "//" + window.location.hostname + "/p/follow-us-on-social-media.html",
+
+                success: function (result) {
+                    $("span.customTempCodeHolderForSocialMedia").html(result);
+                    $("div.customSocialMediaBtnsWrapper").html(
+                        $("span.customTempCodeHolderForSocialMedia div.customSocialMediaWrapper").html()
+                    );
+                }
+
+            });
+        });
+    </script>
+    <!-- Google AdSense Using Machine Learning Code -->
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-3071098372371409",
+            enable_page_level_ads: true
+        });
+    </script>
+
+    <style>
+        .customTempCodeHolderForSocialMedia {
+            display: none;
+        }
+
+        pre {
+            white-space: pre-wrap;
+            white-space: -moz-pre-wrap;
+            white-space: -pre-wrap;
+            white-space: -o-pre-wrap;
+            word-wrap: break-word;
+        }
+
+i.ibb {
+background-color: black;
+color: white;
+display: block;
+}
+
+i.ibg {
+background-color: rgb(50, 50, 50);
+color: white;
+display: block;
+}
+
+i.ibgreen {
+    background-color: lawngreen;
+    color: black;
+    display: block;
+}
+
+i.ibr {
+    background-color: red;
+    color: white;
+    display: block;
+}
+    </style>
+</head>
+<div class="customTemporaryCodeHolder"> </div>
+<span class="customTempCodeHolderForSocialMedia"> </span>
+
+<nav class="customDynamicNav"> </nav> <br />
+<div class="customSocialMediaBtnsWrapper"> </div> <br />
+
+<pre><i class="ibb">import logging
+import pandas as pd
+from time import time 
+
+# create logger
+
+logger = logging.getLogger('mylogger')
+logger.setLevel(logging.DEBUG)
+
+# create formatter
+formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+
+# create file handler which logs even debug messages
+log_file_name = pd.Timestamp('today').strftime('%Y-%m-%d') + "_" + str(round(time())) + ".log"
+
+fh = logging.FileHandler(log_file_name)
+fh.setLevel(logging.DEBUG)
+fh.setFormatter(formatter) # Add formatter to the handlers
+logger.addHandler(fh) # add the handlers to the logger
+
+logger.info("Info logged.")
+logger.debug("Debugging log.") </i>
+
+<b>Output:</b>
+
+<i class="ibg">File: 2021-11-11_1636609628.log
+2021-11-11 11:17:08,174 - mylogger - INFO - Info logged.
+
+File: 2021-11-12_1636688151.log
+2021-11-12 09:05:50,813 - mylogger - INFO - Info logged.
+2021-11-12 09:05:50,813 - mylogger - DEBUG - Debugging log.</i>
+</pre>

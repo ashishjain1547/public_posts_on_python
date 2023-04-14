@@ -1,0 +1,160 @@
+<head>
+    <script crossorigin="anonymous" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                url: window.location.protocol + "//" + window.location.hostname + "/p/personal-posts-menu.html",
+                success: function (result) {
+                    $("div.customTemporaryCodeHolder").html(result);
+                    $("nav.customDynamicNav").html(
+                        $("div.customTemporaryCodeHolder nav.customBitsWilpMenu").html()
+                    );
+                }
+            });
+
+            $.ajax({
+                url: window.location.protocol + "//" + window.location.hostname + "/p/follow-us-on-social-media.html",
+
+                success: function (result) {
+                    $("span.customTempCodeHolderForSocialMedia").html(result);
+                    $("div.customSocialMediaBtnsWrapper").html(
+                        $("span.customTempCodeHolderForSocialMedia div.customSocialMediaWrapper").html()
+                    );
+                }
+
+            });
+        });
+    </script>
+    <!-- Google AdSense Using Machine Learning Code -->
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-3071098372371409",
+            enable_page_level_ads: true
+        });
+    </script>
+
+    <style>
+        .customTempCodeHolderForSocialMedia {
+            display: none;
+        }
+
+        i.ib {
+            color: blue;
+        }
+
+        i.ibb {
+            display: block;
+            background-color: black;
+            color: white;
+        }
+
+        i.ibg {
+            display: block;
+            background-color: rgb(50, 50, 50);
+            color: white;
+        }
+
+        i.ibl {
+            display: block;
+            background-color: lawngreen;
+            color: black;
+        }
+
+        pre {
+            white-space: pre-wrap;
+            white-space: -moz-pre-wrap;
+            white-space: -pre-wrap;
+            white-space: -o-pre-wrap;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<div class="customTemporaryCodeHolder"> </div>
+<span class="customTempCodeHolderForSocialMedia"> </span>
+
+<nav class="customDynamicNav"> </nav> <br />
+<div class="customSocialMediaBtnsWrapper"> </div> <br />
+<!-- Header ends -->
+
+<pre>Steps toward: virtualenv, jupyter notebook, jupyterlab, ipykernel, SpaCy model (en_core_web)
+
+$ pip install virtualenv
+$ virtualenv ve1 --python=python3.8
+
+INSTALL JUPYTER NOTEBOOK AND JUPYTERLAB FROM TERMINAL ON UBUNTU:
+
+$ sudo apt install jupyter-core
+$ pip install jupyter
+$ pip install jupyterlab
+
+<i>(ve1) $ python3 -m notebook</i>
+
+[I 11:56:51.871 NotebookApp] Writing notebook server cookie secret to /home/ashi/.local/share/jupyter/runtime/notebook_cookie_secret
+[I 11:56:52.175 NotebookApp] Serving notebooks from local directory: /home/ashi/Desktop/ws
+[I 11:56:52.175 NotebookApp] Jupyter Notebook 6.4.4 is running at:
+[I 11:56:52.175 NotebookApp] http://localhost:8888/?token=1b335a35516298724494a1ff32e309334d3a819a633719fc
+[I 11:56:52.175 NotebookApp]  or http://127.0.0.1:8888/?token=1b335a35516298724494a1ff32e309334d3a819a633719fc
+[I 11:56:52.175 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 11:56:52.221 NotebookApp] 
+    
+    To access the notebook, open this file in a browser:
+        file:///home/ashi/.local/share/jupyter/runtime/nbserver-13598-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:8888/?token=1b335a35516298724494a1ff32e309334d3a819a633719fc
+        or http://127.0.0.1:8888/?token=1b335a35516298724494a1ff32e309334d3a819a633719fc
+/usr/lib/python3.9/json/encoder.py:257: UserWarning: date_default is deprecated since jupyter_client 7.0.0. Use jupyter_client.jsonutil.json_default.
+    return _iterencode(o, 0)
+[W 11:56:59.140 NotebookApp] 404 GET /lab/tree/Desktop (127.0.0.1) 15.820000ms referer=None
+
+###   ###   ###   ###   ###   
+
+<i>(ve1) $ python3 -m jupyterlab</i>
+
+[I 2021-09-22 11:58:03.326 ServerApp] jupyterlab | extension was successfully linked.
+[I 2021-09-22 11:58:03.357 LabApp] JupyterLab extension loaded from /home/ashi/.local/lib/python3.9/site-packages/jupyterlab
+[I 2021-09-22 11:58:03.357 LabApp] JupyterLab application directory is /home/ashi/.local/share/jupyter/lab
+[I 2021-09-22 11:58:03.360 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2021-09-22 11:58:03.361 ServerApp] The port 8888 is already in use, trying another port.
+[I 2021-09-22 11:58:03.361 ServerApp] Serving notebooks from local directory: /home/ashi/Desktop/ws/ve1/bin
+[I 2021-09-22 11:58:03.361 ServerApp] Jupyter Server 1.11.0 is running at:
+[I 2021-09-22 11:58:03.362 ServerApp] http://localhost:8889/lab?token=9bcab4ac0599e2c3c086f1ace8376d6d8221fd074bdaf066
+[I 2021-09-22 11:58:03.362 ServerApp]  or http://127.0.0.1:8889/lab?token=9bcab4ac0599e2c3c086f1ace8376d6d8221fd074bdaf066
+[I 2021-09-22 11:58:03.362 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[W 2021-09-22 11:58:03.371 ServerApp] No web browser found: could not locate runnable browser.
+[C 2021-09-22 11:58:03.371 ServerApp] 
+    
+    To access the server, open this file in a browser:
+        file:///home/ashi/.local/share/jupyter/runtime/jpserver-14003-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:8889/lab?token=9bcab4ac0599e2c3c086f1ace8376d6d8221fd074bdaf066
+        or http://127.0.0.1:8889/lab?token=9bcab4ac0599e2c3c086f1ace8376d6d8221fd074bdaf066
+[W 2021-09-22 11:58:44.209 LabApp] Could not determine jupyterlab build status without nodejs
+[W 2021-09-22 11:58:47.988 ServerApp] 404 GET /api/contents/Desktop?1632292127985 (127.0.0.1): No such file or directory: Desktop
+[W 2021-09-22 11:58:47.988 ServerApp] No such file or directory: Desktop
+[W 2021-09-22 11:58:47.988 ServerApp] 404 GET /api/contents/Desktop?1632292127985 (127.0.0.1) 1.34ms referer=http://127.0.0.1:8889/lab
+
+###   ###   ###   ###   ###   
+
+$ pip install ipykernel
+
+(ve1) ashi@ashi-VirtualBox:/home/ashi/Desktop/ws$ python3 -m ipykernel install --name ve1
+[Errno 13] Permission denied: '/usr/local/share/jupyter'
+(ve1) ashi@ashi-VirtualBox:/home/ashi/Desktop/ws$ python3 -m ipykernel install --user --name ve1
+Installed kernelspec ve1 in /home/ashi/.local/share/jupyter/kernels/ve1
+
+
+###   ###   ###   ###   ###   
+
+(ve1) ashi@ashi-VirtualBox:/home/ashi/Desktop/ws$ python3 -m spacy download en_core_web_sm
+Collecting en-core-web-sm==3.1.0
+    WARNING: Retrying (Retry(total=4.... connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1129)'))': /explosion/spacy-models/releases/download/en_core_web_sm-3.1.0/en_core_web_sm-3.1.0-py3-none-any.whl
+ERROR: Could not install packages due to an EnvironmentError: HTTPSConnectionPool(host='github.com', port=443): Max retries exceeded with url: /explosion/spacy-models/releases/download/en_core_web_sm-3.1.0/en_core_web_sm-3.1.0-py3-none-any.whl (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1129)')))
+
+<b>We download the wheel file from the GitHub link and install as follows</b>
+$ pip install en_core_web_sm-3.1.0-py3-none-any.whl
+
+###   ###   ###   ###   ###   
+</pre>
+<span class="" style="display: none;">Tags: Python,Technology,Anaconda,</span>

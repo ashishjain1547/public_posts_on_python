@@ -1,0 +1,320 @@
+<head>
+    <script crossorigin="anonymous" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                url: window.location.protocol + "//" + window.location.hostname + "/p/personal-posts-menu.html",
+                success: function (result) {
+                    $("div.customTemporaryCodeHolder").html(result);
+                    $("nav.customDynamicNav").html(
+                        $("div.customTemporaryCodeHolder nav.customBitsWilpMenu").html()
+                    );
+                }
+            });
+  
+            $.ajax({
+                url: window.location.protocol + "//" + window.location.hostname + "/p/follow-us-on-social-media.html",
+  
+                success: function (result) {
+                    $("span.customTempCodeHolderForSocialMedia").html(result);
+                    $("div.customSocialMediaBtnsWrapper").html(
+                        $("span.customTempCodeHolderForSocialMedia div.customSocialMediaWrapper").html()
+                    );
+                }
+  
+            });
+        }); 
+    </script>
+    <!-- Google AdSense Using Machine Learning Code -->
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-3071098372371409",
+            enable_page_level_ads: true
+        });
+    </script>
+  
+    <style>
+        .customTempCodeHolderForSocialMedia {
+            display: none;
+        }
+  
+        pre {
+            white-space: pre-wrap;
+            white-space: -moz-pre-wrap;
+            white-space: -pre-wrap;
+            white-space: -o-pre-wrap;
+            word-wrap: break-word;
+        }
+  
+        .customOl {
+            font-size: 15px;
+        }
+  
+        .customPre {
+            white-space: pre-wrap; 
+        }
+  
+        .customLink {
+            background-color: #4CAF50;
+            border: none;
+            color: white !important;
+            padding: 8px 13px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+  
+        .customLink:hover {
+            text-decoration: none;
+        }
+  
+        .custom_5px_0px_padding_noMargin {
+            padding: 5px 0px;
+            margin: 0px;
+        }
+    
+        td {
+         padding: 0 3px;
+        }
+
+        .ic {
+            background-color: black;
+            color: white
+        }
+    </style>
+</head>
+<div class="customTemporaryCodeHolder"> </div>
+<span class="customTempCodeHolderForSocialMedia"> </span>
+
+<nav class="customDynamicNav"> </nav> <br />
+<div class="customSocialMediaBtnsWrapper"> </div> <br />
+<!-- End of 'Personal Posts Menu Template For Copy-Paste'. It started from the top of the page from <HEAD> tag. -->
+
+<pre class=""><h3 class="">Errors and Exceptions</h3>
+<h4>8.1. Syntax Errors</h4>
+
+Syntax errors, also known as parsing errors, are perhaps the most common kind of complaint you get while you are still learning Python:
+
+<div class="ic"><i>>>>
+>>> while True print('Hello world')
+    File "&lt;stdin>", line 1
+    while True print('Hello world')
+                    ^
+SyntaxError: invalid syntax</i></div>
+
+The parser repeats the offending line and displays a little ‘arrow’ pointing at the earliest point in the line where the error was detected. The error is caused by (or at least detected at) the token preceding the arrow: in the example, the error is detected at the function print(), since a colon (':') is missing before it. File name and line number are printed so you know where to look in case the input came from a script.
+
+<b>An example of name error and package resolution</b>
+
+<div class="ic"><i>(base) C:\Users\Ashish Jain\OneDrive\Desktop>python
+Python 3.7.1 (default, Dec 10 2018, 22:54:23) [MSC v.1915 64 bit (AMD64)] :: Anaconda, Inc. on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> re
+Traceback (most recent call last):
+    File "&lt;stdin>", line 1, in &lt;module>
+NameError: name 're' is not defined
+>>> import re
+>>> re
+&lt;module 're' from 'E:\\programfiles\\Anaconda3\\lib\\re.py'>
+>>> exit()</i></div>
+
+<h4>8.2. Exceptions</h4>
+
+Even if a statement or expression is syntactically correct, it may cause an error when an attempt is made to execute it. Errors detected during execution are called exceptions and are not unconditionally fatal: you will soon learn how to handle them in Python programs. Most exceptions are not handled by programs, however, and result in error messages as shown here:
+
+>>>
+>>> 10 * (1/0)
+Traceback (most recent call last):
+  File "&lt;stdin>", line 1, in &lt;module>
+ZeroDivisionError: division by zero
+>>> 4 + spam*3
+Traceback (most recent call last):
+  File "&lt;stdin>", line 1, in &lt;module>
+NameError: name 'spam' is not defined
+>>> '2' + 2
+Traceback (most recent call last):
+  File "&lt;stdin>", line 1, in &lt;module>
+TypeError: Can't convert 'int' object to str implicitly
+The last line of the error message indicates what happened. Exceptions come in different types, and the type is printed as part of the message: the types in the example are ZeroDivisionError, NameError and TypeError. The string printed as the exception type is the name of the built-in exception that occurred. This is true for all built-in exceptions, but need not be true for user-defined exceptions (although it is a useful convention). Standard exception names are built-in identifiers (not reserved keywords).
+
+The rest of the line provides detail based on the type of exception and what caused it.
+
+The preceding part of the error message shows the context where the exception occurred, in the form of a stack traceback. In general it contains a stack traceback listing source lines; however, it will not display lines read from standard input.
+
+Built-in Exceptions lists the built-in exceptions and their meanings.
+
+<h4>8.3. Handling Exceptions</h4>
+
+It is possible to write programs that handle selected exceptions. Look at the following example, which asks the user for input until a valid integer has been entered, but allows the user to interrupt the program (using Control-C or whatever the operating system supports); note that a user-generated interruption is signalled by raising the KeyboardInterrupt exception.
+
+<div class="ic"><i>>>>
+>>> while True:
+...     try:
+...         x = int(input("Please enter a number: "))
+...         break
+...     except ValueError:
+...         print("Oops!  That was no valid number.  Try again...")
+...</i></div>
+
+The try statement works as follows.
+
+1. First, the try clause (the statement(s) between the try and except keywords) is executed.
+
+2. If no exception occurs, the except clause is skipped and execution of the try statement is finished.
+
+3. If an exception occurs during execution of the try clause, the rest of the clause is skipped. Then if its type matches the exception named after the except keyword, the except clause is executed, and then execution continues after the try statement.
+
+4. If an exception occurs which does not match the exception named in the except clause, it is passed on to outer try statements; if no handler is found, it is an unhandled exception and execution stops with a message as shown above.
+
+~ ~ ~
+
+A try statement may have more than one except clause, to specify handlers for different exceptions. At most one handler will be executed. Handlers only handle exceptions that occur in the corresponding try clause, not in other handlers of the same try statement. An except clause may name multiple exceptions as a parenthesized tuple, for example:
+
+<i style="color: blue;">... except (RuntimeError, TypeError, NameError):
+...     pass</i>
+
+A class in an except clause is compatible with an exception if it is the same class or a base class thereof (but not the other way around — an except clause listing a derived class is not compatible with a base class). For example, the following code will print B, C, D in that order:
+
+<div class="ic"><i>class B(Exception):
+    pass
+
+class C(B):
+    pass
+
+class D(C):
+    pass
+
+for cls in [B, C, D]:
+    try:
+        raise cls()
+    except D:
+        print("D")
+    except C:
+        print("C")
+    except B:
+        print("B")</i></div>
+
+
+OUT:
+(base) C:\Users\Ashish Jain\OneDrive\Desktop>python script2.py
+B
+C
+D
+
+~ ~ ~
+
+<div class="ic"><i>class B(Exception):
+    pass
+
+class C(B):
+    pass
+
+class D(C):
+    pass
+
+for cls in [B, C, D]:
+    try:
+        raise cls()
+    except B:
+        print("B")
+    except C:
+        print("C")
+    except D:
+        print("D")</i></div>
+
+OUT:
+(base) C:\Users\Ashish Jain\OneDrive\Desktop>python script3.py
+B
+B
+B
+
+~ ~ ~
+
+<b>Another example "Division By Zero"</b>
+
+<div class=""><i class="ic">#Handling run-time error: division by zero
+def this_fails():
+    x = 1/0
+try:
+    this_fails()
+except ZeroDivisionError as err:
+    print('Handling run-time error:', err)</i></div>
+
+<b>Modified version:</b>
+
+<div class=""><i>def division(a, b):
+    print("a:", a)
+    print("b:", b)
+    if b == 0:
+        raise Exception
+    return a/b
+
+try:
+    print("Success:", division(5, 5))
+    division(5, 0)
+except ZeroDivisionError as err:
+     print('Handling run-time error:', err)</i></div>
+
+OUT:
+
+<i style="color: red;">(base) C:\Users\Ashish Jain\OneDrive\Desktop>python script5.py
+a: 5
+b: 5
+Success: 1.0
+a: 5
+b: 0
+Traceback (most recent call last):
+    File "script5.py", line 10, in &lt;module>
+    division(5, 0)
+    File "script5.py", line 5, in division
+    raise Exception
+Exception</i>
+
+<h3># Defining Clean-up Actions</h3>
+
+If a finally clause is present, the finally clause will execute as the last task before the try statement completes. The finally clause runs whether or not the try statement produces an exception. The following points discuss more complex cases when an exception occurs:
+
+1. If an exception occurs during execution of the try clause, the exception may be handled by an except clause. If the exception is not handled by an except clause, the exception is re-raised after the finally clause has been executed.
+
+2. An exception could occur during execution of an except or else clause. Again, the exception is re-raised after the finally clause has been executed.
+
+3. If the finally clause executes a break, continue or return statement, exceptions are not re-raised.
+
+4. If the try statement reaches a break, continue or return statement, the finally clause will execute just prior to the break, continue or return statement’s execution.
+
+5. If a finally clause includes a return statement, the returned value will be the one from the finally clause’s return statement, not the value from the try clause’s return statement.
+
+For example:
+
+<div class="ic">>>>
+>>> def bool_return():
+...     try:
+...         return True
+...     finally:
+...         return False
+...
+>>> bool_return()
+False</div>
+
+<h3># Yet Another Division by Zero Example</h3>
+
+<div class="ic">def division(a, b):
+    print("a:", a)
+    print("b:", b)
+    if b == 0:
+        raise ZeroDivisionError
+    return a/b
+
+try:
+    print("Success:", division(5, 5))
+    division(5, 0)
+except ZeroDivisionError as err:
+     print('Handling run-time error:', err)</div>
+
+Ref: <a href="https://docs.python.org/3/tutorial/errors.html">docs.python.org</a>
+<span class="" style="display: none;">Tags: Technology,Python,Anaconda,</span></pre>

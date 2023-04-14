@@ -1,0 +1,134 @@
+<head>
+    <script crossorigin="anonymous" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <!-- Google AdSense Using Machine Learning Code -->
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-3071098372371409",
+            enable_page_level_ads: true
+        });
+    </script>
+    <style>
+        pre {
+            white-space: pre-wrap;
+            white-space: -moz-pre-wrap;
+            white-space: -pre-wrap;
+            white-space: -o-pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .dot {
+            height: 12px;
+            width: 12px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .arrow {
+            border: solid black;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            padding: 3px;
+        }
+
+        .right {
+            transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+        }
+
+        .left {
+            transform: rotate(135deg);
+            -webkit-transform: rotate(135deg);
+        }
+
+        .up {
+            transform: rotate(-135deg);
+            -webkit-transform: rotate(-135deg);
+        }
+
+        .down {
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+        }
+
+        .customLink {
+            background-color: #4CAF50;
+            border: none;
+            color: white !important;
+            padding: 8px 13px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .customLink:hover {
+            text-decoration: none;
+        }
+
+        i.ib {
+            color: blue;
+        }
+
+        i.ig {
+            color: green;
+        }
+
+        i.ir {
+            color: red;
+        }
+    </style>
+</head>
+<!-- End of 'Personal Posts Menu Template For Copy-Paste'. It started from the top of the page from <HEAD> tag. -->
+
+<pre>
+<i class="ib">
+jsonstreng = {
+    "kjoretoydataListe":
+    [
+        {
+            "kjoretoyId": {"kjennemerke":"EK 17058","understellsnummer":"5YJXCCE29GF009633"},
+            "forstegangsregistrering": {"registrertForstegangNorgeDato":"2016-09-07"},
+            "kjennemerke": [
+                {"fomTidspunkt":"2016-09-07T00:00:00+02:00","kjennemerke":"EK 17058","kjennemerkekategori":"KJORETOY",
+                "kjennemerketype":{"kodeBeskrivelse":"Sorte tegn p- hvit bunn","kodeNavn":"Ordin-re kjennemerker","kodeVerdi":"ORDINART","tidligereKodeVerdi":[]}},{"fomTidspunkt":"2022-08-19T17:04:04.334+02:00","kjennemerke":"GTD","kjennemerkekategori":"PERSONLIG"}
+            ]
+        }
+    ]
+}
+
+def checkIfKeyExistsInDict(in_dict, i_key):
+    if(isinstance(in_dict, dict)):
+        if(i_key in in_dict):
+            print(i_key + " found in: " + str(in_dict))
+            print()
+        
+        for j_key in in_dict:
+            checkIfKeyExistsInDict(in_dict[j_key], i_key)
+    elif(isinstance(in_dict, list)):
+        for j_key in range(len(in_dict)):
+            checkIfKeyExistsInDict(in_dict[j_key], i_key)
+
+        
+checkIfKeyExistsInDict(jsonstreng, "kjennemerke")
+</i>
+
+<h1>Logs</h1>
+
+(base) $ python "Check if key is present in a JSON object.py" 
+<i class="ig">
+kjennemerke found in: {'kjoretoyId': {'kjennemerke': 'EK 17058', 'understellsnummer': '5YJXCCE29GF009633'}, 'forstegangsregistrering': {'registrertForstegangNorgeDato': '2016-09-07'}, 'kjennemerke': [{'fomTidspunkt': '2016-09-07T00:00:00+02:00', 'kjennemerke': 'EK 17058', 'kjennemerkekategori': 'KJORETOY', 'kjennemerketype': {'kodeBeskrivelse': 'Sorte tegn p- hvit bunn', 'kodeNavn': 'Ordin-re kjennemerker', 'kodeVerdi': 'ORDINART', 'tidligereKodeVerdi': []}}, {'fomTidspunkt': '2022-08-19T17:04:04.334+02:00', 'kjennemerke': 'GTD', 'kjennemerkekategori': 'PERSONLIG'}]}
+
+kjennemerke found in: {'kjennemerke': 'EK 17058', 'understellsnummer': '5YJXCCE29GF009633'}
+
+kjennemerke found in: {'fomTidspunkt': '2016-09-07T00:00:00+02:00', 'kjennemerke': 'EK 17058', 'kjennemerkekategori': 'KJORETOY', 'kjennemerketype': {'kodeBeskrivelse': 'Sorte tegn p- hvit bunn', 'kodeNavn': 'Ordin-re kjennemerker', 'kodeVerdi': 'ORDINART', 'tidligereKodeVerdi': []}}
+
+kjennemerke found in: {'fomTidspunkt': '2022-08-19T17:04:04.334+02:00', 'kjennemerke': 'GTD', 'kjennemerkekategori': 'PERSONLIG'}
+</i>
+</pre>
+<span style="display: none">Tags: Python,Technology,</span>

@@ -1,0 +1,434 @@
+<head>
+    <script crossorigin="anonymous" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <!-- Google AdSense Using Machine Learning Code -->
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-3071098372371409",
+            enable_page_level_ads: true
+        });
+    </script>
+    <style>
+        pre {
+            white-space: pre-wrap;
+            white-space: -moz-pre-wrap;
+            white-space: -pre-wrap;
+            white-space: -o-pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .dot {
+            height: 12px;
+            width: 12px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .arrow {
+            border: solid black;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            padding: 3px;
+        }
+
+        .right {
+            transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+        }
+
+        .left {
+            transform: rotate(135deg);
+            -webkit-transform: rotate(135deg);
+        }
+
+        .up {
+            transform: rotate(-135deg);
+            -webkit-transform: rotate(-135deg);
+        }
+
+        .down {
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+        }
+
+        .customLink {
+            background-color: #4CAF50;
+            border: none;
+            color: white !important;
+            padding: 8px 13px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .customLink:hover {
+            text-decoration: none;
+        }
+
+        i.ib {
+            color: blue;
+        }
+
+        i.ig {
+            color: green;
+        }
+
+        i.ir {
+            color: red;
+        }
+    </style>
+</head>
+<!-- End of 'Personal Posts Menu Template For Copy-Paste'. It started from the top of the page from <HEAD> tag. -->
+
+<pre>Ques 1: <b>Count the range of each value in Python</b>
+I have dataset of student's scores for each subject.
+
+StuID  Subject Scores                
+1      Math    90
+1      Geo     80
+2      Math    70
+2      Geo     60
+3      Math    50
+3      Geo     90
+Now I want to count the range of scores for each subject like 0 &lt; x &lt;=20, 20 &lt; x &lt;=30 and get a dataframe like this:
+
+Subject  0-20  20-40 40-60 60-80 80-100                 
+Math       0     0     1     1     1
+Geo        0     0     0     1     2    
+How can I do it?
+
+Ans 1:
+<i class="ib">
+import pandas as pd
+
+df = pd.DataFrame({
+    "StuID": [1,1,2,2,3,3],
+    "Subject": ['Math', 'Geo', 'Math', 'Geo', 'Math', 'Geo'],
+    "Scores": [90, 80, 70, 60, 50, 90]
+})
+
+bins = list(range(0, 100+1, 20))
+# [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+labels = [f'{a}-{b}' for a,b in zip(bins, bins[1:])]
+# ['0-10', '10-20', '20-30', '30-40', '40-50', '50-60', '60-70', '70-80', '80-90', '90-100']
+
+out = (pd.crosstab(df['Subject'], pd.cut(df['Scores'], bins=bins,
+                                            labels=labels, ordered=True, right=False))
+            .reindex(labels, axis=1, fill_value=0)
+        )
+
+print(out)</i>
+
+Ques 2: <b>Split one column into 3 columns in python or PySpark</b>
+
+I have:
+Customerkeycode:
+B01:B14:110083
+
+I want:
+PlanningCustomerSuperGroupCode, DPGCode, APGCode
+BO1,B14,110083
+
+Ans 2:
+
+In pyspark, first split the string into an array, and then use the getItem method to split it into multiple columns.
+
+<i class="ib">import pyspark.sql.functions as F
+...
+cols = ['PlanningCustomerSuperGroupCode', 'DPGCode', 'APGCode']
+arr_cols = [F.split('Customerkeycode', ':').getItem(i).alias(cols[i]) for i in range(3)]
+df = df.select(*arr_cols)
+df.show(truncate=False)</i>
+
+Using Plain Pandas:
+
+<i class="ib">
+import pandas as pd
+
+df = pd.DataFrame(
+    {
+        "Customerkeycode": [
+            "B01:B14:110083",
+            "B02:B15:110084"
+        ]
+    }
+)
+
+df['PlanningCustomerSuperGroupCode'] = df['Customerkeycode'].apply(lambda x: x.split(":")[0])
+df['DPGCode'] = df['Customerkeycode'].apply(lambda x: x.split(":")[1])
+df['APGCode'] = df['Customerkeycode'].apply(lambda x: x.split(":")[2])
+
+df_rep = df.drop("Customerkeycode", axis = 1)
+
+print(df_rep)</i>
+
+<i class="ig">
+   PlanningCustomerSuperGroupCode DPGCode APGCode
+0                            B01     B14  110083
+1                            B02     B15  110084</i>
+
+<a href="https://stackoverflow.com/questions/74134988/how-to-split-one-column-into-3-columns-in-python-or-py-spark/74135053">Ref</a>
+
+Ques 3: <b>Create a new list of dict, from a dict with a key that has a list value</b>
+
+I have a dict with one of the keys have a value of list
+
+example = {"a":1,"b":[1,2]}
+I am trying to unpack example["b"] and create a list of the same dict with separate example["b"] value.
+
+output = [{"a":1,"b":1},{"a":1,"b":2}]
+I have tried to use a for loop to understand the unpacking and reconstruction of the list of dict but I am seeing a strange behavior:
+
+<i class="ib">
+iter = example.get("b")
+
+new_list = []
+
+for p in iter:
+    print(f"p is {p}")
+    tmp_dict = example
+    tmp_dict["b"] = p
+    print(tmp_dict)
+    new_list.append(tmp_dict)
+
+print(new_list)</i>
+
+Output:
+
+<i class="ig">
+p is 1
+{'a': 1, 'b': 1}
+
+p is 2
+{'a': 1, 'b': 2}
+
+[{'a': 1, 'b': 2}, {'a': 1, 'b': 2}]</i>
+
+Why is the first dict in the list gets assigned with example["b"] = 2 although the first print() shows that p is 1?
+
+Answer 3.1:
+
+<b>Here's a general approach that works for all cases without hardcoding any keys</b>
+
+here's a general approach that works for all cases without hardcoding any keys. Let's first create a temporary dictionary where all values are lists.
+
+temp = {k: v if isinstance(v, list) else [v] for k, v in example.items()}
+This allows us to then obtain the list of all the values in our temp dict as a list of lists.
+
+<b>We want the product of all the values of this temp dictionary. To do this, we can use the itertools.product function, and unpack our list of lists to its arguments.</b>
+
+In each iteration, the resulting tuple will have one value per key of the temp dictionary, so all we need to do is zip that with our tuple, and create a dict out of those key-value pairs. That gives us our list element!
+
+<i class="ib">
+import itertools
+
+keys = list(temp.keys())
+vals = list(temp.values())
+
+result = []
+
+for vals_product in itertools.product(*vals):
+    d = dict(zip(keys, vals_product))
+    result.append(d) </i>
+Which gives the required result:
+
+<i class="ig">[{'a': 1, 'b': 1}, {'a': 1, 'b': 2}]</i>
+
+This even works for an example with more keys:
+
+example = {'a': 1, 'b': [1, 2], 'c': [1, 2, 3]}
+which gives:
+
+<i class="ig">
+[{'a': 1, 'b': 1, 'c': 1},
+ {'a': 1, 'b': 1, 'c': 2},
+ {'a': 1, 'b': 1, 'c': 3},
+ {'a': 1, 'b': 2, 'c': 1},
+ {'a': 1, 'b': 2, 'c': 2},
+ {'a': 1, 'b': 2, 'c': 3}]</i>
+
+Answer 3.2:
+Just one minor correction: Usage of dict()
+
+<i class="ib">
+example = {"a":1,"b":[1,2]}
+
+iter = example.get("b")
+
+new_list = []
+
+for p in iter:
+    print(f"p is {p}")
+    tmp_dict = dict(example)
+    tmp_dict["b"] = p
+    print(tmp_dict)
+    new_list.append(tmp_dict)
+
+print(new_list)</i>
+
+Output is as given below: [{'a': 1, 'b': 1}, {'a': 1, 'b': 2}]
+
+<a href="https://stackoverflow.com/questions/74106192/create-a-new-list-of-dict-from-a-dict-with-a-key-that-has-a-list-value/74106267#74106267" target="_blank">Ref</a>
+
+Question 4: <b>Classification of sentences</b>
+
+I have a list of sentences. Examples:
+
+<i class="ib">
+${INS1}, Watch our latest webinar about flu vaccine
+Do you think patients would like to go up to 250 days without an attack?
+Watch our latest webinar about flu vaccine
+??? See if more of your patients are ready for vaccine
+Important news for your invaccinated patients
+Important news for your inv?ccinated patients
+...</i>
+
+By 'good' I mean sentences with no strange characters and sequences of characters such as '${INS1}', '???', or '?' inside the word etc. Otherwise sentence is considered as 'bad'. I need to find 'good' patterns to be able to identify 'bad' sentences in the future and exclude them, as the list of sentences will become larger in the future and new 'bad' sentences might appear.
+
+Is there any way to identify 'good' sentences?
+
+Answer 4:
+
+This solution based on character examples specifically given in the question. If there are more characters that should be used to identify good and bad sentences then they should also be added in the RegEx mentioned below in code.
+
+<i class="ib">
+import re 
+
+sents = [
+    "${INS1}, Watch our latest webinar about flu vaccine",
+    "Do you think patients would like to go up to 250 days without an attack?",
+    "Watch our latest webinar about flu vaccine",
+    "??? See if more of your patients are ready for vaccine",
+    "Important news for your invaccinated patients",
+    "Important news for your inv?ccinated patients"
+]
+
+good_sents = []
+bad_sents = []
+
+for i in sents:
+    x = re.findall("[?}{$]", i)
+    if(len(x) == 0):
+        good_sents.append(i)
+
+    else:
+        bad_sents.append(i)
+
+print(good_sents)</i>
+
+Question 5: <b>How to make the sequence result in one line? </b>
+
+Need to print 'n' Fibonacci numbers.
+
+Here is the expected output as shown below:
+
+<i class="ig">
+Enter n: 10
+Fibonacci numbers = 1 1 2 3 5 8 13 21 34 55</i>
+
+Here is my current code:
+
+<i class="ib">
+n = input("Enter n: ")
+
+def fib(n):
+    cur = 1
+    old = 1
+    i = 1
+    while (i < n):
+        cur, old, i = cur+old, cur, i+1
+    return cur</i>
+
+Answer 5:
+To do the least calculation, it is more efficient to have a fib function generate a list of the first n Fibonacci numbers.
+
+<i class="ib">
+def fib(n):
+    fibs = [0, 1]
+    for _ in range(n-2):
+    fibs.append(sum(fibs[-2:]))
+    return fibs</i>
+We know the first two Fibonacci numbers are 0 and 1. For the remaining count we can add the sum of the last two numbers to the list.
+
+>>> fib(10)
+[0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+
+You can now:
+
+<i class="ib">print('Fibonacci numbers = ', end='')
+print(*fib(10), sep=' ', end='\n')</i>
+
+Question 6: <b class="">Maximum occurrences in a list / DataFrame column</b>
+
+I have a dataframe like the one below.
+
+<i class="ib">
+import pandas as pd
+
+data = {'Date': ['2022/09/01', '2022/09/02', '2022/09/03', '2022/09/04', '2022/09/05','2022/09/01', '2022/09/02', '2022/09/03', '2022/09/04', '2022/09/05','2022/09/01', '2022/09/02', '2022/09/03', '2022/09/04', '2022/09/05'],
+        'Runner': ['Runner A', 'Runner A', 'Runner A', 'Runner A', 'Runner A','Runner B', 'Runner B', 'Runner B', 'Runner B', 'Runner B','Runner C', 'Runner C', 'Runner C', 'Runner C', 'Runner C'],
+        'Training Time': ['less than 1 hour', 'less than 1 hour', 'less than 1 hour', 'less than 1 hour', '1 hour to 2 hour','less than 1 hour', '1 hour to 2 hour', 'less than 1 hour', '1 hour to 2 hour', '2 hour to 3 hour', '1 hour to 2 hour ', '2 hour to 3 hour' ,'1 hour to 2 hour ', '2 hour to 3 hour', '2 hour to 3 hour']
+        }
+
+df = pd.DataFrame(data)</i>
+
+I have counted the occurrence for each runner using the below code
+
+s = df.groupby(['Runner','Training Time']).size()
+
+<div class="separator" style="clear: both;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgs07E7FvNgk5ry46pzKLYW-wnb2UC2Yk7JWm3EkQ-M9yhFZIaLJwj7TMDAwU2j_2yW2n8N4QwoLoG5cMHyM2gnxOqs0xm4jdFQR2otnTKD-ZY6za2-ORPeyN2kKFS2lThsmT4hhuwfWAByPRd9TWjN2Vm0UN0ul7mHvunzrzdKGx8G6_Y9bT42b85rDA/s280/1.png" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" width="400" data-original-height="179" data-original-width="280" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgs07E7FvNgk5ry46pzKLYW-wnb2UC2Yk7JWm3EkQ-M9yhFZIaLJwj7TMDAwU2j_2yW2n8N4QwoLoG5cMHyM2gnxOqs0xm4jdFQR2otnTKD-ZY6za2-ORPeyN2kKFS2lThsmT4hhuwfWAByPRd9TWjN2Vm0UN0ul7mHvunzrzdKGx8G6_Y9bT42b85rDA/s400/1.png"/></a></div>
+
+The problem is on Runner B. It should show "1 hour to 2 hour" and "less than 1 hour". But it only shows "1 hour to 2 hour".
+
+How can I get this expected result:
+
+<div class="separator" style="clear: both;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjIaLjddO7uo2IvtaOGl94YrtBO7IOPW_ZaKhhE4T4WJkOAf4LLIigzwZcw3jEvJrp13q22mFFjOrAHUJExmKbFULeP54kOsCVYCQPnd3aKrOgjMt2t7fouuTIjNfKqEo51LJTw5Pn_gna4d9jhynyN3EXS_ZdpD-VXJL6KLOeZwBhf2st-fFz2BeiXyQ/s282/2.png" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" width="400" data-original-height="116" data-original-width="282" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjIaLjddO7uo2IvtaOGl94YrtBO7IOPW_ZaKhhE4T4WJkOAf4LLIigzwZcw3jEvJrp13q22mFFjOrAHUJExmKbFULeP54kOsCVYCQPnd3aKrOgjMt2t7fouuTIjNfKqEo51LJTw5Pn_gna4d9jhynyN3EXS_ZdpD-VXJL6KLOeZwBhf2st-fFz2BeiXyQ/s400/2.png"/></a></div>
+
+Answer 6.1:
+
+<i class="ib">
+import pandas as pd
+
+data = {'Date': ['2022/09/01', '2022/09/02', '2022/09/03', '2022/09/04', '2022/09/05','2022/09/01', '2022/09/02', '2022/09/03', '2022/09/04', '2022/09/05','2022/09/01', '2022/09/02', '2022/09/03', '2022/09/04', '2022/09/05'],
+        'Runner': ['Runner A', 'Runner A', 'Runner A', 'Runner A', 'Runner A','Runner B', 'Runner B', 'Runner B', 'Runner B', 'Runner B','Runner C', 'Runner C', 'Runner C', 'Runner C', 'Runner C'],
+        'Training Time': ['less than 1 hour', 'less than 1 hour', 'less than 1 hour', 'less than 1 hour', '1 hour to 2 hour','less than 1 hour', '1 hour to 2 hour', 'less than 1 hour', '1 hour to 2 hour', '2 hour to 3 hour', '1 hour to 2 hour ', '2 hour to 3 hour' ,'1 hour to 2 hour ', '2 hour to 3 hour', '2 hour to 3 hour']
+        }
+
+df = pd.DataFrame(data)
+s = df.groupby(['Runner', 'Training Time'], as_index=False).size()
+s.columns = ['Runner', 'Training Time', 'Size']
+
+r = s.groupby(['Runner'], as_index=False)['Size'].max()
+
+df_list = []
+for index, row in r.iterrows():
+    temp_df = s[(s['Runner'] == row['Runner']) & (s['Size'] == row['Size'])]
+    df_list.append(temp_df)
+
+df_report = pd.concat(df_list)
+print(df_report)
+    
+df_report.to_csv('report.csv', index = False)</i>
+
+Answer 6.2:
+
+<i class="ib">def agg_most_common(vals):
+    print("vals")
+    matches = []
+    for i in collections.Counter(vals).most_common():
+        if not matches or matches[0][1] == i[1]:
+            matches.append(i)
+        else:
+            break
+    return [x[0] for x in matches]
+
+print(df.groupby('Runner')['Training Time'].agg(agg_most_common))
+</i>
+</pre>
+<span style="display: none">Tags" Python,Technology,</span>

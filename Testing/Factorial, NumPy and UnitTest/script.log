@@ -1,0 +1,19 @@
+(base) C:\Users\Ashish Jain\OneDrive\Desktop>python script.py
+.E.
+======================================================================
+ERROR: test_negative (__main__.FactorialTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "script.py", line 24, in test_negative
+    self.assertRaises(IndexError, factorial(-10))
+  File "script.py", line 8, in factorial
+    raise ValueError("Don't be so negative")
+ValueError: Don't be so negative
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.078s
+
+FAILED (errors=1)
+
+(base) C:\Users\Ashish Jain\OneDrive\Desktop>
+(base) C:\Users\Ashish Jain\OneDrive\Desktop>

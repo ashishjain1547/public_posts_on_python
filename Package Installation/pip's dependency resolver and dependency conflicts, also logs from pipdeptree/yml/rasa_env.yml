@@ -1,0 +1,8 @@
+name: rasa_env
+channels:
+- conda-forge
+dependencies:
+- spacy
+- python=3.8
+- pip
+- pipdeptree

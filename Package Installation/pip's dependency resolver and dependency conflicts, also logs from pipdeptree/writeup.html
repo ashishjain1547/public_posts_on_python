@@ -1,0 +1,749 @@
+<head>
+  <script crossorigin="anonymous" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script>
+      $(document).ready(function () {
+          $.ajax({
+              url: window.location.protocol + "//" + window.location.hostname + "/p/personal-posts-menu.html",
+              success: function (result) {
+                  $("div.customTemporaryCodeHolder").html(result);
+                  $("nav.customDynamicNav").html(
+                      $("div.customTemporaryCodeHolder nav.customBitsWilpMenu").html()
+                  );
+              }
+          });
+
+          $.ajax({
+              url: window.location.protocol + "//" + window.location.hostname + "/p/follow-us-on-social-media.html",
+
+              success: function (result) {
+                  $("span.customTempCodeHolderForSocialMedia").html(result);
+                  $("div.customSocialMediaBtnsWrapper").html(
+                      $("span.customTempCodeHolderForSocialMedia div.customSocialMediaWrapper").html()
+                  );
+              }
+
+          });
+      }); 
+  </script>
+  <!-- Google AdSense Using Machine Learning Code -->
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-3071098372371409",
+          enable_page_level_ads: true
+      });
+  </script>
+
+  <style>
+      .customTempCodeHolderForSocialMedia {
+          display: none;
+      }
+
+      pre {
+          white-space: pre-wrap;
+          white-space: -moz-pre-wrap;
+          white-space: -pre-wrap;
+          white-space: -o-pre-wrap;
+          word-wrap: break-word;
+      }
+
+      .customOl {
+          font-size: 15px;
+      }
+
+      .customPre {
+          white-space: pre-wrap; 
+      }
+
+      .customLink {
+          background-color: #4CAF50;
+          border: none;
+          color: white !important;
+          padding: 8px 13px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 14px;
+          margin: 4px 2px;
+          cursor: pointer;
+      }
+
+      .customLink:hover {
+          text-decoration: none;
+      }
+
+      .custom_5px_0px_padding_noMargin {
+          padding: 5px 0px;
+          margin: 0px;
+      }
+  
+      td {
+       padding: 0 3px;
+      }
+  </style>
+</head>
+<div class="customTemporaryCodeHolder"> </div>
+<span class="customTempCodeHolderForSocialMedia"> </span>
+
+<nav class="customDynamicNav"> </nav> <br />
+<div class="customSocialMediaBtnsWrapper"> </div> <br />
+<!-- End of 'Personal Posts Menu Template For Copy-Paste'. It started from the top of the page from <HEAD> tag. -->
+
+<pre>We have two YAML files:
+
+<b>1. rasa_env.yml</b>
+
+<i style="color: blue;">name: rasa_env
+channels:
+- conda-forge
+dependencies:
+- spacy
+- python=3.8
+- pip
+- pipdeptree</i>
+
+<b>2. snorkel_env.yml</b>
+
+<i style="color: blue;">name: snorkel_env
+channels:
+- conda-forge
+dependencies:
+- python=3.8
+- pip
+- pipdeptree
+- snorkel</i>
+
+<i style="color: blue;">(base) CMD>conda env list</i>
+
+<i style="color: green;"># conda environments:
+#
+base                  *  e:\Anaconda3
+env_py_36                e:\Anaconda3\envs\env_py_36
+pegasus                  e:\Anaconda3\envs\pegasus
+py39                     e:\Anaconda3\envs\py39
+selenium                 e:\Anaconda3\envs\selenium
+string_env               e:\Anaconda3\envs\string_env
+tf                       e:\Anaconda3\envs\tf </i>
+
+<i style="color: blue;">(base) ~>DOSKEY ls=dir /b
+(base) ~>ls</i>
+
+<i style="color: green;">rasa_env.yml
+snorkel_env.yml</i>
+
+(base) ~>conda env create -f rasa_env.yml
+
+Collecting package metadata (repodata.json): done
+Solving environment: done
+
+Downloading and Extracting Packages
+numpy-1.20.3         | 5.3 MB    | # | 100%
+cython-blis-0.7.4    | 5.6 MB    | # | 100%
+protobuf-3.17.1      | 260 KB    | # | 100%
+cryptography-3.4.7   | 706 KB    | # | 100%
+multidict-5.1.0      | 63 KB     | # | 100%
+grpcio-1.38.0        | 2.0 MB    | # | 100%
+botocore-1.20.84     | 4.7 MB    | # | 100%
+python-3.8.10        | 19.3 MB   | # | 100%
+pydantic-1.7.3       | 164 KB    | # | 100%
+preshed-3.0.5        | 97 KB     | # | 100%
+setuptools-49.6.0    | 962 KB    | # | 100%
+murmurhash-1.0.5     | 26 KB     | # | 100%
+wincertstore-0.2     | 15 KB     | # | 100%
+aiohttp-3.7.4        | 596 KB    | # | 100%
+spacy-3.0.6          | 9.2 MB    | # | 100%
+googleapis-common-pr | 125 KB    | # | 100%
+markupsafe-2.0.1     | 25 KB     | # | 100%
+pysocks-1.7.1        | 28 KB     | # | 100%
+yarl-1.5.1           | 136 KB    | # | 100%
+click-8.0.1          | 146 KB    | # | 100%
+catalogue-2.0.4      | 31 KB     | # | 100%
+thinc-8.0.3          | 936 KB    | # | 100%
+srsly-2.4.1          | 517 KB    | # | 100%
+libprotobuf-3.17.1   | 2.3 MB    | # | 100%
+urllib3-1.26.5       | 99 KB     | # | 100%
+brotlipy-0.7.0       | 368 KB    | # | 100%
+tqdm-4.61.0          | 80 KB     | # | 100%
+cffi-1.14.5          | 228 KB    | # | 100%
+boto3-1.17.84        | 70 KB     | # | 100%
+cymem-2.0.5          | 40 KB     | # | 100%
+chardet-4.0.0        | 224 KB    | # | 100%
+jinja2-3.0.1         | 99 KB     | # | 100%
+pip-21.1.2           | 1.1 MB    | # | 100%
+google-crc32c-1.1.2  | 27 KB     | # | 100%
+win_inet_pton-1.1.0  | 8 KB      | # | 100%
+Preparing transaction: done
+... 
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+#
+# To activate this environment, use
+#     $ conda activate rasa_env
+# To deactivate an active environment, use
+#     $ conda deactivate
+
+=== === === === === === === === === ===
+
+(base) ~>conda env create -f snorkel_env.yml
+Collecting package metadata (repodata.json): done
+Solving environment: done
+
+Downloading and Extracting Packages
+munkres-1.1.4        | 12 KB     | # | 100%
+scikit-learn-0.24.2  | 6.6 MB    | # | 100%
+mkl-service-2.3.0    | 51 KB     | # | 100%
+networkx-2.3         | 1.1 MB    | # | 100%
+importlib-metadata-4 | 31 KB     | # | 100%
+absl-py-0.12.0       | 96 KB     | # | 100%
+markdown-3.3.4       | 67 KB     | # | 100%
+pytorch-1.4.0        | 81.0 MB   | # | 100%
+scipy-1.6.3          | 23.3 MB   | # | 100%
+tensorboard-1.15.0   | 3.8 MB    | # | 100%
+ninja-1.10.2         | 273 KB    | # | 100%
+numpy-1.19.5         | 4.9 MB    | # | 100%
+werkzeug-2.0.1       | 219 KB    | # | 100%
+snorkel-0.9.7        | 93 KB     | # | 100%
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+#
+# To activate this environment, use
+#     $ conda activate snorkel_env
+# To deactivate an active environment, use
+#     $ conda deactivate
+
+(base) ~>
+
+=== === === === === === === === === ===
+
+(base) ~>conda env list
+# conda environments:
+#
+base                  *  e:\Anaconda3
+env_py_36                e:\Anaconda3\envs\env_py_36
+py39                     e:\Anaconda3\envs\py39
+<b>rasa_env                 e:\Anaconda3\envs\rasa_env</b> 
+selenium                 e:\Anaconda3\envs\selenium
+<b>snorkel_env              e:\Anaconda3\envs\snorkel_env</b> 
+string_env               e:\Anaconda3\envs\string_env
+tf                       e:\Anaconda3\envs\tf
+
+=== === === === === === === === === ===
+
+<h3>'pipdeptree' Logs Before Installing Rasa</h3>
+
+(base) C:\Users\Ashish Jain>conda activate snorkel_env
+
+(snorkel_env) C:\Users\Ashish Jain>pipdeptree -r -p rasa
+
+(snorkel_env) C:\Users\Ashish Jain>pipdeptree -r -p snorkel
+snorkel==0.9.7
+
+(snorkel_env) C:\Users\Ashish Jain>
+
+=== === === === === === === === === ===
+
+<h3>OSError: [WinError 5] Access is denied: When Trying to Install Rasa Without "--user" Argument</h3>
+
+<i style="color: blue;">(rasa_env) ~>pip install rasa</i>
+
+<i style="color: red;">Collecting rasa
+...    
+ERROR: Could not install packages due to an OSError: [WinError 5] Access is denied: 'e:\\programfiles\\anaconda3\\envs\\rasa_env\\scripts\\tqdm.exe'
+Consider using the `--user` option or check the permissions.</i>
+
+(rasa_env) ~>
+
+=== === === === === === === === === ===
+
+<h3>ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour can be source of dependency conflicts.</h3>
+
+<i style="color: blue;">(base) C:\Users\Ashish Jain>conda activate snorkel_env
+(snorkel_env) C:\Users\Ashish Jain>pip install rasa --user</i>
+
+Requirement already satisfied: rasa in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (2.6.3)
+Requirement already satisfied: SQLAlchemy&lt;1.4.0,>=1.3.3 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from rasa) (1.3.24)
+Requirement already satisfied: fbmessenger&lt;6.1.0,>=6.0.0 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from rasa) (6.0.0)
+Collecting sanic&lt;21.0.0,>=19.12.2
+  Using cached sanic-20.12.3-py3-none-any.whl (80 kB)
+Requirement already satisfied: matplotlib&lt;3.4,>=3.1 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from rasa) (3.3.4)
+Requirement already satisfied: absl-py&lt;0.13,>=0.9 in e:\anaconda3\envs\snorkel_env\lib\site-packages (from rasa) (0.12.0)
+Collecting colorama&lt;0.5.0,>=0.4.4
+  Using cached colorama-0.4.4-py2.py3-none-any.whl (16 kB)
+Requirement already satisfied: scikit-learn&lt;0.25,>=0.22 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from rasa) (0.24.2)
+Requirement already satisfied: rasa-sdk&lt;3.0.0,>=2.6.0 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from rasa) (2.6.0)
+Collecting aiohttp!=3.7.4.post0,&lt;3.8,>=3.6
+  Downloading aiohttp-3.7.4-cp38-cp38-win_amd64.whl (635 kB)
+     |█| 635 kB 437 kB/s
+Requirement already satisfied: pykwalify&lt;1.9,>=1.7 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from rasa) (1.8.0)
+Requirement already satisfied: python-engineio!=5.0.0,&lt;6,>=4 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from rasa) (4.2.0)
+Requirement already satisfied: oauth2client==4.1.3 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from rasa) (4.1.3)
+Collecting packaging&lt;21.0,>=20.0
+  Downloading packaging-20.9-py2.py3-none-any.whl (40 kB)
+     |█| 40 kB 657 kB/s
+Requirement already satisfied: aio-pika&lt;7.0.0,>=6.7.1 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from rasa) (6.8.0)
+Requirement already satisfied: tensorflow-estimator&lt;2.4,>=2.3 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from rasa) (2.3.0)
+Requirement already satisfied: tensorflow_hub&lt;0.11,>=0.10 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from rasa) (0.10.0)
+Requirement already satisfied: jsonschema&lt;3.3,>=3.2 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from rasa) (3.2.0)
+Requirement already satisfied: questionary&lt;1.10.0,>=1.5.1 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from rasa) (1.9.0)
+Requirement already satisfied: python-socketio&lt;6,>=4.4 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from rasa) (5.3.0)
+Requirement already satisfied: tensorflow-addons&lt;=0.12,>=0.10 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from rasa) (0.12.0)
+Requirement already satisfied: colorclass&lt;2.3,>=2.2 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from rasa) (2.2.0)
+Requirement already satisfied: colorhash&lt;1.1.0,>=1.0.2 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from rasa) (1.0.3)
+Requirement already satisfied: sanic-cors&lt;0.11.0,>=0.10.0b1 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from rasa) (0.10.0.post3)
+Requirement already satisfied: tqdm&lt;4.60,>=4.31 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from rasa) (4.59.0)
+Requirement already satisfied: pymongo[srv,tls]&lt;3.11,>=3.8 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from rasa) (3.10.1)
+Requirement already satisfied: rocketchat_API&lt;1.16.0,>=0.6.31 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from rasa) (1.15.0)
+Requirement already satisfied: sanic-jwt&lt;2.0,>=1.3.2 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from rasa) (1.5.0)
+Collecting numpy&lt;1.19,>=1.16
+  Using cached numpy-1.18.5-cp38-cp38-win_amd64.whl (12.8 MB)
+Requirement already satisfied: async_generator&lt;1.11,>=1.10 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from rasa) (1.10)
+Requirement already satisfied: joblib&lt;0.16.0,>=0.15.1 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from rasa) (0.15.1)
+Requirement already satisfied: mattermostwrapper&lt;2.3,>=2.2 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from rasa) (2.2)
+Requirement already satisfied: regex&lt;2020.10,>=2020.6 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from rasa) (2020.9.27)
+Collecting requests&lt;3.0,>=2.23
+  Downloading requests-2.25.1-py2.py3-none-any.whl (61 kB)
+     |█| 61 kB 773 kB/s
+Requirement already satisfied: networkx&lt;2.6,>=2.4 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from rasa) (2.5.1)
+Requirement already satisfied: coloredlogs&lt;16,>=10 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from rasa) (15.0)
+Requirement already satisfied: psycopg2-binary&lt;2.9.0,>=2.8.2 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from rasa) (2.8.6)
+Requirement already satisfied: PyJWT[crypto]&lt;3.0.0,>=2.0.0 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from rasa) (2.1.0)
+Requirement already satisfied: ruamel.yaml&lt;0.17.0,>=0.16.5 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from rasa) (0.16.13)
+Requirement already satisfied: sklearn-crfsuite&lt;0.4,>=0.3 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from rasa) (0.3.6)
+Requirement already satisfied: tensorflow&lt;2.4,>=2.3 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from rasa) (2.3.2)
+Requirement already satisfied: jsonpickle&lt;2.1,>=1.3 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from rasa) (2.0.0)
+Requirement already satisfied: prompt-toolkit&lt;3.0,>=2.0 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from rasa) (2.0.10)
+Requirement already satisfied: scipy&lt;2.0.0,>=1.4.1 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from rasa) (1.6.3)
+Requirement already satisfied: sentry-sdk&lt;0.20.0,>=0.17.0 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from rasa) (0.19.5)
+Requirement already satisfied: terminaltables&lt;3.2.0,>=3.1.0 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from rasa) (3.1.0)
+Requirement already satisfied: apscheduler&lt;3.8,>=3.6 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from rasa) (3.7.0)
+Requirement already satisfied: redis&lt;4.0,>=3.4 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from rasa) (3.5.3)
+Requirement already satisfied: setuptools>=41.0.0 in e:\anaconda3\envs\snorkel_env\lib\site-packages (from rasa) (49.6.0.post20210108)
+Requirement already satisfied: slackclient&lt;3.0.0,>=2.0.0 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from rasa) (2.9.3)
+Requirement already satisfied: webexteamssdk&lt;1.7.0,>=1.1.1 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from rasa) (1.6)
+Requirement already satisfied: pydot&lt;1.5,>=1.4 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from rasa) (1.4.2)
+Requirement already satisfied: cloudpickle&lt;1.7,>=1.2 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from rasa) (1.6.0)
+Requirement already satisfied: kafka-python&lt;3.0,>=1.4 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from rasa) (2.0.2)
+Collecting attrs&lt;20.4,>=19.3
+  Using cached attrs-20.3.0-py2.py3-none-any.whl (49 kB)
+Requirement already satisfied: python-dateutil&lt;2.9,>=2.8 in e:\anaconda3\envs\snorkel_env\lib\site-packages (from rasa) (2.8.1)
+Requirement already satisfied: tensorflow-probability&lt;0.12,>=0.11 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from rasa) (0.11.1)
+Requirement already satisfied: twilio&lt;6.51,>=6.26 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from rasa) (6.50.1)
+Requirement already satisfied: ujson&lt;5.0,>=1.35 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from rasa) (4.0.2)
+Collecting boto3&lt;2.0,>=1.12
+  Downloading boto3-1.17.84-py2.py3-none-any.whl (131 kB)
+     |█| 131 kB 1.3 MB/s
+Requirement already satisfied: pyTelegramBotAPI&lt;4.0.0,>=3.7.3 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from rasa) (3.7.9)
+Requirement already satisfied: pytz&lt;2022.0,>=2019.1 in e:\anaconda3\envs\snorkel_env\lib\site-packages (from rasa) (2021.1)
+Collecting rsa>=3.1.4
+  Downloading rsa-4.7.2-py3-none-any.whl (34 kB)
+Collecting pyasn1>=0.1.7
+  Using cached pyasn1-0.4.8-py2.py3-none-any.whl (77 kB)
+Requirement already satisfied: six>=1.6.1 in e:\anaconda3\envs\snorkel_env\lib\site-packages (from oauth2client==4.1.3->rasa) (1.16.0)
+Requirement already satisfied: httplib2>=0.9.1 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from oauth2client==4.1.3->rasa) (0.19.1)
+Collecting pyasn1-modules>=0.0.5
+  Using cached pyasn1_modules-0.2.8-py2.py3-none-any.whl (155 kB)
+Collecting yarl
+  Downloading yarl-1.6.3-cp38-cp38-win_amd64.whl (125 kB)
+     |█| 125 kB 1.3 MB/s
+Requirement already satisfied: aiormq&lt;4,>=3.2.3 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from aio-pika&lt;7.0.0,>=6.7.1->rasa) (3.3.1)
+Collecting typing-extensions>=3.6.5
+  Downloading typing_extensions-3.10.0.0-py3-none-any.whl (26 kB)
+Collecting chardet&lt;4.0,>=2.0
+  Using cached chardet-3.0.4-py2.py3-none-any.whl (133 kB)
+Collecting async-timeout&lt;4.0,>=3.0
+  Downloading async_timeout-3.0.1-py3-none-any.whl (8.2 kB)
+Collecting multidict&lt;7.0,>=4.5
+  Downloading multidict-5.1.0-cp38-cp38-win_amd64.whl (48 kB)
+     |█| 48 kB 564 kB/s
+Collecting pamqp==2.3.0
+  Using cached pamqp-2.3.0-py2.py3-none-any.whl (28 kB)
+Collecting tzlocal~=2.0
+  Using cached tzlocal-2.1-py2.py3-none-any.whl (16 kB)
+Collecting jmespath&lt;1.0.0,>=0.7.1
+  Downloading jmespath-0.10.0-py2.py3-none-any.whl (24 kB)
+Collecting botocore&lt;1.21.0,>=1.20.84
+  Downloading botocore-1.20.84-py2.py3-none-any.whl (7.6 MB)
+     |█| 7.6 MB 3.3 MB/s
+Collecting s3transfer&lt;0.5.0,>=0.4.0
+  Downloading s3transfer-0.4.2-py2.py3-none-any.whl (79 kB)
+     |█| 79 kB 517 kB/s
+Collecting urllib3&lt;1.27,>=1.25.4
+  Downloading urllib3-1.26.5-py2.py3-none-any.whl (138 kB)
+     |█| 138 kB 6.4 MB/s
+Collecting humanfriendly>=9.1
+  Using cached humanfriendly-9.1-py2.py3-none-any.whl (86 kB)
+Collecting pyparsing&lt;3,>=2.4.2
+  Using cached pyparsing-2.4.7-py2.py3-none-any.whl (67 kB)
+Collecting pyreadline
+  Using cached pyreadline-2.1-py3-none-any.whl
+Requirement already satisfied: pyrsistent>=0.14.0 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from jsonschema&lt;3.3,>=3.2->rasa) (0.17.3)
+Requirement already satisfied: cycler>=0.10 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from matplotlib&lt;3.4,>=3.1->rasa) (0.10.0)
+Requirement already satisfied: kiwisolver>=1.0.1 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from matplotlib&lt;3.4,>=3.1->rasa) (1.3.1)
+Requirement already satisfied: pillow>=6.2.0 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from matplotlib&lt;3.4,>=3.1->rasa) (8.2.0)
+Requirement already satisfied: decorator&lt;5,>=4.3 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from networkx&lt;2.6,>=2.4->rasa) (4.4.2)
+Collecting wcwidth
+  Using cached wcwidth-0.2.5-py2.py3-none-any.whl (30 kB)
+Collecting cryptography&lt;4.0.0,>=3.3.1
+  Downloading cryptography-3.4.7-cp36-abi3-win_amd64.whl (1.6 MB)
+     |█| 1.6 MB 1.7 MB/s
+Requirement already satisfied: cffi>=1.12 in e:\anaconda3\envs\snorkel_env\lib\site-packages (from cryptography&lt;4.0.0,>=3.3.1->PyJWT[crypto]&lt;3.0.0,>=2.0.0->rasa) (1.14.5)
+Requirement already satisfied: pycparser in e:\anaconda3\envs\snorkel_env\lib\site-packages (from cffi>=1.12->cryptography&lt;4.0.0,>=3.3.1->PyJWT[crypto]&lt;3.0.0,>=2.0.0->rasa) (2.20)
+Requirement already satisfied: docopt>=0.6.2 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from pykwalify&lt;1.9,>=1.7->rasa) (0.6.2)
+Requirement already satisfied: dnspython&lt;2.0.0,>=1.16.0 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from pymongo[srv,tls]&lt;3.11,>=3.8->rasa) (1.16.0)
+Requirement already satisfied: bidict>=0.21.0 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from python-socketio&lt;6,>=4.4->rasa) (0.21.2)
+Requirement already satisfied: certifi>=2017.4.17 in e:\anaconda3\envs\snorkel_env\lib\site-packages (from requests&lt;3.0,>=2.23->rasa) (2020.12.5)
+Collecting idna&lt;3,>=2.5
+  Using cached idna-2.10-py2.py3-none-any.whl (58 kB)
+Collecting ruamel.yaml.clib>=0.1.2
+  Using cached ruamel.yaml.clib-0.2.2-cp38-cp38-win_amd64.whl (120 kB)
+Collecting httptools>=0.0.10
+  Using cached httptools-0.2.0-cp38-cp38-win_amd64.whl (141 kB)
+Collecting httpx==0.15.4
+  Using cached httpx-0.15.4-py3-none-any.whl (65 kB)
+Collecting aiofiles>=0.6.0
+  Using cached aiofiles-0.7.0-py3-none-any.whl (13 kB)
+Collecting websockets&lt;9.0,>=8.1
+  Using cached websockets-8.1-cp38-cp38-win_amd64.whl (66 kB)
+Collecting httpcore==0.11.*
+  Using cached httpcore-0.11.1-py3-none-any.whl (52 kB)
+Collecting rfc3986[idna2008]&lt;2,>=1.3
+  Using cached rfc3986-1.5.0-py2.py3-none-any.whl (31 kB)
+Collecting sniffio
+  Using cached sniffio-1.2.0-py3-none-any.whl (10 kB)
+Collecting h11&lt;0.10,>=0.8
+  Using cached h11-0.9.0-py2.py3-none-any.whl (53 kB)
+Collecting sanic-plugins-framework>=0.9.0
+  Using cached Sanic_Plugins_Framework-0.9.5-py2.py3-none-any.whl (23 kB)
+Requirement already satisfied: threadpoolctl>=2.0.0 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from scikit-learn&lt;0.25,>=0.22->rasa) (2.1.0)
+Requirement already satisfied: python-crfsuite>=0.8.3 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from sklearn-crfsuite&lt;0.4,>=0.3->rasa) (0.9.7)
+Requirement already satisfied: tabulate in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from sklearn-crfsuite&lt;0.4,>=0.3->rasa) (0.8.9)
+Requirement already satisfied: astunparse==1.6.3 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from tensorflow&lt;2.4,>=2.3->rasa) (1.6.3)
+Requirement already satisfied: opt-einsum>=2.3.2 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from tensorflow&lt;2.4,>=2.3->rasa) (3.3.0)
+Requirement already satisfied: google-pasta>=0.1.8 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from tensorflow&lt;2.4,>=2.3->rasa) (0.2.0)
+Requirement already satisfied: gast==0.3.3 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from tensorflow&lt;2.4,>=2.3->rasa) (0.3.3)
+Requirement already satisfied: wheel>=0.26 in e:\anaconda3\envs\snorkel_env\lib\site-packages (from tensorflow&lt;2.4,>=2.3->rasa) (0.36.2)
+Requirement already satisfied: grpcio>=1.8.6 in e:\anaconda3\envs\snorkel_env\lib\site-packages (from tensorflow&lt;2.4,>=2.3->rasa) (1.38.0)
+Requirement already satisfied: h5py&lt;2.11.0,>=2.10.0 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from tensorflow&lt;2.4,>=2.3->rasa) (2.10.0)
+Requirement already satisfied: protobuf>=3.9.2 in e:\anaconda3\envs\snorkel_env\lib\site-packages (from tensorflow&lt;2.4,>=2.3->rasa) (3.17.1)
+Requirement already satisfied: termcolor>=1.1.0 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from tensorflow&lt;2.4,>=2.3->rasa) (1.1.0)
+Collecting wrapt>=1.11.1
+  Using cached wrapt-1.12.1-cp38-cp38-win_amd64.whl
+Requirement already satisfied: tensorboard&lt;3,>=2.3.0 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from tensorflow&lt;2.4,>=2.3->rasa) (2.5.0)
+Requirement already satisfied: keras-preprocessing&lt;1.2,>=1.1.1 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from tensorflow&lt;2.4,>=2.3->rasa) (1.1.2)
+Requirement already satisfied: markdown>=2.6.8 in e:\anaconda3\envs\snorkel_env\lib\site-packages (from tensorboard&lt;3,>=2.3.0->tensorflow&lt;2.4,>=2.3->rasa) (3.3.4)
+Collecting tensorboard-data-server&lt;0.7.0,>=0.6.0
+  Using cached tensorboard_data_server-0.6.1-py3-none-any.whl (2.4 kB)
+Requirement already satisfied: werkzeug>=0.11.15 in e:\anaconda3\envs\snorkel_env\lib\site-packages (from tensorboard&lt;3,>=2.3.0->tensorflow&lt;2.4,>=2.3->rasa) (2.0.1)
+Collecting google-auth&lt;2,>=1.6.3
+  Downloading google_auth-1.30.1-py2.py3-none-any.whl (146 kB)
+     |█| 146 kB 3.3 MB/s
+Collecting tensorboard-plugin-wit>=1.6.0
+  Using cached tensorboard_plugin_wit-1.8.0-py3-none-any.whl (781 kB)
+Collecting google-auth-oauthlib&lt;0.5,>=0.4.1
+  Using cached google_auth_oauthlib-0.4.4-py2.py3-none-any.whl (18 kB)
+Collecting cachetools&lt;5.0,>=2.0.0
+  Downloading cachetools-4.2.2-py3-none-any.whl (11 kB)
+Collecting requests-oauthlib>=0.7.0
+  Using cached requests_oauthlib-1.3.0-py2.py3-none-any.whl (23 kB)
+Collecting oauthlib>=3.0.0
+  Using cached oauthlib-3.1.0-py2.py3-none-any.whl (147 kB)
+Collecting typeguard>=2.7
+  Using cached typeguard-2.12.0-py3-none-any.whl (16 kB)
+Requirement already satisfied: dm-tree in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from tensorflow-probability&lt;0.12,>=0.11->rasa) (0.1.6)
+Requirement already satisfied: requests-toolbelt in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from webexteamssdk&lt;1.7.0,>=1.1.1->rasa) (0.9.1)
+Requirement already satisfied: future in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from webexteamssdk&lt;1.7.0,>=1.1.1->rasa) (0.18.2)
+Installing collected packages: sniffio, rfc3986, idna, h11, urllib3, pyasn1, httpcore, chardet, websockets, rsa, requests, pyasn1-modules, oauthlib, multidict, httpx, httptools, cachetools, aiofiles, sanic, requests-oauthlib, pyreadline, jmespath, google-auth, yarl, wcwidth, typing-extensions, tensorboard-plugin-wit, tensorboard-data-server, sanic-plugins-framework, ruamel.yaml.clib, pyparsing, pamqp, numpy, humanfriendly, google-auth-oauthlib, botocore, attrs, async-timeout, wrapt, tzlocal, typeguard, s3transfer, cryptography, aiohttp, packaging, colorama, boto3
+
+<h4 style="color: red;">ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+snorkel 0.9.7 requires networkx&lt;2.4,>=2.2, but you have networkx 2.5.1 which is incompatible.
+snorkel 0.9.7 requires tensorboard&lt;2.0.0,>=1.14.0, but you have tensorboard 2.5.0 which is incompatible.</h4>
+
+Successfully installed aiofiles-0.7.0 aiohttp-3.7.4 async-timeout-3.0.1 attrs-20.3.0 boto3-1.17.84 botocore-1.20.84 cachetools-4.2.2 chardet-3.0.4 colorama-0.4.4 cryptography-3.4.7 google-auth-1.30.1 google-auth-oauthlib-0.4.4 h11-0.9.0 httpcore-0.11.1 httptools-0.2.0 httpx-0.15.4 humanfriendly-9.1 idna-2.10 jmespath-0.10.0 multidict-5.1.0 numpy-1.18.5 oauthlib-3.1.0 packaging-20.9 pamqp-2.3.0 pyasn1-0.4.8 pyasn1-modules-0.2.8 pyparsing-2.4.7 pyreadline-2.1 requests-2.25.1 requests-oauthlib-1.3.0 rfc3986-1.5.0 rsa-4.7.2 ruamel.yaml.clib-0.2.2 s3transfer-0.4.2 sanic-20.12.3 sanic-plugins-framework-0.9.5 sniffio-1.2.0 tensorboard-data-server-0.6.1 tensorboard-plugin-wit-1.8.0 typeguard-2.12.0 typing-extensions-3.10.0.0 tzlocal-2.1 urllib3-1.26.5 wcwidth-0.2.5 websockets-8.1 wrapt-1.12.1 yarl-1.6.3
+
+(snorkel_env) C:\Users\Ashish Jain>pip show rasa
+Name: rasa
+Version: 2.6.3
+Summary: Open source machine learning framework to automate text- and voice-based conversations: NLU, dialogue management, connect to Slack, Facebook, and more - Create chatbots and voice assistants
+Home-page: https://rasa.com
+Author: Rasa Technologies GmbH
+Author-email: hi@rasa.com
+License: Apache-2.0
+Location: c:\users\ashish jain\appdata\roaming\python\python38\site-packages
+Requires: python-socketio, async-generator, tqdm, requests, matplotlib, sentry-sdk, sklearn-crfsuite, scikit-learn, twilio, pytz, ruamel.yaml, jsonpickle, mattermostwrapper, prompt-toolkit, cloudpickle, networkx, packaging, rocketchat-API, colorhash, tensorflow, fbmessenger, psycopg2-binary, pymongo, PyJWT, rasa-sdk, tensorflow-addons, regex, python-engineio, webexteamssdk, oauth2client, pydot, python-dateutil, sanic-jwt, tensorflow-hub, joblib, pyTelegramBotAPI, boto3, pykwalify, tensorflow-estimator, apscheduler, attrs, kafka-python, redis, sanic, tensorflow-probability, SQLAlchemy, questionary, ujson, aio-pika, terminaltables, scipy, colorama, colorclass, sanic-cors, absl-py, coloredlogs, jsonschema, numpy, setuptools, slackclient, aiohttp
+Required-by:
+
+(snorkel_env) C:\Users\Ashish Jain>pip show snorkel
+Name: snorkel
+Version: 0.9.7
+Summary: A system for quickly generating training data with weak supervision
+Home-page: https://github.com/snorkel-team/snorkel
+Author: None
+Author-email: None
+License: Apache License 2.0
+Location: e:\anaconda3\envs\snorkel_env\lib\site-packages
+Requires: numpy, networkx, scikit-learn, tqdm, torch, munkres, scipy, tensorboard, pandas
+Required-by:
+
+(snorkel_env) C:\Users\Ashish Jain>rasa
+usage: rasa [-h] [--version] {init,run,shell,train,interactive,telemetry,test,visualize,data,export,x} ...
+
+Rasa command line interface. Rasa allows you to build your own conversational assistants 🤖. The 'rasa' command allows you to easily run most common commands like creating
+a new bot, training or evaluating models.
+
+positional arguments:
+  {init,run,shell,train,interactive,telemetry,test,visualize,data,export,x}
+                        Rasa commands
+    init                Creates a new project, with example training data, actions, and config files.
+    run                 Starts a Rasa server with your trained model.
+    shell               Loads your trained model and lets you talk to your assistant on the command line.
+    train               Trains a Rasa model using your NLU data and stories.
+    interactive         Starts an interactive learning session to create new training data for a Rasa model by chatting.
+    telemetry           Configuration of Rasa Open Source telemetry reporting.
+    test                Tests Rasa models using your test NLU data and stories.
+    visualize           Visualize stories.
+    data                Utils for the Rasa training files.
+    export              Export conversations using an event broker.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --version             Print installed Rasa version
+
+<h3>Trying 'rasa init' in 'snorkel_env'.</h3>
+
+(snorkel_env) ~\test>rasa init
+Welcome to Rasa! 🤖
+
+To get started quickly, an initial project will be created.
+If you need some help, check out the documentation at https://rasa.com/docs/rasa.
+Now let's start! 👇🏽
+
+? Please enter a path where the project will be created [default: current directory]
+Created project directory at '~\test'.
+Finished creating project structure.
+? Do you want to train an initial model? 💪🏽 No
+No problem 👍🏼. You can also train a model later by going to the project directory and running 'rasa train'.
+
+(snorkel_env) ~\test>dir /b
+actions
+config.yml
+credentials.yml
+data
+domain.yml
+endpoints.yml
+tests
+
+(snorkel_env) ~\test>
+
+=== === === === === === === === === ===
+
+(rasa_env) ~>pip install snorkel
+WARNING: Ignoring invalid distribution -qdm (e:\anaconda3\envs\rasa_env\lib\site-packages)
+WARNING: Ignoring invalid distribution -qdm (e:\anaconda3\envs\rasa_env\lib\site-packages)
+Collecting snorkel
+  Downloading snorkel-0.9.7-py3-none-any.whl (145 kB)
+     |█| 145 kB 819 kB/s
+Collecting torch&lt;2.0.0,>=1.2.0
+  Downloading torch-1.8.1-cp38-cp38-win_amd64.whl (190.5 MB)
+     |█| 190.5 MB 27 kB/s
+Requirement already satisfied: numpy&lt;1.20.0,>=1.16.5 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from snorkel) (1.18.5)
+Collecting tensorboard&lt;2.0.0,>=1.14.0
+  Downloading tensorboard-1.15.0-py3-none-any.whl (3.8 MB)
+     |█| 3.8 MB 3.3 MB/s
+Collecting munkres>=1.0.6
+  Downloading munkres-1.1.4-py2.py3-none-any.whl (7.0 kB)
+Collecting pandas&lt;2.0.0,>=1.0.0
+  Downloading pandas-1.2.4-cp38-cp38-win_amd64.whl (9.3 MB)
+     |█| 9.3 MB 1.3 MB/s
+Requirement already satisfied: scipy&lt;2.0.0,>=1.2.0 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from snorkel) (1.6.3)
+Requirement already satisfied: scikit-learn&lt;0.25.0,>=0.20.2 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from snorkel) (0.24.2)
+Collecting networkx&lt;2.4,>=2.2
+  Downloading networkx-2.3.zip (1.7 MB)
+     |█| 1.7 MB 6.4 MB/s
+Requirement already satisfied: tqdm&lt;5.0.0,>=4.33.0 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from snorkel) (4.59.0)
+Requirement already satisfied: decorator>=4.3.0 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from networkx&lt;2.4,>=2.2->snorkel) (4.4.2)
+Requirement already satisfied: python-dateutil>=2.7.3 in e:\anaconda3\envs\rasa_env\lib\site-packages (from pandas&lt;2.0.0,>=1.0.0->snorkel) (2.8.1)
+Requirement already satisfied: pytz>=2017.3 in e:\anaconda3\envs\rasa_env\lib\site-packages (from pandas&lt;2.0.0,>=1.0.0->snorkel) (2021.1)
+Requirement already satisfied: six>=1.5 in e:\anaconda3\envs\rasa_env\lib\site-packages (from python-dateutil>=2.7.3->pandas&lt;2.0.0,>=1.0.0->snorkel) (1.16.0)
+Requirement already satisfied: joblib>=0.11 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from scikit-learn&lt;0.25.0,>=0.20.2->snorkel) (0.15.1)
+Requirement already satisfied: threadpoolctl>=2.0.0 in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from scikit-learn&lt;0.25.0,>=0.20.2->snorkel) (2.1.0)
+Requirement already satisfied: absl-py>=0.4 in e:\anaconda3\envs\rasa_env\lib\site-packages (from tensorboard&lt;2.0.0,>=1.14.0->snorkel) (0.12.0)
+Requirement already satisfied: werkzeug>=0.11.15 in e:\anaconda3\envs\rasa_env\lib\site-packages (from tensorboard&lt;2.0.0,>=1.14.0->snorkel) (2.0.1)
+Requirement already satisfied: grpcio>=1.6.3 in e:\anaconda3\envs\rasa_env\lib\site-packages (from tensorboard&lt;2.0.0,>=1.14.0->snorkel) (1.38.0)
+Requirement already satisfied: markdown>=2.6.8 in e:\anaconda3\envs\rasa_env\lib\site-packages (from tensorboard&lt;2.0.0,>=1.14.0->snorkel) (3.3.4)
+Requirement already satisfied: wheel>=0.26 in e:\anaconda3\envs\rasa_env\lib\site-packages (from tensorboard&lt;2.0.0,>=1.14.0->snorkel) (0.36.2)
+Requirement already satisfied: setuptools>=41.0.0 in e:\anaconda3\envs\rasa_env\lib\site-packages (from tensorboard&lt;2.0.0,>=1.14.0->snorkel) (49.6.0.post20210108)
+Requirement already satisfied: protobuf>=3.6.0 in e:\anaconda3\envs\rasa_env\lib\site-packages (from tensorboard&lt;2.0.0,>=1.14.0->snorkel) (3.17.1)
+Requirement already satisfied: typing-extensions in c:\users\ashish jain\appdata\roaming\python\python38\site-packages (from torch&lt;2.0.0,>=1.2.0->snorkel) (3.10.0.0)
+Building wheels for collected packages: networkx
+  Building wheel for networkx (setup.py) ... done
+  Created wheel for networkx: filename=networkx-2.3-py2.py3-none-any.whl size=1555990 sha256=9c94f5d6e380e2cb594911807f48a2c5c51c956adf73361417786843daed01ba
+  Stored in directory: c:\users\ashish jain\appdata\local\pip\cache\wheels\ff\62\9e\0ed2d25fd4f5761e2d19568cda0c32716556dfa682e65ecf64
+Successfully built networkx
+WARNING: Ignoring invalid distribution -qdm (e:\anaconda3\envs\rasa_env\lib\site-packages)
+Installing collected packages: torch, tensorboard, pandas, networkx, munkres, snorkel
+  Attempting uninstall: tensorboard
+    Found existing installation: tensorboard 2.5.0
+    Uninstalling tensorboard-2.5.0:
+      Successfully uninstalled tensorboard-2.5.0
+  Attempting uninstall: networkx
+    Found existing installation: networkx 2.5.1
+    Uninstalling networkx-2.5.1:
+      Successfully uninstalled networkx-2.5.1
+
+<b style="background-color: black;color: yellow;">WARNING: Ignoring invalid distribution -qdm (e:\anaconda3\envs\rasa_env\lib\site-packages)
+WARNING: Ignoring invalid distribution -qdm (e:\anaconda3\envs\rasa_env\lib\site-packages)
+WARNING: Ignoring invalid distribution -qdm (e:\anaconda3\envs\rasa_env\lib\site-packages)
+WARNING: Ignoring invalid distribution -qdm (e:\anaconda3\envs\rasa_env\lib\site-packages)
+WARNING: Ignoring invalid distribution -qdm (e:\anaconda3\envs\rasa_env\lib\site-packages)
+WARNING: Ignoring invalid distribution -qdm (e:\anaconda3\envs\rasa_env\lib\site-packages)</b>
+
+<h4 style="color: red;">ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+tensorflow 2.3.2 requires tensorboard&lt;3,>=2.3.0, but you have tensorboard 1.15.0 which is incompatible.
+rasa 2.6.3 requires networkx&lt;2.6,>=2.4, but you have networkx 2.3 which is incompatible.</h4>
+
+Successfully installed munkres-1.1.4 networkx-2.3 pandas-1.2.4 snorkel-0.9.7 tensorboard-1.15.0 torch-1.8.1
+WARNING: Ignoring invalid distribution -qdm (e:\anaconda3\envs\rasa_env\lib\site-packages)
+WARNING: Ignoring invalid distribution -qdm (e:\anaconda3\envs\rasa_env\lib\site-packages)
+
+(rasa_env) ~>
+
+(rasa_env) ~>pip show rasa
+Name: rasa
+Version: 2.6.3
+Summary: Open source machine learning framework to automate text- and voice-based conversations: NLU, dialogue management, connect to Slack, Facebook, and more - Create chatbots and voice assistants
+Home-page: https://rasa.com
+Author: Rasa Technologies GmbH
+Author-email: hi@rasa.com
+License: Apache-2.0
+Location: c:\users\ashish jain\appdata\roaming\python\python38\site-packages
+Requires: python-engineio, pymongo, colorama, webexteamssdk, attrs, matplotlib, aio-pika, oauth2client, setuptools, tensorflow-probability, terminaltables, sentry-sdk, ruamel.yaml, pykwalify, pydot, sklearn-crfsuite, tensorflow-hub, cloudpickle, sanic-jwt, questionary, sanic, python-dateutil, colorhash, networkx, jsonschema, boto3, redis, sanic-cors, aiohttp, coloredlogs, prompt-toolkit, twilio, kafka-python, rasa-sdk, jsonpickle, async-generator, psycopg2-binary, packaging, mattermostwrapper, colorclass, regex, slackclient, scipy, SQLAlchemy, scikit-learn, apscheduler, joblib, requests, pytz, absl-py, fbmessenger, tqdm, PyJWT, tensorflow-addons, ujson, python-socketio, rocketchat-API, numpy, tensorflow, pyTelegramBotAPI, tensorflow-estimator
+Required-by:
+
+(rasa_env) ~>pip show snorkel
+Name: snorkel
+Version: 0.9.7
+Summary: A system for quickly generating training data with weak supervision
+Home-page: https://github.com/snorkel-team/snorkel
+Author: None
+Author-email: None
+License: Apache License 2.0
+Location: e:\anaconda3\envs\rasa_env\lib\site-packages
+Requires: scikit-learn, tqdm, pandas, torch, scipy, tensorboard, networkx, munkres, numpy
+Required-by:
+
+(rasa_env) ~>rasa
+'rasa' is not recognized as an internal or external command,
+operable program or batch file.
+
+(rasa_env) ~>rasa init
+'rasa' is not recognized as an internal or external command,
+operable program or batch file.
+
+=== === === === === === === === === ===
+
+(snorkel_env) ~\ws>rasa init
+┌────────────────────────────────────────────────────────────────────────────────┐
+│ Rasa Open Source reports anonymous usage telemetry to help improve the product │
+│ for all its users.                                                             │
+│                                                                                │
+│ If you'd like to opt-out, you can use `rasa telemetry disable`.                │
+│ To learn more, check out https://rasa.com/docs/rasa/telemetry/telemetry.       │
+└────────────────────────────────────────────────────────────────────────────────┘
+Welcome to Rasa! 🤖
+
+To get started quickly, an initial project will be created.
+If you need some help, check out the documentation at https://rasa.com/docs/rasa.
+Now let's start! 👇🏽
+
+? Please enter a path where the project will be created [default: current directory]
+
+Created project directory at '~\ws'.
+Finished creating project structure.
+? Do you want to train an initial model? 💪🏽 No
+No problem 👍🏼. You can also train a model later by going to the project directory and running 'rasa train'.
+
+(snorkel_env) ~\ws>dir /b
+actions
+config.yml
+credentials.yml
+data
+domain.yml
+endpoints.yml
+tests
+
+=== === === === === === === === === ===
+
+<h3 class="">Checking 'snorkel' installation in both the environments (snorkel_env and rasa_env)</h3>
+
+(snorkel_env) ~\test>python
+Python 3.8.10 | packaged by conda-forge | (default, May 11 2021, 06:25:23) [MSC v.1916 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import snorkel
+>>> exit()
+
+(snorkel_env) ~\test>conda deactivate
+
+(base) ~\test>conda activate rasa_env
+
+(rasa_env) ~\test>python
+Python 3.8.10 | packaged by conda-forge | (default, May 11 2021, 06:25:23) [MSC v.1916 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import snorkel
+>>> exit()
+
+<h3>Checking the output of "pipdeptree -r -p"</h3>
+
+(base) C:\Users\Ashish Jain>conda activate rasa_env
+
+(rasa_env) C:\Users\Ashish Jain>pipdeptree -r -p rasa
+Ignoring invalid distribution -qdm (e:\programfiles\anaconda3\envs\rasa_env\lib\site-packages)
+Warning!!! Possibly conflicting dependencies found:
+* tensorflow==2.3.2
+ - tensorboard [required: >=2.3.0,&lt;3, installed: 1.15.0]
+* rasa==2.6.3
+ - networkx [required: >=2.4,&lt;2.6, installed: 2.3]
+* typer==0.3.1
+ - click [required: >=7.1.1,&lt;7.2.0, installed: 8.0.1]
+------------------------------------------------------------------------
+rasa==2.6.3
+
+(rasa_env) C:\Users\Ashish Jain>pipdeptree -r -p snorkel
+Ignoring invalid distribution -qdm (e:\programfiles\anaconda3\envs\rasa_env\lib\site-packages)
+Warning!!! Possibly conflicting dependencies found:
+* tensorflow==2.3.2
+ - tensorboard [required: >=2.3.0,&lt;3, installed: 1.15.0]
+* rasa==2.6.3
+ - networkx [required: >=2.4,&lt;2.6, installed: 2.3]
+* typer==0.3.1
+ - click [required: >=7.1.1,&lt;7.2.0, installed: 8.0.1]
+------------------------------------------------------------------------
+snorkel==0.9.7
+
+(rasa_env) C:\Users\Ashish Jain>conda deactivate
+
+(base) C:\Users\Ashish Jain>conda activate snorkel_env
+
+(snorkel_env) C:\Users\Ashish Jain>pipdeptree -r -p rasa
+
+Warning!!! Possibly conflicting dependencies found:
+* tensorflow==2.3.2
+ - tensorboard [required: >=2.3.0,&lt;3, installed: 1.15.0]
+* rasa==2.6.3
+ - networkx [required: >=2.4,&lt;2.6, installed: 2.3]
+------------------------------------------------------------------------
+rasa==2.6.3
+
+<i style="color: blue;">(snorkel_env) C:\Users\Ashish Jain>pipdeptree -r -p snorkel</i>
+
+<i style="color: red;">Warning!!! Possibly conflicting dependencies found:
+* tensorflow==2.3.2
+  - tensorboard [required: >=2.3.0,&lt;3, installed: 1.15.0]
+* rasa==2.6.3
+  - networkx [required: >=2.4,&lt;2.6, installed: 2.3]
+------------------------------------------------------------------------
+snorkel==0.9.7</i>
+
+<span style="display: none;">Tags: Anaconda,Python,Natural Language Processing,</span></pre>

@@ -1,0 +1,17 @@
+Part 1 Link: https://youtu.be/rYMJvMi7vf4
+Part 2 Link: https://youtu.be/PQDERhFiFmg
+
+Title 1: Session 5 Part 1/2 - Exception Handling in Python - 20210613
+Title 2: Session 5 - Part 2 of 2 - Exception Handling in Python - 20210613
+
+
+Desc:
+
+This is part 1 (of 2) session on 'Exception Handling in Python'.
+
+Link to YouTube Channel:
+https://www.youtube.com/channel/UCu0_QIMznTB44yVvpcrlEzg
+
+For more information, visit our index page:
+https://survival8.blogspot.com/p/index-of-lessons-in-technology.html#customPython
+

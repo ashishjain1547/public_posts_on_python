@@ -1,0 +1,801 @@
+<head>
+    <script crossorigin="anonymous" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <!-- Google AdSense Using Machine Learning Code -->
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-3071098372371409",
+            enable_page_level_ads: true
+        });
+    </script>
+
+    <style>
+        .customTempCodeHolderForSocialMedia {
+            display: none;
+        }
+
+        pre {
+            white-space: pre-wrap;
+            white-space: -moz-pre-wrap;
+            white-space: -pre-wrap;
+            white-space: -o-pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .ib {
+            color: blue
+        }
+
+        .ig {
+            color: green
+        }
+
+        .ir {
+            color: red
+        }
+
+        .customLink {
+            background-color: #4CAF50;
+            border: none;
+            color: white !important;
+            padding: 8px 13px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .customLink:hover {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<pre>
+<h2>Contents of env.yml</h2>
+
+<i class="ib">
+name: rasa_py38
+channels:
+    - conda-forge
+dependencies:
+    - python=3.8
+    - pip
+    - spacy
+</i>
+
+<i class="ib">(base) ashish@ashish-Lenovo-ideapad-130-15IKB:~/Desktop$ conda env create -f env.yml</i>
+
+<i class="ig">
+Collecting package metadata (repodata.json): done
+Solving environment: done
+
+
+==> WARNING: A newer version of conda exists. &lt;==
+    current version: 4.12.0
+    latest version: 4.14.0
+
+Please update conda by running
+
+    $ conda update -n base -c defaults conda
+
+
+
+Downloading and Extracting Packages
+libsqlite-3.39.3     | 789 KB    | ### | 100% 
+numpy-1.23.3         | 7.1 MB    | ### | 100% 
+dataclasses-0.8      | 10 KB     | ### | 100% 
+pathy-0.6.2          | 38 KB     | ### | 100% 
+srsly-2.4.4          | 540 KB    | ### | 100% 
+sqlite-3.39.3        | 789 KB    | ### | 100% 
+python-3.8.13        | 25.1 MB   | ### | 100% 
+markupsafe-2.1.1     | 22 KB     | ### | 100% 
+spacy-loggers-1.0.3  | 13 KB     | ### | 100% 
+cython-blis-0.7.8    | 9.0 MB    | ### | 100% 
+cymem-2.0.6          | 42 KB     | ### | 100% 
+cffi-1.15.1          | 229 KB    | ### | 100% 
+click-8.1.3          | 146 KB    | ### | 100% 
+langcodes-3.3.0      | 156 KB    | ### | 100% 
+cryptography-37.0.4  | 1.5 MB    | ### | 100% 
+tqdm-4.64.1          | 82 KB     | ### | 100% 
+shellingham-1.5.0    | 12 KB     | ### | 100% 
+brotlipy-0.7.0       | 342 KB    | ### | 100% 
+spacy-3.4.1          | 6.4 MB    | ### | 100% 
+preshed-3.0.7        | 122 KB    | ### | 100% 
+wasabi-0.10.0        | 26 KB     | ### | 100% 
+python_abi-3.8       | 4 KB      | ### | 100% 
+libzlib-1.2.12       | 65 KB     | ### | 100% 
+smart_open-5.2.1     | 43 KB     | ### | 100% 
+thinc-8.1.0          | 904 KB    | ### | 100% 
+typer-0.4.2          | 45 KB     | ### | 100% 
+pydantic-1.9.2       | 2.4 MB    | ### | 100% 
+spacy-legacy-3.0.10  | 20 KB     | ### | 100% 
+catalogue-2.0.8      | 32 KB     | ### | 100% 
+murmurhash-1.0.8     | 27 KB     | ### | 100% 
+libopenblas-0.3.21   | 10.1 MB   | ### | 100% 
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+#
+# To activate this environment, use
+#
+#     $ conda activate rasa_py38
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate
+
+(base) ashish@ashish-Lenovo-ideapad-130-15IKB:~/Desktop$ 
+</i>
+
+<i class="ib">(base) ashish@ashish-Lenovo-ideapad-130-15IKB:~/Desktop$ conda activate rasa_py38
+
+(rasa_py38) ashish@ashish-Lenovo-ideapad-130-15IKB:~/Desktop$ conda install ipykernel jupyterlab -c conda-forge</i>
+
+<i class="ig">
+Collecting package metadata (current_repodata.json): done
+Solving environment: done
+
+
+==> WARNING: A newer version of conda exists. <==
+  current version: 4.12.0
+  latest version: 4.14.0
+
+Please update conda by running
+
+    $ conda update -n base -c defaults conda
+
+
+
+## Package Plan ##
+
+  environment location: /home/ashish/anaconda3/envs/rasa_py38
+
+  added / updated specs:
+    - ipykernel
+    - jupyterlab
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    argon2-cffi-bindings-21.2.0|   py38h0a891b7_2          34 KB  conda-forge
+    debugpy-1.6.3              |   py38hfa26641_0         2.0 MB  conda-forge
+    importlib-metadata-4.11.4  |   py38h578d9bd_0          33 KB  conda-forge
+    ipykernel-6.15.3           |     pyh210e3f2_0          99 KB  conda-forge
+    ipython-8.5.0              |     pyh41d4057_1         552 KB  conda-forge
+    jsonschema-4.16.0          |     pyhd8ed1ab_0          65 KB  conda-forge
+    jupyter_core-4.11.1        |   py38h578d9bd_0          81 KB  conda-forge
+    jupyterlab-3.4.7           |     pyhd8ed1ab_0         5.9 MB  conda-forge
+    lxml-4.9.1                 |   py38h0a891b7_0         1.4 MB  conda-forge
+    nbclient-0.6.8             |     pyhd8ed1ab_0          65 KB  conda-forge
+    nbformat-5.5.0             |     pyhd8ed1ab_0         105 KB  conda-forge
+    prompt-toolkit-3.0.31      |     pyha770c72_0         254 KB  conda-forge
+    psutil-5.9.2               |   py38h0a891b7_0         346 KB  conda-forge
+    pyrsistent-0.18.1          |   py38h0a891b7_1          92 KB  conda-forge
+    pyzmq-24.0.0               |   py38hfc09fa9_0         499 KB  conda-forge
+    terminado-0.15.0           |   py38h578d9bd_0          28 KB  conda-forge
+    tomli-2.0.1                |     pyhd8ed1ab_0          16 KB  conda-forge
+    tornado-6.2                |   py38h0a891b7_0         653 KB  conda-forge
+    traitlets-5.4.0            |     pyhd8ed1ab_0          85 KB  conda-forge
+    ------------------------------------------------------------
+                                           Total:        12.3 MB
+
+The following NEW packages will be INSTALLED:
+
+  anyio              conda-forge/noarch::anyio-3.6.1-pyhd8ed1ab_1
+  argon2-cffi        conda-forge/noarch::argon2-cffi-21.3.0-pyhd8ed1ab_0
+  argon2-cffi-bindi~ conda-forge/linux-64::argon2-cffi-bindings-21.2.0-py38h0a891b7_2
+  asttokens          conda-forge/noarch::asttokens-2.0.8-pyhd8ed1ab_0
+  attrs              conda-forge/noarch::attrs-22.1.0-pyh71513ae_1
+  babel              conda-forge/noarch::babel-2.10.3-pyhd8ed1ab_0
+  backcall           conda-forge/noarch::backcall-0.2.0-pyh9f0ad1d_0
+  backports          conda-forge/noarch::backports-1.0-py_2
+  backports.functoo~ conda-forge/noarch::backports.functools_lru_cache-1.6.4-pyhd8ed1ab_0
+  beautifulsoup4     conda-forge/noarch::beautifulsoup4-4.11.1-pyha770c72_0
+  bleach             conda-forge/noarch::bleach-5.0.1-pyhd8ed1ab_0
+  debugpy            conda-forge/linux-64::debugpy-1.6.3-py38hfa26641_0
+  decorator          conda-forge/noarch::decorator-5.1.1-pyhd8ed1ab_0
+  defusedxml         conda-forge/noarch::defusedxml-0.7.1-pyhd8ed1ab_0
+  entrypoints        conda-forge/noarch::entrypoints-0.4-pyhd8ed1ab_0
+  executing          conda-forge/noarch::executing-1.0.0-pyhd8ed1ab_0
+  flit-core          conda-forge/noarch::flit-core-3.7.1-pyhd8ed1ab_0
+  icu                conda-forge/linux-64::icu-70.1-h27087fc_0
+  importlib-metadata conda-forge/linux-64::importlib-metadata-4.11.4-py38h578d9bd_0
+  importlib_metadata conda-forge/noarch::importlib_metadata-4.11.4-hd8ed1ab_0
+  importlib_resourc~ conda-forge/noarch::importlib_resources-5.9.0-pyhd8ed1ab_0
+  ipykernel          conda-forge/noarch::ipykernel-6.15.3-pyh210e3f2_0
+  ipython            conda-forge/noarch::ipython-8.5.0-pyh41d4057_1
+  ipython_genutils   conda-forge/noarch::ipython_genutils-0.2.0-py_1
+  jedi               conda-forge/noarch::jedi-0.18.1-pyhd8ed1ab_2
+  json5              conda-forge/noarch::json5-0.9.5-pyh9f0ad1d_0
+  jsonschema         conda-forge/noarch::jsonschema-4.16.0-pyhd8ed1ab_0
+  jupyter_client     conda-forge/noarch::jupyter_client-7.3.5-pyhd8ed1ab_0
+  jupyter_core       conda-forge/linux-64::jupyter_core-4.11.1-py38h578d9bd_0
+  jupyter_server     conda-forge/noarch::jupyter_server-1.18.1-pyhd8ed1ab_0
+  jupyterlab         conda-forge/noarch::jupyterlab-3.4.7-pyhd8ed1ab_0
+  jupyterlab_pygmen~ conda-forge/noarch::jupyterlab_pygments-0.2.2-pyhd8ed1ab_0
+  jupyterlab_server  conda-forge/noarch::jupyterlab_server-2.15.1-pyhd8ed1ab_0
+  libiconv           conda-forge/linux-64::libiconv-1.16-h516909a_0
+  libsodium          conda-forge/linux-64::libsodium-1.0.18-h36c2ea0_1
+  libxml2            conda-forge/linux-64::libxml2-2.9.14-h22db469_4
+  libxslt            conda-forge/linux-64::libxslt-1.1.35-h8affb1d_0
+  lxml               conda-forge/linux-64::lxml-4.9.1-py38h0a891b7_0
+  matplotlib-inline  conda-forge/noarch::matplotlib-inline-0.1.6-pyhd8ed1ab_0
+  mistune            conda-forge/noarch::mistune-2.0.4-pyhd8ed1ab_0
+  nbclassic          conda-forge/noarch::nbclassic-0.4.3-pyhd8ed1ab_0
+  nbclient           conda-forge/noarch::nbclient-0.6.8-pyhd8ed1ab_0
+  nbconvert          conda-forge/noarch::nbconvert-7.0.0-pyhd8ed1ab_0
+  nbconvert-core     conda-forge/noarch::nbconvert-core-7.0.0-pyhd8ed1ab_0
+  nbconvert-pandoc   conda-forge/noarch::nbconvert-pandoc-7.0.0-pyhd8ed1ab_0
+  nbformat           conda-forge/noarch::nbformat-5.5.0-pyhd8ed1ab_0
+  nest-asyncio       conda-forge/noarch::nest-asyncio-1.5.5-pyhd8ed1ab_0
+  notebook           conda-forge/noarch::notebook-6.4.12-pyha770c72_0
+  notebook-shim      conda-forge/noarch::notebook-shim-0.1.0-pyhd8ed1ab_0
+  pandoc             conda-forge/linux-64::pandoc-2.19.2-ha770c72_0
+  pandocfilters      conda-forge/noarch::pandocfilters-1.5.0-pyhd8ed1ab_0
+  parso              conda-forge/noarch::parso-0.8.3-pyhd8ed1ab_0
+  pexpect            conda-forge/noarch::pexpect-4.8.0-pyh9f0ad1d_2
+  pickleshare        conda-forge/noarch::pickleshare-0.7.5-py_1003
+  pkgutil-resolve-n~ conda-forge/noarch::pkgutil-resolve-name-1.3.10-pyhd8ed1ab_0
+  prometheus_client  conda-forge/noarch::prometheus_client-0.14.1-pyhd8ed1ab_0
+  prompt-toolkit     conda-forge/noarch::prompt-toolkit-3.0.31-pyha770c72_0
+  psutil             conda-forge/linux-64::psutil-5.9.2-py38h0a891b7_0
+  ptyprocess         conda-forge/noarch::ptyprocess-0.7.0-pyhd3deb0d_0
+  pure_eval          conda-forge/noarch::pure_eval-0.2.2-pyhd8ed1ab_0
+  pygments           conda-forge/noarch::pygments-2.13.0-pyhd8ed1ab_0
+  pyrsistent         conda-forge/linux-64::pyrsistent-0.18.1-py38h0a891b7_1
+  python-dateutil    conda-forge/noarch::python-dateutil-2.8.2-pyhd8ed1ab_0
+  python-fastjsonsc~ conda-forge/noarch::python-fastjsonschema-2.16.1-pyhd8ed1ab_0
+  pytz               conda-forge/noarch::pytz-2022.2.1-pyhd8ed1ab_0
+  pyzmq              conda-forge/linux-64::pyzmq-24.0.0-py38hfc09fa9_0
+  send2trash         conda-forge/noarch::send2trash-1.8.0-pyhd8ed1ab_0
+  six                conda-forge/noarch::six-1.16.0-pyh6c4a22f_0
+  sniffio            conda-forge/noarch::sniffio-1.3.0-pyhd8ed1ab_0
+  soupsieve          conda-forge/noarch::soupsieve-2.3.2.post1-pyhd8ed1ab_0
+  stack_data         conda-forge/noarch::stack_data-0.5.0-pyhd8ed1ab_0
+  terminado          conda-forge/linux-64::terminado-0.15.0-py38h578d9bd_0
+  tinycss2           conda-forge/noarch::tinycss2-1.1.1-pyhd8ed1ab_0
+  tomli              conda-forge/noarch::tomli-2.0.1-pyhd8ed1ab_0
+  tornado            conda-forge/linux-64::tornado-6.2-py38h0a891b7_0
+  traitlets          conda-forge/noarch::traitlets-5.4.0-pyhd8ed1ab_0
+  wcwidth            conda-forge/noarch::wcwidth-0.2.5-pyh9f0ad1d_2
+  webencodings       conda-forge/noarch::webencodings-0.5.1-py_1
+  websocket-client   conda-forge/noarch::websocket-client-1.4.1-pyhd8ed1ab_0
+  zeromq             conda-forge/linux-64::zeromq-4.3.4-h9c3ff4c_1
+  zipp               conda-forge/noarch::zipp-3.8.1-pyhd8ed1ab_0
+
+
+Proceed ([y]/n)? y
+
+
+Downloading and Extracting Packages
+traitlets-5.4.0      | 85 KB     | ### | 100% 
+nbclient-0.6.8       | 65 KB     | ### | 100% 
+ipykernel-6.15.3     | 99 KB     | ### | 100% 
+tomli-2.0.1          | 16 KB     | ### | 100% 
+ipython-8.5.0        | 552 KB    | ### | 100% 
+jsonschema-4.16.0    | 65 KB     | ### | 100% 
+jupyter_core-4.11.1  | 81 KB     | ### | 100% 
+psutil-5.9.2         | 346 KB    | ### | 100% 
+lxml-4.9.1           | 1.4 MB    | ### | 100% 
+jupyterlab-3.4.7     | 5.9 MB    | ### | 100% 
+terminado-0.15.0     | 28 KB     | ### | 100% 
+nbformat-5.5.0       | 105 KB    | ### | 100% 
+argon2-cffi-bindings | 34 KB     | ### | 100% 
+debugpy-1.6.3        | 2.0 MB    | ### | 100% 
+pyrsistent-0.18.1    | 92 KB     | ### | 100% 
+importlib-metadata-4 | 33 KB     | ### | 100% 
+pyzmq-24.0.0         | 499 KB    | ### | 100% 
+tornado-6.2          | 653 KB    | ### | 100% 
+prompt-toolkit-3.0.3 | 254 KB    | ### | 100% 
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+(rasa_py38) ashish@ashish-Lenovo-ideapad-130-15IKB:~/Desktop$ 
+</i>
+
+
+(rasa_py38) ashish@ashish-Lenovo-ideapad-130-15IKB:~/Desktop$ python -m ipykernel install --user --name rasa_py38
+<i class="ig">Installed kernelspec rasa_py38 in /home/ashish/.local/share/jupyter/kernels/rasa_py38</i>
+
+(rasa_py38) ashish@ashish-Lenovo-ideapad-130-15IKB:~/Desktop$ pip3 install rasa --user
+
+<i class="ig">
+Collecting rasa
+Downloading rasa-3.2.8-py3-none-any.whl (819 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 819.2/819.2 kB 320.6 kB/s eta 0:00:00
+Collecting coloredlogs&lt;16,>=10
+Downloading coloredlogs-15.0.1-py2.py3-none-any.whl (46 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 46.0/46.0 kB 209.8 kB/s eta 0:00:00
+Collecting pykwalify&lt;1.9,>=1.7
+Downloading pykwalify-1.8.0-py2.py3-none-any.whl (24 kB)
+Collecting python-socketio&lt;6,>=4.4
+Downloading python_socketio-5.7.1-py3-none-any.whl (56 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 56.6/56.6 kB 234.4 kB/s eta 0:00:00
+Collecting dask==2022.2.0
+Downloading dask-2022.2.0-py3-none-any.whl (1.1 MB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.1/1.1 MB 287.9 kB/s eta 0:00:00
+Collecting questionary&lt;1.11.0,>=1.5.1
+Downloading questionary-1.10.0-py3-none-any.whl (31 kB)
+Collecting colorclass&lt;2.3,>=2.2
+Downloading colorclass-2.2.2-py2.py3-none-any.whl (18 kB)
+Collecting twilio&lt;6.51,>=6.26
+Downloading twilio-6.50.1.tar.gz (457 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 457.9/457.9 kB 272.9 kB/s eta 0:00:00
+Preparing metadata (setup.py) ... done
+Collecting regex&lt;2022.5,>=2020.6
+Downloading regex-2022.4.24-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (764 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 764.9/764.9 kB 324.5 kB/s eta 0:00:00
+Collecting slackclient&lt;3.0.0,>=2.0.0
+Downloading slackclient-2.9.4-py2.py3-none-any.whl (97 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 97.1/97.1 kB 196.5 kB/s eta 0:00:00
+Collecting aio-pika&lt;9.0.0,>=6.7.1
+Downloading aio-pika-8.2.1.tar.gz (42 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 42.3/42.3 kB 218.7 kB/s eta 0:00:00
+Preparing metadata (setup.py) ... done
+Collecting python-engineio!=5.0.0,&lt;6,>=4
+Downloading python_engineio-4.3.4-py3-none-any.whl (52 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 52.9/52.9 kB 281.0 kB/s eta 0:00:00
+Collecting typing-extensions&lt;4.0.0,>=3.7.4
+Downloading typing_extensions-3.10.0.2-py3-none-any.whl (26 kB)
+Collecting apscheduler&lt;3.8,>=3.6
+Downloading APScheduler-3.7.0-py2.py3-none-any.whl (59 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 59.3/59.3 kB 246.7 kB/s eta 0:00:00
+Requirement already satisfied: requests&lt;3.0,>=2.23 in /home/ashish/anaconda3/envs/rasa_py38/lib/python3.8/site-packages (from rasa) (2.28.1)
+Collecting rasa-sdk&lt;3.3.0,>=3.2.0
+Downloading rasa_sdk-3.2.1-py3-none-any.whl (41 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 41.0/41.0 kB 290.6 kB/s eta 0:00:00
+Collecting numpy&lt;1.20.0,>=1.19.2
+Downloading numpy-1.19.5-cp38-cp38-manylinux2010_x86_64.whl (14.9 MB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 14.9/14.9 MB 308.9 kB/s eta 0:00:00
+Collecting pytz&lt;2022.0,>=2019.1
+Downloading pytz-2021.3-py2.py3-none-any.whl (503 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 503.5/503.5 kB 323.7 kB/s eta 0:00:00
+Requirement already satisfied: setuptools>=41.0.0 in /home/ashish/anaconda3/envs/rasa_py38/lib/python3.8/site-packages (from rasa) (65.3.0)
+Collecting google-auth&lt;2
+Downloading google_auth-1.35.0-py2.py3-none-any.whl (152 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 152.9/152.9 kB 247.8 kB/s eta 0:00:00
+Requirement already satisfied: tqdm&lt;5.0,>=4.31 in /home/ashish/anaconda3/envs/rasa_py38/lib/python3.8/site-packages (from rasa) (4.64.1)
+Collecting CacheControl&lt;0.13.0,>=0.12.9
+Downloading CacheControl-0.12.11-py2.py3-none-any.whl (21 kB)
+Collecting scikit-learn&lt;0.25,>=0.22
+Downloading scikit_learn-0.24.2-cp38-cp38-manylinux2010_x86_64.whl (24.9 MB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 24.9/24.9 MB 288.4 kB/s eta 0:00:00
+Collecting tensorflow-addons&lt;0.16.0,>=0.15.0
+Downloading tensorflow_addons-0.15.0-cp38-cp38-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (1.1 MB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.1/1.1 MB 323.8 kB/s eta 0:00:00
+Collecting joblib&lt;1.1.0,>=0.15.1
+Downloading joblib-1.0.1-py3-none-any.whl (303 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 303.1/303.1 kB 310.5 kB/s eta 0:00:00
+Collecting attrs&lt;21.3,>=19.3
+Downloading attrs-21.2.0-py2.py3-none-any.whl (53 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 53.7/53.7 kB 292.9 kB/s eta 0:00:00
+Collecting pymongo[srv,tls]&lt;3.11,>=3.8
+Downloading pymongo-3.10.1-cp38-cp38-manylinux2014_x86_64.whl (480 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 480.1/480.1 kB 314.2 kB/s eta 0:00:00
+Collecting sentry-sdk&lt;1.4.0,>=0.17.0
+Downloading sentry_sdk-1.3.1-py2.py3-none-any.whl (133 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 133.6/133.6 kB 247.9 kB/s eta 0:00:00
+Collecting networkx&lt;2.7,>=2.4
+Downloading networkx-2.6.3-py3-none-any.whl (1.9 MB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.9/1.9 MB 338.2 kB/s eta 0:00:00
+Collecting tensorflow-text&lt;2.8.0,>=2.7.0
+Downloading tensorflow_text-2.7.3-cp38-cp38-manylinux2010_x86_64.whl (4.9 MB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.9/4.9 MB 343.2 kB/s eta 0:00:00
+Collecting kafka-python&lt;3.0,>=1.4
+Downloading kafka_python-2.0.2-py2.py3-none-any.whl (246 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 246.5/246.5 kB 335.8 kB/s eta 0:00:00
+Collecting absl-py&lt;0.14,>=0.9
+Downloading absl_py-0.13.0-py3-none-any.whl (132 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 132.1/132.1 kB 241.4 kB/s eta 0:00:00
+Collecting scipy&lt;1.8.0,>=1.4.1
+Downloading scipy-1.7.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (39.3 MB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 39.3/39.3 MB 297.4 kB/s eta 0:00:00
+Collecting terminaltables&lt;3.2.0,>=3.1.0
+Downloading terminaltables-3.1.10-py2.py3-none-any.whl (15 kB)
+Collecting SQLAlchemy&lt;1.5.0,>=1.4.0
+Downloading SQLAlchemy-1.4.41-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.6 MB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 294.6 kB/s eta 0:00:00
+Collecting packaging&lt;21.0,>=20.0
+Downloading packaging-20.9-py2.py3-none-any.whl (40 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 40.9/40.9 kB 157.0 kB/s eta 0:00:00
+Collecting webexteamssdk&lt;1.7.0,>=1.1.1
+Downloading webexteamssdk-1.6.1-py3-none-any.whl (113 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 113.5/113.5 kB 259.2 kB/s eta 0:00:00
+Requirement already satisfied: python-dateutil&lt;2.9,>=2.8 in /home/ashish/anaconda3/envs/rasa_py38/lib/python3.8/site-packages (from rasa) (2.8.2)
+Collecting rocketchat_API&lt;1.26.0,>=0.6.31
+Downloading rocketchat_API-1.25.0-py3-none-any.whl (19 kB)
+Collecting fbmessenger&lt;6.1.0,>=6.0.0
+Downloading fbmessenger-6.0.0-py2.py3-none-any.whl (11 kB)
+Collecting ruamel.yaml&lt;0.17.0,>=0.16.5
+Downloading ruamel.yaml-0.16.13-py2.py3-none-any.whl (111 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 111.9/111.9 kB 339.1 kB/s eta 0:00:00
+Collecting randomname&lt;0.2.0,>=0.1.5
+Downloading randomname-0.1.5.tar.gz (36 kB)
+Preparing metadata (setup.py) ... done
+Collecting colorhash&lt;1.1.0,>=1.0.2
+Downloading colorhash-1.0.4-py3-none-any.whl (5.5 kB)
+Collecting cloudpickle&lt;1.7,>=1.2
+Downloading cloudpickle-1.6.0-py3-none-any.whl (23 kB)
+Collecting matplotlib&lt;3.4,>=3.1
+Downloading matplotlib-3.3.4-cp38-cp38-manylinux1_x86_64.whl (11.6 MB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.6/11.6 MB 288.3 kB/s eta 0:00:00
+Collecting prompt-toolkit&lt;3.0.29,>=3.0
+Downloading prompt_toolkit-3.0.28-py3-none-any.whl (380 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 380.2/380.2 kB 255.8 kB/s eta 0:00:00
+Collecting pydot&lt;1.5,>=1.4
+Downloading pydot-1.4.2-py2.py3-none-any.whl (21 kB)
+Collecting boto3&lt;2.0,>=1.12
+Downloading boto3-1.24.75-py3-none-any.whl (132 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 132.5/132.5 kB 250.2 kB/s eta 0:00:00
+Collecting redis&lt;4.0,>=3.4
+Downloading redis-3.5.3-py2.py3-none-any.whl (72 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 72.1/72.1 kB 267.3 kB/s eta 0:00:00
+Collecting sanic&lt;21.13,>=21.12
+Downloading sanic-21.12.2-py3-none-any.whl (156 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 156.5/156.5 kB 276.9 kB/s eta 0:00:00
+Collecting aiohttp!=3.7.4.post0,&lt;3.8,>=3.6
+Downloading aiohttp-3.7.4-cp38-cp38-manylinux2014_x86_64.whl (1.5 MB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 331.6 kB/s eta 0:00:00
+Collecting sanic-routing&lt;0.8.0,>=0.7.2
+Downloading sanic_routing-0.7.2-py3-none-any.whl (23 kB)
+Collecting ujson&lt;6.0,>=1.35
+Downloading ujson-5.5.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (46 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 46.1/46.1 kB 178.6 kB/s eta 0:00:00
+Collecting PyJWT[crypto]&lt;3.0.0,>=2.0.0
+Downloading PyJWT-2.5.0-py3-none-any.whl (20 kB)
+Collecting sanic-cors&lt;2.1.0,>=2.0.0
+Downloading Sanic_Cors-2.0.1-py2.py3-none-any.whl (17 kB)
+Collecting tensorflow&lt;2.8.0,>=2.7.0
+Downloading tensorflow-2.7.4-cp38-cp38-manylinux2010_x86_64.whl (496.0 MB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 496.0/496.0 MB 206.4 kB/s eta 0:00:00
+Collecting pyTelegramBotAPI&lt;5.0.0,>=3.7.3
+Downloading pyTelegramBotAPI-4.7.0.tar.gz (210 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 210.7/210.7 kB 229.1 kB/s eta 0:00:00
+Preparing metadata (setup.py) ... done
+Collecting jsonpickle&lt;2.1,>=1.3
+Downloading jsonpickle-2.0.0-py2.py3-none-any.whl (37 kB)
+Collecting sanic-jwt&lt;2.0.0,>=1.6.0
+Downloading sanic_jwt-1.8.0-py3-none-any.whl (23 kB)
+Collecting typing-utils&lt;0.2.0,>=0.1.0
+Downloading typing_utils-0.1.0-py3-none-any.whl (10 kB)
+Collecting mattermostwrapper&lt;2.3,>=2.2
+Downloading mattermostwrapper-2.2.tar.gz (2.5 kB)
+Preparing metadata (setup.py) ... done
+Collecting tarsafe&lt;0.0.4,>=0.0.3
+Downloading tarsafe-0.0.3-py3-none-any.whl (5.0 kB)
+Collecting jsonschema&lt;4.5,>=3.2
+Downloading jsonschema-4.4.0-py3-none-any.whl (72 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 72.7/72.7 kB 240.9 kB/s eta 0:00:00
+Collecting psycopg2-binary&lt;2.10.0,>=2.8.2
+Downloading psycopg2_binary-2.9.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.0 MB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.0/3.0 MB 259.8 kB/s eta 0:00:00
+Collecting tensorflow_hub&lt;0.13.0,>=0.12.0
+Downloading tensorflow_hub-0.12.0-py2.py3-none-any.whl (108 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 108.8/108.8 kB 232.1 kB/s eta 0:00:00
+Collecting sklearn-crfsuite&lt;0.4,>=0.3
+Downloading sklearn_crfsuite-0.3.6-py2.py3-none-any.whl (12 kB)
+Collecting partd>=0.3.10
+Downloading partd-1.3.0-py3-none-any.whl (18 kB)
+Collecting pyyaml>=5.3.1
+Downloading PyYAML-6.0-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl (701 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 701.2/701.2 kB 304.6 kB/s eta 0:00:00
+Collecting toolz>=0.8.2
+Downloading toolz-0.12.0-py3-none-any.whl (55 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 55.8/55.8 kB 243.2 kB/s eta 0:00:00
+Collecting fsspec>=0.6.0
+Downloading fsspec-2022.8.2-py3-none-any.whl (140 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 140.8/140.8 kB 278.9 kB/s eta 0:00:00
+Requirement already satisfied: six in /home/ashish/anaconda3/envs/rasa_py38/lib/python3.8/site-packages (from absl-py&lt;0.14,>=0.9->rasa) (1.16.0)
+Collecting aiormq~=6.4.0
+Downloading aiormq-6.4.2-py3-none-any.whl (34 kB)
+Collecting yarl
+Downloading yarl-1.8.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (262 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 262.1/262.1 kB 299.1 kB/s eta 0:00:00
+Collecting chardet&lt;4.0,>=2.0
+Downloading chardet-3.0.4-py2.py3-none-any.whl (133 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 133.4/133.4 kB 308.3 kB/s eta 0:00:00
+Collecting async-timeout&lt;4.0,>=3.0
+Downloading async_timeout-3.0.1-py3-none-any.whl (8.2 kB)
+Collecting multidict&lt;7.0,>=4.5
+Downloading multidict-6.0.2-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (121 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 121.3/121.3 kB 345.9 kB/s eta 0:00:00
+Collecting tzlocal~=2.0
+Downloading tzlocal-2.1-py2.py3-none-any.whl (16 kB)
+Collecting jmespath&lt;2.0.0,>=0.7.1
+Downloading jmespath-1.0.1-py3-none-any.whl (20 kB)
+Collecting botocore&lt;1.28.0,>=1.27.75
+Downloading botocore-1.27.75-py3-none-any.whl (9.1 MB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.1/9.1 MB 278.2 kB/s eta 0:00:00
+Collecting s3transfer&lt;0.7.0,>=0.6.0
+Downloading s3transfer-0.6.0-py3-none-any.whl (79 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 79.6/79.6 kB 276.0 kB/s eta 0:00:00
+Collecting msgpack>=0.5.2
+Downloading msgpack-1.0.4-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (322 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 322.5/322.5 kB 266.5 kB/s eta 0:00:00
+Collecting humanfriendly>=9.1
+Downloading humanfriendly-10.0-py2.py3-none-any.whl (86 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 86.8/86.8 kB 254.5 kB/s eta 0:00:00
+Collecting cachetools&lt;5.0,>=2.0.0
+Downloading cachetools-4.2.4-py3-none-any.whl (10 kB)
+Collecting pyasn1-modules>=0.2.1
+Downloading pyasn1_modules-0.2.8-py2.py3-none-any.whl (155 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 155.3/155.3 kB 261.2 kB/s eta 0:00:00
+Collecting rsa&lt;5,>=3.1.4
+Downloading rsa-4.9-py3-none-any.whl (34 kB)
+Requirement already satisfied: pyrsistent!=0.17.0,!=0.17.1,!=0.17.2,>=0.14.0 in /home/ashish/anaconda3/envs/rasa_py38/lib/python3.8/site-packages (from jsonschema&lt;4.5,>=3.2->rasa) (0.18.1)
+Requirement already satisfied: importlib-resources>=1.4.0 in /home/ashish/anaconda3/envs/rasa_py38/lib/python3.8/site-packages (from jsonschema&lt;4.5,>=3.2->rasa) (5.9.0)
+Collecting pillow>=6.2.0
+Downloading Pillow-9.2.0-cp38-cp38-manylinux_2_28_x86_64.whl (3.2 MB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.2/3.2 MB 283.6 kB/s eta 0:00:00
+Collecting kiwisolver>=1.0.1
+Downloading kiwisolver-1.4.4-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.whl (1.2 MB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 247.8 kB/s eta 0:00:00
+Collecting cycler>=0.10
+Downloading cycler-0.11.0-py3-none-any.whl (6.4 kB)
+Requirement already satisfied: pyparsing!=2.0.4,!=2.1.2,!=2.1.6,>=2.0.3 in /home/ashish/anaconda3/envs/rasa_py38/lib/python3.8/site-packages (from matplotlib&lt;3.4,>=3.1->rasa) (3.0.9)
+Requirement already satisfied: wcwidth in /home/ashish/anaconda3/envs/rasa_py38/lib/python3.8/site-packages (from prompt-toolkit&lt;3.0.29,>=3.0->rasa) (0.2.5)
+Collecting types-cryptography>=3.3.21
+Downloading types_cryptography-3.3.23-py3-none-any.whl (30 kB)
+Requirement already satisfied: cryptography>=3.3.1 in /home/ashish/anaconda3/envs/rasa_py38/lib/python3.8/site-packages (from PyJWT[crypto]&lt;3.0.0,>=2.0.0->rasa) (37.0.4)
+Collecting docopt>=0.6.2
+Downloading docopt-0.6.2.tar.gz (25 kB)
+Preparing metadata (setup.py) ... done
+Collecting dnspython&lt;2.0.0,>=1.16.0
+Downloading dnspython-1.16.0-py2.py3-none-any.whl (188 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 188.4/188.4 kB 204.2 kB/s eta 0:00:00
+Collecting bidict>=0.21.0
+Downloading bidict-0.22.0-py3-none-any.whl (36 kB)
+Collecting fire
+Downloading fire-0.4.0.tar.gz (87 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 87.7/87.7 kB 207.5 kB/s eta 0:00:00
+Preparing metadata (setup.py) ... done
+Requirement already satisfied: urllib3&lt;2.0.0,>=1.26.5 in /home/ashish/anaconda3/envs/rasa_py38/lib/python3.8/site-packages (from rasa-sdk&lt;3.3.0,>=3.2.0->rasa) (1.26.11)
+Requirement already satisfied: charset-normalizer&lt;3,>=2 in /home/ashish/anaconda3/envs/rasa_py38/lib/python3.8/site-packages (from requests&lt;3.0,>=2.23->rasa) (2.1.1)
+Requirement already satisfied: certifi>=2017.4.17 in /home/ashish/anaconda3/envs/rasa_py38/lib/python3.8/site-packages (from requests&lt;3.0,>=2.23->rasa) (2022.9.14)
+Requirement already satisfied: idna&lt;4,>=2.5 in /home/ashish/anaconda3/envs/rasa_py38/lib/python3.8/site-packages (from requests&lt;3.0,>=2.23->rasa) (3.3)
+Collecting ruamel.yaml.clib>=0.1.2
+Downloading ruamel.yaml.clib-0.2.6-cp38-cp38-manylinux1_x86_64.whl (570 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 570.4/570.4 kB 335.9 kB/s eta 0:00:00
+Collecting aiofiles>=0.6.0
+Downloading aiofiles-22.1.0-py3-none-any.whl (14 kB)
+Collecting uvloop>=0.5.3
+Downloading uvloop-0.17.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (4.6 MB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.6/4.6 MB 302.9 kB/s eta 0:00:00
+Collecting httptools>=0.0.10
+Downloading httptools-0.5.0-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (427 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 427.8/427.8 kB 290.8 kB/s eta 0:00:00
+Collecting websockets>=10.0
+Downloading websockets-10.3-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl (111 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 111.3/111.3 kB 334.3 kB/s eta 0:00:00
+Collecting multidict&lt;7.0,>=4.5
+Downloading multidict-5.2.0-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl (187 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 187.4/187.4 kB 326.6 kB/s eta 0:00:00
+Collecting threadpoolctl>=2.0.0
+Downloading threadpoolctl-3.1.0-py3-none-any.whl (14 kB)
+Collecting python-crfsuite>=0.8.3
+Downloading python_crfsuite-0.9.8-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.0 MB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.0/1.0 MB 326.0 kB/s eta 0:00:00
+Collecting tabulate
+Downloading tabulate-0.8.10-py3-none-any.whl (29 kB)
+Collecting greenlet!=0.4.17
+Downloading greenlet-1.1.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (157 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 157.1/157.1 kB 356.2 kB/s eta 0:00:00
+Collecting opt-einsum>=2.3.2
+Downloading opt_einsum-3.3.0-py3-none-any.whl (65 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 65.5/65.5 kB 318.3 kB/s eta 0:00:00
+Collecting gast&lt;0.5.0,>=0.2.1
+Downloading gast-0.4.0-py3-none-any.whl (9.8 kB)
+Collecting google-pasta>=0.1.1
+Downloading google_pasta-0.2.0-py3-none-any.whl (57 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.5/57.5 kB 221.1 kB/s eta 0:00:00
+Collecting keras-preprocessing>=1.1.1
+Downloading Keras_Preprocessing-1.1.2-py2.py3-none-any.whl (42 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 42.6/42.6 kB 278.5 kB/s eta 0:00:00
+Collecting astunparse>=1.6.0
+Downloading astunparse-1.6.3-py2.py3-none-any.whl (12 kB)
+Collecting flatbuffers&lt;3.0,>=1.12
+Downloading flatbuffers-2.0.7-py2.py3-none-any.whl (26 kB)
+Collecting libclang>=9.0.1
+Downloading libclang-14.0.6-py2.py3-none-manylinux2010_x86_64.whl (14.1 MB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 14.1/14.1 MB 276.7 kB/s eta 0:00:00
+Collecting wrapt>=1.11.0
+Downloading wrapt-1.14.1-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (81 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 81.0/81.0 kB 400.8 kB/s eta 0:00:00
+Collecting tensorboard~=2.6
+Downloading tensorboard-2.10.0-py3-none-any.whl (5.9 MB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.9/5.9 MB 339.5 kB/s eta 0:00:00
+Collecting tensorflow-estimator&lt;2.8,~=2.7.0rc0
+Downloading tensorflow_estimator-2.7.0-py2.py3-none-any.whl (463 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 463.1/463.1 kB 202.3 kB/s eta 0:00:00
+Collecting termcolor>=1.1.0
+Downloading termcolor-2.0.1-py3-none-any.whl (5.4 kB)
+Requirement already satisfied: wheel&lt;1.0,>=0.32.0 in /home/ashish/anaconda3/envs/rasa_py38/lib/python3.8/site-packages (from tensorflow&lt;2.8.0,>=2.7.0->rasa) (0.37.1)
+Collecting protobuf&lt;3.20,>=3.9.2
+Downloading protobuf-3.19.5-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.1 MB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.1/1.1 MB 208.1 kB/s eta 0:00:00
+Collecting keras&lt;2.8,>=2.7.0rc0
+Downloading keras-2.7.0-py2.py3-none-any.whl (1.3 MB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 323.8 kB/s eta 0:00:00
+Collecting grpcio&lt;2.0,>=1.24.3
+Downloading grpcio-1.49.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (4.7 MB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.7/4.7 MB 265.6 kB/s eta 0:00:00
+Collecting tensorflow-io-gcs-filesystem>=0.21.0
+Downloading tensorflow_io_gcs_filesystem-0.27.0-cp38-cp38-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (2.4 MB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.4/2.4 MB 198.4 kB/s eta 0:00:00
+Collecting h5py>=2.9.0
+Downloading h5py-3.7.0-cp38-cp38-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (4.5 MB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 192.7 kB/s eta 0:00:00
+Collecting typeguard>=2.7
+Downloading typeguard-2.13.3-py3-none-any.whl (17 kB)
+Collecting requests-toolbelt
+Downloading requests_toolbelt-0.9.1-py2.py3-none-any.whl (54 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 54.3/54.3 kB 288.5 kB/s eta 0:00:00
+Collecting future
+Downloading future-0.18.2.tar.gz (829 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 829.2/829.2 kB 297.7 kB/s eta 0:00:00
+Preparing metadata (setup.py) ... done
+Collecting pamqp==3.2.1
+Downloading pamqp-3.2.1-py2.py3-none-any.whl (33 kB)
+Requirement already satisfied: cffi>=1.12 in /home/ashish/anaconda3/envs/rasa_py38/lib/python3.8/site-packages (from cryptography>=3.3.1->PyJWT[crypto]&lt;3.0.0,>=2.0.0->rasa) (1.15.1)
+Requirement already satisfied: zipp>=3.1.0 in /home/ashish/anaconda3/envs/rasa_py38/lib/python3.8/site-packages (from importlib-resources>=1.4.0->jsonschema&lt;4.5,>=3.2->rasa) (3.8.1)
+Collecting locket
+Downloading locket-1.0.0-py2.py3-none-any.whl (4.4 kB)
+Collecting pyasn1&lt;0.5.0,>=0.4.6
+Downloading pyasn1-0.4.8-py2.py3-none-any.whl (77 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 77.1/77.1 kB 306.6 kB/s eta 0:00:00
+Collecting tensorboard-data-server&lt;0.7.0,>=0.6.0
+Downloading tensorboard_data_server-0.6.1-py3-none-manylinux2010_x86_64.whl (4.9 MB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.9/4.9 MB 304.1 kB/s eta 0:00:00
+Collecting markdown>=2.6.8
+Downloading Markdown-3.4.1-py3-none-any.whl (93 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 93.3/93.3 kB 325.5 kB/s eta 0:00:00
+Collecting werkzeug>=1.0.1
+Downloading Werkzeug-2.2.2-py3-none-any.whl (232 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 232.7/232.7 kB 296.1 kB/s eta 0:00:00
+Collecting google-auth-oauthlib&lt;0.5,>=0.4.1
+Downloading google_auth_oauthlib-0.4.6-py2.py3-none-any.whl (18 kB)
+Collecting tensorboard-plugin-wit>=1.6.0
+Downloading tensorboard_plugin_wit-1.8.1-py3-none-any.whl (781 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 781.3/781.3 kB 286.4 kB/s eta 0:00:00
+Requirement already satisfied: pycparser in /home/ashish/anaconda3/envs/rasa_py38/lib/python3.8/site-packages (from cffi>=1.12->cryptography>=3.3.1->PyJWT[crypto]&lt;3.0.0,>=2.0.0->rasa) (2.21)
+Collecting requests-oauthlib>=0.7.0
+Downloading requests_oauthlib-1.3.1-py2.py3-none-any.whl (23 kB)
+Requirement already satisfied: importlib-metadata>=4.4 in /home/ashish/anaconda3/envs/rasa_py38/lib/python3.8/site-packages (from markdown>=2.6.8->tensorboard~=2.6->tensorflow&lt;2.8.0,>=2.7.0->rasa) (4.11.4)
+Requirement already satisfied: MarkupSafe>=2.1.1 in /home/ashish/anaconda3/envs/rasa_py38/lib/python3.8/site-packages (from werkzeug>=1.0.1->tensorboard~=2.6->tensorflow&lt;2.8.0,>=2.7.0->rasa) (2.1.1)
+Collecting oauthlib>=3.0.0
+Downloading oauthlib-3.2.1-py3-none-any.whl (151 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.7/151.7 kB 301.9 kB/s eta 0:00:00
+Building wheels for collected packages: aio-pika, mattermostwrapper, pyTelegramBotAPI, randomname, twilio, docopt, fire, future
+Building wheel for aio-pika (setup.py) ... done
+Created wheel for aio-pika: filename=aio_pika-8.2.1-py3-none-any.whl size=49595 sha256=61819ae86e93deb5d8f1f7c60f769d40e42ccf6de8af62f4af0a3bcb30a98499
+Stored in directory: /home/ashish/.cache/pip/wheels/27/ab/59/a3f84ec019a2a87ad812a2dc15945f763e5684aecfb059d9ec
+Building wheel for mattermostwrapper (setup.py) ... done
+Created wheel for mattermostwrapper: filename=mattermostwrapper-2.2-py3-none-any.whl size=2448 sha256=671230d2ec1c13e72ee8b2f53cd09e8a800d5db87dc166a6c2eb6ac019a89a7c
+Stored in directory: /home/ashish/.cache/pip/wheels/1a/d3/89/63aef88b581e7acc2c48812e6160a2bae57b6ef180f6e1f293
+Building wheel for pyTelegramBotAPI (setup.py) ... done
+Created wheel for pyTelegramBotAPI: filename=pyTelegramBotAPI-4.7.0-py3-none-any.whl size=192810 sha256=388f48b689f2b9f8f5ab4253a9a1a0c0caba6a9869dacffe2f60077cab1a69ea
+Stored in directory: /home/ashish/.cache/pip/wheels/f7/29/1d/113c046ac93c2896159bb2c33673efe140b3642f21a06c4ac5
+Building wheel for randomname (setup.py) ... done
+Created wheel for randomname: filename=randomname-0.1.5-py3-none-any.whl size=58808 sha256=b4ef46a33c316f83d0947ae923af542f7963176dffcd821789ce9af5b5d6393e
+Stored in directory: /home/ashish/.cache/pip/wheels/46/0a/9d/32f2d10d4fae6ddfbdeb504d949ccd70d666382a277e7c1bd5
+Building wheel for twilio (setup.py) ... done
+Created wheel for twilio: filename=twilio-6.50.1-py2.py3-none-any.whl size=1208682 sha256=bc11ed67ebb0cd32e27e90ea4db4232206f01c9c0ed5909773b04b4b9e20391d
+Stored in directory: /home/ashish/.cache/pip/wheels/85/db/cc/c5c9ef20439073ba2a5403f5ce292446d3a01547007927df87
+Building wheel for docopt (setup.py) ... done
+Created wheel for docopt: filename=docopt-0.6.2-py2.py3-none-any.whl size=13706 sha256=659b1afa51fb6f8497374a399b9e1c36a423a1fead4fa7999ccd1440917d65c2
+Stored in directory: /home/ashish/.cache/pip/wheels/56/ea/58/ead137b087d9e326852a851351d1debf4ada529b6ac0ec4e8c
+Building wheel for fire (setup.py) ... done
+Created wheel for fire: filename=fire-0.4.0-py2.py3-none-any.whl size=115926 sha256=ecb49e817db0442d3d91f76c263f923d22f9c308f2fb6b2f170a80b3ceef5ac0
+Stored in directory: /home/ashish/.cache/pip/wheels/1f/10/06/2a990ee4d73a8479fe2922445e8a876d38cfbfed052284c6a1
+Building wheel for future (setup.py) ... done
+Created wheel for future: filename=future-0.18.2-py3-none-any.whl size=491058 sha256=cca1f0c0a3dfd4ada8c1534891271c9122c30f91097627fc9495f64eed6ae3d1
+Stored in directory: /home/ashish/.cache/pip/wheels/8e/70/28/3d6ccd6e315f65f245da085482a2e1c7d14b90b30f239e2cf4
+Successfully built aio-pika mattermostwrapper pyTelegramBotAPI randomname twilio docopt fire future
+Installing collected packages: typing-extensions, types-cryptography, tensorflow-estimator, tensorboard-plugin-wit, sanic-routing, pytz, python-crfsuite, pyasn1, msgpack, libclang, keras, kafka-python, flatbuffers, docopt, chardet, wrapt, werkzeug, websockets, uvloop, ujson, tzlocal, typing-utils, typeguard, toolz, threadpoolctl, terminaltables, termcolor, tensorflow-io-gcs-filesystem, tensorboard-data-server, tarsafe, tabulate, sentry-sdk, ruamel.yaml.clib, rsa, regex, redis, pyyaml, python-engineio, pymongo, PyJWT, pydot, pyasn1-modules, psycopg2-binary, protobuf, prompt-toolkit, pillow, pamqp, packaging, oauthlib, numpy, networkx, multidict, locket, kiwisolver, jsonpickle, joblib, jmespath, humanfriendly, httptools, grpcio, greenlet, google-pasta, gast, future, fsspec, dnspython, cycler, colorhash, colorclass, cloudpickle, cachetools, bidict, attrs, async-timeout, astunparse, aiofiles, absl-py, yarl, twilio, tensorflow_hub, tensorflow-addons, SQLAlchemy, sklearn-crfsuite, scipy, sanic-jwt, sanic, ruamel.yaml, rocketchat_API, requests-toolbelt, requests-oauthlib, questionary, python-socketio, pyTelegramBotAPI, partd, opt-einsum, mattermostwrapper, matplotlib, markdown, keras-preprocessing, jsonschema, h5py, google-auth, fire, fbmessenger, coloredlogs, CacheControl, botocore, apscheduler, webexteamssdk, scikit-learn, sanic-cors, s3transfer, randomname, pykwalify, google-auth-oauthlib, dask, aiormq, aiohttp, tensorboard, slackclient, rasa-sdk, boto3, aio-pika, tensorflow, tensorflow-text, rasa
+WARNING: The script chardetect is installed in '/home/ashish/.local/bin' which is not on PATH.
+Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+WARNING: The script tabulate is installed in '/home/ashish/.local/bin' which is not on PATH.
+Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+WARNING: The scripts pyrsa-decrypt, pyrsa-encrypt, pyrsa-keygen, pyrsa-priv2pub, pyrsa-sign and pyrsa-verify are installed in '/home/ashish/.local/bin' which is not on PATH.
+Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+WARNING: The scripts f2py, f2py3 and f2py3.8 are installed in '/home/ashish/.local/bin' which is not on PATH.
+Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+WARNING: The script humanfriendly is installed in '/home/ashish/.local/bin' which is not on PATH.
+Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+WARNING: The scripts futurize and pasteurize are installed in '/home/ashish/.local/bin' which is not on PATH.
+Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+WARNING: The scripts make_image_classifier and make_nearest_neighbour_index are installed in '/home/ashish/.local/bin' which is not on PATH.
+Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+WARNING: The script sanic is installed in '/home/ashish/.local/bin' which is not on PATH.
+Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+WARNING: The script markdown_py is installed in '/home/ashish/.local/bin' which is not on PATH.
+Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+WARNING: The script jsonschema is installed in '/home/ashish/.local/bin' which is not on PATH.
+Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+WARNING: The script coloredlogs is installed in '/home/ashish/.local/bin' which is not on PATH.
+Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+WARNING: The script doesitcache is installed in '/home/ashish/.local/bin' which is not on PATH.
+Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+WARNING: The script randomname is installed in '/home/ashish/.local/bin' which is not on PATH.
+Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+WARNING: The script pykwalify is installed in '/home/ashish/.local/bin' which is not on PATH.
+Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+WARNING: The script google-oauthlib-tool is installed in '/home/ashish/.local/bin' which is not on PATH.
+Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+WARNING: The script tensorboard is installed in '/home/ashish/.local/bin' which is not on PATH.
+Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+WARNING: The scripts estimator_ckpt_converter, import_pb_to_tensorboard, saved_model_cli, tensorboard, tf_upgrade_v2, tflite_convert, toco and toco_from_protos are installed in '/home/ashish/.local/bin' which is not on PATH.
+Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+WARNING: The script rasa is installed in '/home/ashish/.local/bin' which is not on PATH.
+Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+Successfully installed CacheControl-0.12.11 PyJWT-2.5.0 SQLAlchemy-1.4.41 absl-py-0.13.0 aio-pika-8.2.1 aiofiles-22.1.0 aiohttp-3.7.4 aiormq-6.4.2 apscheduler-3.7.0 astunparse-1.6.3 async-timeout-3.0.1 attrs-21.2.0 bidict-0.22.0 boto3-1.24.75 botocore-1.27.75 cachetools-4.2.4 chardet-3.0.4 cloudpickle-1.6.0 colorclass-2.2.2 coloredlogs-15.0.1 colorhash-1.0.4 cycler-0.11.0 dask-2022.2.0 dnspython-1.16.0 docopt-0.6.2 fbmessenger-6.0.0 fire-0.4.0 flatbuffers-2.0.7 fsspec-2022.8.2 future-0.18.2 gast-0.4.0 google-auth-1.35.0 google-auth-oauthlib-0.4.6 google-pasta-0.2.0 greenlet-1.1.3 grpcio-1.49.0 h5py-3.7.0 httptools-0.5.0 humanfriendly-10.0 jmespath-1.0.1 joblib-1.0.1 jsonpickle-2.0.0 jsonschema-4.4.0 kafka-python-2.0.2 keras-2.7.0 keras-preprocessing-1.1.2 kiwisolver-1.4.4 libclang-14.0.6 locket-1.0.0 markdown-3.4.1 matplotlib-3.3.4 mattermostwrapper-2.2 msgpack-1.0.4 multidict-5.2.0 networkx-2.6.3 numpy-1.19.5 oauthlib-3.2.1 opt-einsum-3.3.0 packaging-20.9 pamqp-3.2.1 partd-1.3.0 pillow-9.2.0 prompt-toolkit-3.0.28 protobuf-3.19.5 psycopg2-binary-2.9.3 pyTelegramBotAPI-4.7.0 pyasn1-0.4.8 pyasn1-modules-0.2.8 pydot-1.4.2 pykwalify-1.8.0 pymongo-3.10.1 python-crfsuite-0.9.8 python-engineio-4.3.4 python-socketio-5.7.1 pytz-2021.3 pyyaml-6.0 questionary-1.10.0 randomname-0.1.5 rasa-3.2.8 rasa-sdk-3.2.1 redis-3.5.3 regex-2022.4.24 requests-oauthlib-1.3.1 requests-toolbelt-0.9.1 rocketchat_API-1.25.0 rsa-4.9 ruamel.yaml-0.16.13 ruamel.yaml.clib-0.2.6 s3transfer-0.6.0 sanic-21.12.2 sanic-cors-2.0.1 sanic-jwt-1.8.0 sanic-routing-0.7.2 scikit-learn-0.24.2 scipy-1.7.3 sentry-sdk-1.3.1 sklearn-crfsuite-0.3.6 slackclient-2.9.4 tabulate-0.8.10 tarsafe-0.0.3 tensorboard-2.10.0 tensorboard-data-server-0.6.1 tensorboard-plugin-wit-1.8.1 tensorflow-2.7.4 tensorflow-addons-0.15.0 tensorflow-estimator-2.7.0 tensorflow-io-gcs-filesystem-0.27.0 tensorflow-text-2.7.3 tensorflow_hub-0.12.0 termcolor-2.0.1 terminaltables-3.1.10 threadpoolctl-3.1.0 toolz-0.12.0 twilio-6.50.1 typeguard-2.13.3 types-cryptography-3.3.23 typing-extensions-3.10.0.2 typing-utils-0.1.0 tzlocal-2.1 ujson-5.5.0 uvloop-0.17.0 webexteamssdk-1.6.1 websockets-10.3 werkzeug-2.2.2 wrapt-1.14.1 yarl-1.8.1
+(rasa_py38) ashish@ashish-Lenovo-ideapad-130-15IKB:~/Desktop$ 
+</i>
+
+(rasa_py38) ashish@ashish-Lenovo-ideapad-130-15IKB:~/Desktop$ pip show rasa
+
+<i class="ig">
+Name: rasa
+Version: 3.2.8
+Summary: Open source machine learning framework to automate text- and voice-based conversations: NLU, dialogue management, connect to Slack, Facebook, and more - Create chatbots and voice assistants
+Home-page: https://rasa.com
+Author: Rasa Technologies GmbH
+Author-email: hi@rasa.com
+License: Apache-2.0
+Location: /home/ashish/.local/lib/python3.8/site-packages
+Requires: absl-py, aio-pika, aiohttp, apscheduler, attrs, boto3, CacheControl, cloudpickle, colorclass, coloredlogs, colorhash, dask, fbmessenger, google-auth, joblib, jsonpickle, jsonschema, kafka-python, matplotlib, mattermostwrapper, networkx, numpy, packaging, prompt-toolkit, psycopg2-binary, pydot, PyJWT, pykwalify, pymongo, pyTelegramBotAPI, python-dateutil, python-engineio, python-socketio, pytz, questionary, randomname, rasa-sdk, redis, regex, requests, rocketchat_API, ruamel.yaml, sanic, sanic-cors, sanic-jwt, sanic-routing, scikit-learn, scipy, sentry-sdk, setuptools, sklearn-crfsuite, slackclient, SQLAlchemy, tarsafe, tensorflow, tensorflow-addons, tensorflow-text, tensorflow_hub, terminaltables, tqdm, twilio, typing-extensions, typing-utils, ujson, webexteamssdk
+Required-by:     
+</i>
+
+<h2>Fix the PATH variable to enable RASA CLI</h2>
+
+(rasa_py38) ashish@ashish-Lenovo-ideapad-130-15IKB:~/Desktop$ rasa
+<i class="ir">rasa: command not found</i>
+
+(rasa_py38) ashish@ashish-Lenovo-ideapad-130-15IKB:~/Desktop$ 
+(rasa_py38) ashish@ashish-Lenovo-ideapad-130-15IKB:~/Desktop$ sudo nano ~/.bashrc
+[sudo] password for ashish: 
+(rasa_py38) ashish@ashish-Lenovo-ideapad-130-15IKB:~/Desktop$ 
+(rasa_py38) ashish@ashish-Lenovo-ideapad-130-15IKB:~/Desktop$ 
+(rasa_py38) ashish@ashish-Lenovo-ideapad-130-15IKB:~/Desktop$ source ~/.bashrc
+(base) ashish@ashish-Lenovo-ideapad-130-15IKB:~/Desktop$ conda activate rasa_py38
+(rasa_py38) ashish@ashish-Lenovo-ideapad-130-15IKB:~/Desktop$ rasa
+<i class="ig">
+usage: rasa [-h] [--version] {init,run,shell,train,interactive,telemetry,test,visualize,data,export,x,evaluate} ...
+
+Rasa command line interface. Rasa allows you to build your own conversational assistants 🤖. The 'rasa' command allows you to easily run most common commands like creating a new bot, training or
+evaluating models.
+
+positional arguments:
+  {init,run,shell,train,interactive,telemetry,test,visualize,data,export,x,evaluate}
+                        Rasa commands
+    init                Creates a new project, with example training data, actions, and config files.
+    run                 Starts a Rasa server with your trained model.
+    shell               Loads your trained model and lets you talk to your assistant on the command line.
+    train               Trains a Rasa model using your NLU data and stories.
+    interactive         Starts an interactive learning session to create new training data for a Rasa model by chatting.
+    telemetry           Configuration of Rasa Open Source telemetry reporting.
+    test                Tests Rasa models using your test NLU data and stories.
+    visualize           Visualize stories.
+    data                Utils for the Rasa training files.
+    export              Export conversations using an event broker.
+    evaluate            Tools for evaluating models.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --version             Print installed Rasa version
+</i>
+
+<h3>The Fix of PATH Variable</h3>
+(rasa_py38) ashish@ashish-Lenovo-ideapad-130-15IKB:~/Desktop$ echo $PATH
+/home/ashish/.local/bin:/home/ashish/anaconda3/envs/rasa_py38/bin:/home/ashish/anaconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin
+(rasa_py38) ashish@ashish-Lenovo-ideapad-130-15IKB:~/Desktop$ 
+</pre>
+<span style="display: none">Tags: Technology,Python,Anaconda,Rasa,Natural Language Processing</span>

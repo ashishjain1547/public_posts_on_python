@@ -1,0 +1,425 @@
+<head>
+  <script crossorigin="anonymous" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script>
+      $(document).ready(function () {
+          $.ajax({
+              url: window.location.protocol + "//" + window.location.hostname + "/p/personal-posts-menu.html",
+              success: function (result) {
+                  $("div.customTemporaryCodeHolder").html(result);
+                  $("nav.customDynamicNav").html(
+                      $("div.customTemporaryCodeHolder nav.customBitsWilpMenu").html()
+                  );
+              }
+          });
+
+          $.ajax({
+              url: window.location.protocol + "//" + window.location.hostname + "/p/follow-us-on-social-media.html",
+
+              success: function (result) {
+                  $("span.customTempCodeHolderForSocialMedia").html(result);
+                  $("div.customSocialMediaBtnsWrapper").html(
+                      $("span.customTempCodeHolderForSocialMedia div.customSocialMediaWrapper").html()
+                  );
+              }
+
+          });
+      }); 
+  </script>
+  <!-- Google AdSense Using Machine Learning Code -->
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-3071098372371409",
+          enable_page_level_ads: true
+      });
+  </script>
+
+  <style>
+      .customTempCodeHolderForSocialMedia {
+          display: none;
+      }
+
+      pre {
+          white-space: pre-wrap;
+          white-space: -moz-pre-wrap;
+          white-space: -pre-wrap;
+          white-space: -o-pre-wrap;
+          word-wrap: break-word;
+      }
+
+      .customOl {
+          font-size: 15px;
+      }
+
+      .customPre {
+          white-space: pre-wrap; 
+      }
+
+      .customLink {
+          background-color: #4CAF50;
+          border: none;
+          color: white !important;
+          padding: 8px 13px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 14px;
+          margin: 4px 2px;
+          cursor: pointer;
+      }
+
+      .customLink:hover {
+          text-decoration: none;
+      }
+
+      .custom_5px_0px_padding_noMargin {
+          padding: 5px 0px;
+          margin: 0px;
+      }
+  
+      td {
+       padding: 0 3px;
+      }
+  </style>
+</head>
+<div class="customTemporaryCodeHolder"> </div>
+<span class="customTempCodeHolderForSocialMedia"> </span>
+
+<nav class="customDynamicNav"> </nav> <br />
+<div class="customSocialMediaBtnsWrapper"> </div> <br />
+<!-- End of 'Personal Posts Menu Template For Copy-Paste'. It started from the top of the page from <HEAD> tag. -->
+
+<pre class="">We had covered Strings in our previous session, which can be found here:
+<a href="https://survival8.blogspot.com/2021/05/python-2-string-and-related-packages.html" target="_blank" class="">Python (2) String and related packages [20210523]
+</a>
+
+In this post, we are covering the Python package "re", which stands for RegEx or Regular Expressions.
+
+First step towards working with "RegEx" is by importing the "re" package. Without importing "re", package Python would not know what you are mean by "re".
+
+<i style="color: blue;">(base) C:\Users\Ashish Jain>python
+Python 3.7.1 (default, Dec 10 2018, 22:54:23) [MSC v.1915 64 bit (AMD64)] :: Anaconda, Inc. on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> re</i>
+
+<i style="color: red;">Traceback (most recent call last):
+  File "&lt;stdin>", line 1, in &lt;module>
+NameError: name 're' is not defined</i>
+
+<i style="color: blue;">>>> import re
+>>> re</i>
+
+<i style="color: green;">&lt;module 're' from 'E:\\programfiles\\Anaconda3\\lib\\re.py'>
+>>></i>
+
+<b>RegEx Functions At a High Level</b>
+
+The re module offers a set of functions that allows us to search a string for a match:
+
+findall : Returns a list containing all matches
+search  : Returns a Match object if there is a match anywhere in the string
+split   : Returns a list where the string has been split at each match
+sub     : Replaces one or many matches with a string
+
+<h3 class="">A Regular Expression composed using following parts: Metacharacters, Special Sequences, and Sets.</h3>
+
+<b>Metacharacters: These are the characters with a special meaning</b>
+
+Character: Description: Example
+
+[]  A set of characters	"[a-m]"	
+
+\  Signals a special sequence (can also be used to escape special characters): "\d"	
+
+.  Any character (except newline character): "he..o"	
+
+^  Starts with	"^hello"	
+
+$  Ends with: "world$"	
+
+*  Zero or more occurrences: "aix*"	
+
++  One or more occurrences: "aix+"	
+
+?  Zero or one occurences: "r.?" 
+
+{}  Exactly the specified number of occurrences	"al{2}"	
+
+|  Either or "falls|stays"	
+
+()  Capture and group
+
+<b>Special Sequences: It is a \ followed by one of the characters in the list below, and has a special meaning:</b>
+
+Character: Description: Example
+
+\A	Returns a match if the specified characters are at the beginning of the string	"\AThe"	
+
+\b	Returns a match where the specified characters are at the beginning or at the end of a word
+(the "r" in the beginning is making sure that the string is being treated as a "raw string")	r"\bain"
+r"ain\b"	
+
+\B	Returns a match where the specified characters are present, but NOT at the beginning (or at the end) of a word
+(the "r" in the beginning is making sure that the string is being treated as a "raw string")	r"\Bain"
+r"ain\B"	
+
+\d	Returns a match where the string contains digits (numbers from 0-9)	"\d"	
+
+\D	Returns a match where the string DOES NOT contain digits	"\D"	
+
+\s	Returns a match where the string contains a white space character	"\s"	
+
+\S	Returns a match where the string DOES NOT contain a white space character	"\S"	
+
+\w	Returns a match where the string contains any word characters (characters from a to Z, digits from 0-9, and the underscore _ character)	"\w"	
+
+\W	Returns a match where the string DOES NOT contain any word characters	"\W"	
+
+\Z	Returns a match if the specified characters are at the end of the string
+
+<b>Sets: A set is a set of characters inside a pair of square brackets [] with a special meaning:</b>
+
+Set: Description
+
+[arn]	Returns a match where one of the specified characters (a, r, or n) are present	
+
+[a-n]	Returns a match for any lower case character, alphabetically between a and n	
+
+[^arn]	Returns a match for any character EXCEPT a, r, and n	
+
+[0123]	Returns a match where any of the specified digits (0, 1, 2, or 3) are present	
+
+[0-9]	Returns a match for any digit between 0 and 9	
+
+[0-5][0-9]	Returns a match for any two-digit numbers from 00 and 59	
+
+[a-zA-Z]	Returns a match for any character alphabetically between a and z, lower case OR upper case	
+
+[+]	In sets, +, *, ., |, (), $,{} has no special meaning, so [+] means: return a match for any + character in the string
+
+<b>The findall() Function</b>
+
+The findall() function returns a list containing all matches.
+The list contains the matches in the order they are found.
+
+<i style="color: blue;">import re
+txt = "The rain in Spain"
+x = re.findall("ai", txt)
+print(x)</i>
+
+<i style="color: green;">['ai', 'ai']</i>
+
+<i style="color: blue;">txt = "The rain in Spain detected by Mr Jain."
+x = re.findall("ai", txt)
+print(x)</i>
+
+<i style="color: green;">['ai', 'ai', 'ai']</i>
+
+<i style="color: blue;">txt = "The rain in Spain detected by Mr Jain."
+x = re.findall("r.?", txt)
+print(x)</i>
+
+".?" means zero or one occurence of any character, so we get the characters 'a' and ' '.
+<i style="color: green;">['ra', 'r ']</i>
+
+<i style="color: blue;">txt = "The rain in Spain detected by Mr Jain."
+x = re.findall("r\w?", txt)
+print(x)</i>
+
+"\w?" means zero or one occurence of any word character, so we get the characters 'ra' and only 'r'.
+<i style="color: green;">['ra', 'r']</i>
+
+If no matches are found, an empty list is returned.
+
+<i style="color: blue;">import re
+txt = "The rain in Spain"
+x = re.findall("Portugal", txt)
+print(x)</i>
+
+<b>The search() Function</b>
+
+The search() function searches the string for a match, and returns a Match object if there is a match.
+If there is more than one match, only the first occurrence of the match will be returned.
+
+<i style="color: blue;">import re
+txt = "The rain in Spain"
+x = re.search("\s", txt)
+print("The first white-space character is located in position:", x.start()) </i>
+
+<i style="color: green;">The first white-space character is located in position: 3</i>
+
+- - -
+
+<i style="color: blue;">txt = "The rain in Spain"
+x = re.search("\s", txt)
+print(x) </i>
+
+<i style="color: green;">&lt;re.Match object; span=(3, 4), match=' '></i>
+
+If no matches are found, the value None is returned.
+
+<i class="" style="color: blue;">import re
+txt = "The rain in Spain"
+x = re.search("Portugal", txt)
+print(x)</i>
+
+<b>The split() Function</b>
+
+The split() function returns a list where the string has been split at each match:
+
+<i style="color: blue;">import re
+txt = "The rain in Spain"
+x = re.split("\s", txt)
+print(x)</i>
+
+<i style="color: green;">['The', 'rain', 'in', 'Spain']</i>
+
+You can control the number of occurrences by specifying the maxsplit parameter:
+Split the string only at the first occurrence:
+
+<i style="color: blue;">import re
+txt = "The rain in Spain"
+x = re.split("\s", txt, maxsplit = 1)
+print(x)
+x = re.split("\s", txt, maxsplit = 2)
+print(x)</i>
+
+<i style="color: green;">['The', 'rain in Spain']
+['The', 'rain', 'in Spain']</i>
+
+<b>The sub() Function</b>
+
+The sub() function replaces the matches with the text of your choice:
+
+<i style="color: blue;">import re
+txt = "The rain in Spain"
+x = re.sub("\s", "9", txt)
+print(x)</i>
+
+<i style="color: green;">The9rain9in9Spain</i>
+
+You can control the number of replacements by specifying the count parameter:
+Replace the first 2 occurrences:
+<i style="color: blue;">import re
+txt = "The rain in Spain"
+x = re.sub("\s", "9", txt, count = 1)
+print(x)
+x = re.sub("\s", "9", txt, count = 2)
+print(x)</i>
+
+<i style="color: green">The9rain in Spain
+The9rain9in Spain</i>
+
+<b>Match Object</b>
+
+A Match Object is an object containing information about the search and the result.
+Note: If there is no match, the value None will be returned, instead of the Match Object.
+
+Do a search that will return a Match Object:
+
+<i style="color: blue;">import re
+txt = "The rain in Spain"
+x = re.search("ai", txt)
+print(x) #this will print an object</i>
+
+<b>Print all the methods or attributes on Match object:</b>
+
+<i style="color: blue;" class="">print(x.__dir__())</i>
+
+<i style="color: green;">['__repr__',
+'__getitem__',
+'group',
+'start',
+'end',
+'span',
+'groups',
+'groupdict',
+'expand',
+'__copy__',
+'__deepcopy__',
+'__class_getitem__',
+'string',
+'re',
+'pos',
+'endpos',
+'lastindex',
+'lastgroup',
+'regs',
+'__doc__',
+'__hash__',
+'__str__',
+'__getattribute__',
+'__setattr__',
+'__delattr__',
+'__lt__',
+'__le__',
+'__eq__',
+'__ne__',
+'__gt__',
+'__ge__',
+'__init__',
+'__new__',
+'__reduce_ex__',
+'__reduce__',
+'__subclasshook__',
+'__init_subclass__',
+'__format__',
+'__sizeof__',
+'__dir__',
+'__class__']</i>
+
+<b>The Match object has properties and methods used to retrieve information about the search, and the result:</b>
+.span() returns a tuple containing the start-, and end positions of the match.
+.string returns the string passed into the function
+.group() returns the part of the string where there was a match
+
+<i style="color: blue;">txt = "The rain in Spain"
+x = re.search(r"\bS\w+", txt)
+print(x)
+print("span:", x.span())
+print("string:", x.string)
+print("group:", x.group())
+print("start:", x.start())</i>
+
+<i style="color: green">&lt;re.Match object; span=(12, 17), match='Spain'>
+span: (12, 17)
+string: The rain in Spain
+group: Spain
+start: 12</i>
+
+<i style="color: blue;">txt = "Mr Jain enjoyed the rain in Spain."
+x = re.search(r"\bS\w+", txt)
+print(x)
+print("span:", x.span())
+print("string:", x.string)
+print("group:", x.group())
+print("start:", x.start())
+print("end:", x.end())</i>
+
+<i style="color: green;">&lt;re.Match object; span=(28, 33), match='Spain'>
+span: (28, 33)
+string: Mr Jain enjoyed the rain in Spain.
+group: Spain
+start: 28
+end: 33</i>
+
+<h3 class="">The "finditer()" function</h3>
+
+<i class="" style="color: blue;">>>> import re
+>>> s = "Mr Jain enjoyed the rain in Spain with Ms Jain."
+>>> re.finditer('ai', s)
+&lt;callable_iterator object at 0x000001899B48A9B0>
+>>>
+>>> fi = re.finditer('ai', s)
+>>> for i in fi:
+...  print(i.span())
+...</i>
+
+<i style="color: green;">(4, 6)
+(21, 23)
+(30, 32)
+(43, 45)
+>>></i>
+
+<span class="" style="display: none;">Tags: Technology,Python,Anaconda,Natural Language Processing,</span></pre>

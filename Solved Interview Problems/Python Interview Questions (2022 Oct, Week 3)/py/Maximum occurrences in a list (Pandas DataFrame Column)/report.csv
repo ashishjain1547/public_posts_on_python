@@ -1,0 +1,5 @@
+Runner,Training Time,Size
+Runner A,less than 1 hour,4
+Runner B,1 hour to 2 hour,2
+Runner B,less than 1 hour,2
+Runner C,2 hour to 3 hour,3
