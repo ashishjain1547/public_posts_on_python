@@ -1,0 +1,71 @@
+<head>
+    <script crossorigin="anonymous" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <!-- Google AdSense Using Machine Learning Code -->
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-3071098372371409",
+            enable_page_level_ads: true
+        });
+    </script>
+
+</head>
+
+<style>
+    i.ib {
+        color: blue;
+    }
+
+    i.ig {
+        color: green;
+    }
+
+    pre {
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -pre-wrap;
+        white-space: -o-pre-wrap;
+        word-wrap: break-word;
+    }
+</style>
+
+<pre>
+<h1>myfile.csv </h1>
+<i class="ig">
+student_id,student_name,percentage
+1,Ram,50
+2,Jim,60
+3,Jack,70
+4,Jones,80
+5,Rahim,90
+</i>
+
+<h1>Code</h1>
+<i class="ib">
+with open("myfile.csv", mode = 'r') as f:
+    data = f.read()
+
+print(data)
+print(type(data)) # &lt;class 'str'>
+
+data = data.splitlines() # Splits the string at line breaks and returns a list
+
+print("List of strings")
+print(data)
+print(type(data)) # &lt;class 'list'>
+
+# Using list comprehension
+# data = [x.split(',') for x in data]
+
+output = []
+for i in data:
+    output.append(i.split(","))
+
+
+print("List of list")
+print(output)
+</i>
+</pre>
+<span style="display: none;">Tags: Technology,Python,</span>
