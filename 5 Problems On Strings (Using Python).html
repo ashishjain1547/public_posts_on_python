@@ -1,0 +1,209 @@
+<head>
+    <script crossorigin="anonymous" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    
+    <!-- Google AdSense Using Machine Learning Code -->
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-3071098372371409",
+            enable_page_level_ads: true
+        });
+    </script>
+
+    <style>
+        .customTempCodeHolderForSocialMedia {
+            display: none;
+        }
+
+        pre {
+            white-space: pre-wrap;
+            white-space: -moz-pre-wrap;
+            white-space: -pre-wrap;
+            white-space: -o-pre-wrap;
+            word-wrap: break-word;
+        }
+
+        i.ib {
+            color: blue;
+        }
+    </style>
+</head>
+
+<pre><h1>1: Print every second character of a string using for-loop</h1> 
+
+<i class="ib">
+name = "Johanth Yada" # Variable declaration
+
+# What a string is? A string is a list of characters that we can iterate.
+
+# We iterate over a sequence using the "in" keyword.
+
+# for i in name:
+#     print(i)
+
+# USING INTERATION OR FOR-LOOP
+cntr = 1 # This is because we need to pick every second character only. To keep a track of our characters in the string.
+for i in name:
+    if(cntr % 2 == 0):
+        print(i)
+    cntr += 1
+
+
+print("----------")
+
+<b># STRING INDEXING</b>
+
+print(name[1 : len(name) : 2]) # start index (0), end index (length - 1), step (1)
+# Stings indexing starts from 0. And the first character we wanted was on index number "1".
+
+
+names = "Johanth Yada, Shaurya"
+
+# STRING INDEXING
+print(names[5 : len(names) : 2]) 
+# Stings indexing starts from 0. And the first character we wanted was on index number "1".
+</i>
+
+<h1>2: Reverse the order of words in a given string</h1>
+
+<i class="ib">
+# Python3 program to reverse a string
+# s = input()
+s = "i like this program very much"
+words = s.split(' ')
+
+string = []
+for word in words:
+    string.insert(0, word)
+ 
+print(" ".join(string))
+</i>
+
+<h2>Version 2</h2>
+<i class="ib">
+# input string
+string = "i like this program very much"
+ 
+# spliting words in the given string using slicing reverse the words
+s = string.split()[::-1]
+ 
+# joining the reversed string and printing the output
+print(" ".join(s))
+</i>
+
+<h1>3: Check whether a given number is divisible by 7</h1>
+
+# Using Modulo
+
+<i class="ib">
+n=371
+# the above input can also be given as n=input() -> taking input from user
+# finding given number is divisible by 7 or not
+if int(n)%7==0:
+  print("divisible")
+else:
+  print("Not divisible")
+</i>
+
+# Using divide and multiply 
+
+<i class="ib">
+import math
+
+n = 48
+quo = math.floor(n/7) # int() was not explicit that we needed a floor value.
+
+if quo*7 == n:
+    print("Divisible")
+else:
+    print("Not Divisible")
+</i>
+
+<h1>4: Check if given String is Pangram or not</h1>
+<i class="ib">
+test_pangram_positive = [
+    "The quick brown fox jumps over the lazy dog.",
+    "Waltz, bad nymph, for quick jigs vex.",
+    "Glib jocks quiz nymph to vex dwarf.",
+    "Sphinx of black quartz, judge my vow.",
+    "How quickly daft jumping zebras vex!",
+    "The five boxing wizards jump quickly.",
+    "Jackdaws love my big sphinx of quartz.",
+    "Pack my box with five dozen liquor jugs."
+]
+
+test_pangram_negative = [
+    "My name is Ashish.",
+    "I love programming.",
+    "Am from Delhi and brown fox jumps over the dog."
+]
+
+def check_pangram(in_str):
+    in_str = in_str.lower()
+    in_str = [x for x in in_str if x.isalpha()]
+    
+    in_str = set(in_str)
+
+    ret_val = False
+    if(len(in_str) == 26):
+        ret_val = True
+    
+    return ret_val 
+
+
+for i in test_pangram_positive:
+    print(check_pangram(i))
+
+for i in test_pangram_negative:
+    print(check_pangram(i))
+</i>
+
+<h2>Version 2</h2>
+<i class="ib">
+s = "The quick brown fox jumps over the lazy boy."
+
+s = s.lower()
+
+new_str = ""
+for i in s:
+    if i.isalpha():
+        new_str = new_str + i
+
+
+a = "abcdefghijklmnopqrstuvwxyz"
+
+msg = "Yes, it is a pangram"
+for i in a:
+    if i not in new_str:
+        msg = "No, it is not a pangram"
+
+print(msg)
+</i>
+
+<h1>5: Given a string, create a new string without vowels and print that string</h1>
+<i class="ib">
+x = ['a', 'e', 'i', 'o', 'u']
+y = input("please enter the word: ").lower()
+result=""
+print(range(len(y)))
+for i in range(len(y)):
+    if y[i] not in x:
+        result = result + y[i]
+    else:
+        print(y[i])
+
+print("\nAfter removing vowels: ", result)
+</i>
+
+<h2>Version 2: Using List Comprehension</h2>
+
+<i class="ib">
+x = ['a', 'e', 'i', 'o', 'u']
+y = input("please enter the word: ").lower()
+result = [i for i in y if i not in x]
+
+print("".join(result))
+</i>
+</pre>
+<span style="display: none;">Tags: Technology,Python,</span>

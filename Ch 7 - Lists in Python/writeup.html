@@ -1,0 +1,461 @@
+<html>
+
+<head>
+  <script crossorigin="anonymous" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+  <!-- Google AdSense Using Machine Learning Code -->
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "ca-pub-3071098372371409",
+      enable_page_level_ads: true
+    });
+  </script>
+
+</head>
+
+<style>
+  table.customTable tr:nth-child(odd) {
+    background-color: #e2e2e2;
+  }
+
+  table.customTable tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  ul.customUL {
+    list-style-type: none;
+  }
+</style>
+
+<body>
+  
+  <h1>
+    What is a list?
+  </h1>
+  <ul class="customUL">
+    <li>Lists are used to store multiple items in a single variable.</li>
+    <li>List items are:</li>
+    <li>- Ordered: items take order in which they are written in code</li>
+    <li>- Changeable: you can use the assignment operator to change the items</li>
+    <li>- And allow duplicate values</li>
+    <li>List items are indexed, the first item has index [0], the second item has index [1], the third item has index
+      [2], so and so forth.</li>
+  </ul>
+  <h1>
+    Indexing (Part 1)
+  </h1>
+  <ul class="customUL">
+    <li># Accessing list items by using their index</li>
+    <li># Note : index start from 0</li>
+    <li># Note : Negative index start from -1</li>
+    <li>thislist = [&quot;apple&quot;, &quot;banana&quot;, &quot;cherry&quot;]</li>
+    <li>print(thislist[0])</li>
+    <li>print(thislist[1]) </li>
+    <li>print(thislist[2]) </li>
+    <li>print(thislist[-1]) # Prints the last element</li>
+  </ul>
+  <div class="separator" style="clear: both;"><a
+      href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjgZrsZXmCmXipSd_Uyos8JmPZPTU0B9slD3zqdmLS5JEjL8TRen6YnWz_icfCc55q3NQ8O2_Yk-MSBiI1xpYI2kepXt21Oa_DzGW0aOuYUi4wTUL04eKxVIBYkfVPx8D3kMi9LgQEK7vbGorfm98evNa3-2-FZHB-eK_ENfOaKxicmWXlxgbsrVbfeCw/s432/1.png"
+      style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" width="600"
+        data-original-height="264" data-original-width="432"
+        src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjgZrsZXmCmXipSd_Uyos8JmPZPTU0B9slD3zqdmLS5JEjL8TRen6YnWz_icfCc55q3NQ8O2_Yk-MSBiI1xpYI2kepXt21Oa_DzGW0aOuYUi4wTUL04eKxVIBYkfVPx8D3kMi9LgQEK7vbGorfm98evNa3-2-FZHB-eK_ENfOaKxicmWXlxgbsrVbfeCw/s600/1.png" /></a>
+  </div>
+
+
+  <h1>
+    Indexing (Part 2)
+  </h1>
+  <ul class="customUL">
+    <li>Using negative numbers as indices to write a slice.</li>
+    <li>x = [&quot;apple&quot;, &quot;banana&quot;, &quot;orange&quot;, &quot;watermelon&quot;, &quot;cherry&quot;]</li>
+  </ul>
+  <p>
+    print(thislist[-1]) # Prints the last element
+  </p>
+  <p>
+    print(thislist[len(thislist) - 1])
+  </p>
+  <p>
+    # Index “-1” is equivalent to index “len(thislist) – 1”.
+  </p>
+  <p>
+
+  </p>
+  <p>
+    print(thislist[-2]) # Prints the second last element
+  </p>
+  <p>
+    print(thislist[len(thislist) - 2])
+  </p>
+  <p>
+
+  </p>
+  <p>
+    print(thislist[-3]) # Prints the third last element
+  </p>
+  <p>
+    print(thislist[len(thislist) - 3])
+  </p>
+  <div class="separator" style="clear: both;"><a
+      href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhsdlwVcV8prxxxse5_vL4Y8TDmc5avuxWSE1sQdSqXM8MZ7z9_Si6RPtByHP5LpjMIe2IdF5MIYYUDWCpBsk9wlK2o6gmjpYZCevvTsjyGEo-kDx6p6Z7nafSWbxrdT5-7ME1oDxXCpUIdbj6KYMuTSuz7U77jPUjLIlK7youmdmKPRoBOEw_rRnohzg/s857/2.png"
+      style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" width="600"
+        data-original-height="625" data-original-width="857"
+        src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhsdlwVcV8prxxxse5_vL4Y8TDmc5avuxWSE1sQdSqXM8MZ7z9_Si6RPtByHP5LpjMIe2IdF5MIYYUDWCpBsk9wlK2o6gmjpYZCevvTsjyGEo-kDx6p6Z7nafSWbxrdT5-7ME1oDxXCpUIdbj6KYMuTSuz7U77jPUjLIlK7youmdmKPRoBOEw_rRnohzg/s600/2.png" /></a>
+  </div>
+  <div class="separator" style="clear: both;"><a
+      href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiUsd64U8YRWc8SaFTXLUbwI1zXLNMSMLMQGnFt7EwfIGVGS06hg-id7NmV9nkgTx8nrXh7O4O7_aiXtlXg6f8MGmjW15D4TKfDB_MRCZbK0_aLkruV6o6-w1-8XuxvZfK9fRv-nqZr-2Ytv8lNBwvgvodMzKxVsGSGGpftIUsvVnwibwHBrk6hUadvtw/s863/3.png"
+      style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" width="600"
+        data-original-height="569" data-original-width="863"
+        src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiUsd64U8YRWc8SaFTXLUbwI1zXLNMSMLMQGnFt7EwfIGVGS06hg-id7NmV9nkgTx8nrXh7O4O7_aiXtlXg6f8MGmjW15D4TKfDB_MRCZbK0_aLkruV6o6-w1-8XuxvZfK9fRv-nqZr-2Ytv8lNBwvgvodMzKxVsGSGGpftIUsvVnwibwHBrk6hUadvtw/s600/3.png" /></a>
+  </div>
+  <h1>
+    Slicing (Part 1)
+  </h1>
+  <ul class="customUL">
+    <li>Slice syntax = [start index : end index : step (optional)]</li>
+    <li>Q: You are given that a list has 10 items. </li>
+    <li>Which all indices are covered by the slice [2:5]?</li>
+    <li>Ans: Three parts of the slice [2:5] are:</li>
+    <li>start index = 2</li>
+    <li>end index = 5</li>
+    <li>step = 1 (takes the default value as it is not mentioned)</li>
+    <li>Slicing is “exclusive” of end index, that means index 5 will not be a part of the slice [2:5].</li>
+    <li>That means indices covered are: 2, 3 and 4.</li>
+  </ul>
+  <h1>
+    Slicing (Part 2)
+  </h1>
+  <ul class="customUL">
+    <li>What does this slice expand to - [:4]</li>
+    <li>Start index is not mentioned. That means start index takes the default value: 0</li>
+    <li>End index is given to be 4.</li>
+    <li>Step is not mentioned. Step takes the default value of ‘1’</li>
+  </ul>
+  <h1>
+    Slicing (Part 3)
+  </h1>
+  <ul class="customUL">
+    <li>What does this slice expand to... [4:]</li>
+    <li>Start index is mentioned. </li>
+    <li>It has the value: 4</li>
+    <li>End index is not mentioned. </li>
+    <li>It has the default value of: len()</li>
+    <li>Step is not mentioned. Step takes the default value of ‘1’</li>
+  </ul>
+  <h1>
+    Slicing (Part 4)
+  </h1>
+  <ul class="customUL">
+    <li>You are given a list of 10 elements.</li>
+    <li>Ques: Which all indices are present in slice... [2:10:2]</li>
+    <li>Ans:</li>
+    <li>Start index is 2. Why? Because it is the number mentioned before the first colon.</li>
+    <li>End index is 10.</li>
+    <li>‘Step’ is mentioned after the second colon. Step has value 2.</li>
+    <li>So, 2 will come. After that, 4 will come. After that, 6 will come. After that, 8 will come. That is it, because
+      it is exclusive of end index.</li>
+  </ul>
+
+  <div class="separator" style="clear: both;"><a
+      href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh5gI9gdcbFBfWrrn8tZjrA_thwhuo72mNnQ1RbxsaLb2kG6Qeg8tx4fP9mrNWa8lSioV7oUJgmWmI4LCxKIJuIdUc4WOKIc7G4ICrdFxph7ZSj_PH55A9_XHPFmYVGLJQwXUpq6ezemzsQfxZ5A0R1S7AB6-zUeXjyyOD-aHW0mh3tIhmrCyWZztewuQ/s485/4.png"
+      style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" width="600"
+        data-original-height="99" data-original-width="485"
+        src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh5gI9gdcbFBfWrrn8tZjrA_thwhuo72mNnQ1RbxsaLb2kG6Qeg8tx4fP9mrNWa8lSioV7oUJgmWmI4LCxKIJuIdUc4WOKIc7G4ICrdFxph7ZSj_PH55A9_XHPFmYVGLJQwXUpq6ezemzsQfxZ5A0R1S7AB6-zUeXjyyOD-aHW0mh3tIhmrCyWZztewuQ/s600/4.png" /></a>
+  </div>
+
+  <h1>
+    Slicing (Part 3)
+  </h1>
+  <ul class="customUL">
+    <li>A slice has three parts: start index, end index and step.</li>
+    <li>Default value of start index: 0</li>
+    <li>Default value of end index: len()</li>
+    <li>Default value of step: 1</li>
+    <li>Q: What does this [2:5] expand to?</li>
+    <li>[2:5:1]</li>
+    <li>Q: What does this [:4] expand to?</li>
+    <li>Here, we can see that we have a single colon. This means that we have assume default value for step = 1.</li>
+    <li>Because the number before colon is missing that has to be start index. And number after colon is: end index.
+    </li>
+    <li>[0:4:1]</li>
+    <li>Q: What does this [2:] expand to?</li>
+    <li>Answer: [2:len():1]</li>
+  </ul>
+  <h1>
+    Slicing (Part 4)
+  </h1>
+  <ul class="customUL">
+    <li># Accessing multiple items by using a range of indexes</li>
+    <li>thislist = [&quot;apple&quot;, &quot;banana&quot;, &quot;cherry&quot;, &quot;orange&quot;, &quot;kiwi&quot;,
+      &quot;melon&quot;, &quot;mango&quot;]</li>
+    <li>print(thislist[2:5]) # Inclusive of 2 and exclusive of 5</li>
+    <li>print(thislist[:4]) # From Begining to specified index </li>
+    <li># Note &quot;kiwi&quot; not included in the result</li>
+    <li># This slice [:4] -&gt; [0:4:1]</li>
+    <li>print(thislist[2:])</li>
+    <li># This slice [2:] -&gt; [2:7:1]</li>
+    <li># 7 because it is the length of the list.</li>
+    <li># Using Negative indexes</li>
+    <li>print(thislist[-4:-1]) # Note - last item index value is -1 and this not included in result </li>
+  </ul>
+  <h1>
+    Assignment of another list on a slice of list
+  </h1>
+  <ul class="customUL">
+    <li>With assignment operator, you can assign to an index and assign to a slice.</li>
+    <li>When you assign a longer list to a shorter slice, it increases the length of the list.</li>
+    <li>When you assign a shorter list to a longer slice, it decreases the length of the list.</li>
+  </ul>
+  <h1>
+    Adding elements to a list
+  </h1>
+  <ul class="customUL">
+    <li>Insert(): Used to insert element at a specified index.</li>
+    <li>Takes two arguments. First argument is the index. </li>
+    <li>Append(): takes one argument. That argument is an element to be appended in the list.</li>
+    <li>Extend(): takes one argument but that argument is a list for us.</li>
+    <li>Here, usage is: mainlist.extend(listtoappend)</li>
+    <li>It is equivalent to: mainlist = mainlist + listtoappend</li>
+    <li>Note: They lead to increase in the length of the original list.</li>
+  </ul>
+  <h1>
+    Removing items from a list
+  </h1>
+  <ul class="customUL">
+    <li>Remove(): takes one argument. And argument is the element itself.</li>
+    <li>For ex: if it is list of strings, the argument would be a string. If it is a list of integers, the argument
+      would be an int.</li>
+    <li>Pop(): also takes one argument (defaults to ‘len()-1’ (which means the last element) if no argument is passed)
+      but that argument is the index.</li>
+    <li>Del: using the keyword ‘del’ delete from a specified index.</li>
+    <li>Clear(): empties a list</li>
+  </ul>
+  <h1>
+    Problem
+  </h1>
+  <ul class="customUL">
+    <li>Q: Let the input list be: x = [&quot;apple&quot;, &quot;banana&quot;, &quot;orange&quot;,
+      &quot;watermelon&quot;, &quot;cherry&quot;]</li>
+    <li>Show how you can reverse this list in three ways.</li>
+  </ul>
+  <h1>
+    Solution
+  </h1>
+  <ul class="customUL">
+    <li>1) Through slicing:</li>
+    <li>x[::-1]</li>
+    <li>2) Using the built-in function:</li>
+    <li>list(reversed(x))</li>
+    <li>3) Using method invocation:</li>
+    <li>x.reverse()</li>
+  </ul>
+  <h1>
+    List Comprehension (Part 1)
+  </h1>
+  <ul>
+    <li>Creating a new list from an existing one:</li>
+  </ul>
+  <p>
+    # Creating a new list from an existing one
+  </p>
+  <p>
+    l = [&quot;apple&quot;, &quot;banana&quot;, &quot;cherry&quot;, &quot;guava&quot;]
+  </p>
+  <p>
+    n = []
+  </p>
+  <p>
+    for i in l:
+  </p>
+  <p>
+    n.append(i)
+  </p>
+  <p>
+    print(n)
+  </p>
+  <p>
+
+  </p>
+  <p>
+    ['apple', 'banana', 'cherry', 'guava']
+  </p>
+  <p>
+
+  </p>
+  <p>
+    # NOW USING LIST COMPREHENSION:
+  </p>
+  <p>
+
+  </p>
+  <p>
+    l = [&quot;apple&quot;, &quot;banana&quot;, &quot;cherry&quot;, &quot;guava&quot;]
+  </p>
+  <p>
+    n = [ str(i) for i in l ]
+  </p>
+  <p>
+    print(n)
+  </p>
+  <p>
+
+  </p>
+  <p>
+
+  </p>
+  <p>
+
+  </p>
+  <p>
+
+  </p>
+  <h1>
+    List Comprehension (Part 2)
+  </h1>
+  <p>
+    # Syntax of list comprehension: [ some_function(i) for i in some_list ]
+  </p>
+  <p>
+
+  </p>
+  <p>
+    my_list = [&quot;apple&quot;, &quot;banana&quot;, &quot;cherry&quot;, &quot;guava&quot;]
+
+  </p>
+  <p>
+    n = [ str(i) for i in my_list ]
+  </p>
+  <p>
+    print(n)
+  </p>
+  <p>
+
+  </p>
+  <p>
+    Output:
+  </p>
+  <p>
+    ['apple', 'banana', 'cherry', 'guava']
+  </p>
+  <p>
+
+  </p>
+  <p>
+    Here:
+  </p>
+  <p>
+    some_function() is your: str()
+  </p>
+  <p>
+    some_list is your: my_list = [&quot;apple&quot;, &quot;banana&quot;, &quot;cherry&quot;,
+    &quot;guava&quot;]
+  </p>
+  <p>
+
+  </p>
+  <h1>
+    Problem on List Comprehension
+  </h1>
+  <ul class="customUL">
+    <li>You have a list of 10 numbers.</li>
+    <li>[5, 2, 9, 1, 8, 3, 6, 0, 4, 7]</li>
+    <li>Create a new list by adding 5 to each of these numbers.</li>
+  </ul>
+  <h1>
+    Solution
+  </h1>
+  <p>
+    # Create a new list by adding 5 to each of these numbers.
+  </p>
+  <p>
+    l = [5, 2, 9, 1, 8, 3, 6, 0, 4, 7]
+  </p>
+  <p>
+    k = [i + 5 for i in l]
+  </p>
+  <p>
+    print(k)
+  </p>
+  <p>
+
+  </p>
+  <p>
+    [10, 7, 14, 6, 13, 8, 11, 5, 9, 12]
+  </p>
+  <h1>
+    Problem 1 on: Assignment to a slice
+  </h1>
+  <p>
+    thislist = [&quot;apple&quot;, &quot;banana&quot;, &quot;cherry&quot;, &quot;orange&quot;,
+    &quot;kiwi&quot;, &quot;melon&quot;, &quot;mango&quot;]
+  </p>
+  <p>
+    thislist[1:3] = ['potato', 'tomato', 'brinjal']
+  </p>
+  <p>
+
+  </p>
+  <p>
+    What will be the output?
+  </p>
+  <h1>
+    Solution 1 on: Assignment to a slice
+  </h1>
+  <p>
+    thislist = [&quot;apple&quot;, &quot;banana&quot;, &quot;cherry&quot;, &quot;orange&quot;,
+    &quot;kiwi&quot;, &quot;melon&quot;, &quot;mango&quot;]
+  </p>
+  <p>
+
+  </p>
+  <p>
+    len(thislist)
+  </p>
+  <p>
+    Out: 7
+  </p>
+  <p>
+
+  </p>
+  <p>
+    # What is being replaced?
+  </p>
+  <p>
+    thislist[1:3]
+  </p>
+  <p>
+    Out: ['banana', 'cherry']
+  </p>
+  <p>
+
+  </p>
+  <p>
+    thislist[1:3] = ['potato', 'tomato', 'brinjal']
+  </p>
+  <p>
+
+  </p>
+  <p>
+    thislist
+  </p>
+  <p>
+    Out: ['apple', 'potato', 'tomato', 'brinjal', 'orange', 'kiwi', 'melon', 'mango']
+  </p>
+  <p>
+
+  </p>
+  <p>
+    len(thislist)
+  </p>
+  <p>
+    8
+  </p>
+  <p>
+
+  </p>
+</body>
+
+</html>
+<span style="display: none;">Tags: Technology,Python,</span>

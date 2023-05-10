@@ -1,0 +1,152 @@
+<html>
+
+<head>
+  <style>
+    table.customTable tr:nth-child(odd) {
+      background-color: #e2e2e2;
+    }
+
+    table.customTable tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    ul.customUL {
+      list-style-type: none;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 style="page-break-before:always; ">Operator Precedence</h1>
+  <div class="separator" style="clear: both;"><a
+      href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjdsUpRWB4N0LYhY6UQtMPnpOQJg5XeJxBweQkPXHnLkSuD1GXH1qwc5SV5TT-D9HuJyp9Pv5snasJSE1R_FFTry_4UX2qndvuahVBeKYjlCwSISMBvXvldg2jAVUU2iD5QY18HKcdgTtg5nay_hcqMDtzqB_MS-wMbpqdfnl_3fVu7vA0z5aee1e4wzw/s724/1.png"
+      style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" width="600"
+        data-original-height="593" data-original-width="724"
+        src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjdsUpRWB4N0LYhY6UQtMPnpOQJg5XeJxBweQkPXHnLkSuD1GXH1qwc5SV5TT-D9HuJyp9Pv5snasJSE1R_FFTry_4UX2qndvuahVBeKYjlCwSISMBvXvldg2jAVUU2iD5QY18HKcdgTtg5nay_hcqMDtzqB_MS-wMbpqdfnl_3fVu7vA0z5aee1e4wzw/s600/1.png" /></a>
+  </div>
+
+  <h1 style="page-break-before:always; ">Problem 1</h1>
+  <ul class="customUL">
+    <li>Solve 25 + 10 * 20</li>
+  </ul>
+  <h1 style="page-break-before:always; ">Solution 1</h1>
+  <ul class="customUL">
+    <li>25 + 10 * 20 is calculated as 25 + (10 * 20)</li>
+    <li>and not as (25 + 10) * 20</li>
+    <li>&gt;&gt;&gt; 25 + 10 * 20</li>
+    <li>225</li>
+  </ul>
+  <h1 style="page-break-before:always; ">Problem 2</h1>
+  <ul class="customUL">
+    <li>What will be output of:</li>
+    <li>print(3*1**3)</li>
+  </ul>
+  <h1 style="page-break-before:always; ">Solution 2</h1>
+  <ul class="customUL">
+    <li>3*1**3 is equivalent to: 3 * (1**3)</li>
+    <li>(base) ashish@ashish:~$ python</li>
+    <li>Python 3.9.13 (main, Aug 25 2022, 23:26:10) </li>
+    <li>[GCC 11.2.0] :: Anaconda, Inc. on linux</li>
+    <li>Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.
+    </li>
+    <li>&gt;&gt;&gt; 3*1**3</li>
+    <li>3</li>
+  </ul>
+  <h1 style="page-break-before:always; ">Problem 3</h1>
+  <ul class="customUL">
+    <li># Precedence of 'or' &amp; 'and'</li>
+    <li>name = &quot;Alex&quot;</li>
+    <li>age = 0</li>
+    <li>if ( name == &quot;Alex&quot; or name == &quot;John&quot; ) and age &gt;= 2 :</li>
+    <li> print(&quot;Hello! Welcome.&quot;)</li>
+    <li>else :</li>
+    <li> print(&quot;Good Bye!!&quot;)</li>
+  </ul>
+  <h1 style="page-break-before:always; ">Solution 3</h1>
+  <div class="separator" style="clear: both;"><a
+      href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh8hcBUVZYto2fz21wDtvaGrvheFeWvMipE13AkrRjWsVZXjmHviJ7urwtaThReA5CkcfZ-CpnHXVeWjiDvVtNiF6ZGPeziVSsiMneOGdu9ex3_IjyVayAk8EMpB5yEzFYrzBNx5s59R8apJwy4mopGx1Z6bBvDJ1SqMDBv9VO6n4VZJhD0PfcY9HKQuQ/s561/2.png"
+      style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" width="600"
+        data-original-height="392" data-original-width="561"
+        src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh8hcBUVZYto2fz21wDtvaGrvheFeWvMipE13AkrRjWsVZXjmHviJ7urwtaThReA5CkcfZ-CpnHXVeWjiDvVtNiF6ZGPeziVSsiMneOGdu9ex3_IjyVayAk8EMpB5yEzFYrzBNx5s59R8apJwy4mopGx1Z6bBvDJ1SqMDBv9VO6n4VZJhD0PfcY9HKQuQ/s600/2.png" /></a>
+  </div>
+  <h1 style="page-break-before:always; ">Problem 4</h1>
+  <ul class="customUL">
+    <li># Precedence of 'or' &amp; 'and'</li>
+    <li>name = &quot;Alex&quot;</li>
+    <li>age = 0</li>
+    <li>if name == &quot;Alex&quot; or name == &quot;John&quot; and age &gt;= 2 :</li>
+    <li> print(&quot;Hello! Welcome.&quot;)</li>
+    <li>else :</li>
+    <li> print(&quot;Good Bye!!&quot;)</li>
+  </ul>
+  <h1 style="page-break-before:always; ">Solution 4 (Part 1)</h1>
+  <ul class="customUL">
+    <li>Condition: <i>name == &quot;Alex&quot; or name == &quot;John&quot; and age &gt;= 2</i></li>
+    <li>It is equivalent to:</li>
+    <li><i>name == &quot;Alex&quot; or (name == &quot;John&quot; and age &gt;= 2)</i></li>
+    <li>For: </li>
+    <li>name = &quot;Alex&quot;</li>
+    <li>age = 0</li>
+    <li>What will it print(): True or False?</li>
+  </ul>
+  <h1 style="page-break-before:always; ">Solution 4 (Part 2)</h1>
+  <div class="separator" style="clear: both;"><a
+      href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgvwC7nO2qFRFC8hscDyg_OSPFtACG7gu5iBSFBV6p8Sd4C3BbxgkNnjnCchl-oxw4ytuvJBf70BynMGHLHi7L5W2ErdsRjzZJfC6bq4Zd29p2T5D7I7w4AuPR-EM4sQ-9wB-8fa4fPxwZxKO8xwROuR-1rcvuwvLVQ9XZ8S2fSrCxVJNsrDR9YjkYT9g/s773/3.png"
+      style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" width="600"
+        data-original-height="471" data-original-width="773"
+        src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgvwC7nO2qFRFC8hscDyg_OSPFtACG7gu5iBSFBV6p8Sd4C3BbxgkNnjnCchl-oxw4ytuvJBf70BynMGHLHi7L5W2ErdsRjzZJfC6bq4Zd29p2T5D7I7w4AuPR-EM4sQ-9wB-8fa4fPxwZxKO8xwROuR-1rcvuwvLVQ9XZ8S2fSrCxVJNsrDR9YjkYT9g/s600/3.png" /></a>
+  </div>
+
+  <h1 style="page-break-before:always; ">Operator Associativity</h1>
+  <p>Operator Associativity: If an expression contains two or more operators with the same precedence then Operator
+    Associativity is used to determine. It can either be Left to Right or from Right to Left.</p>
+  <p>Example: ‘*’ and ‘/’ have the same precedence and their associativity is Left to Right, so the expression “100 / 10
+    * 10” is treated as “(100 / 10) * 10”.</p>
+  <p><a href="https://media.geeksforgeeks.org/wp-content/uploads/20190708164646/Operators-Associativity-1.jpg"></a></p>
+  <p></p>
+  <h1 style="page-break-before:always; ">Problem 5</h1>
+  <ul class="customUL">
+    <li>print(100 / 10 * 10)</li>
+    <li>print(5 - 2 + 3)</li>
+    <li>print(2 ** 3 ** 2)</li>
+  </ul>
+  <h1 style="page-break-before:always; ">Solution 5</h1>
+  <ul class="customUL">
+    <li># Left-to-right associativity</li>
+    <li># 100 / 10 * 10 is calculated as </li>
+    <li># (100 / 10) * 10 and not as 100 / (10 * 10)</li>
+    <li>print(100 / 10 * 10)</li>
+    <li># Left-to-right associativity</li>
+    <li># 5 - 2 + 3 is calculated as </li>
+    <li># (5 - 2) + 3 and not as 5 - (2 + 3)</li>
+    <li>print(5 - 2 + 3)</li>
+  </ul>
+  <ul class="customUL">
+    <li># right-to-left associativity</li>
+    <li># 2 ** 3 ** 2 is calculated as </li>
+    <li># 2 ** (3 ** 2) and not as (2 ** 3) ** 2</li>
+    <li>print(2 ** 3 ** 2)</li>
+    <li></li>
+    <li>&gt;&gt;&gt; 2 ** 3 ** 2</li>
+    <li>512</li>
+    <li></li>
+  </ul>
+  <h1 style="page-break-before:always; ">Problem 6</h1>
+  <ul class="customUL">
+    <li>print(10 + 10 / 10 - 10 * 10)</li>
+    <li>print(100 + 200 / 10 - 3 * 10)</li>
+  </ul>
+  <h1 style="page-break-before:always; ">Solution 6</h1>
+  <p>&gt;&gt;&gt; print(10 + 10 / 10 - 10 * 10)</p>
+  <p>-89.0</p>
+
+  <div class="separator" style="clear: both;"><a
+      href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhLbW0fyoDNLuoLLbT6Q_sKh0P8llEuGo7E84VkT2T7Cs76P-k0BWdP6wJm8Uuj9ae2cbD9LD1uFQ9WXrf6UITqVqnP1_-O_l11yvTXsevQvFJZlh8n9_dp2JqeIIBIu5wZr0pyJw9o5dOTpugVpH6-f_JFJfhhGo22hy-6xAR_DLv-xuuzPvm8EV-3vw/s719/4.png"
+      style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" width="600"
+        data-original-height="498" data-original-width="719"
+        src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhLbW0fyoDNLuoLLbT6Q_sKh0P8llEuGo7E84VkT2T7Cs76P-k0BWdP6wJm8Uuj9ae2cbD9LD1uFQ9WXrf6UITqVqnP1_-O_l11yvTXsevQvFJZlh8n9_dp2JqeIIBIu5wZr0pyJw9o5dOTpugVpH6-f_JFJfhhGo22hy-6xAR_DLv-xuuzPvm8EV-3vw/s600/4.png" /></a>
+  </div>
+</body>
+
+</html>
+<span style="display: none;">Tags: Python,Technology,</span>
