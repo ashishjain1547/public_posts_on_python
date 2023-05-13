@@ -25,9 +25,54 @@
     ul.customUL {
         list-style-type: none;
     }
+
+    pre {
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -pre-wrap;
+        white-space: -o-pre-wrap;
+        word-wrap: break-word;
+    }
+
+    i.ib {
+        color: blue
+    }
 </style>
 
-<pre># 1
+<pre>
+Python is flexible about variable declaration. You do not need to give data type of a variable at the time of it’s declaration.
+a=5 (We can say here that “a” stores the integer 5.)
+Valid:defined a variable ‘a’ and passed a value of 5 to it.
+This statement has three parts:
+
+1. Variable name
+2. Assignment operator
+3. Variable value
+
+A program is essentially a manipulation of data.
+The logic is what you code.
+The variables hold the data.
+Operators act on variables.
+
+<h1>Perimeter of a circle</h1>
+Input: Radius (int or float)
+Logic: 2 * Pi * Radius
+Output: float
+
+Lessons:
+1. How to declare a variable?
+2. How to use operators on it?
+
+<h1>In Code</h1>
+
+# Variable declaration. r is holding the radius.
+r = input("Enter the radius: ") # input() gives you a string
+r = float(r) # Type casting builtin for getting the float value of r
+perimeter = 2 * 3.14 * r # Computation
+print(perimeter)
+
+<h1>Problems</h1>
+# 1
 
 Declare two integer variables.
 And perform arithematic operations on them.
@@ -74,5 +119,50 @@ Step 3: use the above two variables in formula to find the perimeter.
 #7
 
 Find the area of the equilateral triangle.
+
+<h1>Solutions</h1>
+<i class="ib">
+x = 4
+y = 9
+
+x + y
+
+x - y
+
+dividend = 8
+
+divisor = 2
+
+dividend / divisor
+
+import math
+
+radius = 5
+
+perimeter = 2 * math.pi * radius
+
+area = math.pi * radius * radius
+
+a = 7
+b = 8
+print(a == 8)
+
+l = 5
+w = 7
+h = 9
+v = l * w * h
+print(v)
+315
+
+2*l*w + 2*w*h + 2*l*h
+
+286
+
+side = 5
+area = math.sqrt(3) * pow(side, 2) / 4
+print(area)
+
+10.825317547305483
+</i>
 </pre>
 <span style="display: none;">Tags: Python,Technology,</span>

@@ -25,6 +25,14 @@
   ul.customUL {
     list-style-type: none;
   }
+
+  pre {
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+  }
 </style>
 
 <body>
@@ -58,6 +66,59 @@
         data-original-height="166" data-original-width="296"
         src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhcpx-XiN5_hsIRgSxNrxg1rsC1Nrf4i8Y_PDpmIAjkRj2efnctM4zzjkR1NPegbt5dPt5AHAqkKtOCo_myJ-Ul1bw2Ea0xO1Ld-XpYHTfe1Mq6RA-WTSmOJ-vdmQ3aFD54efsjJZt332GBr393CzGdPOsiCakMiALjDbhG00hpPEcvSgNFqFSA6--DwA/s600/Screenshot%20from%202023-04-18%2018-18-16.png" /></a>
   </div>
+<pre>
+<h1>+ And * Operators Can Act on Strings</h1>
+
+String Concatenation using + Operator
+
+>>> x = 'johanth'
+>>> y = 'yada'
+>>> x + y
+'johanthyada'
+
+
+String repetition using * Operator
+
+>>> x*3
+'johanthjohanthjohanth'
+
+This phenomenon is over-loading of operator.
+
+>>> a = 5
+>>> b = 6
+>>> a + b
+11
+>>> a = "rakesh"
+>>> b = "vikash"
+>>> a + b
+'rakeshvikash'
+>>> 
+>>> a = 5
+>>> b = 6
+>>> a*b
+30
+>>> a = "rakesh"
+>>> b = 'vikash'
+>>> a * 3
+'rakeshrakeshrakesh'
+>>> b * 2
+'vikashvikash'
+>>> 
+>>> l = ['rakesh', 'vikash', 'ashish']
+>>> l * 3
+['rakesh', 'vikash', 'ashish', 'rakesh', 'vikash', 'ashish', 'rakesh', 'vikash', 'ashish']
+>>> 
+
+<h1>+ And * Operators Can Act on Lists</h1>
+
+>>> l = ['rakesh', 'vikash', 'ashish']
+>>> l * 3
+['rakesh', 'vikash', 'ashish', 'rakesh', 'vikash', 'ashish', 'rakesh', 'vikash', 'ashish']
+>>> k = ['johanth', 'sonia']
+>>> l + k
+['rakesh', 'vikash', 'ashish', 'johanth', 'sonia']
+>>> 
+</pre>
 
   <h1 style="page-break-before:always; ">
     Assignment Operators
@@ -134,6 +195,54 @@
   <p>
     “or” in C++ is: ||
   </p>
+
+<pre>
+>>> x = 6
+>>> y = x < 7
+>>> y
+True
+>>> not y
+False
+>>> not(y)
+False
+>>>   
+
+<h1>Truth Table For ‘and’ </h1>
+
+If both expressions are True, then it will return True.
+
+<table>
+  <tr>
+    <td>Left Side Exp</td>
+    <td>Right Side Exp</td>
+    <td>Overall Result</td>
+  </tr>
+
+  <tr>
+    <td>True</td>
+    <td>True</td>
+    <td>True</td>
+  </tr>
+
+  <tr>
+    <td>False</td>
+    <td>True</td>
+    <td>False</td>
+  </tr>
+
+  <tr>
+    <td>True</td>
+    <td>False</td>
+    <td>False</td>
+  </tr>
+  <tr>
+    <td>False</td>
+    <td>False</td>
+    <td>False</td>
+  </tr>
+</table>
+</pre>
+
   <h1 style="page-break-before:always; ">
     Identity Operators
   </h1>
@@ -166,6 +275,16 @@
         data-original-height="408" data-original-width="516"
         src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjoPLmIlNwRD_RsZT4_gqzroIgAr9Zm-Cr716M-mS-E_eocYpgzDO6fAgZ2tk4Kc4nTZnk6lkURJgzxUdJn-bzM2JGwq2zOuVf4XkRQ-it62ZPi_AntJJARUk74DFsT2gcBeCCnh22POu2tbyj6ba3O0V17wg-r4uIGAcxV0fhXc4F70uWgWBGvjV57xg/s600/in%20and%20not%20in.png" /></a>
   </div>
+<pre>
+>>> l
+['rakesh', 'vikash', 'ashish']
+>>> 'rakesh' in l
+True
+>>> 'sonia' in l
+False
+>>>   
+</pre>
+
   <h1 style="page-break-before:always; ">
     Bitwise Operators
   </h1>
@@ -177,3 +296,4 @@
   </div>
 
 </body>
+<span style="display: none;">Tags: Python,Technology,</span>

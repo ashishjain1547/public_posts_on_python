@@ -28,9 +28,48 @@
   ul.customUL {
     list-style-type: none;
   }
+
+  pre {
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+  }
 </style>
 
 <body>
+  <pre>
+<h1>The most commonly used Python builtin function: print()</h1>
+
+“print()” function displays the value of argument passed to it.
+print(5): prints 5 
+print(“hello world”): prints the message “hello world”
+
+Some other built-ins that come in handy are: input(), len(), type() etc.
+first_name = input(“Enter your first name: ”)
+len(“Rakesh”) --> 6
+
+<h1>len()</h1>
+
+It tells you the number of characters in the string.
+
+>>> len("rakesh")
+6
+
+>>> len("vikash")
+6
+
+It is also able to tell you the number of elements in a list / sequence.
+
+>>> len([1, 2, 3, 5, 7])
+5
+
+>>> len(['rakesh', 'vikash', 'ashish'])
+3
+
+</pre>
+
   <h1 style="page-break-before:always; ">Some Numbers Related Builtin Functions</h1>
   <ul class="customUL">
     <li>abs() Returns the absolute value of a number</li>
@@ -106,6 +145,58 @@
   </div>
   <p>Return the value of 4 to the power of 3 (same as 4 * 4 * 4):</p>
 
+  <pre>
+<h3>Some more examples</h3>
+>>> l = [5, 6, 2, 0, 9]
+>>> max(l)
+9
+>>> min(l)
+0
+>>> sum(l)
+22    
+
+<h1>range()</h1>
+
+Range takes three arguments: start, stop, step
+But start and step are optional. What does that mean?
+They can some default values, like:
+Start: 0
+Step: 1
+Note: Range is exclusive of 'stop'
+
+>>> list(range(1, 11))
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+>>> 
+>>> 
+>>> list(range(2, 20, 2))
+[2, 4, 6, 8, 10, 12, 14, 16, 18]
+>>> 
+
+>>> list(range(10))
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+>>> 
+>>> 
+>>> list(range(0, 10))
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+>>> 
+>>> list(range(0, 10, 2))
+[0, 2, 4, 6, 8]
+>>> 
+>>> list(range(0, 10, 3))
+[0, 3, 6, 9]
+>>> 
+
+<h1>pow()</h1>
+
+>>> pow(2, 5)
+32
+>>> 2 ** 5
+32
+
+Python is very flexible. In most situations, it gives you more than one way to do things.
+  </pre>
+
+
   <h1 style="page-break-before:always; ">Some Type Casting Related Builtin Functions</h1>
   <ul class="customUL">
     <li>bool() Returns the boolean value of the specified object</li>
@@ -118,6 +209,67 @@
     <li>tuple() Returns a tuple (tuple is an immutable list)</li>
     <li>type() Returns the type of an object</li>
   </ul>
+  <pre>
+<h1>Type Casting Built-ins: bool()</h1>
+
+>>> 0
+0
+>>> True
+True
+>>> bool(0)
+False
+>>> bool(-1)
+True
+>>> bool(1)
+True
+>>> 
+
+Extra Information:
+Q1: Trick question about a set.
+
+>>> {True, False, True}
+{False, True}
+>>> {True, False, 0, 1}
+{False, True}
+
+Q2: Trick question about if-else:
+var = 0
+
+if(True):
+    print("Got True")
+
+if(var):
+    print("In If")
+else:
+    print("In Else")
+
+
+<h1>int() and list()</h1>
+
+>>> int("5")
+5
+>>> int("5XYZ")
+Traceback (most recent call last):
+  File "&lt;stdin>", line 1, in &lt;module>
+ValueError: invalid literal for int() with base 10: '5XYZ'
+
+>>> age = input("Enter your age: ")
+Enter your age: 20
+>>> type(age)
+&lt;class 'str'>
+ 
+>>> salary = int(input("Enter your salary: "))
+Enter your salary: 5000
+>>> type(salary)
+&lt;class 'int'>
+ 
+>>> age
+'20'
+>>> salary
+5000
+ 
+
+</pre>
   <h1 style="page-break-before:always;">Some Examples of Type Casting Related Builtin Functions</h1>
   <ul class="customUL">
     <li>We saw this in code for building a calculator:</li>
@@ -132,6 +284,17 @@
         src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiD0KkUKfQvXyjtG1H4O0e8n8oA7Djg8GPhtQ7DTNqW8yOHnoME_4NzoArgmQSQclbWKZL2gSej3ESWB-oBuBVj68QZOO1TmcFP_kIiwzuOQEPhwrYbaoENz4lJOQmgaSmPfIG31YL1fsUX1ETN4CtJwiHXH-exsy-Sk3Vqk9hzktNpHy3Ag0oWEdiYhA/s600/Screenshot%20from%202023-04-18%2017-38-12.png" /></a>
   </div>
 
+  <pre>
+<h1>Finding volume of a cube</h1>
+
+# Variable declaration. s is holding the side length.
+s = input("Enter the side: ") # input() gives you a string
+print(type(s))
+s = float(s) # Type casting builtin for getting the float value of r
+volume=pow (s,3) # Computation
+print(volume)
+</pre>
+
   <h1 style="page-break-before:always;">Some Builtins For Processing a List</h1>
   <ul class="customUL">
     <li>enumerate() Takes a collection (e.g. a tuple) and returns it as an enumerate object</li>
@@ -144,7 +307,51 @@
     <li>slice() Returns a slice object</li>
     <li>zip() Returns an iterator, from two or more iterators</li>
   </ul>
-  <h1 style="page-break-before:always; ">Some Examples of Builtins For Processing a List</h1>
+
+  <pre>
+<h1>Some Examples of Builtins For Processing a List (Part 1)</h1>
+
+>>> l = [5, 1, 9, 2, 4, 7] # Here, your list is a sequence of integers.
+>>> max(l)
+9
+>>> min(l)
+1
+>>> sum(l)
+28
+>>> 
+>>> sorted(l)
+[1, 2, 4, 5, 7, 9]
+>>> 
+>>> l
+[5, 1, 9, 2, 4, 7]
+>>> 
+>>> list(reversed(l))
+[7, 4, 2, 9, 1, 5]
+>>> 
+>>> list(range(10))
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+>>> 
+>>> l = ["alpha", "beta", "gamma", "delta", "epsilon"] # sequence of strings
+>>> max(l)
+'gamma'
+>>> 
+>>> ord('a')
+97
+>>> ord('b')
+98
+>>> ord('g')
+103
+>>> min(l)
+'alpha'
+>>> 
+>>> sorted(l)
+['alpha', 'beta', 'delta', 'epsilon', 'gamma']
+>>> list(reversed(l))
+['epsilon', 'delta', 'gamma', 'beta', 'alpha']
+>>> 
+
+</pre>
+  <h1 style="page-break-before:always; ">Some Examples of Builtins For Processing a List (Part 2)</h1>
 
   <div class="separator" style="clear: both;"><a
       href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj5nlN3yHv6J-8VYSzryaPvXJOUTTyi3djcq6qGF0qXVfPQpxeP7LF0oSSamYBg3gcX4fYr-vQCPmwhSxfllAuMKP6btR1dkDNfLvlQSPpUkHd9PakiD4JBOSHpaX4A5d2pH7xWKl4uXi3hX95wtMXIiGK8Dnlqlbdrj2QBHyGmh_aVySTuhY7FO_CSvA/s746/Screenshot%20from%202023-04-18%2017-42-04.png"

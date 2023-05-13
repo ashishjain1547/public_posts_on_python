@@ -1,0 +1,740 @@
+<head>
+    <script crossorigin="anonymous" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <!-- Google AdSense Using Machine Learning Code -->
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-3071098372371409",
+            enable_page_level_ads: true
+        });
+    </script>
+
+    <style>
+        .customTempCodeHolderForSocialMedia {
+            display: none;
+        }
+
+        pre {
+            white-space: pre-wrap;
+            white-space: -moz-pre-wrap;
+            white-space: -pre-wrap;
+            white-space: -o-pre-wrap;
+            word-wrap: break-word;
+        }
+
+        table.customTable tr:nth-child(odd) {
+            background-color: #e2e2e2;
+        }
+
+        table.customTable tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        i.ig {
+            color: green;
+        }
+
+        i.ib {
+            color: blue;
+        }
+
+    </style>
+</head>
+<pre>
+Note: In this article we discuss three things:
+1. math Module 
+2. statistics Module 
+3. Descriptive statistics using Pandas, NumPy, SciPy and StatsModels
+</pre>
+
+<h1>Python math Module</h1>
+<p>Python has a built-in module that you can use for mathematical tasks.</p>
+<p>The <code class="w3-codespan">math</code> module has a set of methods and constants.</p>
+<hr>
+
+<h2>Math Methods</h2>
+<table class="customTable" style="margin:0">
+    <tbody>
+        <tr>
+            <th style="width:30%">Method</th>
+            <th style="width:70%">Description</th>
+        </tr>
+        <tr>
+            <td>math.acos()</td>
+            <td>Returns the arc cosine of a number</td>
+        </tr>
+        <tr>
+            <td>math.acosh()</td>
+            <td>Returns the inverse hyperbolic cosine of a number</td>
+        </tr>
+        <tr>
+            <td>math.asin()</td>
+            <td>Returns the arc sine of a number</td>
+        </tr>
+        <tr>
+            <td>math.asinh()</td>
+            <td>Returns the inverse hyperbolic sine of a number</td>
+        </tr>
+        <tr>
+            <td>math.atan()</td>
+            <td>Returns the arc tangent of a number in radians</td>
+        </tr>
+        <tr>
+            <td>math.atan2()</td>
+            <td>Returns the arc tangent of y/x in radians </td>
+        </tr>
+        <tr>
+            <td>math.atanh()</td>
+            <td>Returns the inverse hyperbolic tangent of a number</td>
+        </tr>
+        <tr>
+            <td>math.ceil()</td>
+            <td>Rounds a number up to the nearest integer</td>
+        </tr>
+        <tr>
+            <td>math.comb()</td>
+            <td>Returns the number of ways to choose k items from n items without repetition and order</td>
+        </tr>
+        <tr>
+            <td>math.copysign()</td>
+            <td>Returns a float consisting of the value of the first parameter and the sign of the second parameter</td>
+        </tr>
+        <tr>
+            <td>math.cos()</td>
+            <td>Returns the cosine of a number</td>
+        </tr>
+        <tr>
+            <td>math.cosh()</td>
+            <td>Returns the hyperbolic cosine of a number</td>
+        </tr>
+        <tr>
+            <td>math.degrees()</td>
+            <td>Converts an angle from radians to degrees</td>
+        </tr>
+        <tr>
+            <td>math.dist()</td>
+            <td>Returns the Euclidean distance between two points (p and q), where p and
+                q are the coordinates of that point</td>
+        </tr>
+        <tr>
+            <td>math.erf()</td>
+            <td>Returns the error function of a number</td>
+        </tr>
+        <tr>
+            <td>math.erfc()</td>
+            <td>Returns the complementary error function of a number</td>
+        </tr>
+        <tr>
+            <td>math.exp()</td>
+            <td>Returns E raised to the power of x</td>
+        </tr>
+        <tr>
+            <td>math.expm1()</td>
+            <td>Returns E<sup>x</sup>
+                - 1</td>
+        </tr>
+        <tr>
+            <td>math.fabs()</td>
+            <td>Returns the absolute value of a number</td>
+        </tr>
+        <tr>
+            <td>math.factorial()</td>
+            <td>Returns the factorial of a number</td>
+        </tr>
+        <tr>
+            <td>math.floor()</td>
+            <td>Rounds a number down to the nearest integer</td>
+        </tr>
+        <tr>
+            <td>math.fmod()</td>
+            <td>Returns the remainder of x/y</td>
+        </tr>
+        <tr>
+            <td>math.frexp()</td>
+            <td>Returns the mantissa and the exponent, of a specified number</td>
+        </tr>
+        <tr>
+            <td>math.fsum()</td>
+            <td>Returns the sum of all items in any iterable (tuples, arrays, lists, etc.)</td>
+        </tr>
+        <tr>
+            <td>math.gamma()</td>
+            <td>Returns the gamma function at x</td>
+        </tr>
+        <tr>
+            <td>math.gcd()</td>
+            <td>Returns the greatest common divisor of two integers</td>
+        </tr>
+        <tr>
+            <td>math.hypot()</td>
+            <td>Returns the Euclidean norm</td>
+        </tr>
+        <tr>
+            <td>math.isclose()</td>
+            <td>Checks whether two values are close to each other, or not</td>
+        </tr>
+        <tr>
+            <td>math.isfinite()</td>
+            <td>Checks whether a number is finite or not</td>
+        </tr>
+        <tr>
+            <td>math.isinf()</td>
+            <td>Checks whether a number is infinite or not</td>
+        </tr>
+        <tr>
+            <td>math.isnan()</td>
+            <td>Checks whether a value is NaN (not a number) or not</td>
+        </tr>
+        <tr>
+            <td>math.isqrt()</td>
+            <td>Rounds a square root number downwards to the nearest integer</td>
+        </tr>
+        <tr>
+            <td>math.ldexp()</td>
+            <td>Returns the inverse of math.frexp()
+                which is x * (2**i) of the given numbers x and i</td>
+        </tr>
+        <tr>
+            <td>math.lgamma()</td>
+            <td>Returns the log gamma value of x</td>
+        </tr>
+        <tr>
+            <td>math.log()</td>
+            <td>Returns the natural logarithm of a number, or the logarithm of number to base</td>
+        </tr>
+        <tr>
+            <td>math.log10()</td>
+            <td>Returns the base-10 logarithm of x</td>
+        </tr>
+        <tr>
+            <td>math.log1p()</td>
+            <td>Returns the natural logarithm of 1+x</td>
+        </tr>
+        <tr>
+            <td>math.log2()</td>
+            <td>Returns the base-2 logarithm of x</td>
+        </tr>
+        <tr>
+            <td>math.perm()</td>
+            <td>Returns the number of ways to choose k items from n items with order and without repetition</td>
+        </tr>
+        <tr>
+            <td>math.pow()</td>
+            <td>Returns the value of x to the power of y</td>
+        </tr>
+        <tr>
+            <td>math.prod()</td>
+            <td>Returns the product of all the elements in an iterable</td>
+        </tr>
+        <tr>
+            <td>math.radians()</td>
+            <td>Converts a degree value into radians</td>
+        </tr>
+        <tr>
+            <td>math.remainder()</td>
+            <td>Returns the closest value that can make numerator completely divisible by the denominator</td>
+        </tr>
+        <tr>
+            <td>math.sin()</td>
+            <td>Returns the sine of a number</td>
+        </tr>
+        <tr>
+            <td>math.sinh()</td>
+            <td>Returns the hyperbolic sine of a number</td>
+        </tr>
+        <tr>
+            <td>math.sqrt()</td>
+            <td>Returns the square root of a number</td>
+        </tr>
+        <tr>
+            <td>math.tan()</td>
+            <td>Returns the tangent of a number</td>
+        </tr>
+        <tr>
+            <td>math.tanh()</td>
+            <td>Returns the hyperbolic tangent of a number</td>
+        </tr>
+        <tr>
+            <td>math.trunc()</td>
+            <td>Returns the truncated integer parts of a number</td>
+        </tr>
+    </tbody>
+</table>
+<br>
+
+<h2>Math Constants</h2>
+
+<table class="customTable" style="margin:0">
+    <tbody>
+        <tr>
+            <th style="width:30%">Constant</th>
+            <th style="width:70%">Description</th>
+        </tr>
+        <tr>
+            <td>math.e</td>
+            <td>Returns Euler's number (2.7182...)</td>
+        </tr>
+        <tr>
+            <td>math.inf</td>
+            <td>Returns a floating-point positive infinity</td>
+        </tr>
+        <tr>
+            <td>math.nan</td>
+            <td>Returns a floating-point NaN (Not a Number) value</td>
+        </tr>
+        <tr>
+            <td>math.pi</td>
+            <td>Returns PI (3.1415...)</td>
+        </tr>
+        <tr>
+            <td>math.tau</td>
+            <td>Returns tau (6.2831...)</td>
+        </tr>
+    </tbody>
+</table>
+
+<pre>
+Some of these methods have been seen very frequently in our work. These include:
+
+math.ceil(): Rounds a number up to the nearest integer
+math.floor(): Rounds a number down to the nearest integer
+math.factorial(): Returns the factorial of a number
+math.comb(): Returns the number of ways to choose k items from n items without repetition and order
+math.degrees(): Converts an angle from radians to degrees
+math.radians(): Converts a degree value into radians
+math.gcd(): Returns the greatest common divisor of two integers
+math.dist(): Returns the Euclidean distance between two points (p and q), where p and q are the coordinates of that point
+</pre>
+
+<h1>Python statistics Module</h1>
+
+<section id="averages-and-measures-of-central-location">
+    <h2>Averages and measures of central location</h2>
+
+        <p>These functions calculate an average or typical value from a population
+            or sample.</p>
+        <div class="responsive-table__container">
+            <table class="customTable">
+                <colgroup>
+                    <col style="width: 27%">
+                    <col style="width: 73%">
+                </colgroup>
+                <tbody>
+                    <tr class="row-odd">
+                        <td>
+                            <p><code
+                                    class="xref py py-func docutils literal notranslate"><span class="pre">mean()</span></code>
+                            </p>
+                        </td>
+                        <td>
+                            <p>Arithmetic mean (“average”) of data.</p>
+                        </td>
+                    </tr>
+                    <tr class="row-even">
+                        <td>
+                            <p><code
+                                    class="xref py py-func docutils literal notranslate"><span class="pre">fmean()</span></code>
+                            </p>
+                        </td>
+                        <td>
+                            <p>Fast, floating point arithmetic mean, with optional weighting.</p>
+                        </td>
+                    </tr>
+                    <tr class="row-odd">
+                        <td>
+                            <p>
+                                <code
+                                    class="xref py py-func docutils literal notranslate"><span class="pre">geometric_mean()</span></code>
+                            </p>
+                        </td>
+                        <td>
+                            <p>Geometric mean of data.</p>
+                        </td>
+                    </tr>
+                    <tr class="row-even">
+                        <td>
+                            <p>
+                                <code
+                                    class="xref py py-func docutils literal notranslate"><span class="pre">harmonic_mean()</span></code>
+                            </p>
+                        </td>
+                        <td>
+                            <p>Harmonic mean of data.</p>
+                        </td>
+                    </tr>
+                    <tr class="row-odd">
+                        <td>
+                            <p><code
+                                    class="xref py py-func docutils literal notranslate"><span class="pre">median()</span></code>
+                            </p>
+                        </td>
+                        <td>
+                            <p>Median (middle value) of data.</p>
+                        </td>
+                    </tr>
+                    <tr class="row-even">
+                        <td>
+                            <p>
+                                <code
+                                    class="xref py py-func docutils literal notranslate"><span class="pre">median_low()</span></code>
+                            </p>
+                        </td>
+                        <td>
+                            <p>Low median of data.</p>
+                        </td>
+                    </tr>
+                    <tr class="row-odd">
+                        <td>
+                            <p>
+                                <code
+                                    class="xref py py-func docutils literal notranslate"><span class="pre">median_high()</span></code>
+                            </p>
+                        </td>
+                        <td>
+                            <p>High median of data.</p>
+                        </td>
+                    </tr>
+                    <tr class="row-even">
+                        <td>
+                            <p>
+                                <code
+                                    class="xref py py-func docutils literal notranslate"><span class="pre">median_grouped()</span></code>
+                            </p>
+                        </td>
+                        <td>
+                            <p>Median, or 50th percentile, of grouped data.</p>
+                        </td>
+                    </tr>
+                    <tr class="row-odd">
+                        <td>
+                            <p><code
+                                    class="xref py py-func docutils literal notranslate"><span class="pre">mode()</span></code>
+                            </p>
+                        </td>
+                        <td>
+                            <p>Single mode (most common value) of discrete or nominal data.</p>
+                        </td>
+                    </tr>
+                    <tr class="row-even">
+                        <td>
+                            <p><code
+                                    class="xref py py-func docutils literal notranslate"><span class="pre">multimode()</span></code>
+                            </p>
+                        </td>
+                        <td>
+                            <p>List of modes (most common values) of discrete or nominal data.</p>
+                        </td>
+                    </tr>
+                    <tr class="row-odd">
+                        <td>
+                            <p><code
+                                    class="xref py py-func docutils literal notranslate"><span class="pre">quantiles()</span></code>
+                            </p>
+                        </td>
+                        <td>
+                            <p>Divide data into intervals with equal probability.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+</section>
+
+<section id="measures-of-spread">
+    <h2>Measures of spread</h2>
+        <p>These functions calculate a measure of how much the population or sample
+            tends to deviate from the typical or average values.</p>
+        <div class="responsive-table__container">
+            <table class="customTable">
+                <colgroup>
+                    <col style="width: 34%">
+                    <col style="width: 66%">
+                </colgroup>
+                <tbody>
+                    <tr class="row-odd">
+                        <td>
+                            <p><code
+                                    class="xref py py-func docutils literal notranslate"><span class="pre">pstdev()</span></code>
+                            </p>
+                        </td>
+                        <td>
+                            <p>Population standard deviation of data.</p>
+                        </td>
+                    </tr>
+                    <tr class="row-even">
+                        <td>
+                            <p><code
+                                    class="xref py py-func docutils literal notranslate"><span class="pre">pvariance()</span></code>
+                            </p>
+                        </td>
+                        <td>
+                            <p>Population variance of data.</p>
+                        </td>
+                    </tr>
+                    <tr class="row-odd">
+                        <td>
+                            <p><code
+                                    class="xref py py-func docutils literal notranslate"><span class="pre">stdev()</span></code>
+                            </p>
+                        </td>
+                        <td>
+                            <p>Sample standard deviation of data.</p>
+                        </td>
+                    </tr>
+                    <tr class="row-even">
+                        <td>
+                            <p><code
+                                    class="xref py py-func docutils literal notranslate"><span class="pre">variance()</span></code>
+                            </p>
+                        </td>
+                        <td>
+                            <p>Sample variance of data.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+</section>
+
+<section id="statistics-for-relations-between-two-inputs">
+    <h2>Statistics for relations between two inputs</h2>
+
+    <p>These functions calculate statistics regarding relations between two inputs.</p>
+    <div class="responsive-table__container">
+        <table class="customTable">
+            <colgroup>
+                <col style="width: 32%">
+                <col style="width: 68%">
+            </colgroup>
+            <tbody>
+                <tr class="row-odd">
+                    <td>
+                        <p>
+                            <code
+                                class="xref py py-func docutils literal notranslate"><span class="pre">covariance()</span></code>
+                        </p>
+                    </td>
+                    <td>
+                        <p>Sample covariance for two variables.</p>
+                    </td>
+                </tr>
+                <tr class="row-even">
+                    <td>
+                        <p>
+                            <code
+                                class="xref py py-func docutils literal notranslate"><span class="pre">correlation()</span></code>
+                        </p>
+                    </td>
+                    <td>
+                        <p>Pearson's correlation coefficient for two variables.</p>
+                    </td>
+                </tr>
+                <tr class="row-odd">
+                    <td>
+                        <p>
+                            <code
+                                class="xref py py-func docutils literal notranslate"><span class="pre">linear_regression()</span></code>
+                        </p>
+                    </td>
+                    <td>
+                        <p>Slope and intercept for simple linear regression.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<pre>
+<h1>NormalDist</h1>
+
+NormalDist is a tool for creating and manipulating normal distributions of a random variable. It is a class that treats the mean and standard deviation of data measurements as a single entity.
+
+Normal distributions arise from the Central Limit Theorem and have a wide range of applications in statistics.
+</pre>
+<pre>
+<i class="ib">
+l = [13, 15, 16, 16, 19, 20, 20, 21, 22, 22, 25, 25, 25, 25, 30, 33, 33, 35, 35, 35, 36, 40, 45, 46, 52, 70]
+
+# Sum of all elements
+
+print(sum(l))
+
+# Count of each items.
+
+from collections import Counter 
+print(Counter(l))
+
+# Mean
+
+import statistics as st
+
+print(st.mean(l))
+
+print("Median:", st.median(l))
+
+# Mode
+
+print(st.mode(l))
+
+# Mid-range 
+
+print(st.mean([max(l), min(l)]))
+
+# Other statistical measures
+
+print(st.quantiles(data = l, n = 4)) # [20.0, 25.0, 35.25]
+print(st.stdev(l))
+print(st.variance(l))
+
+import pandas
+l = [13, 15, 16, 16, 19, 20, 20, 21, 22, 22, 25, 25, 25, 25, 30, 33, 33, 35, 35, 35, 36, 40, 45, 46, 52, 70]
+df = pandas.DataFrame(l, columns=['Numbers'])
+sum = df['Numbers'].sum()
+count_val = df['Numbers'].value_counts()
+mode = df['Numbers'].mode().values.tolist()
+midrange = (df['Numbers'].max() + df['Numbers'].min()) / 2
+
+print("The sum of the given data using pandas ", sum)
+print("\nThe count of values \n", count_val)
+print("\nMean of the given data using pandas ", df['Numbers'].mean())
+print("\nMedian of the given data using pandas ", df['Numbers'].median())
+print("\nMode of the given data using pandas ", mode[0])
+print("\nMidrange of the given data using pandas:", midrange)
+print("\nStandard deviation for given data using pandas:", df['Numbers'].std())
+print("\nVariance for given data using pandas:", df['Numbers'].var())
+print("\nQuantiles\n", df['Numbers'].quantile([0.25,0.50,0.75]))
+print("\n\n")
+
+import numpy as np
+
+data=np.array(l)
+print("Using NumPy\n")
+unique_values, counts = np.unique(data, return_counts=True)
+quantiles=np.percentile(data,[25,50,75])
+print("Sum ",np.sum(data))
+print("\nCount of values \n")
+for value, count in zip(unique_values, counts):
+    print( value, count)   
+print("Mean :",np.mean(data))
+print("\nMedian:",np.median(data))
+print("\nMode:",np.argmax(np.bincount(data)))    
+print("\nStandard deviation",np.std(data))
+print("\nVariance :",np.var(data))
+print("\nQuantiles \n")
+print(quantiles[0],quantiles[1],quantiles[2])
+print("\n\n")
+
+
+from scipy import stats 
+
+print("Using SciPy\n")
+mode=stats.mode(data)
+print("Mode: ", mode.mode[0])
+
+# For count--> scipy.stats.itemfreq()
+# Other statistical measures similar to numpy
+
+</i>
+
+<i class="ig">$ python statistical_summary.py 
+774
+Counter({25: 4, 35: 3, 16: 2, 20: 2, 22: 2, 33: 2, 13: 1, 15: 1, 19: 1, 21: 1, 30: 1, 36: 1, 40: 1, 45: 1, 46: 1, 52: 1, 70: 1})
+29.76923076923077
+Median: 25.0
+25
+41.5
+[20.0, 25.0, 35.25]
+13.158442741624686
+173.14461538461538
+The sum of the given data using pandas  774
+
+The count of values 
+25    4
+35    3
+16    2
+20    2
+22    2
+33    2
+13    1
+40    1
+52    1
+46    1
+45    1
+30    1
+36    1
+15    1
+21    1
+19    1
+70    1
+Name: Numbers, dtype: int64
+
+Mean of the given data using pandas  29.76923076923077
+
+Median of the given data using pandas  25.0
+
+Mode of the given data using pandas  25
+
+Midrange of the given data using pandas: 41.5
+
+Standard deviation for given data using pandas: 13.158442741624686
+
+Variance for given data using pandas: 173.14461538461538
+
+Quantiles
+0.25    20.25
+0.50    25.00
+0.75    35.00
+Name: Numbers, dtype: float64
+
+
+
+Using NumPy
+
+Sum  774
+
+Count of values 
+
+13 1
+15 1
+16 2
+19 1
+20 2
+21 1
+22 2
+25 4
+30 1
+33 2
+35 3
+36 1
+40 1
+45 1
+46 1
+52 1
+70 1
+Mean : 29.76923076923077
+
+Median: 25.0
+
+Mode: 25
+
+Standard deviation 12.902914674622618
+
+Variance : 166.4852071005917
+
+Quantiles 
+
+20.25 25.0 35.0
+
+
+
+Using SciPy
+
+/home/ashish/Desktop/statistical_summary.py:90: FutureWarning: Unlike other reduction functions (e.g. `skew`, `kurtosis`), the default behavior of `mode` typically preserves the axis it acts along. In SciPy 1.11.0, this behavior will change: the default value of `keepdims` will become False, the `axis` over which the statistic is taken will be eliminated, and the value None will no longer be accepted. Set `keepdims` to True or False to avoid this warning.
+    mode=stats.mode(data)
+Mode:  25
+</i>
+</pre>
+<span style="display: none;">Tags: Technology,Python,Mathematical Foundations for Data Science,</span>

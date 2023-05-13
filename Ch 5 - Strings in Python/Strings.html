@@ -1,4 +1,5 @@
 <html>
+
 <head>
     <script crossorigin="anonymous" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
         src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -698,7 +699,32 @@
             </td>
         </tr>
     </table>
-    <h1 style="page-break-before:always; "></h1>
+
+    <pre><h1>A Word About String Indexing</h1>
+
+Indexing starts from 0
+Indexing ends at len() - 1
+
+>>> s = 'rakesh'
+>>> s[0]
+'r'
+>>> s[1]
+'a'
+>>> s[2]
+'k'
+>>> s[3]
+'e'
+>>> s[4]
+'s'
+>>> s[5]
+'h'
+>>> s[6]
+Traceback (most recent call last):
+  File "&lt;stdin>", line 1, in &lt;module>
+IndexError: string index out of range
+>>> 
+</pre>
+
     <div class="separator" style="clear: both;"><a
             href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEivtYZd4DDYGJ5Mu9sGr2Jz7mdOV7mX8Zg0YMvg6nmkS3lMzuIBW6BIHmJV0T4RwiyvNLh5INMeTWvwk8h_CplKfT3LXBrYSFHOOELdnQijjAk1cWkdRRLqUJf_0Kl4XsmUSUshYkaaCoI_4ZcIc6eRyZlpnwaYqA58uRwXmzXo4NRJKNNy2RGHgf6NZQ/s722/1.png"
             style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" width="600"
@@ -718,12 +744,6 @@
     <h2>
         3. Print the length of the string variable
     </h2>
-    <h2>
-        4. Reverse the string
-    </h2>
-    <h2>
-        5. Check if a string is a palindrome.
-    </h2>
     <table>
         <tr>
             <td>
@@ -740,6 +760,966 @@
             </td>
         </tr>
     </table>
+
+    <b>Q: If the length is 7, what is the last index?</b>
+
+
+
+    <h1 style="page-break-before:always; ">
+        What is a slice and why is it needed?
+    </h1>
+    <ul class="customUL">
+        <li>With indexing: we can access a character in the string.</li>
+        <li>What if I ask you to extract just “Jack” for me?</li>
+        <li>What about just “Smith”?</li>
+        <li>What about “Junior”?</li>
+    </ul>
+    <table class="customTable">
+        <tr>
+            <td>
+                <p>
+                    J
+                </p>
+            </td>
+            <td>
+                <p>
+                    a
+                </p>
+            </td>
+            <td>
+                <p>
+                    c
+                </p>
+            </td>
+            <td>
+                <p>
+                    k
+                </p>
+            </td>
+            <td>
+                <p>
+
+                </p>
+            </td>
+            <td>
+                <p>
+                    S
+                </p>
+            </td>
+            <td>
+                <p>
+                    m
+                </p>
+            </td>
+            <td>
+                <p>
+                    i
+                </p>
+            </td>
+            <td>
+                <p>
+                    t
+                </p>
+            </td>
+            <td>
+                <p>
+                    h
+                </p>
+            </td>
+            <td>
+                <p>
+
+                </p>
+            </td>
+            <td>
+
+                J
+
+            </td>
+            <td>
+
+                u
+
+            </td>
+            <td>
+
+                n
+
+            </td>
+            <td>
+
+                i
+
+            </td>
+            <td>
+
+                o
+
+            </td>
+            <td>
+
+                r
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    0
+                </p>
+            </td>
+            <td>
+                <p>
+                    1
+                </p>
+            </td>
+            <td>
+                <p>
+                    2
+                </p>
+            </td>
+            <td>
+                <p>
+                    3
+                </p>
+            </td>
+            <td>
+                <p>
+                    4
+                </p>
+            </td>
+            <td>
+                <p>
+                    5
+                </p>
+            </td>
+            <td>
+                <p>
+                    6
+                </p>
+            </td>
+            <td>
+                <p>
+                    7
+                </p>
+            </td>
+            <td>
+                <p>
+                    8
+                </p>
+            </td>
+            <td>
+                <p>
+                    9
+                </p>
+            </td>
+            <td>
+                <p>
+                    10
+                </p>
+            </td>
+            <td>
+                <p>
+                    11
+                </p>
+            </td>
+            <td>
+                <p>
+                    12
+                </p>
+            </td>
+            <td>
+                <p>
+                    13
+                </p>
+            </td>
+            <td>
+                <p>
+                    14
+                </p>
+            </td>
+            <td>
+                <p>
+                    15
+                </p>
+            </td>
+            <td>
+                <p>
+                    16
+                </p>
+            </td>
+        </tr>
+    </table>
+    <h1 style="page-break-before:always; ">
+        Building a slice
+    </h1>
+    <ul class="customUL">
+        <li>For Jack: starting index is: 0, ending index is: 3 </li>
+        <li>So, the slice is: [0:4]</li>
+        <li>For Smith: starting index is: 5, ending index is: 9</li>
+        <li>So, the slice is: [5:10]</li>
+        <li>For Junior: starting index is: 11, ending index is: 16</li>
+        <li>So, the slice is: [11:17]</li>
+    </ul>
+
+    <pre>
+>>> x = "Jack Smith Junior"
+>>> x[0:4]
+'Jack'
+>>> x[5:10]
+'Smith'
+>>> x[11:17]
+'Junior'
+>>>  
+</pre>
+
+    <table class="customTable">
+        <tr>
+            <td>
+                <p>
+                    J
+                </p>
+            </td>
+            <td>
+                <p>
+                    a
+                </p>
+            </td>
+            <td>
+                <p>
+                    c
+                </p>
+            </td>
+            <td>
+                <p>
+                    k
+                </p>
+            </td>
+            <td>
+                <p>
+
+                </p>
+            </td>
+            <td>
+                <p>
+                    S
+                </p>
+            </td>
+            <td>
+                <p>
+                    m
+                </p>
+            </td>
+            <td>
+                <p>
+                    i
+                </p>
+            </td>
+            <td>
+                <p>
+                    t
+                </p>
+            </td>
+            <td>
+                <p>
+                    h
+                </p>
+            </td>
+            <td>
+                <p>
+
+                </p>
+            </td>
+            <td>
+
+                J
+
+            </td>
+            <td>
+
+                u
+
+            </td>
+            <td>
+
+                n
+
+            </td>
+            <td>
+
+                i
+
+            </td>
+            <td>
+
+                o
+
+            </td>
+            <td>
+
+                r
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    0
+                </p>
+            </td>
+            <td>
+                <p>
+                    1
+                </p>
+            </td>
+            <td>
+                <p>
+                    2
+                </p>
+            </td>
+            <td>
+                <p>
+                    3
+                </p>
+            </td>
+            <td>
+                <p>
+                    4
+                </p>
+            </td>
+            <td>
+                <p>
+                    5
+                </p>
+            </td>
+            <td>
+                <p>
+                    6
+                </p>
+            </td>
+            <td>
+                <p>
+                    7
+                </p>
+            </td>
+            <td>
+                <p>
+                    8
+                </p>
+            </td>
+            <td>
+                <p>
+                    9
+                </p>
+            </td>
+            <td>
+                <p>
+                    10
+                </p>
+            </td>
+            <td>
+                <p>
+                    11
+                </p>
+            </td>
+            <td>
+                <p>
+                    12
+                </p>
+            </td>
+            <td>
+                <p>
+                    13
+                </p>
+            </td>
+            <td>
+                <p>
+                    14
+                </p>
+            </td>
+            <td>
+                <p>
+                    15
+                </p>
+            </td>
+            <td>
+                <p>
+                    16
+                </p>
+            </td>
+        </tr>
+    </table>
+
+    <h1 style="page-break-before:always; ">
+        Demonstrating Negative Step For a Slice
+    </h1>
+    <ul>
+        <li>Let us say that this time we set step = -1</li>
+        <li>Then, the traversing of the string would happen from right to left.</li>
+        <li>Now, let us say start index: 15</li>
+        <li>Now, let us say end index: 5</li>
+        <li>This will traverse the string from right to left: from index 15 to index 6 because it is exclusive of end
+            index.</li>
+    </ul>
+
+    <pre>
+>>> x[15:5:-1]
+'oinuJ htim'
+>>>     
+</pre>
+
+    <table class="customTable">
+        <tr>
+            <td>
+                <p>
+                    J
+                </p>
+            </td>
+            <td>
+                <p>
+                    a
+                </p>
+            </td>
+            <td>
+                <p>
+                    c
+                </p>
+            </td>
+            <td>
+                <p>
+                    k
+                </p>
+            </td>
+            <td>
+                <p>
+
+                </p>
+            </td>
+            <td>
+                <p>
+                    S
+                </p>
+            </td>
+            <td>
+                <p>
+                    m
+                </p>
+            </td>
+            <td>
+                <p>
+                    i
+                </p>
+            </td>
+            <td>
+                <p>
+                    t
+                </p>
+            </td>
+            <td>
+                <p>
+                    h
+                </p>
+            </td>
+            <td>
+                <p>
+
+                </p>
+            </td>
+            <td>
+
+                J
+
+            </td>
+            <td>
+
+                u
+
+            </td>
+            <td>
+
+                n
+
+            </td>
+            <td>
+
+                i
+
+            </td>
+            <td>
+
+                o
+
+            </td>
+            <td>
+
+                r
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    0
+                </p>
+            </td>
+            <td>
+                <p>
+                    1
+                </p>
+            </td>
+            <td>
+                <p>
+                    2
+                </p>
+            </td>
+            <td>
+                <p>
+                    3
+                </p>
+            </td>
+            <td>
+                <p>
+                    4
+                </p>
+            </td>
+            <td>
+                <p>
+                    5
+                </p>
+            </td>
+            <td>
+                <p>
+                    6
+                </p>
+            </td>
+            <td>
+                <p>
+                    7
+                </p>
+            </td>
+            <td>
+                <p>
+                    8
+                </p>
+            </td>
+            <td>
+                <p>
+                    9
+                </p>
+            </td>
+            <td>
+                <p>
+                    10
+                </p>
+            </td>
+            <td>
+                <p>
+                    11
+                </p>
+            </td>
+            <td>
+                <p>
+                    12
+                </p>
+            </td>
+            <td>
+                <p>
+                    13
+                </p>
+            </td>
+            <td>
+                <p>
+                    14
+                </p>
+            </td>
+            <td>
+                <p>
+                    15
+                </p>
+            </td>
+            <td>
+                <p>
+                    16
+                </p>
+            </td>
+        </tr>
+    </table>
+    <h1 style="page-break-before:always; ">
+        One more example: For Step &gt; 1
+    </h1>
+    <ul class="customUL">
+        <li>Now, let us say our step = 2</li>
+        <li>This time it will not traverse each index, it will increment by 2 to pick an index.</li>
+        <li>And, start index is: 0</li>
+        <li>End index is: 17 (Why 17? Because slicing is exclusive of end index.)</li>
+    </ul>
+    <table class="customTable">
+        <tr>
+            <td>
+                <p>
+                    J
+                </p>
+            </td>
+            <td>
+                <p>
+                    a
+                </p>
+            </td>
+            <td>
+                <p>
+                    c
+                </p>
+            </td>
+            <td>
+                <p>
+                    k
+                </p>
+            </td>
+            <td>
+                <p>
+
+                </p>
+            </td>
+            <td>
+                <p>
+                    S
+                </p>
+            </td>
+            <td>
+                <p>
+                    m
+                </p>
+            </td>
+            <td>
+                <p>
+                    i
+                </p>
+            </td>
+            <td>
+                <p>
+                    t
+                </p>
+            </td>
+            <td>
+                <p>
+                    h
+                </p>
+            </td>
+            <td>
+                <p>
+
+                </p>
+            </td>
+            <td>
+
+                J
+
+            </td>
+            <td>
+
+                u
+
+            </td>
+            <td>
+
+                n
+
+            </td>
+            <td>
+
+                i
+
+            </td>
+            <td>
+
+                o
+
+            </td>
+            <td>
+
+                r
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    0
+                </p>
+            </td>
+            <td>
+                <p>
+                    1
+                </p>
+            </td>
+            <td>
+                <p>
+                    2
+                </p>
+            </td>
+            <td>
+                <p>
+                    3
+                </p>
+            </td>
+            <td>
+                <p>
+                    4
+                </p>
+            </td>
+            <td>
+                <p>
+                    5
+                </p>
+            </td>
+            <td>
+                <p>
+                    6
+                </p>
+            </td>
+            <td>
+                <p>
+                    7
+                </p>
+            </td>
+            <td>
+                <p>
+                    8
+                </p>
+            </td>
+            <td>
+                <p>
+                    9
+                </p>
+            </td>
+            <td>
+                <p>
+                    10
+                </p>
+            </td>
+            <td>
+                <p>
+                    11
+                </p>
+            </td>
+            <td>
+                <p>
+                    12
+                </p>
+            </td>
+            <td>
+                <p>
+                    13
+                </p>
+            </td>
+            <td>
+                <p>
+                    14
+                </p>
+            </td>
+            <td>
+                <p>
+                    15
+                </p>
+            </td>
+            <td>
+                <p>
+                    16
+                </p>
+            </td>
+        </tr>
+    </table>
+
+    <pre>
+>>> x[0:17:2]
+'Jc mt uir'
+>>>     
+</pre>
+
+    <h1 style="page-break-before:always; ">
+        What is a Slice?
+    </h1>
+    <ul class="customUL">
+        <li>A slice has three parts.</li>
+        <li>First part is: start index</li>
+        <li>Second part is: end index</li>
+        <li>Third part is: step (optional)</li>
+        <li>Representation: [start index: end index: step]</li>
+    </ul>
+
+    <h1>Default values</h1>
+    <ul class="customUL">
+        <li>Start index: 0</li>
+        <li>End index: len(mylist) or len(mystr) when step is positive. </li>
+        <li>Step: 1 </li>
+        <li>Negative step means direction of traversing is from right to left. </li>
+    </ul>
+        
+    <h1 style="page-break-before:always; ">
+        Slice (example)
+    </h1>
+    <table class="customTable">
+        <tr>
+            <td>
+                <p>
+                    j
+                </p>
+            </td>
+            <td>
+                <p>
+                    a
+                </p>
+            </td>
+            <td>
+                <p>
+                    c
+                </p>
+            </td>
+            <td>
+                <p>
+                    k
+                </p>
+            </td>
+            <td>
+                <p>
+
+                </p>
+            </td>
+            <td>
+                <p>
+                    s
+                </p>
+            </td>
+            <td>
+                <p>
+                    m
+                </p>
+            </td>
+            <td>
+                <p>
+                    i
+                </p>
+            </td>
+            <td>
+                <p>
+                    t
+                </p>
+            </td>
+            <td>
+                <p>
+                    h
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    0
+                </p>
+            </td>
+            <td>
+                <p>
+                    1
+                </p>
+            </td>
+            <td>
+                <p>
+                    2
+                </p>
+            </td>
+            <td>
+                <p>
+                    3
+                </p>
+            </td>
+            <td>
+                <p>
+                    4
+                </p>
+            </td>
+            <td>
+                <p>
+                    5
+                </p>
+            </td>
+            <td>
+                <p>
+                    6
+                </p>
+            </td>
+            <td>
+                <p>
+                    7
+                </p>
+            </td>
+            <td>
+                <p>
+                    8
+                </p>
+            </td>
+            <td>
+                <p>
+                    9
+                </p>
+            </td>
+        </tr>
+    </table>
+    <p>
+        If the string “jack smith” is given to you, then what all possible values can start index
+        take?
+    </p>
+    <p>
+        Answer: 0, 1, 2, ..., 7, 8, 9
+    </p>
+    <p>
+
+    </p>
+    <p>
+        Let’s assume that step = 1.
+    </p>
+    <p>
+        What all possible values can end index take?
+    </p>
+    <p>
+        Answer: it depends on start index.
+    </p>
+    <p>
+        &gt;&gt;&gt; x = 'jack smith'
+    </p>
+    <p>
+        &gt;&gt;&gt; x[5:9]
+    </p>
+    <p>
+        'smit'
+    </p>
+    <p>
+        &gt;&gt;&gt; x[5:2]
+    </p>
+    <p>
+        ''
+    </p>
+    <p>
+
+    </p>
+    <h1 style="page-break-before:always; ">
+        Problems on slice expansion.
+    </h1>
+    <ul class="customUL">
+        <li>What is the expansion of [2:7]</li>
+        <li>Start index is 2. End index is 7. Step takes the default value: 1 --&gt; [2:7:1]</li>
+        <li>What is the expansion of [:2]</li>
+        <li>Start index is not given. Takes the default of 0. End index is given 2 --&gt; [0:2:1]</li>
+        <li>What is the expansion of [3:]</li>
+        <li>One colon is there. Step is optional. So step takes the default value. Start index is given to be 3. End
+            index takes the default value: len() --&gt; [3:len():1]</li>
+        <li>What is the expansion of [:]</li>
+        <li>Read as: End to end. All the default values will be there --&gt; [0:len():1]</li>
+        <li>What is the expansion of [::-1]</li>
+        <li>This comes in handy when you want to reverse a string.</li>
+        <li>Since start index is not there and end index is also not there, we would assume that it would go end to end.
+            And since step is negative we would traverse the list from right to left. </li>
+        <li>But it is not equal to [0:len(x):-1]</li>
+    </ul>
     <h1 style="page-break-before:always; ">
         String Slicing
     </h1>
@@ -768,28 +1748,157 @@
         <li># Python is intelligent about end index. </li>
         <li># If you give an end index larger than the last index, it automatically picks up the last index.</li>
     </ul>
+    <h1 style="page-break-before:always; "></h1>
+    <p>
+        Solution:
+    </p>
+    <table class="customTable">
+        <tr>
+            <td>
+                <p>
+                    j
+                </p>
+            </td>
+            <td>
+                <p>
+                    a
+                </p>
+            </td>
+            <td>
+                <p>
+                    c
+                </p>
+            </td>
+            <td>
+                <p>
+                    k
+                </p>
+            </td>
+            <td>
+                <p>
+
+                </p>
+            </td>
+            <td>
+                <p>
+                    s
+                </p>
+            </td>
+            <td>
+                <p>
+                    m
+                </p>
+            </td>
+            <td>
+                <p>
+                    i
+                </p>
+            </td>
+            <td>
+                <p>
+                    t
+                </p>
+            </td>
+            <td>
+                <p>
+                    h
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    0
+                </p>
+            </td>
+            <td>
+                <p>
+                    1
+                </p>
+            </td>
+            <td>
+                <p>
+                    2
+                </p>
+            </td>
+            <td>
+                <p>
+                    3
+                </p>
+            </td>
+            <td>
+                <p>
+                    4
+                </p>
+            </td>
+            <td>
+                <p>
+                    5
+                </p>
+            </td>
+            <td>
+                <p>
+                    6
+                </p>
+            </td>
+            <td>
+                <p>
+                    7
+                </p>
+            </td>
+            <td>
+                <p>
+                    8
+                </p>
+            </td>
+            <td>
+                <p>
+                    9
+                </p>
+            </td>
+        </tr>
+    </table>
     <h1 style="page-break-before:always; ">
         Problem on index and slicing
     </h1>
     <ul class="customUL">
+        <li>Q: Print all the characters from even indices (inc. 0) of your name.</li>
+        <li>Q: Print all the characters from odd indices of your name.</li>
         <li>Q: Print every second character of your name.</li>
         <li>name1 = &quot;Ashish Jain&quot; # Ahs an</li>
         <li>name2 = &quot;Sonia and Johanth&quot;</li>
         <li>temp = name1[::2] # Start index, end index, step (default value of step is 1)</li>
         <li>print(temp)</li>
-        <li>temp2 = name2[1::2]</li>
-        <li>print(temp2)</li>
+        <li>temp3 = name2[1::2]</li>
+        <li>print(temp3)</li>
     </ul>
     <h1 style="page-break-before:always; ">
-        Default values of start index, end index, step
+        Solution on index and slicing
     </h1>
-    <ul class="customUL">
-        <li>Start index: 0</li>
-        <li>End index: len()</li>
-        <li>Step: 1 </li>
-    </ul>
+    <p>
+        &gt;&gt;&gt; x = 'vikash gupta'
+    </p>
+    <p>
+        &gt;&gt;&gt; x[0:len(x):2]
+    </p>
+    <p>
+        'vks ut'
+    </p>
+    <p>
+        &gt;&gt;&gt;
+    </p>
+    <p>
+        &gt;&gt;&gt; x[1:len(x):2]
+    </p>
+    <p>
+        'iahgpa'
+    </p>
+    <p>
+        &gt;&gt;&gt;
+    </p>
+    <p>
 
-    
+    </p>
     <h1 style="page-break-before:always; ">
         Follow-up Question
     </h1>
@@ -797,21 +1906,94 @@
         <li>Q: What is the difference when single colon is used and when double colon is used?</li>
         <li>If there is only one colon while indexing a string:</li>
         <li>You have to assume that step is not mentioned and it is equal to 1 (the default value).</li>
-        <li>name[0::1] # end index is 'len()' </li>
-        <li>name[::2] # start index: 0, end index: len(), step: 2</li>
+        <li>name[0::1] # end index is maximum value possible </li>
+        <li>name[::2] # start index: 0, end index: max value, step: 2</li>
         <li>name[:] # start index: 0, end index: len(), step: 1 </li>
-        <li></li>
+    </ul>
+    <p>
+        &gt;&gt;&gt; x
+    </p>
+    <p>
+        'vikash gupta'
+    </p>
+    <p>
+
+    </p>
+    <p>
+        &gt;&gt;&gt; x[:]
+    </p>
+    <p>
+        'vikash gupta'
+    </p>
+    <p>
+
+    </p>
+    <p>
+        &gt;&gt;&gt; x[::]
+    </p>
+    <p>
+        'vikash gupta'
+    </p>
+    <p>
+
+    </p>
+    <h1 style="page-break-before:always; ">
+        Second Set of Questions on Strings
+    </h1>
+    <ul class="customUL">
         <li>
-            What is the expansion of [::-1]
+            1. Reverse the string
         </li>
         <li>
-            Since start index is not there and end index is also not there, we would assume that it would go end to end. And since step is negative we would traverse the list from right to left. 
+            2. Check if a string is a palindrome.
         </li>
         <li>
-            But it is not equal to [0:len(x):-1]
+            Note: Palindrome is a string that is spelled the same way forward and backward. For
+            example: mam, madam, malayalam.
         </li>
     </ul>
-    
+    <h1 style="page-break-before:always; ">
+        Solutions
+    </h1>
+    <p>
+        &gt;&gt;&gt; x
+    </p>
+    <p>
+        'vikash gupta'
+    </p>
+    <p>
+        &gt;&gt;&gt; x[::-1]
+    </p>
+    <p>
+        'atpug hsakiv'
+    </p>
+    <p>
+        &gt;&gt;&gt; y = 'madam'
+    </p>
+    <p>
+        &gt;&gt;&gt; y == y[::-1]
+    </p>
+    <p>
+        True
+    </p>
+    <p>
+        &gt;&gt;&gt; z = 'malayalam'
+    </p>
+    <p>
+        &gt;&gt;&gt; z == z[::-1]
+    </p>
+    <p>
+        True
+    </p>
+    <p>
+        &gt;&gt;&gt;
+    </p>
+    <p>
+        &gt;&gt;&gt; x == x[::-1]
+    </p>
+    <p>
+        False
+    </p>
     <h1>More on Strings</h1>
     <h1 style="page-break-before:always; ">Some Commonly Used String Methods</h1>
     <table class="customTable">
