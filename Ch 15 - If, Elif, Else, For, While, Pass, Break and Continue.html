@@ -1,0 +1,307 @@
+<head>
+<script crossorigin="anonymous" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+<!-- Google AdSense Using Machine Learning Code -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-3071098372371409",
+        enable_page_level_ads: true
+    });
+</script>
+
+<style>
+
+    pre {
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -pre-wrap;
+        white-space: -o-pre-wrap;
+        word-wrap: break-word;
+    }
+</style>
+</head>
+
+<body>
+<h1>IF-ELIF-ELSE</h1>
+<p>If-Elif-Else is a class of statements that are known as conditional statements.</p>
+<p></p>
+<p>They accept a conditional expression (which we can also call as only ‘condition’ or only ‘expression’), and process a piece of code based on that.</p>
+<p></p>
+<p>A conditional statement evaluates to True or False.</p>
+<p>Note: In Python, 0 is considered as False and 1 is considered as True.</p>
+<h1 style="page-break-before:always; ">IF-ELSE Statement in Code</h1>
+
+<p>Simple if-else program to check voter eligibility:</p>
+
+<pre>
+<p>age = int(input(&quot;Enter your age: &quot;))</p>
+<p></p>
+<p>if age &gt;= 18:</p>
+<p>    print(&quot;Eligible to vote&quot;)</p>
+<p>else:</p>
+<p>    print(&quot;Not eligible to vote&quot;)</p>
+<p></p>
+<p># One more example </p>
+<p>a = 9</p>
+<p>b = 2</p>
+<p>if a &gt; b :</p>
+<p>    print(&quot;a is greater than b&quot;)</p>
+</pre>
+
+<h1 style="page-break-before:always; ">ELIF</h1>
+<p>We know about IF.</p>
+<p>If the condition is met, execute the IF block.</p>
+<p>If the condition is not met, execute the ELSE block.</p>
+<p></p>
+<p>But there is a third possibility: of checking a second condition if the first condition is not met.</p>
+<p>In this case if the second condition is met (after the first condition is not met), the ELIF block executes.</p>
+<h1 style="page-break-before:always; ">ELIF Statement in Code (Part 1)</h1>
+<p># Elif stands for &quot;else if&quot;</p>
+<pre>
+<p>a = 33</p>
+<p>b = 32</p>
+<p>if b &gt; a:</p>
+<p>  print(&quot;b is greater than a&quot;)</p>
+<p>elif a == b:</p>
+<p>  print(&quot;a and b are equal&quot;)</p>
+<p>else:</p>
+<p>  print(&quot; b is less than a&quot;)</p>
+</pre>
+
+<h1 style="page-break-before:always; ">ELIF Statement in Code (Part 2)</h1>
+<pre>
+<p>day = input(&quot;Enter a week day's name: &quot;)</p>
+<p></p>
+<p>if day == &quot;Sunday&quot;:</p>
+<p>    print(1)</p>
+<p>elif day == &quot;Monday&quot;:</p>
+<p>    print(2)</p>
+<p>elif day == &quot;Tuesday&quot;:</p>
+<p>    print(3)</p>
+<p>elif day == &quot;Wednesday&quot;:</p>
+<p>    print(4)</p>
+<p>elif day == &quot;Thursday&quot;:</p>
+<p>    print(5)</p>
+<p>elif day == &quot;Friday&quot;:</p>
+<p>    print(6)</p>
+<p>elif day == &quot;Saturday&quot;:</p>
+<p>    print(7)</p>
+<p>else:</p>
+<p>    print(&quot;Enter a valid day like Sunday, Monday,...&quot;)</p>
+</pre>
+
+<h1 style="page-break-before:always; ">Problem</h1>
+<b>What is the output of the following code:</b>
+<pre>
+<p>var = 0</p>
+<p>if var:</p>
+<p>    print(&quot;In If&quot;)</p>
+<p>else:</p>
+<p>    print(&quot;In Else&quot;)</p>
+<p></p>
+<p>var = 1</p>
+<p>if var:</p>
+<p>    print(&quot;In If&quot;)</p>
+<p>else:</p>
+<p>    print(&quot;In Else&quot;)</p>
+</pre>
+
+<h1 style="page-break-before:always; ">Shorthand If-Else</h1>
+<p># Shorthand if else statment</p>
+<p># This technique is known as Ternary Operators, or Conditional Expressions</p>
+<p></p>
+<p>a = 2</p>
+<p>b = 330</p>
+<p>print(&quot;A&quot;) if a &gt; b else print(&quot;B&quot;)</p>
+<p></p>
+<p>Here four lines of code have been reduced to one.</p>
+<h1 style="page-break-before:always; ">For Loop</h1>
+<p>Purpose of For loop is pure iteration.</p>
+<p></p>
+<p>For example: if we want to print first 10 natural numbers then we would simply iterate over those numbers using the range() built-in.
+</p>
+<p>Code:</p>
+<pre>
+<p>#1</p>
+<p></p>
+<p><i><b>for i in range(1, 11):</b></i></p>
+<p><i><b>    print(i)</b></i></p>
+<p></p>
+<p>#2</p>
+<p><i><b>l = ['Ashish', 'Lijiya', 'Bala'] </b></i></p>
+<p><i><b>for i in l:</b></i></p>
+<p><i><b>    print(i)</b></i></p>
+<p></p>
+<p>Ashish</p>
+<p>Lijiya</p>
+<p>Bala</p>
+</pre>
+
+<h1 style="page-break-before:always; "></h1>
+<p>Q2: Python program to print all the even numbers within the given range.</p>
+<p></p>
+<pre>
+<p>x = int(input(&quot;input range: &quot;))</p>
+<p>for i in range(1, x):</p>
+<p>    if i % 2 == 0:</p>
+<p>        print(i)</p>
+</pre>
+
+<h1 style="page-break-before:always; "></h1>
+<p>Q3: Write a program to read 10 numbers from the keyboard and find their sum and average.</p>
+<p></p>
+<p>#Write a program to read 10 numbers from the keyboard and find their sum and average.</p>
+<p>Sum() and Average() : Way 1</p>
+
+<pre>
+<p>l = []</p>
+<p>for i in range(10):</p>
+<p>    l.append(int(input(&quot;Enter the number: &quot;)))</p>
+<p></p>
+<p>s = sum(l)</p>
+<p>print(s)</p>
+<p></p>
+<p>avg = sum(l) / len(l)</p>
+<p>print(avg)</p>
+</pre>
+
+<p>Sum() and Average() : Way 2 (Using statistics module)</p>
+<pre>
+<p>import statistics</p>
+<p>#Write a program to read 10 numbers from the keyboard and find their sum and average.</p>
+<p></p>
+<p>l = []</p>
+<p>for i in range(10):</p>
+<p>    l.append(int(input(&quot;Enter the number: &quot;)))</p>
+<p></p>
+<p>s = sum(l)</p>
+<p>print(s)</p>
+<p>m = statistics.mean(l)</p>
+<p>print(m)</p>
+<p></p>
+</pre>
+
+<h1 style="page-break-before:always; ">While Loop</h1>
+<p>While loop is an entry controlled loop.</p>
+<p></p>
+<p>First thing we need is a variable to control our while loop.</p>
+<p></p>
+<p>Second thing a while loop requires is a condition (or conditional expression).</p>
+<p></p>
+<p>if True:</p>
+<p>    pass </p>
+<p></p>
+<p>And a condition requires: a variable and some test on it that would result in True or False.</p>
+<p></p>
+<p>Generally:</p>
+<p>We let our variable to start with something like: i = 1</p>
+<p>We let our condition be something like: i &lt; 10</p>
+<p></p>
+<p><b>Printing first ten natural numbers</b></p>
+<p></p>
+<p>For 10 natural numbers</p>
+<p>Let: i = 1</p>
+<p>Condition: i &lt;= 10</p>
+<p></p>
+<p>Third thing is modification of variable used in the condition above.</p>
+<p>i += 1</p>
+<p>Three steps described here are:</p>
+<p>1. initialization</p>
+<p>2. condition</p>
+<p>3. change</p>
+<h1 style="page-break-before:always; ">Infinite Loop</h1>
+<p>You can create infinite loop by manipulating these three steps of a while loop:</p>
+<p></p>
+<p>1. initialization</p>
+<p>2. condition</p>
+<p>3. change</p>
+<p></p>
+<p><i><b>while (True):</b></i></p>
+<p><i><b>	# Do something infinite number of times</b></i></p>
+<h1 style="page-break-before:always; "></h1>
+<p>Break: breaks out of the normal flow of the code</p>
+<p></p>
+<p>Continue: it skips the current iteration on encountering this keyword and continues with the next iteration. </p>
+
+<br>
+<h1>“pass” Statement</h1>
+
+<p>&gt;&gt;&gt; x = 5</p>
+<p>&gt;&gt;&gt; print(&quot;less than 10&quot;) if x &lt; 10 else print(&quot;greater than or equal to 10&quot;)</p>
+<p>less than 10</p>
+<p></p>
+<p>&gt;&gt;&gt; x = 15</p>
+<p>&gt;&gt;&gt; print(&quot;less than 10&quot;) if x &lt; 10 else print(&quot;greater than or equal to 10&quot;)</p>
+<p>greater than or equal to 10</p>
+<pre>
+<p>&gt;&gt;&gt; x = 5</p>
+<p>&gt;&gt;&gt; if(x &lt; 10):</p>
+<p>...  x = x + 10</p>
+<p>... else:</p>
+<p>...  pass</p>
+<p>... </p>
+<p>&gt;&gt;&gt; x</p>
+<p>15</p>
+<p>&gt;&gt;&gt; </p>
+</pre>
+
+<h1 style="page-break-before:always; ">‘pass’ with ‘if-else’</h1>
+<pre>
+<p>passing_marks = 33</p>
+<p>student_marks = int(input(&quot;Enter student's marks:&quot;))</p>
+<p>grace_marks = 10</p>
+<p></p>
+<p>if student_marks &lt; passing_marks:</p>
+<p>    student_marks += grace_marks</p>
+<p>else:</p>
+<p>    pass </p>
+<p></p>
+<p>print(&quot;Final marks are:&quot;, student_marks)</p>
+</pre>
+<h1 style="page-break-before:always; ">‘pass’ with ‘for’ loop</h1>
+<p># Print first 20 natural numbers leaving the multiples if 5 (inc. 5).</p>
+<pre>
+<p>for i in range(1, 21):</p>
+<p>    if i % 5 == 0:</p>
+<p>        pass</p>
+<p>    else:</p>
+<p>        print(i)</p>
+</pre>
+
+<h1 style="page-break-before:always; ">‘pass’ with ‘try-except’</h1>
+<p># A question worth 3 marks was wrong in the exam. So we have to give 3+ marks to each student.</p>
+<pre>
+<p>try:</p>
+<p>    student_marks = int(input(&quot;Enter the student's marks: &quot;))</p>
+<p>    </p>
+<p>    if student_marks &gt; 97:</p>
+<p>        print(&quot;Raising exception...&quot;)</p>
+<p>        raise Exception</p>
+<p></p>
+<p>    student_marks += 3</p>
+<p></p>
+<p>except ValueError as e:</p>
+<p>    # invalid literal for int() with base 10: 'alpha beta gamma'</p>
+<p>    print(e)</p>
+<p></p>
+<p>except Exception as e:</p>
+<p>    pass </p>
+<p></p>
+<p>print(&quot;Final student marks: &quot;, student_marks)</p>
+</pre>
+<h1 style="page-break-before:always; ">Defining an empty class</h1>
+<pre>
+<p>#  Defining an empty class</p>
+<p></p>
+<p>class Person:</p>
+<p>    pass</p>
+</pre>
+
+<iframe
+src="https://docs.google.com/forms/d/e/1FAIpQLScfcExOnrWHw1OcGTyNd2yef9Z-mqUNrqPg3hnbxAS9Zsji1Q/viewform?embedded=true"
+width="640" height="721" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
+</body>
+</html>

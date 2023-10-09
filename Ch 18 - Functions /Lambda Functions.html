@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+     "http://www.w3.org/TR/html4/transitional.dtd">
+<html>
+<head>
+    <style>
+      ul.customUL{
+        list-style-type: none;
+      }
+    </style>
+</head>
+<body >
+<h1></h1>
+<ul class="customUL">
+<li><b>Lambda Function:</b></li>
+</ul >
+<ul class="customUL">
+<li>It is a small anonymous function.</li>
+<li>It can take any number of arguments but have only one expression inside it</li>
+<li>It should use when an anonymous function required for a short period of  time</li>
+</ul>
+<ul class="customUL">
+<li><b>Syntax</b></li><br>
+<li>lambda  <i>arguments </i>:  <i>expression</i></li><br>
+<li>The expression is executed and the result is returned: For Ex –</li>
+<li>1)   Multiply argument a with argument b and return the result:</li>
+<pre>
+x = lambda a, b : a * b <br>
+print(x(5, 6))
+</pre>
+<li>output will be  : 30</li>
+</ul>
+<ul class="customUL">
+<li>2)   Summarize argument a, b, and c and return the result:</li>
+<pre>
+x = lambda a, b, c : a + b + c <br>
+print(x(5, 6, 2))
+</pre>
+</ul>
+<ul class="customUL">
+<li>output will be : 13</li>
+</ul>
+<h1 ></h1>
+<ul class="customUL">
+<li><b>Why Use Lambda Functions?</b></li>
+<li>Its power reflects when they are used as anonymous function inside another function. For Ex –</li>
+<li>1)   Defining a function which take only one argument  and that will be multiplied with an unknown number</li><br>
+<li>Defining of Doublers and Trippers Function :</li><br>
+<pre>
+def myfunc(n):
+return lambda a : a * n
+<br>
+mydoubler = myfunc(2)
+<br>
+mytripler = myfunc(3)
+<br>
+<ul class="customUL">
+  print(mydoubler(11))
+<br>
+  print(mytripler(11))
+<br>
+</pre>
+<li>output : 22</li>
+<li>33</li>
+<li></li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,255 @@
+<head>
+  <script crossorigin="anonymous" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+  <!-- Google AdSense Using Machine Learning Code -->
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-3071098372371409",
+          enable_page_level_ads: true
+      });
+  </script>
+
+  <style>
+      pre {
+          white-space: pre-wrap;
+          white-space: -moz-pre-wrap;
+          white-space: -pre-wrap;
+          white-space: -o-pre-wrap;
+          word-wrap: break-word;
+      }
+  </style>
+</head>
+
+
+  <style>
+    ul.customUL{
+      list-style-type: none;
+    }
+  </style>
+<body >
+<h1>What is a Function?</h1>
+<p>A function is a block of code.</p>
+<p>It runs when it is called with pair of parenthesis at the end.</p>
+<p></p>
+<p>There are some functions which are built-in like: print(), input(), type(), len(), list(), etc.</p>
+<p></p>
+<p>There are also functions which are user defined.</p>
+<p></p>
+<p>We can pass data to function through parameter. Parameters are separated by commas.</p>
+<p></p>
+<p>We can pass any number of arguments into a function. </p>
+<p>And a function can return data as result.</p>
+<p></p>
+<p>Parameters or Arguments ?</p>
+<p>Both term’s are used for the Information passed into a function</p>
+<h1 >First Function</h1>
+<p>A function is defined using the “def” keyword.</p>
+<p>A function has a name and a body.</p>
+<p>It may or may not have parameters (or arguments).</p>
+<p></p>
+<pre><i>def my_function():</i>
+<i> print(&quot;Hello from a function&quot;)</i>
+<p></p>
+Name: my_function
+Arguments: no args
+Body: print()</pre>
+<h1 >Problem</h1>
+<ul class="customUL">
+<li>Create a function that takes an integer as input and tells whether it is divisible by 7.</li>
+</ul >
+<pre> 
+def div_by_7(x):
+    if x % 7 == 0:
+        print(&quot;yes, it is divisible by &quot;)
+    else:
+        print(&quot;no, not divisible by 7&quot;)
+
+x = int(input(&quot;Enter a natural number: &quot;))
+
+div_by_7(x)
+</pre>
+<h1 >Problem: Passing of Arguments (With Name and Without Name)</h1>
+<p># Passing arguments with keywords i.e ( bind arguments with parameters name )</p>
+<p># Ordering of parameter has no mean in this case</p>
+<p></p>
+<p># define a function with three parameter </p>
+<p></p>
+<pre>
+<b>def get_youngest_child(child3, child2, child1):   </b>
+<b>  print(&quot;The youngest child is &quot; + child3)</b>
+</pre>
+<p><b></b></p>
+<p># What will be output?</p>
+<p></p>
+<pre><b>get_youngest_child(&quot;Emil&quot;, &quot;Tobias&quot;, &quot;Linus&quot;)</b></pre>
+<p></p>
+<p># Calling of function by passing key value pairs, order does not matter</p>
+<p></p>
+<pre><b>get_youngest_child(child1 = &quot;Emil&quot;, child2 = &quot;Tobias&quot;, child3 = &quot;Linus&quot;) </b></pre>
+<p></p>
+<h1 >Argument Passing With / Without Names</h1>
+
+<p><b>Argument passing by positions:</b></p>
+<p>First argument goes to the first variable, second argument goes to the second variable, so on, so forth.</p>
+
+<pre><b>def</b> get_youngest_child(child3, child2, child1):
+  get_youngest_child(&quot;Emil&quot;, &quot;Tobias&quot;, &quot;Linus&quot;) </pre>
+
+<p><b>Argument passing by name</b></p>
+
+<pre><b>def</b> get_youngest_child(child3, child2, child1): <br>
+  get_youngest_child(child1 = &quot;Emil&quot;, child2 = &quot;Tobias&quot;, child3 = &quot;Linus&quot;) </pre>
+
+<div class="separator" style="clear: both;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEipSYz4_6U5rmIw3NlUt3v2VO7x7akORqh4OZXnTTvNQYxE1EGYPfqMac6p7ODguWRz-MLKbIyu5wwnIhMmYbI5kgw3ZEK_m74dmVVu0QNkvcpX3IEUr-CHjkcia8HpeR17z88E5XQEAX9DxAA89st9ojE1iDDFDBnM-7wlKoab27xx7B4h0YHjarGsC6qU/s1147/Screenshot%20from%202023-07-23%2020-52-31.png" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" width="600" data-original-height="457" data-original-width="1147" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEipSYz4_6U5rmIw3NlUt3v2VO7x7akORqh4OZXnTTvNQYxE1EGYPfqMac6p7ODguWRz-MLKbIyu5wwnIhMmYbI5kgw3ZEK_m74dmVVu0QNkvcpX3IEUr-CHjkcia8HpeR17z88E5XQEAX9DxAA89st9ojE1iDDFDBnM-7wlKoab27xx7B4h0YHjarGsC6qU/s600/Screenshot%20from%202023-07-23%2020-52-31.png"/></a></div>
+<pre>
+<h2>Method vs. Function: Difference Between Methods and Function</h2>
+
+<b>Definition</b>
+
+Method: Method definitions are always present inside a class.
+Function: No class is needed to define a function.
+
+<b>Association</b>
+
+Method: Associated with the class object.
+Function: Not associated with any objects.
+
+<b>Call</b>
+
+Method: It is called on an object.
+Function: It is called by its name.
+
+<b>Dependency</b>
+
+Method: It depends on the class they belong to.
+Function: It doesn’t depend on any class, i.e., it is an identical entity.
+
+<b>self</b>
+
+Method: It requires the self as its first argument.
+Function: It doesn’t require any self-argument.
+
+<b>Operation</b>
+
+Method: It operates on the data of the object it associates with.
+Function: It operates on the data that you pass to them as an argument.
+
+<h2>Local Variable and Global Variable</h2>
+
+Take a look at this code:
+
+<div class="separator" style="clear: both;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhDIZvGE-CN3ehS7gm76N4KgZ4fd_5cYO1dFjHEzMBZcLs5fVS1eHzuh2TM89gL9y3tyvjKe04zoObA9ql_4Au-qsaCgjmWhMFY5htdOKoesrUNCKDbNEWYViSIAPCOouiATusGniBdAHG_dIsSOWC7PpP90to09xL6FAVcdT0X-f7N6jqPCw5SOhK0Ff2h/s552/1.png" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" width="600" data-original-height="481" data-original-width="552" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhDIZvGE-CN3ehS7gm76N4KgZ4fd_5cYO1dFjHEzMBZcLs5fVS1eHzuh2TM89gL9y3tyvjKe04zoObA9ql_4Au-qsaCgjmWhMFY5htdOKoesrUNCKDbNEWYViSIAPCOouiATusGniBdAHG_dIsSOWC7PpP90to09xL6FAVcdT0X-f7N6jqPCw5SOhK0Ff2h/s600/1.png"/></a></div>
+
+If you run the program, you will get the output below.
+
+<i>INSIDE THE FUNCTION
+Global Variable
+Local Variable
+OUTSIDE THE FUNCTION
+Global Variable
+NameError: name 'message2' is not defined</i>
+
+In the code above, message1 is a global variable while message2 is a local variable declared inside the function myFunction(). Within the function, both the local and global variables are accessible. Outside the function, the local variable message2 is no longer accessible. We get a NameError when we try to access it outside the function.
+
+The second concept to understand about variable scope is that if a local variable shares the same name as a global variable, any code inside the function is accessing the local variable. Any code outside is accessing the global variable. Try running the code below:
+
+<div class="separator" style="clear: both;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgmkP15y0L8PnQO6daLWcleYVuMG4IBMACPGi-EeUpdkkTnpURDsyKdAd-TsVpkXaOGvoN8pDzR7PpcjeZN4YRnDl6hnUBlu_eR9YXDjWjjap5J-VkJ-hubTc1ZrZezMEYvZDbq_e9eVVkeHs7DJ7N4B3wxw4d1YQHiE3QmSavcWF6as_jU2Ny8FSsaPY-Y/s575/2.png" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" width="600" data-original-height="315" data-original-width="575" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgmkP15y0L8PnQO6daLWcleYVuMG4IBMACPGi-EeUpdkkTnpURDsyKdAd-TsVpkXaOGvoN8pDzR7PpcjeZN4YRnDl6hnUBlu_eR9YXDjWjjap5J-VkJ-hubTc1ZrZezMEYvZDbq_e9eVVkeHs7DJ7N4B3wxw4d1YQHiE3QmSavcWF6as_jU2Ny8FSsaPY-Y/s600/2.png"/></a></div>
+
+You’ll get the output as follows:
+
+INSIDE THE FUNCTION
+Local Variable (shares same name as a global variable)
+OUTSIDE THE FUNCTION
+Global Variable (shares same name as a local variable)
+
+<h2>Default Parameter Values</h2>
+
+Now that we understand how functions and variable scope work, let us look at some interesting variations that Python allows when defining a function. First, let’s look at default values.
+
+Python allows us to define default values for the parameters of a function. If a parameter has a default value, we do not have to pass in any value for the parameter when calling the method. For instance, suppose a function has 5 parameters a, b, c, d and e. We can define the function as
+
+def someFunction(a, b, c=1, d=2, e=3):
+  print(a, b, c, d, e)
+
+Here, we assign default values for the last three parameters. All parameters with default values must be placed at the end of the parameter list. In other words, we cannot define a function as follows because r comes after q which has a default value:
+
+def someIncorrectFunction(p, q=1, r):
+  print(p, q, r)
+
+To call someFunction(), we can write
+someFunction(10, 20)
+
+we’ll get
+10, 20, 1, 2, 3
+
+We do not have to pass in any values for c, d and e. If we write
+
+someFunction(10, 20, 30, 40)
+
+we’ll get
+10, 20, 30, 40, 3
+
+The two additional arguments that we pass in (30 and 40) are assigned to the parameters with default values in order. Hence, 30 replaces the default value for c while 40 replaces d.
+
+<h2>Variable Length Argument List</h2>
+
+In addition to having default values for parameters, Python also allows us to pass a variable number of arguments to a function. This is very useful if we do not know the number of arguments a function has in advance. For instance, we may have a function that adds a series of numbers, but we do not know how many numbers there are in advance. In cases like this, we can use the * symbol. The example below shows how this can be done.
+
+def addNumbers(*num):
+  sum = 0
+  for i in num:
+    sum = sum + i
+  print(sum)
+
+When we add a single asterisk in front of num, we are telling the compiler that num stores a variable-length argument list that contains several items. The function then loops through the argument to find the sum of all the numbers and return the answer.
+
+To call the function, we write
+addNumbers(1, 2, 3, 4, 5)
+
+we’ll get 15 as the output. We can also add more numbers by writing
+
+addNumbers(1, 2, 3, 4, 5, 6, 7, 8)
+
+we’ll get 36 as the output.
+
+As we can see in the examples above, when we add an asterisk in front of a parameter name, we can pass in a variable number of arguments to the function. This is known as a non-keyworded variable length argument list. If we want to pass in a keyworded variable length argument list to the function, we can use double asterisks.
+
+For instance, consider the following example:
+def printMemberAge(**age):
+  for i, j in age.items():
+    print("Name = %s, Age = %s" %(i, j))
+
+This function has a parameter called age. The double asterisks denote that this parameter stores a keyworded variable length argument list, which is essentially a dictionary. The for loop then loops through the argument and prints out the values. To call the function, we can write
+
+printMemberAge(Peter = 5, John = 7)
+
+we’ll get
+
+Name = Peter, Age = 5
+Name = John, Age = 7
+
+If we write
+printMemberAge(Peter = 5, John = 7, Yvonne = 10)
+
+we’ll get
+
+Name = Peter, Age = 5
+Name = John, Age = 7
+Name = Yvonne, Age = 10
+
+If our function uses a normal argument (also known as a formal argument), a non-keyworded variable length argument list and a keyworded variable length argument list, we must define the function using the following order:
+
+def someFunction2(farg, *args, **kwargs):
+
+That is, the formal argument must come first, followed by the non-keyworded argument and the keyworded argument in that order.
+</pre>
+<iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLScfcExOnrWHw1OcGTyNd2yef9Z-mqUNrqPg3hnbxAS9Zsji1Q/viewform?embedded=true"
+        width="640" height="721" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
+<b>Credits</b> <br>
+Aman Kumar <br>
+<a href="https://www.linkedin.com/in/amankr025/" target="_blank">LinkedIn</a>
+</body>

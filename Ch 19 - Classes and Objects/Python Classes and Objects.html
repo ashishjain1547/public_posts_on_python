@@ -1,0 +1,187 @@
+<head>
+    <script crossorigin="anonymous" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <!-- Google AdSense Using Machine Learning Code -->
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-3071098372371409",
+            enable_page_level_ads: true
+        });
+    </script>
+
+    <style>
+        pre {
+            white-space: pre-wrap;
+            white-space: -moz-pre-wrap;
+            white-space: -pre-wrap;
+            white-space: -o-pre-wrap;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+
+<style>
+    pre > p {
+        margin: 0px;
+        padding: 0px;
+    }
+</style>
+<body>
+<p>Python is an object oriented programming language.</p>
+<p>Almost everything in Python is an object, with its properties and methods.</p>
+<p>A class is a blueprint of creating an object (like a Constructor).</p>
+<p>The keyword to remember is “class” itself.</p>
+<p># For Ex: Creating a class with Name MyClass</p>
+<pre>
+<p><i><b>class MyClass:</b></i></p>
+<p><i><b>  x = 5</b></i></p>
+<p># Print created class</p>
+<p>print(MyClass)</p>
+<p>Output : &lt;class '__main__.MyClass'&gt;</p>
+</pre>
+<h1 style="page-break-before:always; "><b><font color="#002060">Creating an Object</b></font>
+</h1>
+<p># Create an object named p1, and print the value of x</p>
+<pre>
+<p><i><b>class MyClass:     </b></i></p>
+<p><i><b>  x = 5</b></i></p>
+<p><i><b>p1 = MyClass()</b></i>  # Object creation using constructor</p>
+<p># Accessing the property of an Object using the dot (.) notation.</p>
+<p><i><b>print(p1.x) </b></i></p>
+</pre>
+<p>Output :  5</p>
+<p><b><font color="#002060">Define an Empty class</b></font></p>
+<p>A class body can’t be empty , if we have nothing to define then need to use pass statement to ignore error message</p>
+<p># Defining an empty class</p>
+<pre>
+<p><i><b>class Person :</b></i></p>
+<p><i><b>    pass</b></i></p></pre>
+<h1 style="page-break-before:always; "><b><font color="#002060">The __init__() Function and Classes</b></font>
+</h1>
+<ul>
+<li>  All classes have a function called __init__()</li>
+<li>  It is always executed when an object is being created </li>
+<li>  We can use it to assign values to object properties &amp;</li>
+<li>  To perform other necessary operations required at the time of object creation</li>
+</ul>
+<p># Create a class named Person, and use the __init__() function to assign values for name and age:</p>
+<pre>
+<p>class Person:
+&nbsp; def __init__(self, name, age):
+&nbsp;&nbsp;&nbsp; self.name = name
+&nbsp;&nbsp;&nbsp; self.age = age</p>
+<p>p1 = Person(&quot;John&quot;, 36) 
+
+print(p1.name)
+print(p1.age) </p></pre>
+<p>Output : </p>
+<p>John
+36</p>
+<p>
+</p>
+<h1 style="page-break-before:always; "></h1>
+<pre>
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+p1 = Person(&quot;John&quot;, 36)
+print(p1.name)
+print(p1.age) 
+</pre>
+<h1>A word about ‘self’</h1>
+<p>Simply stated, self refers to an instance itself. </p>
+<p>For now, just know that when we want to refer to instance variables in the class, we need to add self in front of the variable names. </p>
+<p>In addition, most methods in a class have self as the first parameter.</p>
+
+<h1 style="page-break-before:always; "><font color="#002060">Object Methods</font></h1>
+<ul>
+<li> Class can contain methods for objects</li>
+<p> </p>
+</ul>
+<p># For Ex – Defining a method that print a message on its call by object</p>
+<pre>
+<p>class Person:
+&nbsp; def __init__(self, name, age):
+&nbsp;&nbsp;&nbsp; self.name = name
+&nbsp;&nbsp;&nbsp; self.age = age</p>
+<p>  def greeting(self):
+&nbsp;&nbsp;&nbsp; print(&quot;Hello my name is &quot; + self.name)
+</p>
+<p>p1 = Person(&quot;John&quot;, 36)
+p1.greeting() </p></pre>
+<p>Output :  Hello my name is John</p>
+<p><font color="#C00000">Note </font>: The <font color="#FF0000">self</font> parameter is a reference to the object of the class, and is used to        access properties of the object</p>
+<p><font color="#C00000">Note</font> : First parameter of a method always refer to the current object , no matter what its name.
+</p>
+<h1 style="page-break-before:always; ">Function and Method</h1>
+<p>Function is usually understood as a standalone block of code.</p>
+<pre>
+<p>&gt;&gt;&gt; m = lambda a, b: a * b</p>
+<p>&gt;&gt;&gt; m(5, 5)</p>
+<p>25</p>
+<p>&gt;&gt;&gt; m</p>
+<p>&lt;function &lt;lambda&gt; at 0x7f69cd84d280&gt;</p>
+<p>&gt;&gt;&gt; </p></pre>
+<p>Method is understood as a funtion associated with a class or it’s object.</p>
+<h1 style="page-break-before:always; "></h1>
+<pre>
+class Calc:
+    def __init__(self, a, b):
+        self.a = a
+        self.b = b
+
+    def add(self):
+        return self.a + self.b
+
+    def mul(self):
+        return self.a * self.b
+    
+    def sub(self):
+        return self.a - self.b
+</pre>
+sub() has no existence outside of Calc.
+
+<div class="separator" style="clear: both;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjPHeYPDgPcQHA4XSjBC3MaeDL_7oYCKpghhvzvhyphenhyphenIWw6iSXmxKUrNyyL3-pS7ZYrhQ9YiDsYdtfxVgUnVnJwcOaXRHaaW9z_AyPF6PCasexsAJdl9ZiZwZsbzsJ0pRWDNwnlDPYKkMCg3lkOvyIPlWE2MbkZS2Nsx07Ws1q16CZC7YEMhyphenhyphendiWL50GBRZi3/s489/img1.png" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" height="600" data-original-height="489" data-original-width="323" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjPHeYPDgPcQHA4XSjBC3MaeDL_7oYCKpghhvzvhyphenhyphenIWw6iSXmxKUrNyyL3-pS7ZYrhQ9YiDsYdtfxVgUnVnJwcOaXRHaaW9z_AyPF6PCasexsAJdl9ZiZwZsbzsJ0pRWDNwnlDPYKkMCg3lkOvyIPlWE2MbkZS2Nsx07Ws1q16CZC7YEMhyphenhyphendiWL50GBRZi3/s600/img1.png"/></a></div>
+
+<h1 style="page-break-before:always; "><b><font color="#002060">Modify and Deleting Object Properties</b></font>
+</h1>
+
+<p>#  For Ex – Modify the age of Object p1 to 40 :</p>
+<pre>
+<p>class Person:</p>
+<p>  def __init__(self, name, age):</p>
+<p>    self.name = name</p>
+<p>    self.age = age</p>
+<p>  def myfunc(self):</p>
+<p>    print(&quot;Hello my name is &quot; + self.name)</p>
+<p>p1 = Person(&quot;John&quot;, 36)</p>
+<p>p1.age = 40  # Modify the age for object p1</p>
+<p>del p1.name  # Deleting the name property for object p1 by using del keyword</p>
+<p>print(p1.age)  # Output will be : 40 </p>
+<p>print(p1.name) #  Output  will be  : AttributeError: 'Person' object has no attribute ‘name'</p>
+</pre>
+<h1 style="page-break-before:always; "><font color="#002060">Deleting an Object </font></h1>
+<ul>
+<li> An object can be deleted by using del key word as well</li>
+<p># For Ex - Delete the p1 object</p>
+<pre>
+<p>class Person:</p>
+<p>  def __init__(self, name, age):</p>
+<p>    self.name = name</p>
+<p>    self.age = age</p>
+<p>  def myfunc(self):</p>
+<p>    print(&quot;Hello my name is &quot; + self.name)</p>
+<p>p1 = Person(&quot;John&quot;, 36)</p>
+<p>del p1</p>
+<p>print(p1)</p>
+</pre>
+<p>Output : </p>
+<p>NameError: 'p1' is not defined</p>
+<p> </p>
+<p>	</p>
+</ul>
+</body>
+

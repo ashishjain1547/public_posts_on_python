@@ -1,0 +1,135 @@
+#1
+
+(base) ashish@ashish:~/Desktop/ws/gh/public/public_lessons_in_python$ python
+Python 3.9.13 (main, Aug 25 2022, 23:26:10) 
+[GCC 11.2.0] :: Anaconda, Inc. on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> s = 'malayalam'
+>>> s.strip('mal')
+'y'
+>>> 
+
+
+
+
+
+
+
+#2 
+
+(base) ashish@ashish:~$ python
+Python 3.9.13 (main, Aug 25 2022, 23:26:10) 
+[GCC 11.2.0] :: Anaconda, Inc. on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> &code = 'abc'
+  File "<stdin>", line 1
+    &code = 'abc'
+    ^
+SyntaxError: invalid syntax
+>>> 
+>>> discount% = 90
+  File "<stdin>", line 1
+    discount% = 90
+              ^
+SyntaxError: invalid syntax
+>>> 
+>>> _ = "Alpha"
+>>> 
+>>> string = "Beta"
+>>> 
+
+
+
+
+
+
+
+#3
+
+>>> s = "   Python Program   "
+>>> s.lstrip("P")
+'   Python Program   '
+>>> 
+
+
+
+
+
+
+
+#4
+
+>>> l = ['Alpha', 'Beta', 'Gamma', 'Delta', 'Epsilon']
+>>> l[-2][2]
+'l'
+>>> 
+
+
+
+
+
+
+
+#5
+
+var = 0
+
+if var:
+    print("In If")
+elif (var == 0):
+    print("In Elif 1")
+elif (var == 0):
+    print("In Elif 2")
+else:
+    print("In Else")
+
+
+Output:
+In Elif 1
+
+
+
+
+
+
+
+#6
+
+for i in range(10):
+    if(i == 5):
+        break
+    else:
+        print(i, sep = " ")
+else:
+    print("In Else 2")
+    
+
+OUTPUT:
+0 1 2 3 4
+
+Note: The else block will NOT be executed if the loop is stopped by a break statement.
+
+
+
+
+
+
+#7
+
+for x in range(6):
+  print(x)
+else:
+  print("Finally finished!")
+  
+OUTPUT:
+0
+1
+2
+3
+4
+5
+Finally finished! 
+
+
+
+
