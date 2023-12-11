@@ -1,0 +1,145 @@
+<head>
+    <script crossorigin="anonymous" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <!-- Google AdSense Using Machine Learning Code -->
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-3071098372371409",
+            enable_page_level_ads: true
+        });
+    </script>
+    <style>
+        pre {
+            white-space: pre-wrap;
+            white-space: -moz-pre-wrap;
+            white-space: -pre-wrap;
+            white-space: -o-pre-wrap;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+
+<body>
+    <font color="#002060">
+        <pre>
+#There is no date data type in python
+#To deal with date and time you need to use DateTime built in module of python
+        
+# For Ex - Current date can be displayed as follow
+</pre>
+    </font>
+    <font color="#C00000">
+        <pre>
+import datetime as dt   # importing the module
+
+# Note below: datetime represent constructor of datetime class
+x = dt.datetime.now()   
+
+print(x)
+</pre>
+    </font>
+    <font color="#002060">
+        <pre>
+Output will be in following format:
+
+2023-05-25 16:02:23.115559
+
+Note*: It contains year, month, day, hour, minute, second, and microsecond
+</pre>
+    </font>
+    <h1 style="page-break-before:always; ">
+        <font color="#002060">DateTime module methods</font>
+    </h1>
+    <font color="#002060">
+        <pre>
+# There are many methods to give information about date object
+# For Ex – Getting the year and name of weekday using current date object
+</pre>
+    </font>
+    <font color="#C00000">
+        <pre>
+import datetime as dt
+x = dt.datetime.now()    # To get current date object
+print(x.year)            # To display year
+
+print(x.strftime("%A"))  # To display day name
+</pre>
+    </font>
+    <font color="#002060">
+        <pre>
+Output will be like: 
+2023
+Thursday
+</pre>
+    </font>
+    <h1 style="page-break-before:always; "><b>
+            <font color="#002060">Creating Date Objects
+        </b></font>
+    </h1>
+    <font color="#002060">
+        <pre>
+# You can create a date object using datetime class constructor of the datetime module 
+# And you have to pass three parameters  values: year, month and day in constructor
+
+# The datetime() class also takes parameters for time and timezone (i.e : hour, minute, second, microsecond, tzone), but they are optional, and has a default value of 0, (None for timezone)
+   
+# For Ex – Creating a date object
+</pre>
+    </font>
+    <font color="#C00000">
+        <pre>
+import datetime
+
+x = datetime.datetime(2020, 5, 17)
+
+print(x)
+</pre>
+    </font>
+    <font color="#002060">
+        <pre>
+Output will be: 
+2020-05-17 00:00:00
+</pre>
+    </font>
+    <h1 style="page-break-before:always; "><b>
+            <font color="#002060">The strftime() Method</font>
+        </b></h1>
+    <font color="#002060">
+        <pre>
+# This method is used for formatting date objects into readable strings.
+# It takes one parameter, format, to specify the format of the returned string
+
+# For Ex – Displaying the name of the month 
+</pre>
+    </font>
+
+    <font color="#C00000">
+        <pre>
+import datetime
+x = datetime.datetime(2018, 6, 1)   # Creating a specific date object
+
+print(x.strftime("%B"))             # Getting month information from date object
+</pre>
+    </font>
+    <font color="#002060">
+        <pre>
+Output will be: 
+June
+</pre>
+    </font>
+    <h1 style="page-break-before:always; "></h1>
+    <p>
+        <font color="#002060"> # Few Examples of format code to be pass in </font>
+        <font color="#C00000">strftime()</font>
+        <font color="#002060"> method : </font>
+    </p>
+    <div class="separator" style="clear: both;"><a
+            href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjs2bFLas0ZfknvfE2wtWtSvguAhCRQ2mDd4sbMTWd646jbF9UBS615u-3hLO_ZJUBHrw3vtnfiIQMKf3ULqLSJaigHmfBTDM8Fwq5V0Y52aAq4UWK8OAhEaZfUqdm-YevXEktFxD-y6b5JyoYhCnS1HvWOjLGNMxu6xC2HusVlRXvb80R-vzXn7U-NKS26/s814/imgSlide5.png"
+            style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" width="320"
+                data-original-height="574" data-original-width="814"
+                src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjs2bFLas0ZfknvfE2wtWtSvguAhCRQ2mDd4sbMTWd646jbF9UBS615u-3hLO_ZJUBHrw3vtnfiIQMKf3ULqLSJaigHmfBTDM8Fwq5V0Y52aAq4UWK8OAhEaZfUqdm-YevXEktFxD-y6b5JyoYhCnS1HvWOjLGNMxu6xC2HusVlRXvb80R-vzXn7U-NKS26/s320/imgSlide5.png" /></a>
+    </div>
+</body>
+<span style="display: none;">Tags: Technology,Python,</span>
