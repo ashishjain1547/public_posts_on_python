@@ -1,0 +1,248 @@
+<head>
+    <script crossorigin="anonymous" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <!-- Google AdSense Using Machine Learning Code -->
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-3071098372371409",
+            enable_page_level_ads: true
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                url: "https://raw.githubusercontent.com/ashishjain1547/pubLessonsInTechnology/main/links_to_tech_clubs.json",
+                success: function (result) {
+                    let grouplink = JSON.parse(result)['Beta Tech Club'];
+                    $("#customWhatsAppGroupLinkWrapper").html(
+                        `
+                        <h2 class="custom_link_h2"><a href="${grouplink}" target="_blank"> 
+                            <span>Join us on:</span>
+                            <span class="customLink"><i class="fa fa-whatsapp"></i> Whatsapp </span>
+                            </a>
+                        </h2>
+                        `
+                    );
+                }
+            });
+        });
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        pre {
+            white-space: pre-wrap;
+            white-space: -moz-pre-wrap;
+            white-space: -pre-wrap;
+            white-space: -o-pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .customLink {
+            background-color: #4CAF50;
+            border: none;
+            color: white !important;
+            padding: 8px 13px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .customLink:hover {
+            text-decoration: none;
+        }
+
+        div.code-block-decoration.footer {
+            display: none;
+        }
+
+        button.export-sheets-button-wrapper {
+            display: none;
+        }
+    </style>
+
+    <style>
+        .custom_link_h2 a {
+            color: black;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .custom_link_h2 a:hover {
+            color: black;
+        }
+
+        .custom_link_h2 a:active {
+            color: black;
+        }
+
+        .custom_link_h2 span {
+            translate: 0px -5px;
+            display: inline-block;
+        }
+
+        .custom_link_h2 img {
+            width: 100px;
+            padding: 0px;
+            border: none;
+            box-shadow: none;
+        }
+    </style>
+    <style>
+        .customul {
+            list-style: none;
+        }
+
+        [aria-hidden='true'] {
+            display: none;
+        }
+
+        .custom_iframe {
+            width: 100%;
+        }
+
+        i.ib {
+            color: blue;
+        }
+
+        i.ig {
+            color: green;
+        }
+
+        .customTable td {
+            padding: 2px;
+        }
+    </style>
+
+</head>
+
+<div id="customWhatsAppGroupLinkWrapper"></div>
+
+To See All Python Articles: <a class="customLink"
+    href="https://survival8.blogspot.com/2023/07/python-course-index.html" target="_blank">Python Course (Index)</a>
+
+<pre>
+
+<iframe class="custom_iframe" width="560" height="315" src="https://www.youtube.com/embed/NB5LGzmSiCs?si=VoglJZStB7mAoPMB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+Question 1: Which of these is not a module?
+
+A. libraries
+B. functions
+C. classes
+D. files
+E. None of the above.
+
+
+Answer:
+
+All of these are modules: libraries, functions, classes and files.
+Correct answer: E
+
+~~~
+
+Question 2: 
+
+What will this print:
+
+<i class="ib">
+import pandas
+df = pandas.DataFrame([1, 2])
+print(__name__)
+</i>
+
+~~~
+
+Q3:
+
+What will this print:
+
+<i class="ib">
+import pandas
+df = pandas.DataFrame([1, 2])
+print(pandas.__name__)
+</i>
+
+~~~
+
+Q4:
+
+What will this print:
+
+<i class="ib">
+import pandas as pd
+df = pandas.DataFrame([1, 2])
+print(pd.__name__)
+</i>
+
+Q5:
+
+What will this print:
+
+<i class="ib">
+from pandas import DataFrame
+print(DataFrame.__name__)
+</i>
+
+Q6: What will this print:
+
+from pandas import DataFrame
+print(pandas.__name__)
+
+
+Answer: NameError: name 'pandas' is not defined
+
+
+<b>Rules of Thumb</b>
+
+For libraries:
+Remove the .py filename extension to get the __name__ of any library.
+
+For Classes and Functions:
+
+The __name__ is the same as the name of the class.
+
+~~~
+
+Q7: What will this print:
+
+<i class="ib">
+<b>++++ File: import_me.py ++++</b>
+
+def call_me():
+    print("Hello!!!")
+
+call_me()
+
+<b>++++ File: run_me.py ++++</b>
+
+from import_me import call_me
+
+call_me()
+print(5+5) </i>
+
+Output:
+
+<i class="ig">
+Hello!!!
+Hello!!!
+10</i>
+
+~~~
+
+
+<b>Ratings</b>
+
+<table class="customTable">
+    <tr><td>Harshitha</td><td>4</td></tr>
+</table>
+</pre>
+
+<span style="display: none;">Tags: Python,Technology,</span>
