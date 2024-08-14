@@ -1,0 +1,32 @@
+[
+    {
+        "TITLE": "<a href='https://www.youtube.com/watch?v=kqtD5dpn9C8' target='_blank'>Python For Beginners - Learn Python in 1 Hour</a>",
+        "INSTRUCTOR": "Programming with Mosh",
+        "INTERVIEW_QUES": "NA",
+        "EMBED_CODE": "<iframe class=\"custom_iframe\" height=\"310\" src=\"https://www.youtube.com/embed/kqtD5dpn9C8\" title=\"Python For Beginners - Learn Python in 1 Hour\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+    },
+    {
+        "TITLE": "<a href='https://www.youtube.com/watch?v=_uQrJ0TkZlc' target='_blank'>Python Tutorial - Python Full Course for Beginners (in 6 Hours)</a>",
+        "INSTRUCTOR": "Programming with Mosh",
+        "INTERVIEW_QUES": "NA",
+        "EMBED_CODE": "<iframe class=\"custom_iframe\" height=\"310\" src=\"https://www.youtube.com/embed/_uQrJ0TkZlc\" title=\"Python Tutorial - Python Full Course for Beginners (in 6 Hours)\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+    },
+    {
+        "TITLE": "<a href='https://www.codecademy.com/learn/learn-python-3' target='_blank'>Python 3 - Complete practicals based course</a>",
+        "INSTRUCTOR": "Codecademy",
+        "INTERVIEW_QUES": "NA",
+        "EMBED_CODE": "NA"
+    },
+    {
+        "TITLE": "<a href='https://learn.deeplearning.ai/courses/pair-programming-llm/lesson/1/introduction' target='_blank'>Pair Programming with a Large Language Model</a>",
+        "INSTRUCTOR": "DeepLearning.ai",
+        "INTERVIEW_QUES": "<a href='https://survival8.blogspot.com/2024/08/questions-from-pair-programming-with.html' target='_blank'>Interview Questions</a>",
+        "EMBED_CODE": "NA"
+    },
+    {
+        "TITLE": "<a href='https://youtu.be/NB5LGzmSiCs' target='_blank'>Interview Prep: If __name__ == '__main__' </a>",
+        "INSTRUCTOR": "Python Simplified",
+        "INTERVIEW_QUES": "<a href='https://survival8.blogspot.com/2024/08/questions-on-if-name-main-python-lesson.html' target='_blank'>Interview Questions</a>",
+        "EMBED_CODE": "<iframe class=\"custom_iframe\" height=\"310\" src=\"https://youtube.com/embed/NB5LGzmSiCs\" title=\"Interview Prep: If __name__ == '__main__' \" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+    }
+]
