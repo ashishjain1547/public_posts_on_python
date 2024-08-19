@@ -6,10 +6,10 @@
         "EMBED_CODE": "<iframe class=\"custom_iframe\" height=\"310\" src=\"https://www.youtube.com/embed/kqtD5dpn9C8\" title=\"Python For Beginners - Learn Python in 1 Hour\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
     },
     {
-        "TITLE": "<a href='https://www.youtube.com/watch?v=_uQrJ0TkZlc' target='_blank'>Python Tutorial - Python Full Course for Beginners (in 6 Hours)</a>",
+        "TITLE": "<a href='https://www.youtube.com/watch?v=_uQrJ0TkZlc' target='_blank'>Python Tutorial - Full Course for Beginners (in 6 Hours)</a>",
         "INSTRUCTOR": "Programming with Mosh",
         "INTERVIEW_QUES": "NA",
-        "EMBED_CODE": "<iframe class=\"custom_iframe\" height=\"310\" src=\"https://www.youtube.com/embed/_uQrJ0TkZlc\" title=\"Python Tutorial - Python Full Course for Beginners (in 6 Hours)\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+        "EMBED_CODE": "<iframe class=\"custom_iframe\" height=\"310\" src=\"https://www.youtube.com/embed/_uQrJ0TkZlc\" title=\"Python Tutorial - Full Course for Beginners (in 6 Hours)\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
     },
     {
         "TITLE": "<a href='https://www.codecademy.com/learn/learn-python-3' target='_blank'>Python 3 - Complete practicals based course</a>",
@@ -28,5 +28,23 @@
         "INSTRUCTOR": "Python Simplified",
         "INTERVIEW_QUES": "<a href='https://survival8.blogspot.com/2024/08/questions-on-if-name-main-python-lesson.html' target='_blank'>Interview Questions</a>",
         "EMBED_CODE": "<iframe class=\"custom_iframe\" height=\"310\" src=\"https://youtube.com/embed/NB5LGzmSiCs\" title=\"Interview Prep: If __name__ == '__main__' \" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+    },
+    {
+        "TITLE": "<a href='https://www.youtube.com/playlist?list=PLu0W_9lII9agwh1XjRt242xIpHhPT2llg' target='_blank'>Full Course: Python for Beginners | #100DaysOfCode | Tutorial in Hindi</a>",
+        "INSTRUCTOR": "CodeWithHarry",
+        "INTERVIEW_QUES": "NA",
+        "EMBED_CODE": "NA"
+    },
+    {
+        "TITLE": "<a href='https://youtu.be/f0TrMH9s-VE' target='_blank'>Python Classes and Objects - OOP for Beginners</a>",
+        "INSTRUCTOR": "Python Simplified",
+        "INTERVIEW_QUES": "<a href='https://survival8.blogspot.com/2024/08/intro-to-classes-and-objects-in-python.html' target='_blank'>Interview Questions</a>",
+        "EMBED_CODE": "<iframe class=\"custom_iframe\" height=\"310\" src=\"https://youtube.com/embed/f0TrMH9s-VE\" title=\"Python Classes and Objects - OOP for Beginners\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+    },
+    {
+        "TITLE": "<a href='https://www.youtube.com/playlist?list=PLqXS1b2lRpYRCbHe3sG5viisehpADOWUv' target='_blank'>Full Course: Object Oriented Programming </a>",
+        "INSTRUCTOR": "Python Simplified",
+        "INTERVIEW_QUES": "NA",
+        "EMBED_CODE": "NA"
     }
 ]

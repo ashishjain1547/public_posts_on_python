@@ -1,0 +1,390 @@
+<head>
+    <script crossorigin="anonymous" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <!-- Google AdSense Using Machine Learning Code -->
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-3071098372371409",
+            enable_page_level_ads: true
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                url: "https://raw.githubusercontent.com/ashishjain1547/pubLessonsInTechnology/main/links_to_tech_clubs.json",
+                success: function (result) {
+                    let grouplink = JSON.parse(result)['Beta Tech Club'];
+                    $("#customWhatsAppGroupLinkWrapper").html(
+                        `
+                        <h2 class="custom_link_h2"><a href="${grouplink}" target="_blank"> 
+                            <span>Join us on:</span>
+                            <span class="customLink"><i class="fa fa-whatsapp"></i> Whatsapp </span>
+                            </a>
+                        </h2>
+                        `
+                    );
+                }
+            });
+        });
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        pre {
+            white-space: pre-wrap;
+            white-space: -moz-pre-wrap;
+            white-space: -pre-wrap;
+            white-space: -o-pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .customLink {
+            background-color: #4CAF50;
+            border: none;
+            color: white !important;
+            padding: 8px 13px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .customLink:hover {
+            text-decoration: none;
+        }
+
+        div.code-block-decoration.footer {
+            display: none;
+        }
+
+        button.export-sheets-button-wrapper {
+            display: none;
+        }
+    </style>
+
+    <style>
+        .custom_link_h2 a {
+            color: black;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .custom_link_h2 a:hover {
+            color: black;
+        }
+
+        .custom_link_h2 a:active {
+            color: black;
+        }
+
+        .custom_link_h2 span {
+            translate: 0px -5px;
+            display: inline-block;
+        }
+
+        .custom_link_h2 img {
+            width: 100px;
+            padding: 0px;
+            border: none;
+            box-shadow: none;
+        }
+    </style>
+    <style>
+        .customul {
+            list-style: none;
+        }
+
+        [aria-hidden='true'] {
+            display: none;
+        }
+
+        .custom_iframe {
+            width: 100%;
+            height: 320px;
+        }
+
+        i.ib {
+            color: blue;
+        }
+
+        i.ig {
+            color: green;
+        }
+
+        .customTable td {
+            padding: 2px;
+        }
+
+    [aria-hidden='true'] {
+        display: none;
+    }
+
+    div.py-2.px-4 {
+        display: none;
+    }
+</style>
+
+</head>
+
+<div id="customWhatsAppGroupLinkWrapper"></div>
+
+To Watch All Python Videos: <a class="customLink" href="https://survival8.blogspot.com/2024/08/youtube-academy-for-python.html" target="_blank">YouTube Academy For Python</a> 
+
+<pre><iframe class="custom_iframe" src="https://www.youtube.com/embed/f0TrMH9s-VE?list=PLqXS1b2lRpYRCbHe3sG5viisehpADOWUv" title="Python Classes and Objects - OOP for Beginners" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<h2>Interview Questions</h2>
+
+<h3>1. What is the concept behind the 'self' variable?</h3>
+
+<h3>2. What does self refer to in the __init__ method?</h3>
+
+<h3>3. When does a class method does not take self as the first argurment?</h3>
+
+<h3>4. What is the concept behind the __init__ method?</h3>
+
+<h3>5. Explain the need for Object Oriented Programming when we could do stuff with Functional programing?</h3>
+
+<h3>6. What is the difference between a function and a method?</h3>
+
+<h3>7. Apart from attributes and methods, what else can a Python object hold?</h3>
+
+<div class="markdown prose w-full break-words dark:prose-invert light"><p>In Python, an object can hold several types of data beyond just attributes (data members) and methods (functions). Here’s a breakdown of other things a Python object can hold:</p><h3>1. <strong>Class Variables</strong></h3><ul><li><strong>Definition</strong>: Variables that are shared among all instances of a class. These are defined within the class but outside any instance methods.</li><li><strong>Usage</strong>: Often used to maintain shared state or constants across all instances of a class.</li></ul><pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><div class="flex items-center"><span class="" data-state="closed"><button class="flex gap-1 items-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" class="icon-sm"><path fill="currentColor" fill-rule="evenodd" d="M7 5a3 3 0 0 1 3-3h9a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3h-2v2a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3v-9a3 3 0 0 1 3-3h2zm2 2h5a3 3 0 0 1 3 3v5h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-9a1 1 0 0 0-1 1zM5 9a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1v-9a1 1 0 0 0-1-1z" clip-rule="evenodd"></path></svg>Copy code</button></span></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">MyClass</span>:
+    shared_variable = <span class="hljs-string">"I am shared"</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, value</span>):
+        self.instance_variable = value
+</code></div></div></pre><h3>2. <strong>Static Methods and Class Methods</strong></h3><ul><li><strong>Static Methods</strong>: Methods that do not operate on an instance of the class. They are bound to the class and not the object instance.</li></ul><pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><div class="flex items-center"><span class="" data-state="closed"><button class="flex gap-1 items-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" class="icon-sm"><path fill="currentColor" fill-rule="evenodd" d="M7 5a3 3 0 0 1 3-3h9a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3h-2v2a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3v-9a3 3 0 0 1 3-3h2zm2 2h5a3 3 0 0 1 3 3v5h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-9a1 1 0 0 0-1 1zM5 9a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1v-9a1 1 0 0 0-1-1z" clip-rule="evenodd"></path></svg>Copy code</button></span></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">MyClass</span>:
+<span class="hljs-meta">    @staticmethod</span>
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">static_method</span>():
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">"This is a static method"</span>)
+</code></div></div></pre><ul><li><strong>Class Methods</strong>: Methods that are bound to the class itself and not to any particular object instance. They receive the class as the first argument (<code>cls</code>).</li></ul><pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><div class="flex items-center"><span class="" data-state="closed"><button class="flex gap-1 items-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" class="icon-sm"><path fill="currentColor" fill-rule="evenodd" d="M7 5a3 3 0 0 1 3-3h9a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3h-2v2a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3v-9a3 3 0 0 1 3-3h2zm2 2h5a3 3 0 0 1 3 3v5h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-9a1 1 0 0 0-1 1zM5 9a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1v-9a1 1 0 0 0-1-1z" clip-rule="evenodd"></path></svg>Copy code</button></span></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">MyClass</span>:
+<span class="hljs-meta">    @classmethod</span>
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">class_method</span>(<span class="hljs-params">cls</span>):
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">"This is a class method"</span>)
+</code></div></div></pre><h3>3. <strong>Properties (Getter and Setter Methods)</strong></h3><ul><li><strong>Properties</strong>: Special methods that allow controlled access to an object’s attributes. They are often used to encapsulate data and add logic to getting and setting attribute values.</li></ul><pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><div class="flex items-center"><span class="" data-state="closed"><button class="flex gap-1 items-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" class="icon-sm"><path fill="currentColor" fill-rule="evenodd" d="M7 5a3 3 0 0 1 3-3h9a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3h-2v2a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3v-9a3 3 0 0 1 3-3h2zm2 2h5a3 3 0 0 1 3 3v5h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-9a1 1 0 0 0-1 1zM5 9a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1v-9a1 1 0 0 0-1-1z" clip-rule="evenodd"></path></svg>Copy code</button></span></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">MyClass</span>:
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, value</span>):
+        self._value = value
+
+<span class="hljs-meta">    @property</span>
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">value</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-keyword">return</span> self._value
+
+<span class="hljs-meta">    @value.setter</span>
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">value</span>(<span class="hljs-params">self, new_value</span>):
+        self._value = new_value
+</code></div></div></pre><h3>4. <strong>Descriptors</strong></h3><ul><li><strong>Definition</strong>: Objects that define the behavior of attribute access, specifically through the use of <code>__get__()</code>, <code>__set__()</code>, and <code>__delete__()</code> methods. Descriptors are a way to create reusable and controlled attribute management.</li></ul><pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><div class="flex items-center"><span class="" data-state="closed"><button class="flex gap-1 items-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" class="icon-sm"><path fill="currentColor" fill-rule="evenodd" d="M7 5a3 3 0 0 1 3-3h9a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3h-2v2a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3v-9a3 3 0 0 1 3-3h2zm2 2h5a3 3 0 0 1 3 3v5h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-9a1 1 0 0 0-1 1zM5 9a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1v-9a1 1 0 0 0-1-1z" clip-rule="evenodd"></path></svg>Copy code</button></span></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Descriptor</span>:
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__get__</span>(<span class="hljs-params">self, instance, owner</span>):
+        <span class="hljs-keyword">return</span> <span class="hljs-string">"Descriptor get method"</span>
+
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">MyClass</span>:
+    attr = Descriptor()
+</code></div></div></pre><h3>5. <strong>Custom <code>__call__</code> Method</strong></h3><ul><li><strong>Definition</strong>: An object can be made callable by defining the <code>__call__()</code> method. This allows the object to be called as if it were a function.</li></ul><pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><div class="flex items-center"><span class="" data-state="closed"><button class="flex gap-1 items-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" class="icon-sm"><path fill="currentColor" fill-rule="evenodd" d="M7 5a3 3 0 0 1 3-3h9a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3h-2v2a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3v-9a3 3 0 0 1 3-3h2zm2 2h5a3 3 0 0 1 3 3v5h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-9a1 1 0 0 0-1 1zM5 9a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1v-9a1 1 0 0 0-1-1z" clip-rule="evenodd"></path></svg>Copy code</button></span></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">MyCallable</span>:
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__call__</span>(<span class="hljs-params">self, x</span>):
+        <span class="hljs-keyword">return</span> x * x
+
+obj = MyCallable()
+<span class="hljs-built_in">print</span>(obj(<span class="hljs-number">5</span>))  <span class="hljs-comment"># Output: 25</span>
+</code></div></div></pre><h3>6. <strong>Slots</strong></h3><ul><li><strong>Definition</strong>: A special mechanism (<code>__slots__</code>) that restricts the creation of instance attributes to a predefined set, reducing memory usage for instances of the class.</li></ul><pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><div class="flex items-center"><span class="" data-state="closed"><button class="flex gap-1 items-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" class="icon-sm"><path fill="currentColor" fill-rule="evenodd" d="M7 5a3 3 0 0 1 3-3h9a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3h-2v2a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3v-9a3 3 0 0 1 3-3h2zm2 2h5a3 3 0 0 1 3 3v5h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-9a1 1 0 0 0-1 1zM5 9a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1v-9a1 1 0 0 0-1-1z" clip-rule="evenodd"></path></svg>Copy code</button></span></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">MyClass</span>:
+    __slots__ = [<span class="hljs-string">'attr1'</span>, <span class="hljs-string">'attr2'</span>]
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, attr1, attr2</span>):
+        self.attr1 = attr1
+        self.attr2 = attr2
+</code></div></div></pre><h3>7. <strong>Magic Methods (Dunder Methods)</strong></h3><ul><li><strong>Definition</strong>: Special methods that begin and end with double underscores, like <code>__init__</code>, <code>__str__</code>, <code>__repr__</code>, <code>__eq__</code>, etc. These methods allow objects to interact with Python’s built-in functions and operators.</li></ul><pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><div class="flex items-center"><span class="" data-state="closed"><button class="flex gap-1 items-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" class="icon-sm"><path fill="currentColor" fill-rule="evenodd" d="M7 5a3 3 0 0 1 3-3h9a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3h-2v2a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3v-9a3 3 0 0 1 3-3h2zm2 2h5a3 3 0 0 1 3 3v5h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-9a1 1 0 0 0-1 1zM5 9a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1v-9a1 1 0 0 0-1-1z" clip-rule="evenodd"></path></svg>Copy code</button></span></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">MyClass</span>:
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__str__</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-keyword">return</span> <span class="hljs-string">"String representation of MyClass"</span>
+</code></div></div></pre><h3>8. <strong>Type Annotations</strong></h3><ul><li><strong>Definition</strong>: While not held directly by the object, Python objects can have type annotations for attributes, which are hints for developers and tools to understand what type of data the attribute should hold.</li></ul><pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><div class="flex items-center"><span class="" data-state="closed"><button class="flex gap-1 items-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" class="icon-sm"><path fill="currentColor" fill-rule="evenodd" d="M7 5a3 3 0 0 1 3-3h9a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3h-2v2a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3v-9a3 3 0 0 1 3-3h2zm2 2h5a3 3 0 0 1 3 3v5h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-9a1 1 0 0 0-1 1zM5 9a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1v-9a1 1 0 0 0-1-1z" clip-rule="evenodd"></path></svg>Copy code</button></span></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">MyClass</span>:
+    attr: <span class="hljs-built_in">int</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, attr: <span class="hljs-built_in">int</span></span>):
+        self.attr = attr
+</code></div></div></pre><h3>9. <strong>Metaclasses</strong></h3><ul><li><strong>Definition</strong>: The class of a class, controlling the creation of classes themselves. Metaclasses define how classes behave.</li></ul><pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><div class="flex items-center"><span class="" data-state="closed"><button class="flex gap-1 items-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" class="icon-sm"><path fill="currentColor" fill-rule="evenodd" d="M7 5a3 3 0 0 1 3-3h9a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3h-2v2a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3v-9a3 3 0 0 1 3-3h2zm2 2h5a3 3 0 0 1 3 3v5h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-9a1 1 0 0 0-1 1zM5 9a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1v-9a1 1 0 0 0-1-1z" clip-rule="evenodd"></path></svg>Copy code</button></span></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Meta</span>(<span class="hljs-title class_ inherited__">type</span>):
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__new__</span>(<span class="hljs-params">cls, name, bases, attrs</span>):
+        <span class="hljs-keyword">return</span> <span class="hljs-built_in">super</span>(Meta, cls).__new__(cls, name, bases, attrs)
+
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">MyClass</span>(metaclass=Meta):
+    <span class="hljs-keyword">pass</span>
+</code></div></div></pre><h3>10. <strong>Annotations (<code>__annotations__</code>)</strong></h3><ul><li><strong>Definition</strong>: A dictionary attribute where type annotations are stored. This can be accessed via the <code>__annotations__</code> attribute on the class or instance.</li></ul><pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><div class="flex items-center"><span class="" data-state="closed"><button class="flex gap-1 items-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" class="icon-sm"><path fill="currentColor" fill-rule="evenodd" d="M7 5a3 3 0 0 1 3-3h9a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3h-2v2a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3v-9a3 3 0 0 1 3-3h2zm2 2h5a3 3 0 0 1 3 3v5h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-9a1 1 0 0 0-1 1zM5 9a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1v-9a1 1 0 0 0-1-1z" clip-rule="evenodd"></path></svg>Copy code</button></span></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">MyClass</span>:
+    attr: <span class="hljs-built_in">int</span> = <span class="hljs-number">5</span>
+
+<span class="hljs-built_in">print</span>(MyClass.__annotations__)  <span class="hljs-comment"># Output: {'attr': &lt;class 'int'&gt;}</span>
+</code></div></div></pre><h3>11. <strong>Custom Attributes Added Dynamically</strong></h3><ul><li><strong>Definition</strong>: Python objects are dynamic, so you can add attributes to instances even after they’ve been created.</li></ul><pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><div class="flex items-center"><span class="" data-state="closed"><button class="flex gap-1 items-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" class="icon-sm"><path fill="currentColor" fill-rule="evenodd" d="M7 5a3 3 0 0 1 3-3h9a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3h-2v2a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3v-9a3 3 0 0 1 3-3h2zm2 2h5a3 3 0 0 1 3 3v5h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-9a1 1 0 0 0-1 1zM5 9a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1v-9a1 1 0 0 0-1-1z" clip-rule="evenodd"></path></svg>Copy code</button></span></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">MyClass</span>:
+    <span class="hljs-keyword">pass</span>
+
+obj = MyClass()
+obj.new_attr = <span class="hljs-string">"Dynamically added attribute"</span>
+</code></div></div></pre><p>These additional elements allow Python objects to be highly flexible and powerful, supporting a wide range of programming paradigms and advanced behaviors.</p></div>
+
+<h3>8. Can you explain this with an example?</h3>
+
+<div class="markdown prose w-full break-words dark:prose-invert light"><p>Certainly! Let's explore the various things a Python object can hold by creating an example class that demonstrates these concepts.</p><h3>Example Class: <code>Car</code></h3><p>We'll create a class called <code>Car</code> that showcases attributes, methods, class variables, static methods, class methods, properties, descriptors, magic methods, and more.</p><pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><div class="flex items-center"><span class="" data-state="closed"><button class="flex gap-1 items-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" class="icon-sm"><path fill="currentColor" fill-rule="evenodd" d="M7 5a3 3 0 0 1 3-3h9a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3h-2v2a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3v-9a3 3 0 0 1 3-3h2zm2 2h5a3 3 0 0 1 3 3v5h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-9a1 1 0 0 0-1 1zM5 9a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1v-9a1 1 0 0 0-1-1z" clip-rule="evenodd"></path></svg>Copy code</button></span></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-python"><span class="hljs-comment"># Descriptor example</span>
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">FuelEfficiency</span>:
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__get__</span>(<span class="hljs-params">self, instance, owner</span>):
+        <span class="hljs-keyword">return</span> instance._mileage / instance._fuel_used
+
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Car</span>:
+    <span class="hljs-comment"># Class variable</span>
+    vehicle_type = <span class="hljs-string">"Automobile"</span>
+
+    <span class="hljs-comment"># __slots__ example to limit attributes</span>
+    __slots__ = [<span class="hljs-string">'make'</span>, <span class="hljs-string">'model'</span>, <span class="hljs-string">'year'</span>, <span class="hljs-string">'_mileage'</span>, <span class="hljs-string">'_fuel_used'</span>]
+
+    <span class="hljs-comment"># Annotations for type hints</span>
+    make: <span class="hljs-built_in">str</span>
+    model: <span class="hljs-built_in">str</span>
+    year: <span class="hljs-built_in">int</span>
+
+    <span class="hljs-comment"># Static variable for descriptor</span>
+    fuel_efficiency = FuelEfficiency()
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, make, model, year, mileage, fuel_used</span>):
+        self.make = make
+        self.model = model
+        self.year = year
+        self._mileage = mileage
+        self._fuel_used = fuel_used
+
+    <span class="hljs-comment"># Instance method</span>
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">drive</span>(<span class="hljs-params">self, distance</span>):
+        self._mileage += distance
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">f"Driven <span class="hljs-subst">{distance}</span> miles. Total mileage: <span class="hljs-subst">{self._mileage}</span> miles"</span>)
+
+    <span class="hljs-comment"># Static method</span>
+<span class="hljs-meta">    @staticmethod</span>
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">honk</span>():
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">"Honk! Honk!"</span>)
+
+    <span class="hljs-comment"># Class method</span>
+<span class="hljs-meta">    @classmethod</span>
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">from_string</span>(<span class="hljs-params">cls, car_string</span>):
+        make, model, year = car_string.split(<span class="hljs-string">'-'</span>)
+        <span class="hljs-keyword">return</span> cls(make, model, <span class="hljs-built_in">int</span>(year), <span class="hljs-number">0</span>, <span class="hljs-number">0</span>)
+
+    <span class="hljs-comment"># Property for controlled access to mileage</span>
+<span class="hljs-meta">    @property</span>
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">mileage</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-keyword">return</span> self._mileage
+
+<span class="hljs-meta">    @mileage.setter</span>
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">mileage</span>(<span class="hljs-params">self, value</span>):
+        <span class="hljs-keyword">if</span> value &lt; <span class="hljs-number">0</span>:
+            <span class="hljs-keyword">raise</span> ValueError(<span class="hljs-string">"Mileage cannot be negative"</span>)
+        self._mileage = value
+
+    <span class="hljs-comment"># Magic method to represent the object as a string</span>
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__str__</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-keyword">return</span> <span class="hljs-string">f"<span class="hljs-subst">{self.year}</span> <span class="hljs-subst">{self.make}</span> <span class="hljs-subst">{self.model}</span>"</span>
+
+    <span class="hljs-comment"># Magic method to make the object callable</span>
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__call__</span>(<span class="hljs-params">self, action</span>):
+        <span class="hljs-keyword">return</span> <span class="hljs-string">f"The car is now <span class="hljs-subst">{action}</span>."</span>
+
+<span class="hljs-comment"># Creating a car object using the class</span>
+my_car = Car(<span class="hljs-string">"Toyota"</span>, <span class="hljs-string">"Corolla"</span>, <span class="hljs-number">2020</span>, <span class="hljs-number">5000</span>, <span class="hljs-number">200</span>)
+
+<span class="hljs-comment"># Demonstrating different aspects of the class</span>
+
+<span class="hljs-comment"># Accessing class variable</span>
+<span class="hljs-built_in">print</span>(<span class="hljs-string">f"Vehicle Type: <span class="hljs-subst">{Car.vehicle_type}</span>"</span>)
+
+<span class="hljs-comment"># Using an instance method</span>
+my_car.drive(<span class="hljs-number">150</span>)
+
+<span class="hljs-comment"># Using a static method</span>
+Car.honk()
+
+<span class="hljs-comment"># Using a class method to create an instance</span>
+new_car = Car.from_string(<span class="hljs-string">"Honda-Civic-2022"</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">f"New Car: <span class="hljs-subst">{new_car}</span>"</span>)
+
+<span class="hljs-comment"># Using a property</span>
+<span class="hljs-built_in">print</span>(<span class="hljs-string">f"Mileage: <span class="hljs-subst">{my_car.mileage}</span>"</span>)
+my_car.mileage = <span class="hljs-number">6000</span>  <span class="hljs-comment"># Setting mileage via the property</span>
+<span class="hljs-built_in">print</span>(<span class="hljs-string">f"Updated Mileage: <span class="hljs-subst">{my_car.mileage}</span>"</span>)
+
+<span class="hljs-comment"># Using the descriptor for fuel efficiency</span>
+<span class="hljs-built_in">print</span>(<span class="hljs-string">f"Fuel Efficiency: <span class="hljs-subst">{my_car.fuel_efficiency}</span> miles per gallon"</span>)
+
+<span class="hljs-comment"># Using a magic method (__str__) to get a string representation</span>
+<span class="hljs-built_in">print</span>(<span class="hljs-built_in">str</span>(my_car))
+
+<span class="hljs-comment"># Using a magic method (__call__) to make the object callable</span>
+<span class="hljs-built_in">print</span>(my_car(<span class="hljs-string">"accelerating"</span>))
+
+<span class="hljs-comment"># Adding a dynamic attribute (not allowed due to __slots__)</span>
+<span class="hljs-comment"># my_car.color = "Blue"  # This will raise an AttributeError</span>
+</code></div></div></pre><h3>Explanation of Each Concept</h3><ol><li><p><strong>Class Variable (<code>vehicle_type</code>)</strong>:</p><ul><li>This variable is shared by all instances of the class. It is accessible through the class itself (<code>Car.vehicle_type</code>) or any instance (<code>my_car.vehicle_type</code>).</li></ul></li><li><p><strong>Instance Variables (<code>make</code>, <code>model</code>, <code>year</code>, <code>_mileage</code>, <code>_fuel_used</code>)</strong>:</p><ul><li>These are specific to each instance of the <code>Car</code> class, holding the state of the object. For example, <code>my_car.make</code> holds the value <code>"Toyota"</code>.</li></ul></li><li><p><strong>Static Method (<code>honk</code>)</strong>:</p><ul><li>This method does not depend on the instance's state and can be called on the class itself. <code>Car.honk()</code> prints a honk sound.</li></ul></li><li><p><strong>Class Method (<code>from_string</code>)</strong>:</p><ul><li>This method is bound to the class, not the instance. It's used here to create a <code>Car</code> object from a string. <code>Car.from_string("Honda-Civic-2022")</code> creates a new <code>Car</code> object.</li></ul></li><li><p><strong>Properties (<code>mileage</code>)</strong>:</p><ul><li>Properties provide a controlled way to access and set instance variables. The <code>mileage</code> property ensures that the mileage cannot be set to a negative value.</li></ul></li><li><p><strong>Descriptor (<code>fuel_efficiency</code>)</strong>:</p><ul><li>The <code>FuelEfficiency</code> descriptor calculates the car's fuel efficiency dynamically based on the mileage and fuel used. The descriptor is accessed like a normal attribute (<code>my_car.fuel_efficiency</code>).</li></ul></li><li><p><strong>Magic Methods (<code>__str__</code>, <code>__call__</code>)</strong>:</p><ul><li><code>__str__</code>: Provides a readable string representation of the object, used when you print the object or convert it to a string.</li><li><code>__call__</code>: Makes the object callable like a function, allowing <code>my_car("accelerating")</code> to work.</li></ul></li><li><p><strong>Slots (<code>__slots__</code>)</strong>:</p><ul><li>The <code>__slots__</code> attribute limits the attributes that can be added to an instance, reducing memory usage. Attempting to add an attribute not listed in <code>__slots__</code> will raise an <code>AttributeError</code>.</li></ul></li></ol><p>This example demonstrates how a Python object can hold various types of data and behavior, making it a powerful and flexible construct in object-oriented programming.</p></div>
+
+<h3>9. Can I change a class variable? 
+And what would it be it's impant on the various instances of this class?</h3>
+
+<div class="markdown prose w-full break-words dark:prose-invert light"><p>Yes, you can change a class variable in Python. The impact of changing a class variable depends on how you modify it, and it can affect all instances of the class in specific ways. Here's a detailed explanation:</p><h3>1. <strong>Changing the Class Variable via the Class</strong></h3><p>When you change a class variable directly via the class, the change affects all instances of the class that do not have an overridden value for that variable.</p><pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><div class="flex items-center"><span class="" data-state="closed"><button class="flex gap-1 items-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" class="icon-sm"><path fill="currentColor" fill-rule="evenodd" d="M7 5a3 3 0 0 1 3-3h9a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3h-2v2a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3v-9a3 3 0 0 1 3-3h2zm2 2h5a3 3 0 0 1 3 3v5h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-9a1 1 0 0 0-1 1zM5 9a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1v-9a1 1 0 0 0-1-1z" clip-rule="evenodd"></path></svg>Copy code</button></span></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Car</span>:
+    <span class="hljs-comment"># Class variable</span>
+    vehicle_type = <span class="hljs-string">"Automobile"</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, make, model</span>):
+        self.make = make
+        self.model = model
+
+<span class="hljs-comment"># Create two instances</span>
+car1 = Car(<span class="hljs-string">"Toyota"</span>, <span class="hljs-string">"Corolla"</span>)
+car2 = Car(<span class="hljs-string">"Honda"</span>, <span class="hljs-string">"Civic"</span>)
+
+<span class="hljs-comment"># Access the class variable</span>
+<span class="hljs-built_in">print</span>(car1.vehicle_type)  <span class="hljs-comment"># Output: Automobile</span>
+<span class="hljs-built_in">print</span>(car2.vehicle_type)  <span class="hljs-comment"># Output: Automobile</span>
+
+<span class="hljs-comment"># Change the class variable via the class</span>
+Car.vehicle_type = <span class="hljs-string">"Motor Vehicle"</span>
+
+<span class="hljs-comment"># Access the class variable again</span>
+<span class="hljs-built_in">print</span>(car1.vehicle_type)  <span class="hljs-comment"># Output: Motor Vehicle</span>
+<span class="hljs-built_in">print</span>(car2.vehicle_type)  <span class="hljs-comment"># Output: Motor Vehicle</span>
+</code></div></div></pre><h4>Impact:</h4><ul><li>When <code>Car.vehicle_type</code> is modified, all instances (<code>car1</code>, <code>car2</code>, etc.) reflect the new value, <code>"Motor Vehicle"</code>, because they are still referencing the class variable.</li><li>Since <code>vehicle_type</code> is shared across all instances, changing it through the class affects every instance that hasn't overridden this variable.</li></ul><h3>2. <strong>Overriding the Class Variable via an Instance</strong></h3><p>If you change the class variable via an instance, it doesn't change the class variable itself but instead creates (or overrides) an instance variable with the same name.</p><pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><div class="flex items-center"><span class="" data-state="closed"><button class="flex gap-1 items-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" class="icon-sm"><path fill="currentColor" fill-rule="evenodd" d="M7 5a3 3 0 0 1 3-3h9a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3h-2v2a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3v-9a3 3 0 0 1 3-3h2zm2 2h5a3 3 0 0 1 3 3v5h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-9a1 1 0 0 0-1 1zM5 9a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1v-9a1 1 0 0 0-1-1z" clip-rule="evenodd"></path></svg>Copy code</button></span></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Car</span>:
+    <span class="hljs-comment"># Class variable</span>
+    vehicle_type = <span class="hljs-string">"Automobile"</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, make, model</span>):
+        self.make = make
+        self.model = model
+
+<span class="hljs-comment"># Create two instances</span>
+car1 = Car(<span class="hljs-string">"Toyota"</span>, <span class="hljs-string">"Corolla"</span>)
+car2 = Car(<span class="hljs-string">"Honda"</span>, <span class="hljs-string">"Civic"</span>)
+
+<span class="hljs-comment"># Override the class variable in car1</span>
+car1.vehicle_type = <span class="hljs-string">"Electric Vehicle"</span>
+
+<span class="hljs-comment"># Access the class variable</span>
+<span class="hljs-built_in">print</span>(car1.vehicle_type)  <span class="hljs-comment"># Output: Electric Vehicle</span>
+<span class="hljs-built_in">print</span>(car2.vehicle_type)  <span class="hljs-comment"># Output: Automobile</span>
+</code></div></div></pre><h4>Impact:</h4><ul><li><code>car1.vehicle_type</code> now points to an instance variable, not the class variable. So <code>car1</code> shows <code>"Electric Vehicle"</code>.</li><li><code>car2.vehicle_type</code> still references the class variable, so it continues to show <code>"Automobile"</code>.</li><li>Changing <code>car1.vehicle_type</code> does not affect <code>car2</code> or any other instance.</li></ul><h3>3. <strong>Resetting the Class Variable via the Class</strong></h3><p>If you reset the class variable after instances have overridden it, only those instances that have not overridden the variable will see the change.</p><pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><div class="flex items-center"><span class="" data-state="closed"><button class="flex gap-1 items-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" class="icon-sm"><path fill="currentColor" fill-rule="evenodd" d="M7 5a3 3 0 0 1 3-3h9a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3h-2v2a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3v-9a3 3 0 0 1 3-3h2zm2 2h5a3 3 0 0 1 3 3v5h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-9a1 1 0 0 0-1 1zM5 9a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1v-9a1 1 0 0 0-1-1z" clip-rule="evenodd"></path></svg>Copy code</button></span></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Car</span>:
+    <span class="hljs-comment"># Class variable</span>
+    vehicle_type = <span class="hljs-string">"Automobile"</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, make, model</span>):
+        self.make = make
+        self.model = model
+
+<span class="hljs-comment"># Create two instances</span>
+car1 = Car(<span class="hljs-string">"Toyota"</span>, <span class="hljs-string">"Corolla"</span>)
+car2 = Car(<span class="hljs-string">"Honda"</span>, <span class="hljs-string">"Civic"</span>)
+
+<span class="hljs-comment"># Override the class variable in car1</span>
+car1.vehicle_type = <span class="hljs-string">"Electric Vehicle"</span>
+
+<span class="hljs-comment"># Change the class variable via the class</span>
+Car.vehicle_type = <span class="hljs-string">"Motor Vehicle"</span>
+
+<span class="hljs-comment"># Access the class variable</span>
+<span class="hljs-built_in">print</span>(car1.vehicle_type)  <span class="hljs-comment"># Output: Electric Vehicle (instance variable, unchanged)</span>
+<span class="hljs-built_in">print</span>(car2.vehicle_type)  <span class="hljs-comment"># Output: Motor Vehicle (class variable, changed)</span>
+</code></div></div></pre><h4>Impact:</h4><ul><li><code>car1</code> still holds its instance variable (<code>"Electric Vehicle"</code>), so it isn't affected by the change in the class variable.</li><li><code>car2</code>, which didn't override the class variable, now shows the updated value <code>"Motor Vehicle"</code>.</li></ul><h3>Summary</h3><ul><li><strong>Class-Level Change</strong>: Changing a class variable directly via the class affects all instances that have not overridden that variable.</li><li><strong>Instance-Level Override</strong>: Changing a class variable via an instance creates an instance-specific variable, leaving the class variable unaffected for other instances.</li><li><strong>Instance Impact</strong>: Instances that override the class variable are unaffected by changes to the class variable, while those that don't will reflect any changes made to the class variable.</li></ul></div>
+</pre>
+<span style="display: none;">Tags: Technology,Python,Interview Preparation,</span>

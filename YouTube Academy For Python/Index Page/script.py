@@ -2,16 +2,16 @@ import pandas as pd
 import json
 from pprint import pprint
 
-df = pd.read_excel('ALL IN ONE COURSE VIA YOUTUBE.xlsx', sheet_name='Python')
+df = pd.read_excel('input.xlsx', sheet_name='Python')
 
 df_temp = df[['TITLE', 'URL', 'Instructor', 'Interview Questions']]
 
 def get_embed_url(in_url):
-    if "youtube.com" in in_url:
+    if "youtube.com" in in_url and '/playlist?' not in in_url:
         in_url = in_url.replace('watch?v=', 'embed/')
-    elif "youtu.be" in in_url:
+    elif "youtu.be" in in_url and '/playlist?' not in in_url:
         in_url = in_url.replace('youtu.be/', 'youtube.com/embed/')
-    else:
+    else :
         in_url = 'NA'
 
     return in_url
@@ -43,10 +43,3 @@ with open('data.json', 'w') as f:
     json.dump(data, f, indent=4)
 
 pprint(data)
-"""
-
-<iframe width="1004" height="565" src="https://www.youtube.com/embed/kqtD5dpn9C8" title="Python for Beginners - Learn Python in 1 Hour" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-<iframe width="1004" height="565" src="https://www.youtube.com/embed/_uQrJ0TkZlc" title="Python Tutorial - Python Full Course for Beginners" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-"""
